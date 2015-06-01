@@ -49,10 +49,24 @@
 				<div id="inner-header" class="wrap cf">
 
 					<?php // to use a image just replace the bloginfo('name') with your img src and remove the surrounding <p> ?>
-					<p id="logo" class="h1" itemscope itemtype="http://schema.org/Organization"><a href="<?php echo home_url(); ?>" rel="nofollow"><?php bloginfo('name'); ?></a></p>
+					<a id="logo" href="<?php echo home_url(); ?>" rel="nofollow"><img src="<?php echo get_template_directory_uri(); ?>/library/images/gold_logo.png"></a>
+					<a id="hamburger"><img src="<?php echo get_template_directory_uri(); ?>/library/images/hamburger.png"></a>
 
-					<?php // if you'd like to use the site description you can un-comment it below ?>
-					<?php // bloginfo('description'); ?>
+
+					<div id="mobile-menu" class="family-navigation mobile-menu">
+	                    <div class="mobile-menu-inner">
+	                        <ul>
+<!-- 	                            <li class="active"><a data-navigate-to="home" href="http://cfm.dev/home"><h1>HOME</h1></a></li>
+	                            <li><a data-navigate-to="projects" href="http://cfm.dev/projects"><h1>OUR WORK</h1></a></li>
+	                            <li><a data-navigate-to="about" href="http://cfm.dev/home"><h1>ABOUT</h1></a></li>
+	                            <li><a data-navigate-to="people" href="http://cfm.dev/people"><h1>PEOPLE</h1></a></li>
+	                            <li><a href="http://www.click3x.com/contact"><h1>CONTACT</h1></a></li>
+	                            <li><a href="http://www.click3x.com" id="click3x-tab"><h1>CLICK 3X</h1></a></li> -->
+	                        </ul>
+
+	                        <a id="menu-close"><img src="<?php echo get_template_directory_uri(); ?>/library/images/menu-close.png"></a>
+	                    </div>
+	                </div>
 
 
 					<nav role="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">

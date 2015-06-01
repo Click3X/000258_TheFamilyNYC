@@ -1027,6 +1027,49 @@ them however you see fit.
     width: 8.33%;
   }
 }
+/* line 1, ../scss/partials/_nav.scss */
+#hamburger {
+  float: right;
+  display: inline-block;
+  cursor: pointer;
+}
+
+/* line 7, ../scss/partials/_nav.scss */
+.family-navigation.mobile-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 5;
+  top: 100%;
+  opacity: 0;
+  -webkit-transition: opacity 0.4s;
+  -moz-transition: opacity 0.4s;
+  -o-transition: opacity 0.4s;
+  -ms-transition: opacity 0.4s;
+  transition: opacity 0.4s;
+}
+
+/* line 23, ../scss/partials/_nav.scss */
+.menu-open.mobile-menu {
+  top: 0;
+  opacity: 1;
+}
+
+/* line 28, ../scss/partials/_nav.scss */
+.family-navigation.mobile-menu .mobile-menu-inner {
+  height: 100%;
+  background: #FFF;
+}
+
+/* line 33, ../scss/partials/_nav.scss */
+#menu-close {
+  float: right;
+  display: inline-block;
+  cursor: pointer;
+}
+
 /*********************
 IMPORTING MODULES
 Modules are reusable blocks or elements we use throughout the project.

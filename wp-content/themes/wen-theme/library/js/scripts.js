@@ -105,16 +105,12 @@ function loadGravatars() {
 } // end function
 
 
-/*
- * Put all your regular jQuery in here.
-*/
 jQuery(document).ready(function($) {
-
-  /*
-   * Let's fire off the gravatar function
-   * You can remove this if you don't need it
-  */
-  loadGravatars();
+  $('#hamburger,#menu-close').click(function(){
+    $('.mobile-menu').toggleClass('menu-open');
 
 
-}); /* end of as page load scripts */
+  });
+
+
+}); 
