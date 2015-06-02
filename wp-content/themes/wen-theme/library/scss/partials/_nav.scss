@@ -103,8 +103,15 @@
 	margin: auto;
 }
 
+.main-menu-selected {
+	background-color: $footer-green;
+	a {
+		color: $white !important;
+	}
+}
 
-// ADD PADDING TO OFFSET NAV MENU - TALK TO WEN ABOUT THSI CXODWE
+
+// ADD PADDING TO OFFSET NAV MENU
 #container {
 	padding-top:56px;
 }
