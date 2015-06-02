@@ -275,27 +275,4 @@ function cleanString($string){
 }
 
 
-// function getTeamMembers() {
-// 	$teamMembers = array();
-// 	$args = array(
-// 		'post_type'=>'family-members'
-// 		);
-// 	// The Query
-// 	$the_query = new WP_Query( $args );
-
-// 	// The Loop
-// 	if ( $the_query->have_posts() ) {
-// 		while ( $the_query->have_posts() ) {
-// 			// PUSH TEAM MEMBER CUSTOM POST OBJECT INTO TEAM MEBERS ARRAY
-// 			$teamMember = $the_query->the_post();
-// 			array_push($teamMembers, $teamMember);
-// 		}
-// 	}
-// 	/* Restore original Post Data */
-// 	wp_reset_postdata();
-
-// 	return $teamMembers;
-// }
-
-
 /* DON'T DELETE THIS CLOSING TAG */ ?>

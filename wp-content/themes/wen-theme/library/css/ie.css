@@ -270,11 +270,6 @@ GENERAL STYLES
 /*********************
 LAYOUT & GRID STYLES
 *********************/
-/* line 26, ../scss/breakpoints/_768up.scss */
-.wrap {
-  width: 760px;
-}
-
 /*********************
 HEADER STYLES
 *********************/
@@ -433,7 +428,8 @@ be seen on the Desktop.
 ******************************************************************/
 /* line 12, ../scss/breakpoints/_1030up.scss */
 .wrap {
-  width: 1040px;
+  max-width: 1400px;
+  margin: 0 auto;
 }
 
 /*

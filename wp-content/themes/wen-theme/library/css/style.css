@@ -1156,6 +1156,11 @@ them however you see fit.
   margin: auto;
 }
 
+/* line 108, ../scss/partials/_nav.scss */
+#container {
+  padding-top: 56px;
+}
+
 /*********************
 IMPORTING MODULES
 Modules are reusable blocks or elements we use throughout the project.
@@ -1658,7 +1663,6 @@ LAYOUT & GRID STYLES
 *********************/
 /* line 73, ../scss/breakpoints/_base.scss */
 .wrap {
-  width: 96%;
   margin: 0 auto;
 }
 
@@ -2308,16 +2312,11 @@ view.
 }
 
 /* line 8, ../scss/partials/_util.scss */
-#container {
-  padding-top: 56px;
-}
-
-/* line 13, ../scss/partials/_util.scss */
 #content {
   margin-top: 0;
 }
 
-/* line 18, ../scss/partials/_util.scss */
+/* line 13, ../scss/partials/_util.scss */
 h1, h2, h3, h4, h5, h6,
 h1.h1, h2.h2, h3.h3, h4.h4, h5.h5, h6.h6 {
   text-transform: uppercase;
@@ -2326,6 +2325,42 @@ h1.h1, h2.h2, h3.h3, h4.h4, h5.h5, h6.h6 {
   margin: 0;
 }
 
+/* line 25, ../scss/partials/_util.scss */
+.center-table > div {
+  width: 50%;
+  display: block;
+  margin: 0 auto;
+}
+/* line 30, ../scss/partials/_util.scss */
+.center-table > div img {
+  width: 100%;
+  display: block;
+}
+
+/* line 37, ../scss/partials/_util.scss */
+.center-table {
+  display: table;
+  height: auto;
+  width: 100%;
+  border-collapse: collapse;
+}
+
+/* line 44, ../scss/partials/_util.scss */
+.center-table > div {
+  display: block;
+  margin: 0 auto;
+  width: auto;
+}
+
+@media (min-width: 768px) {
+  /* line 53, ../scss/partials/_util.scss */
+  .center-table > div {
+    display: table-cell;
+    margin: 0;
+    width: 50%;
+    vertical-align: middle;
+  }
+}
 /*********************
 LARGER MOBILE DEVICES
 This is for devices like the Galaxy Note or something that's
@@ -2448,11 +2483,6 @@ you can add resource intensive styles.
   /*********************
   LAYOUT & GRID STYLES
   *********************/
-  /* line 26, ../scss/breakpoints/_768up.scss */
-  .wrap {
-    width: 760px;
-  }
-
   /*********************
   HEADER STYLES
   *********************/
@@ -2619,7 +2649,8 @@ you can add resource intensive styles.
   ******************************************************************/
   /* line 12, ../scss/breakpoints/_1030up.scss */
   .wrap {
-    width: 1040px;
+    max-width: 1400px;
+    margin: 0 auto;
   }
 }
 /*********************
