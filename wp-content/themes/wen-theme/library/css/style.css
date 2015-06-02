@@ -1027,6 +1027,18 @@ them however you see fit.
     width: 8.33%;
   }
 }
+@font-face {
+  font-family: gotham-light;
+  src: url(../fonts/gotham-light.ttf);
+}
+@font-face {
+  font-family: gotham-book;
+  src: url(../fonts/gotham-book.ttf);
+}
+@font-face {
+  font-family: gotham-bold;
+  src: url(../fonts/gotham-bold.ttf);
+}
 /* line 1, ../scss/partials/_nav.scss */
 #hamburger {
   float: right;
@@ -1060,14 +1072,39 @@ them however you see fit.
 /* line 28, ../scss/partials/_nav.scss */
 .family-navigation.mobile-menu .mobile-menu-inner {
   height: 100%;
-  background: #FFF;
+  background: #f7f6f1;
 }
 
 /* line 33, ../scss/partials/_nav.scss */
 #menu-close {
-  float: right;
   display: inline-block;
   cursor: pointer;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+/* line 42, ../scss/partials/_nav.scss */
+#menu-main-menu {
+  text-align: center;
+}
+
+/* line 46, ../scss/partials/_nav.scss */
+#menu-main-menu li {
+  margin: 0;
+  padding: 0;
+  display: block;
+  float: none;
+}
+
+/* line 53, ../scss/partials/_nav.scss */
+#menu-main-menu li a {
+  font-family: 'gotham-bold';
+  text-transform: uppercase;
+  display: block;
+  color: #000;
+  text-decoration: none;
+  line-height: 20px;
 }
 
 /*********************
@@ -1519,7 +1556,7 @@ GENERAL STYLES
 *********************/
 /* line 18, ../scss/breakpoints/_base.scss */
 body {
-  font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: 'gotham-light';
   font-size: 100%;
   line-height: 1.5;
   color: #5c6b80;
