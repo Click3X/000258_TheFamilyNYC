@@ -55,36 +55,38 @@
 
 					<div id="mobile-menu" class="family-navigation mobile-menu">
 	                    <div class="mobile-menu-inner">
-	                        <ul>
+	                        <!-- <ul> -->
 <!-- 	                            <li class="active"><a data-navigate-to="home" href="http://cfm.dev/home"><h1>HOME</h1></a></li>
 	                            <li><a data-navigate-to="projects" href="http://cfm.dev/projects"><h1>OUR WORK</h1></a></li>
 	                            <li><a data-navigate-to="about" href="http://cfm.dev/home"><h1>ABOUT</h1></a></li>
 	                            <li><a data-navigate-to="people" href="http://cfm.dev/people"><h1>PEOPLE</h1></a></li>
 	                            <li><a href="http://www.click3x.com/contact"><h1>CONTACT</h1></a></li>
 	                            <li><a href="http://www.click3x.com" id="click3x-tab"><h1>CLICK 3X</h1></a></li> -->
-	                        </ul>
+	                        <!-- </ul> -->
+
+			                <nav role="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
+								<?php wp_nav_menu(array(
+		    					         'container' => false,                           // remove nav container
+		    					         'container_class' => 'menu cf',                 // class of container (should you choose to use it)
+		    					         'menu' => __( 'The Main Menu', 'bonestheme' ),  // nav name
+		    					         'menu_class' => 'nav top-nav cf',               // adding custom nav class
+		    					         'theme_location' => 'main-nav',                 // where it's located in the theme
+		    					         'before' => '',                                 // before the menu
+		        			               'after' => '',                                  // after the menu
+		        			               'link_before' => '',                            // before each link
+		        			               'link_after' => '',                             // after each link
+		        			               'depth' => 0,                                   // limit the depth of the nav
+		    					         'fallback_cb' => ''                             // fallback function (if there is one)
+								)); ?>
+
+							</nav>
 
 	                        <a id="menu-close"><img src="<?php echo get_template_directory_uri(); ?>/library/images/menu-close.png"></a>
 	                    </div>
 	                </div>
 
 
-					<nav role="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
-						<?php wp_nav_menu(array(
-    					         'container' => false,                           // remove nav container
-    					         'container_class' => 'menu cf',                 // class of container (should you choose to use it)
-    					         'menu' => __( 'The Main Menu', 'bonestheme' ),  // nav name
-    					         'menu_class' => 'nav top-nav cf',               // adding custom nav class
-    					         'theme_location' => 'main-nav',                 // where it's located in the theme
-    					         'before' => '',                                 // before the menu
-        			               'after' => '',                                  // after the menu
-        			               'link_before' => '',                            // before each link
-        			               'link_after' => '',                             // after each link
-        			               'depth' => 0,                                   // limit the depth of the nav
-    					         'fallback_cb' => ''                             // fallback function (if there is one)
-						)); ?>
 
-					</nav>
 
 				</div>
 

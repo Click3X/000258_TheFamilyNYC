@@ -27,11 +27,35 @@
 
 .family-navigation.mobile-menu .mobile-menu-inner {
 	height: 100%;
-  	background: #FFF;
+  	background: $light-gold;
 }
 
 #menu-close {
-	float: right;
+	// float: right;
 	display: inline-block;
 	cursor: pointer;
+	  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+#menu-main-menu {
+	text-align: center;
+}
+
+#menu-main-menu li {
+	  margin: 0;
+  padding: 0;
+  display: block;
+  float: none;
+}
+
+#menu-main-menu li a {
+	font-family: 'gotham-bold';
+	text-transform: uppercase;
+		display: block;
+	  color: #000;
+	  text-decoration: none;
+	  line-height: 20px;
+	  
 }
