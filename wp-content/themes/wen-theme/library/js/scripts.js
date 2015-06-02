@@ -108,9 +108,14 @@ function loadGravatars() {
 jQuery(document).ready(function($) {
   $('#hamburger,#menu-close').click(function(){
     $('.mobile-menu').toggleClass('menu-open');
-
-
   });
 
+  // highlight selected menu item
+  var url = window.location;
+  $('a[href="'+url+'"]').parent('#menu-main-menu>li').addClass('main-menu-selected');
 
+  if ($('body').attr('id') != "home" ) {
+    console.log('home page');
+    $('body').addClass('non-home-header');
+  }
 }); 
