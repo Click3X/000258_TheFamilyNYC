@@ -13,7 +13,58 @@
 */
 ?>
 
-<?php get_header(); ?>
+<?php get_header(); 
+
+// TEAM MEMBERS AND PROJECTS DATA
+$pKey = 0;
+$tmKey = 0;
+
+// POST DATA VARS
+$teamMembers = array();
+$projects = array();
+$partners = array();
+
+
+// GET FAMILY MEMBERS AND PROJECTS
+$args = array(
+  'post_type' => array('family-member', 'project')
+);
+
+$the_query = new WP_Query( $args );
+
+// The Loop
+if ( $the_query->have_posts() ) {
+	while ( $the_query->have_posts() ) {
+		$the_query->the_post();
+		if($post->post_type == 'family-member') {
+			$teamMembers[$tmKey] = $post;
+			$tmKey++;
+		} elseif($post->post_type == 'project') {
+			$projects[$pKey] = $post;
+			$pKey++;
+		}
+	}
+}
+/* Restore original Post Data */
+wp_reset_postdata();
+
+
+// STANDARD LOOP
+if (have_posts()) : while (have_posts()) : the_post(); 
+	$partners = get_field('partners');
+endwhile;
+endif;
+/* Restore original Post Data */
+wp_reset_postdata();
+
+
+
+// helper($teamMembers);
+// helper($projects);
+// helper($partners);
+
+
+?>
 
 			<div id="content">
 
@@ -64,7 +115,7 @@
 
 							</article>
 
-							<?php endwhile; else : ?>
+							<?php endwhile; ?>
 
 							<?php endif; ?>
 

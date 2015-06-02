@@ -1,0 +1,24 @@
+// UTILITES
+
+.italic {
+	font-style: italic;
+}
+
+// ADD PADDING TO OFFSET NAV MENU - TALK TO WEN ABOUT THSI CXODWE
+#container {
+	padding-top:56px;
+}
+
+// RESET MARGINS
+#content {
+	margin-top:0;
+}
+
+// PAGE SPECFIC
+h1, h2, h3, h4, h5, h6,
+h1.h1, h2.h2, h3.h3, h4.h4, h5.h5, h6.h6 {
+	text-transform: uppercase;
+	text-align: center;
+	line-height: 1em;
+	margin:0;
+}
