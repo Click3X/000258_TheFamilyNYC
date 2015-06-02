@@ -108,9 +108,11 @@ function loadGravatars() {
 jQuery(document).ready(function($) {
   $('#hamburger,#menu-close').click(function(){
     $('.mobile-menu').toggleClass('menu-open');
-
-
   });
+
+  // highlight selected menu item
+  var url = window.location;
+  $('a[href="'+url+'"]').parent('#menu-main-menu>li').addClass('main-menu-selected');
 
 
 }); 
