@@ -1,8 +1,22 @@
-#hamburger {
-	float: right;
-	display: inline-block;
-	cursor: pointer;
+#inner-header {
+	padding: 6px 20px 0 20px;
+
+	#hamburger {
+		float: right;
+		display: inline-block;
+		cursor: pointer;
+		margin-top: 6px;	
+		img {
+			width: 34px;
+		}	
+	}
+
+	#logo img {
+		width: 34px;
+	}
 }
+
+
 
 .family-navigation.mobile-menu {
 	position: fixed;
@@ -31,12 +45,14 @@
 }
 
 #menu-close {
-	// float: right;
 	display: inline-block;
 	cursor: pointer;
-	  position: absolute;
-  top: 0;
-  right: 0;
+	position: absolute;
+    top: 4px;
+    right: 4px;
+    img {
+    	width: 34px;
+    }
 }
 
 #menu-main-menu {
@@ -45,25 +61,31 @@
 }
 
 #menu-main-menu li {
-	  margin: 0;
-  padding: 0;
-  display: block;
-  float: none;
+	margin: 0;
+	padding: 0;
+	display: block;
+	float: none;
+	@include transition(background-color 0.1s ease);
+
+    &:hover {
+    	background-color: $footer-green;
+    	a {
+    		color: $white;
+    	}
+    	
+    }
 }
 
 #menu-main-menu li a {
 	font-family: 'gotham-book';
 	font-size: 1.8em;
 	text-transform: uppercase;
-		display: block;
-	  color: #000;
-	  text-decoration: none;
-	  line-height: 20px;
-	  font-weight: 700;
-	outline: none;
-	border: none;
-	border-color: transparent;
-	  
+	display: block;
+	color: $black;
+	text-decoration: none;
+	line-height: 20px;
+	font-weight: 700;
+	@include transition(color 0.1s ease);
 }
 
 #menu-title {
@@ -74,18 +96,6 @@
 	padding: 100px 0 40px 0;
 	text-align: center;
 }
-
-#menu-main-menu li a:link, #menu-main-menu li a:visited {
-	outline: none;
-	border: none;
-	border-color: transparent;
-}
-#menu-main-menu li a:hover, #menu-main-menu li a:focus {
-	outline: none;
-	border: none;
-	border-color: transparent;
-}
-
 
 .menu-border {
 	border-bottom: 1px dashed #666;
