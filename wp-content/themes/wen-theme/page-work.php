@@ -34,7 +34,6 @@
 							wp_reset_postdata(); 
 						?>
 
-
 						<?php 
 							// WORK PROJECTS VAR
 							$projects = [];
@@ -48,7 +47,7 @@
 							if ($the_query->have_posts()) : while ($the_query->have_posts()) : $the_query->the_post();
 								// GET POST THUMBNAIL SRC
 								$url_src = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID) , 'full' );
-
+								// GET PROJECT FIELDS
 								$project = array(
 									'title'=>get_the_title(),
 									'client'=>get_field('client'),
@@ -65,24 +64,7 @@
 							endif;
 							wp_reset_postdata(); 
 
-
-							function printProject($projects) {
-								echo '<ul id="project-list" class="cf projects-list">';
-								foreach ($projects as $key => $project) {
-									echo '<li id="project-'.$project['id'].'" class="cf project">';
-										echo '<div class="center-table">';
-											echo '<div>';
-												echo '<div class="img-container">';
-												echo '<img src="'.$project['poster'].'">';
-												echo '</div>';
-											echo '</div>';
-											echo "<div>I'm vertically centered multiple lines of text in a CSS-created table layout. I'm vertically centered multiple lines of text in a CSS-created table layout. I'm vertically centered multiple lines of text in a CSS-created table layout. I'm vertically centered multiple lines of text in a CSS-created table layout.</div>";
-										echo '</div>';
-									echo '</li>';
-								}
-								echo '</ul>';
-							}
-
+							// PRINT CUSTOM PROJECTS FUNCTION DECLARED IN FUNCTIONS PHP
 							printProject($projects);
 
 

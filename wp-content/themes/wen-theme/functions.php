@@ -274,5 +274,50 @@ function cleanString($string){
 
 }
 
+// projects funcxtion
+function printProject($projects) {
+	echo '<ul id="project-list" class="cf projects-list">';
+
+	foreach ($projects as $key => $project) {
+		echo '<li id="project-'.$project['id'].'" class="cf project">';
+			echo '<div class="center-table">';
+			if($key % 2 != 0) {
+				// IMAGE
+				echo '<div class="img-container bg-img" style="background-image:url('.$project['poster'].');">';
+					echo '<div class="img-wrapper mobile-only">';
+						echo '<img src="'.$project['poster'].'">';
+					echo '</div>';
+				echo '</div>';
+
+				// TEXT
+				echo '<div class="txt-container">';
+					echo '<div class="txt-wrapper">';
+						echo '<h1 class="p-title">'.$project['title'].'</h1>';
+						echo '<h2 class="p-client">'.$project['client'].'</h2>';
+						echo $project['description'];
+					echo '</div>';
+				echo '</div>';
+			} else {
+				// TEXT
+				echo '<div class="txt-container">';
+					echo '<div class="txt-wrapper">';
+						echo '<h1 class="p-title">'.$project['title'].'</h1>';
+						echo '<h2 class="p-client">'.$project['client'].'</h2>';
+						echo $project['description'];
+					echo '</div>';
+				echo '</div>';
+
+				// IMAGE
+				echo '<div class="img-container bg-img" style="background-image:url('.$project['poster'].');">';
+					echo '<div class="img-wrapper mobile-only">';
+						echo '<img src="'.$project['poster'].'">';
+					echo '</div>';
+				echo '</div>';
+			}
+			echo '</div>';
+		echo '</li>';
+	}
+	echo '</ul>';
+}
 
 /* DON'T DELETE THIS CLOSING TAG */ ?>
