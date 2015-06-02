@@ -55,14 +55,8 @@
 
 					<div id="mobile-menu" class="family-navigation mobile-menu">
 	                    <div class="mobile-menu-inner">
-	                        <!-- <ul> -->
-<!-- 	                            <li class="active"><a data-navigate-to="home" href="http://cfm.dev/home"><h1>HOME</h1></a></li>
-	                            <li><a data-navigate-to="projects" href="http://cfm.dev/projects"><h1>OUR WORK</h1></a></li>
-	                            <li><a data-navigate-to="about" href="http://cfm.dev/home"><h1>ABOUT</h1></a></li>
-	                            <li><a data-navigate-to="people" href="http://cfm.dev/people"><h1>PEOPLE</h1></a></li>
-	                            <li><a href="http://www.click3x.com/contact"><h1>CONTACT</h1></a></li>
-	                            <li><a href="http://www.click3x.com" id="click3x-tab"><h1>CLICK 3X</h1></a></li> -->
-	                        <!-- </ul> -->
+	                    	<h2 id="menu-title">MENU</h2>
+	                    	<div class="menu-border"></div>
 
 			                <nav role="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
 								<?php wp_nav_menu(array(
@@ -80,6 +74,8 @@
 								)); ?>
 
 							</nav>
+
+							<div class="menu-border"></div>
 
 	                        <a id="menu-close"><img src="<?php echo get_template_directory_uri(); ?>/library/images/menu-close.png"></a>
 	                    </div>

@@ -41,6 +41,7 @@
 
 #menu-main-menu {
 	text-align: center;
+	padding: 20px 0;
 }
 
 #menu-main-menu li {
@@ -51,11 +52,43 @@
 }
 
 #menu-main-menu li a {
-	font-family: 'gotham-bold';
+	font-family: 'gotham-book';
+	font-size: 1.8em;
 	text-transform: uppercase;
 		display: block;
 	  color: #000;
 	  text-decoration: none;
 	  line-height: 20px;
+	  font-weight: 700;
+	outline: none;
+	border: none;
+	border-color: transparent;
 	  
+}
+
+#menu-title {
+	font-style: italic;
+	color: $gold;
+	font-size: 1.2em;
+	margin: 0;
+	padding: 100px 0 40px 0;
+	text-align: center;
+}
+
+#menu-main-menu li a:link, #menu-main-menu li a:visited {
+	outline: none;
+	border: none;
+	border-color: transparent;
+}
+#menu-main-menu li a:hover, #menu-main-menu li a:focus {
+	outline: none;
+	border: none;
+	border-color: transparent;
+}
+
+
+.menu-border {
+	border-bottom: 1px dashed #666;
+	width: 100px;
+	margin: auto;
 }
