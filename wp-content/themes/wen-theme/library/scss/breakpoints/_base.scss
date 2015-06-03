@@ -280,31 +280,21 @@ POSTS & CONTENT STYLES
 
 		.hentry {
 			background-color: $white;
-			border-radius: 3px;
-			margin-bottom: 1.5em;
-			// border: 1px solid $border-color;
+			margin-bottom:0;
 
-			header {
-				// border-bottom: 1px solid $light-gray;
-				padding: 1.5em;
-			}
+			header { padding: 1.5em; }
 
 			footer {
 				padding: 1.5em;
-				// border-top: 1px solid $light-gray;
 
-				p {
-					margin: 0;
-				}
+				p { margin: 0; }
 			}
 
 		} /* end .hentry */
 
 		.single-title,
 		.page-title,
-		.entry-title {
-			margin: 0;
-		}
+		.entry-title { margin: 0; }
 
 		.single-title {}
 
