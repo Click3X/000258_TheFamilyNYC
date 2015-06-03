@@ -1,13 +1,9 @@
 // UTILITES
 
-.italic {
-	font-style: italic;
-}
+.italic { font-style: italic; }
 
 // RESET MARGINS
-#content {
-	margin-top:0;
-}
+#content { margin-top:0; }
 
 // PAGE SPECFIC
 h1, h2, h3, h4, h5, h6,
@@ -16,14 +12,60 @@ h1.h1, h2.h2, h3.h3, h4.h4, h5.h5, h6.h6 {
 	text-align: center;
 	line-height: 1em;
 	margin:0;
+	color: $project-green;
 }
 
-ul {
-	margin:0;
-}
+ul { margin:0; }
 
 .mobile-only {
 	@media(min-width: 768px) {
 		display: none;
 	}
+}
+
+.page-title {
+	font-size: 1.5em;
+	margin:0.05em auto;
+	position: relative;
+	display: block;
+	@media(min-width: 768px) { font-size: 2em; }
+
+	&:after {
+		content: "";
+		display: block;
+		border-bottom: 1px dashed $border-gray;
+		width: 15%; max-width: 144px;
+		margin: 0.85em auto 1em;
+	}
+}
+
+.page-sub-title {
+	font-size: 1.2em;
+	@media(min-width: 768px) { font-size: 1.6em; }
+}
+
+.article-header {
+	// margin:3em auto;
+	margin:6em auto 3em;
+	text-align: center;
+}
+
+
+video {
+	display: block;
+	width: 100% !important;
+	height: 100% !important;
+}
+
+.btn {
+	text-decoration: none;
+	outline: none;
+	text-transform: uppercase;
+	background:$project-gold; color:white;
+	display: inline-block;
+	margin: 0 auto;
+	font-size: 0.8em;
+	padding:0.4em 1.5em 0.25em;
+	font-weight: 800;
+	letter-spacing: 0.05em;
 }

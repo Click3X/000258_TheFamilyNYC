@@ -22,20 +22,24 @@
 
 					<main id="main" class="m-all t-3of3 d-7of7 cf" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
 
-						<?php // PAGE INFO
+						<?php 
+							// PAGE INFO
+							// LOOP 1: NORMAL LOOP
 							if (have_posts()) : while (have_posts()) : the_post(); ?>
 								<header class="article-header">
 										<h2 class="page-sub-title italic"><?php bloginfo('title');?></h2>
 										<h1 class="page-title"><?php the_title(); ?></h1>
+										<a id="sort-by" href="#" class="btn sort-by">Sort By</a>
 								</header>
 						<?php 
 							endwhile; 
 							endif;
 							wp_reset_postdata(); 
+							// END LOOP 1: 
 						?>
 
 						<?php 
-							// WORK PROJECTS VAR
+							// WORK PROJECTS ARRAY TO STORE VAR
 							$projects = [];
 							// WORK PROJECT POSTS
 							$args = array(
@@ -43,7 +47,8 @@
 							);
 							// QUERY
 							$the_query = new WP_Query( $args );
-							// LOOP
+							
+							// LOOP 2: WP QUERY LOOP
 							if ($the_query->have_posts()) : while ($the_query->have_posts()) : $the_query->the_post();
 								// GET POST THUMBNAIL SRC
 								$url_src = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID) , 'full' );
@@ -57,17 +62,16 @@
 									'poster'=>$url_src[0],
 									'id'=>$post->ID
 								);
-
+								// PUSH PROJECT INTO PROJECTS ARRAY FOR LATER USE
 								$projects[] = $project;
 						
 							endwhile; 
 							endif;
 							wp_reset_postdata(); 
+							// END LOOP 2: WP QUERY LOOP
 
 							// PRINT CUSTOM PROJECTS FUNCTION DECLARED IN FUNCTIONS PHP
 							printProject($projects);
-
-
 						?>
 
 					</main>
@@ -75,6 +79,5 @@
 				</div>
 
 			</div>
-
 
 <?php get_footer(); ?>
