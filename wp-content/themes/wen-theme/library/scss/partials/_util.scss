@@ -1,13 +1,9 @@
 // UTILITES
 
-.italic {
-	font-style: italic;
-}
+.italic { font-style: italic; }
 
 // RESET MARGINS
-#content {
-	margin-top:0;
-}
+#content { margin-top:0; }
 
 // PAGE SPECFIC
 h1, h2, h3, h4, h5, h6,
@@ -16,14 +12,39 @@ h1.h1, h2.h2, h3.h3, h4.h4, h5.h5, h6.h6 {
 	text-align: center;
 	line-height: 1em;
 	margin:0;
+	color: $project-green;
 }
 
-ul {
-	margin:0;
-}
+ul { margin:0; }
 
 .mobile-only {
 	@media(min-width: 768px) {
 		display: none;
 	}
+}
+
+.page-title {
+	font-size: 1.5em;
+	margin:0.05em auto;
+	@media(min-width: 768px) {
+		font-size: 2em;
+	}
+}
+
+.page-sub-title {
+	font-size: 1.2em;
+	@media(min-width: 768px) {
+		font-size: 1.6em;
+	}
+}
+
+.article-header {
+	margin:2em auto;
+}
+
+
+video {
+	display: block;
+	width: 100% !important;
+	height: 100% !important;
 }

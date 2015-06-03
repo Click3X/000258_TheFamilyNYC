@@ -274,18 +274,36 @@ function cleanString($string){
 
 }
 
-// projects funcxtion
+
+// PROJECTS FUNCXTION - PASS IN AN ARRAY OF PROJECTS
 function printProject($projects) {
 	echo '<ul id="project-list" class="cf projects-list">';
 
 	foreach ($projects as $key => $project) {
+		// GET PROJECT VIDEO FIELDS
+		$video_source = $project['video_files'];
+		// FOR EACH OF THE FOLLOWING VIDEO TYPES, MAKE A NEW PROJECT ARRAY KEY AND STORE THE VALUE
+		foreach ($video_source as $vidKey => $source) {
+	        if( $source['file']['mime_type'] == 'video/mp4' ) { $project['mp4'] = $source['file']['url']; }
+	        if( $source['file']['mime_type'] == 'video/ogg' ) { $project['ogg'] = $source['file']['url']; }
+	        if( $source['file']['mime_type'] == 'video/webm' ) { $project['webm'] = $source['file']['url']; }
+	    }
+
+		// OUTPUT PROJECT
 		echo '<li id="project-'.$project['id'].'" class="cf project">';
 			echo '<div class="center-table">';
+			// MODOLU TESTING IS FOR FRONT-END 'CHECKERED LOOK'
 			if($key % 2 != 0) {
-				// IMAGE
-				echo '<div class="img-container bg-img" style="background-image:url('.$project['poster'].');">';
-					echo '<div class="img-wrapper mobile-only">';
-						echo '<img src="'.$project['poster'].'">';
+				// IMAGE / VIDEO
+				echo '<div class="img-container">';
+					echo '<div class="img-wrapper">';
+						// VIDEO
+						echo '<video poster="'.$project['poster'].'" controls="controls" preload="none" >';
+							if($project['mp4']) { echo '<source src="'.$project['mp4'].'" type="video/mp4" />'; }
+							if($project['ogg']) { echo '<source src="'.$project['ogg'].'" type="video/ogg" />'; }
+							if($project['webm']) { echo '<source src="'.$project['webm'].'" type="video/webm" />'; }
+						echo '</video>';
+						// END VIDEO
 					echo '</div>';
 				echo '</div>';
 
@@ -307,10 +325,16 @@ function printProject($projects) {
 					echo '</div>';
 				echo '</div>';
 
-				// IMAGE
-				echo '<div class="img-container bg-img" style="background-image:url('.$project['poster'].');">';
-					echo '<div class="img-wrapper mobile-only">';
-						echo '<img src="'.$project['poster'].'">';
+				// IMAGE / VIDEO
+				echo '<div class="img-container">';
+					echo '<div class="img-wrapper">';
+					// VIDEO
+						echo '<video poster="'.$project['poster'].'" controls="controls" preload="none" >';
+							if($project['mp4']) { echo '<source src="'.$project['mp4'].'" type="video/mp4" />'; }
+							if($project['ogg']) { echo '<source src="'.$project['ogg'].'" type="video/ogg" />'; }
+							if($project['webm']) { echo '<source src="'.$project['webm'].'" type="video/webm" />'; }
+						echo '</video>';
+						// END VIDEO
 					echo '</div>';
 				echo '</div>';
 			}

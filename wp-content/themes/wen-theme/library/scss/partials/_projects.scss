@@ -56,12 +56,20 @@
 
 	h1 {
 		color:$project-green;
-		font-size: 1.25em;
+		font-size: 1.1em;
+		margin: 0 auto 0.35em;
+
+		@media(min-width: 1060px) {
+			font-size: 1.25em;
+		}
 	}
 
 	h2 {
 		color:$project-gold;
-		font-size: 1em;
+		font-size: 0.9em;
+		@media(min-width: 1060px) {
+			font-size: 1em;
+		}
 	}
 	
 	p {
@@ -74,27 +82,21 @@
 	.txt-container { padding:1.2em; }
 
 	@media(min-width: 768px) {
-		p { margin: 1em auto 0; }
-
-		.img-container { height: 360px; }
-
-		.txt-container {
-			padding:2em 1.2em;
+		p { 
+			margin: 1em auto 0; 
+			font-size: 13px;
 		}
-	}
 
-	@media(min-width: 768px) {
-		.img-container { height: 400px; }
+		// .txt-container {
+		// 	padding:2em 1.2em;
+		// }
 	}
 
 	@media(min-width:900px) {
 		font-size: 20px;
-
-		.img-container { height: 500px; }
-
 		p {
 			font-size: 0.75em;
-			margin: 2em auto 0;
+			margin: 1em auto 0;
 		}
 	}
 
