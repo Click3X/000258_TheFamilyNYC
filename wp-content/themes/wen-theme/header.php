@@ -56,7 +56,7 @@
 					<div id="mobile-menu" class="family-navigation mobile-menu">
 	                    <div class="mobile-menu-inner">
 	                    	<h2 id="menu-title">MENU</h2>
-	                    	<div class="menu-border"></div>
+	                    	<div class="dashed-border"></div>
 
 			                <nav role="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
 								<?php wp_nav_menu(array(
@@ -74,7 +74,7 @@
 								)); ?>
 							</nav>
 
-							<div class="menu-border"></div>
+							<div class="dashed-border"></div>
 
 	                        <a id="menu-close"><img src="<?php echo get_template_directory_uri(); ?>/library/images/menu-close.png"></a>
 	                    </div>
