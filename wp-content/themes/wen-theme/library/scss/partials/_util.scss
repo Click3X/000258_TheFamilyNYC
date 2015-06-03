@@ -60,11 +60,20 @@ video {
 	text-decoration: none;
 	outline: none;
 	text-transform: uppercase;
-	background:$project-gold; color:white;
+	background-color:$project-gold; 
+	color:white;
 	display: inline-block;
 	margin: 0 auto;
 	font-size: 0.8em;
 	padding:0.4em 1.5em 0.25em;
 	font-weight: 800;
 	letter-spacing: 0.05em;
+	cursor: pointer;
+	@include transition(all 0.2s ease-in-out);
+
+
+	&:hover {
+		color: $white;
+		background-color: $footer-green;
+	}
 }
