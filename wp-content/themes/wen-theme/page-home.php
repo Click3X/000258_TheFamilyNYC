@@ -105,13 +105,58 @@ wp_reset_postdata();
 				<div id="inner-content" class="wrap cf">
 
 					<main id="main" class="m-all t-3of3 d-7of7 cf" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
-
-						<article id="post-<?php the_ID(); ?>" <?php post_class( 'cf' ); ?> role="article" itemscope itemtype="http://schema.org/BlogPosting">
-
+						<!-- HOME PART 1 -->
+						<article id="post-<?php the_ID(); ?>-1" class="cf" role="article" itemscope itemtype="http://schema.org/BlogPosting">
+							<header class="article-header">
+								<?php echo '<h2 class="sub-title">'.$sub_title.'</h2>'; ?>
+								<a href="#" class="btn learn-more">Learn More</a>
+							</header>
 						</article>
 
-						<article id="featured-posts" class="cs featured-posts" role="article" itemscope itemtype="http://schema.org/BlogPosting">
+						<!-- FAMILY MEMBERS -->
+						<article id="family-members" class="cs family-members" role="article" itemscope itemtype="http://schema.org/BlogPosting">
+							<!-- TOP GOLD LINE -->
+							<div class="gold-line" style="background-image: url(<?php echo get_template_directory_uri(); ?>/library/images/gold-border-bottom.png);"></div>
+							<!-- TITLE -->
+							<header class="article-header">
+									<h2 class="page-sub-title italic">Family</h2>
+									<h1 class="page-title">Members</h1>
+							</header>
+							<!-- FAMILY MEMBER LIST -->
+							<section class="family-member-list cf">
+								<?php printFamilyMembers(); ?>
+							</section>
+							<!-- BOTTOM GOLD LINE -->
+							<div class="gold-line" style="background-image: url(<?php echo get_template_directory_uri(); ?>/library/images/gold-border-bottom.png);"></div>
+						</article>
 
+
+						<!-- HOME PART 2 -->
+						<article id="post-<?php the_ID(); ?>-2" class="cf home-content-2" role="article" itemscope itemtype="http://schema.org/BlogPosting">
+							<header class="article-header">
+								<?php echo '<div class="page-content">'.$content.'</div>'; ?>
+								<a href="#" class="btn learn-more">Learn More</a>
+							</header>
+						</article>
+
+
+						<!-- NEWS -->
+						<article id="news" class="cs news" role="article" itemscope itemtype="http://schema.org/BlogPosting">
+							<!-- TOP GOLD LINE -->
+							<div class="gold-line" style="background-image: url(<?php echo get_template_directory_uri(); ?>/library/images/gold-border-bottom.png);"></div>
+							<!-- TITLE -->
+							<header class="article-header">
+									<h2 class="page-sub-title italic">The Family</h2>
+									<h1 class="page-title">News</h1>
+							</header>
+
+
+							<!-- BOTTOM GOLD LINE -->
+							<div class="gold-line" style="background-image: url(<?php echo get_template_directory_uri(); ?>/library/images/gold-border-bottom.png);"></div>
+						</article>
+
+
+						<article id="featured-posts" class="cs featured-posts" role="article" itemscope itemtype="http://schema.org/BlogPosting">
 							<header class="article-header">
 									<h2 class="page-sub-title italic">Featured</h2>
 									<h1 class="page-title">Posts</h1>
@@ -120,7 +165,6 @@ wp_reset_postdata();
 							<section id="projects-list" class="projects-list cf" itemprop="articleBody">
 								<?php printProject($projects); ?>
 							</section>
-
 						</article>
 
 					</main>

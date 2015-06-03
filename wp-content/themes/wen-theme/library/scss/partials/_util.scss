@@ -18,9 +18,7 @@ h1.h1, h2.h2, h3.h3, h4.h4, h5.h5, h6.h6 {
 ul { margin:0; }
 
 .mobile-only {
-	@media(min-width: 768px) {
-		display: none;
-	}
+	@media(min-width: 768px) { display: none; }
 }
 
 .page-title {
@@ -28,21 +26,23 @@ ul { margin:0; }
 	margin:0.05em auto;
 	position: relative;
 	display: block;
-	@media(min-width: 768px) { font-size: 2em; }
+}
 
-	&:after {
-		content: "";
-		display: block;
-		border-bottom: 1px dashed $border-gray;
-		width: 15%; max-width: 144px;
-		margin: 0.85em auto 1em;
+.sub-title,
+	h2.sub-title {
+		line-height: 1.6em;
+		font-size: 1.0125em;
+		max-width: 23em;
+		margin: 0 auto;
+		font-weight: 800;
+		padding:0 1em;
+		@media(min-width: 768px) { 
+			font-size: 1.35em;
+		}
 	}
-}
 
-.page-sub-title {
-	font-size: 1.2em;
-	@media(min-width: 768px) { font-size: 1.6em; }
-}
+
+.page-sub-title { font-size: 1.2em; }
 
 .article-header {
 	margin:3em auto;
@@ -63,8 +63,31 @@ video {
 	background:$project-gold; color:white;
 	display: inline-block;
 	margin: 0 auto;
-	font-size: 0.8em;
-	padding:0.4em 1.5em 0.25em;
+	font-size: 0.65em;
+	padding:0.4em 1.5em;
 	font-weight: 800;
 	letter-spacing: 0.05em;
+	@media(min-width: 768px) {
+		font-size: 0.8em;
+		padding:0.4em 1.5em 0.25em;
+	}
+}
+
+
+// DOTS AFTER TITLES ON CERTAIN PAGES:
+.page-id-13 {
+	.page-title {
+		&:after {
+			content: "";
+			display: block;
+			border-bottom: 1px dashed $border-gray;
+			width: 15%; max-width: 144px;
+			margin: 0.85em auto 1em;
+		}
+	}
+	
+	@media(min-width: 768px) { 
+		.page-title { font-size: 2em; }
+		.page-sub-title {font-size: 1.6em; }
+	}
 }

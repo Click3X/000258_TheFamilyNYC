@@ -72,7 +72,6 @@
 		        			               'depth' => 0,                                   // limit the depth of the nav
 		    					         'fallback_cb' => ''                             // fallback function (if there is one)
 								)); ?>
-
 							</nav>
 
 							<div class="menu-border"></div>
@@ -84,12 +83,13 @@
 
 			</header>
 
-			<!-- TRANGLES HEADER BG-->
-			<div id="triangle-header" style="background-image: url(<?php echo get_template_directory_uri(); ?>/library/images/header-bg.png);">
-
-				<div id="family-logo" style="background: url(<?php echo get_template_directory_uri(); ?>/library/images/family_logo_1x.png) center center no-repeat"></div>
-
-				<div id="down-arrow" style="background: url(<?php echo get_template_directory_uri(); ?>/library/images/down-arrow.png) center center no-repeat""></div>
-
-			</div>
-
+			<!-- ONLY PRINT HEADER IF NOT HOME PAGE -->
+			<?php // if(!is_page(6)) { ?>
+				<!-- TRANGLES HEADER BG-->
+				<div id="triangle-header" style="background-image: url(<?php echo get_template_directory_uri(); ?>/library/images/header-bg.png);">
+					<div class="logo-wrapper cf">
+						<div id="family-logo" style="background-image: url(<?php echo get_template_directory_uri(); ?>/library/images/family_logo_1x.png);"></div>
+						<div id="down-arrow" style="background-image: url(<?php echo get_template_directory_uri(); ?>/library/images/down-arrow.png);"></div>
+					</div>
+				</div>
+			<?php // } ?>

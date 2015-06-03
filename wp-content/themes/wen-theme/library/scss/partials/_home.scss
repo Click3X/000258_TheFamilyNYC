@@ -1,4 +1,43 @@
 // HOME 
+.page-id-6 {
+	.article-header {
+		.btn {
+			margin: 2em auto 0;
+		}
+	}
+}
+
+.home-content-2 {
+	.article-header {
+		margin:7.75em auto;
+	}
+}
+
+.page-content {
+	text-align: center;
+	max-width: 36em;
+	margin: 1em auto 1em;
+	color: black;
+	font-size: 1em; line-height: 1.7em;
+
+	h3 { 
+	  	font-size: 1.5em;
+  		margin: 0.3em auto;
+  	}
+  	h4 {
+  		font-size: 1.2em;
+  	}
+  	p { margin: 2em auto 1em; }
+}
+
+.family-members {
+	header.article-header {
+		margin:1.75em auto;
+	}	
+}
+
 .featured-posts {
-	
+	header.article-header {
+		margin:8em auto 5em;
+	}	
 }

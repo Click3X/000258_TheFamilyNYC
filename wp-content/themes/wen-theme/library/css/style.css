@@ -1193,40 +1193,86 @@ them however you see fit.
 #triangle-header {
   width: 100%;
   height: 0;
+  padding-bottom: 84%;
   background-size: cover;
-  padding-bottom: 55%;
   background-repeat: no-repeat;
   background-position: center center;
+  position: relative;
 }
-@media (min-width: 1400px) {
+@media (min-width: 481px) {
   /* line 1, ../scss/partials/_triangle_header.scss */
   #triangle-header {
-    padding-bottom: 735px;
+    padding-bottom: 76%;
+  }
+}
+@media (min-width: 920px) {
+  /* line 1, ../scss/partials/_triangle_header.scss */
+  #triangle-header {
+    padding-bottom: 700px;
   }
 }
 
-/* line 13, ../scss/partials/_triangle_header.scss */
+/* line 12, ../scss/partials/_triangle_header.scss */
 #family-logo {
-  background-size: 180px 273px;
-  width: 180px;
-  height: 273px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 38.857%;
+  padding-bottom: 60%;
+  max-width: 180px;
+  height: 0;
   margin: auto;
 }
+@media (min-width: 464px) {
+  /* line 12, ../scss/partials/_triangle_header.scss */
+  #family-logo {
+    padding-bottom: 273px;
+  }
+}
 
-/* line 20, ../scss/partials/_triangle_header.scss */
+@media (min-width: 464px) {
+  /* line 24, ../scss/partials/_triangle_header.scss */
+  .logo-wrapper {
+    display: inline-block;
+    width: 100%;
+    height: 336px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+  }
+}
+@media (min-width: 920px) {
+  /* line 24, ../scss/partials/_triangle_header.scss */
+  .logo-wrapper {
+    height: 423px;
+  }
+}
+
+/* line 36, ../scss/partials/_triangle_header.scss */
 #down-arrow {
   width: 7px;
-  height: 70px;
+  height: 33px;
   background-size: 7px 70px;
   margin: auto;
-  margin-top: 80px;
+  margin-top: 30px;
+  background-position: 0% 100%;
+  background-repeat: no-repeat;
+}
+@media (min-width: 920px) {
+  /* line 36, ../scss/partials/_triangle_header.scss */
+  #down-arrow {
+    margin-top: 80px;
+    height: 70px;
+  }
 }
 
-/* line 29, ../scss/partials/_triangle_header.scss */
+/* line 52, ../scss/partials/_triangle_header.scss */
 .non-home-header #down-arrow {
   display: none;
 }
-/* line 33, ../scss/partials/_triangle_header.scss */
+/* line 54, ../scss/partials/_triangle_header.scss */
 .non-home-header #triangle-header {
   padding-bottom: 20%;
 }
@@ -2495,38 +2541,35 @@ ul {
   }
 }
 
-/* line 26, ../scss/partials/_util.scss */
+/* line 24, ../scss/partials/_util.scss */
 .page-title {
   font-size: 1.5em;
   margin: 0.05em auto;
   position: relative;
   display: block;
 }
-@media (min-width: 768px) {
-  /* line 26, ../scss/partials/_util.scss */
-  .page-title {
-    font-size: 2em;
-  }
+
+/* line 31, ../scss/partials/_util.scss */
+.sub-title,
+h2.sub-title {
+  line-height: 1.6em;
+  font-size: 1.0125em;
+  max-width: 23em;
+  margin: 0 auto;
+  font-weight: 800;
+  padding: 0 1em;
 }
-/* line 33, ../scss/partials/_util.scss */
-.page-title:after {
-  content: "";
-  display: block;
-  border-bottom: 1px dashed #a8b2a8;
-  width: 15%;
-  max-width: 144px;
-  margin: 0.85em auto 1em;
+@media (min-width: 768px) {
+  /* line 31, ../scss/partials/_util.scss */
+  .sub-title,
+  h2.sub-title {
+    font-size: 1.35em;
+  }
 }
 
-/* line 42, ../scss/partials/_util.scss */
+/* line 45, ../scss/partials/_util.scss */
 .page-sub-title {
   font-size: 1.2em;
-}
-@media (min-width: 768px) {
-  /* line 42, ../scss/partials/_util.scss */
-  .page-sub-title {
-    font-size: 1.6em;
-  }
 }
 
 /* line 47, ../scss/partials/_util.scss */
@@ -2551,10 +2594,37 @@ video {
   color: white;
   display: inline-block;
   margin: 0 auto;
-  font-size: 0.8em;
-  padding: 0.4em 1.5em 0.25em;
+  font-size: 0.65em;
+  padding: 0.4em 1.5em;
   font-weight: 800;
   letter-spacing: 0.05em;
+}
+@media (min-width: 768px) {
+  /* line 59, ../scss/partials/_util.scss */
+  .btn {
+    font-size: 0.8em;
+    padding: 0.4em 1.5em 0.25em;
+  }
+}
+
+/* line 80, ../scss/partials/_util.scss */
+.page-id-13 .page-title:after {
+  content: "";
+  display: block;
+  border-bottom: 1px dashed #a8b2a8;
+  width: 15%;
+  max-width: 144px;
+  margin: 0.85em auto 1em;
+}
+@media (min-width: 768px) {
+  /* line 90, ../scss/partials/_util.scss */
+  .page-id-13 .page-title {
+    font-size: 2em;
+  }
+  /* line 91, ../scss/partials/_util.scss */
+  .page-id-13 .page-sub-title {
+    font-size: 1.6em;
+  }
 }
 
 /* line 5, ../scss/partials/_projects.scss */
@@ -2696,6 +2766,49 @@ video {
   .project .img-container {
     height: 200px;
   }
+}
+
+/* line 4, ../scss/partials/_home.scss */
+.page-id-6 .article-header .btn {
+  margin: 2em auto 0;
+}
+
+/* line 11, ../scss/partials/_home.scss */
+.home-content-2 .article-header {
+  margin: 7.75em auto;
+}
+
+/* line 16, ../scss/partials/_home.scss */
+.page-content {
+  text-align: center;
+  max-width: 36em;
+  margin: 1em auto 1em;
+  color: black;
+  font-size: 1em;
+  line-height: 1.7em;
+}
+/* line 23, ../scss/partials/_home.scss */
+.page-content h3 {
+  font-size: 1.5em;
+  margin: 0.3em auto;
+}
+/* line 27, ../scss/partials/_home.scss */
+.page-content h4 {
+  font-size: 1.2em;
+}
+/* line 30, ../scss/partials/_home.scss */
+.page-content p {
+  margin: 2em auto 1em;
+}
+
+/* line 34, ../scss/partials/_home.scss */
+.family-members header.article-header {
+  margin: 1.75em auto;
+}
+
+/* line 40, ../scss/partials/_home.scss */
+.featured-posts header.article-header {
+  margin: 8em auto 5em;
 }
 
 /* line 3, ../scss/partials/_family-members.scss */
