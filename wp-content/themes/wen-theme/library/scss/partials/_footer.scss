@@ -1,0 +1,80 @@
+.gold-line {
+	background-size: cover;
+	padding-bottom: 8px;
+	width: 100%;
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+
+footer {
+
+	#inner-footer {
+		text-align: center;
+		max-width: 1400px;
+		margin: auto;
+		padding: 60px 0;
+	}
+
+	.contact-item {
+		width: 30%;
+		display: inline-block;
+		padding: 10px 0;
+		vertical-align: top;
+		.footer-icon {
+			background-size: 24px 34px;
+			width: 24px;
+			height: 34px;
+			margin: auto;
+		}
+
+		h4 {
+			padding: 22px 0;
+			font-size: 1em;
+			text-transform: uppercase;
+			@media (max-width: 605px) {
+				padding: 10px 0 0 0;
+			}
+		}
+
+		p {
+			font-size: 0.8em;
+		}
+
+		@media (max-width: 605px) {
+			width: 80%;
+		}
+	}
+
+	.social-container {
+		margin: 20px 5px 70px 5px;
+		div {
+			background-size: 37px 37px;
+			width: 37px;
+			height: 37px;
+			margin: auto;
+			display: inline-block;	
+			margin: 0 25px;		
+		}
+
+	}
+
+	#footer-logo {
+		background-size: 290px 24px;
+		width: 290px;
+		height: 24px;
+		margin: 10px auto;
+	}
+
+	.footer-credits {
+		padding: 0 4px;
+		p {
+			display: inline-block;
+			font-size: 0.8em;
+			margin: 6px 0 0 0;
+		}
+
+		span {
+			margin: 0 10px;
+		}
+	}
+}

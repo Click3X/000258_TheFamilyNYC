@@ -102,20 +102,26 @@ function loadGravatars() {
     jQuery(this).attr('src',jQuery(this).attr('data-gravatar'));
   });
 	}
-} // end function
+} 
 
 
 jQuery(document).ready(function($) {
-  $('#hamburger,#menu-close').click(function(){
-    $('.mobile-menu').toggleClass('menu-open');
-  });
+  $('#hamburger,#menu-close').click(toggleOverlay);
 
   // highlight selected menu item
   var url = window.location;
   $('a[href="'+url+'"]').parent('#menu-main-menu>li').addClass('main-menu-selected');
 
   if ($('body').attr('id') != "home" ) {
-    console.log('home page');
     $('body').addClass('non-home-header');
+  }
+
+  function toggleOverlay() {
+    $('.mobile-menu').toggleClass('menu-open');
+    if ($('.mobile-menu').hasClass('menu-open')) {
+      $('html,body').addClass('noScroll');
+    } else {
+      $('html,body').removeClass('noScroll');
+    }
   }
 }); 

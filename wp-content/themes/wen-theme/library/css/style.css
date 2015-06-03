@@ -556,6 +556,7 @@ COLORS
 Need help w/ choosing your colors? Try this site out:
 http://0to255.com/
 *********************/
+/** ---- window sizes ----**/
 /*
 Here's a great tutorial on how to
 use color variables properly:
@@ -1040,26 +1041,31 @@ them however you see fit.
   src: url(../fonts/gotham-bold.ttf);
 }
 /* line 1, ../scss/partials/_nav.scss */
+.noScroll {
+  overflow: hidden;
+}
+
+/* line 5, ../scss/partials/_nav.scss */
 #inner-header {
   padding: 6px 20px 0 20px;
 }
-/* line 4, ../scss/partials/_nav.scss */
+/* line 8, ../scss/partials/_nav.scss */
 #inner-header #hamburger {
   float: right;
   display: inline-block;
   cursor: pointer;
   margin-top: 6px;
 }
-/* line 9, ../scss/partials/_nav.scss */
+/* line 13, ../scss/partials/_nav.scss */
 #inner-header #hamburger img {
   width: 34px;
 }
-/* line 14, ../scss/partials/_nav.scss */
+/* line 18, ../scss/partials/_nav.scss */
 #inner-header #logo img {
   width: 34px;
 }
 
-/* line 21, ../scss/partials/_nav.scss */
+/* line 23, ../scss/partials/_nav.scss */
 .family-navigation.mobile-menu {
   position: fixed;
   top: 0;
@@ -1076,38 +1082,39 @@ them however you see fit.
   transition: opacity 0.4s;
 }
 
-/* line 37, ../scss/partials/_nav.scss */
+/* line 39, ../scss/partials/_nav.scss */
 .menu-open.mobile-menu {
   top: 0;
   opacity: 1;
+  overflow-y: scroll;
 }
 
-/* line 42, ../scss/partials/_nav.scss */
+/* line 45, ../scss/partials/_nav.scss */
 .family-navigation.mobile-menu .mobile-menu-inner {
   height: 100%;
   background: #f7f6f1;
 }
 
-/* line 47, ../scss/partials/_nav.scss */
+/* line 50, ../scss/partials/_nav.scss */
 #menu-close {
   display: inline-block;
   cursor: pointer;
   position: absolute;
-  top: 4px;
-  right: 4px;
+  top: 12px;
+  right: 20px;
 }
-/* line 53, ../scss/partials/_nav.scss */
+/* line 56, ../scss/partials/_nav.scss */
 #menu-close img {
   width: 34px;
 }
 
-/* line 58, ../scss/partials/_nav.scss */
+/* line 61, ../scss/partials/_nav.scss */
 #menu-main-menu {
   text-align: center;
   padding: 20px 0;
 }
 
-/* line 63, ../scss/partials/_nav.scss */
+/* line 66, ../scss/partials/_nav.scss */
 #menu-main-menu li {
   margin: 0;
   padding: 0;
@@ -1116,16 +1123,16 @@ them however you see fit.
   -webkit-transition: background-color 0.1s ease;
   transition: background-color 0.1s ease;
 }
-/* line 70, ../scss/partials/_nav.scss */
+/* line 73, ../scss/partials/_nav.scss */
 #menu-main-menu li:hover {
   background-color: #1c391e;
 }
-/* line 72, ../scss/partials/_nav.scss */
+/* line 75, ../scss/partials/_nav.scss */
 #menu-main-menu li:hover a {
   color: #fff;
 }
 
-/* line 79, ../scss/partials/_nav.scss */
+/* line 82, ../scss/partials/_nav.scss */
 #menu-main-menu li a {
   font-family: 'gotham-book';
   font-size: 1.8em;
@@ -1133,13 +1140,19 @@ them however you see fit.
   display: block;
   color: #323944;
   text-decoration: none;
-  line-height: 20px;
+  line-height: 1.1em;
   font-weight: 700;
   -webkit-transition: color 0.1s ease;
   transition: color 0.1s ease;
 }
+@media (max-width: 480px) {
+  /* line 82, ../scss/partials/_nav.scss */
+  #menu-main-menu li a {
+    font-size: 1.4em;
+  }
+}
 
-/* line 91, ../scss/partials/_nav.scss */
+/* line 98, ../scss/partials/_nav.scss */
 #menu-title {
   font-style: italic;
   color: #cc9c40;
@@ -1148,24 +1161,30 @@ them however you see fit.
   padding: 100px 0 40px 0;
   text-align: center;
 }
+@media (max-width: 480px) {
+  /* line 98, ../scss/partials/_nav.scss */
+  #menu-title {
+    padding: 40px 0 40px 0;
+  }
+}
 
-/* line 100, ../scss/partials/_nav.scss */
+/* line 110, ../scss/partials/_nav.scss */
 .menu-border {
   border-bottom: 1px dashed #666;
   width: 100px;
   margin: auto;
 }
 
-/* line 106, ../scss/partials/_nav.scss */
+/* line 116, ../scss/partials/_nav.scss */
 .main-menu-selected {
   background-color: #1c391e;
 }
-/* line 108, ../scss/partials/_nav.scss */
+/* line 118, ../scss/partials/_nav.scss */
 .main-menu-selected a {
   color: #fff !important;
 }
 
-/* line 115, ../scss/partials/_nav.scss */
+/* line 125, ../scss/partials/_nav.scss */
 #container {
   padding-top: 56px;
 }
@@ -1203,6 +1222,93 @@ them however you see fit.
 /* line 29, ../scss/partials/_triangle_header.scss */
 .non-home-header #triangle-header {
   padding-bottom: 20%;
+}
+
+/* line 1, ../scss/partials/_footer.scss */
+.gold-line {
+  background-size: cover;
+  padding-bottom: 8px;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+/* line 11, ../scss/partials/_footer.scss */
+footer #inner-footer {
+  text-align: center;
+  max-width: 1400px;
+  margin: auto;
+  padding: 60px 0;
+}
+/* line 18, ../scss/partials/_footer.scss */
+footer .contact-item {
+  width: 30%;
+  display: inline-block;
+  padding: 10px 0;
+  vertical-align: top;
+}
+/* line 23, ../scss/partials/_footer.scss */
+footer .contact-item .footer-icon {
+  background-size: 24px 34px;
+  width: 24px;
+  height: 34px;
+  margin: auto;
+}
+/* line 30, ../scss/partials/_footer.scss */
+footer .contact-item h4 {
+  padding: 22px 0;
+  font-size: 1em;
+  text-transform: uppercase;
+}
+@media (max-width: 605px) {
+  /* line 30, ../scss/partials/_footer.scss */
+  footer .contact-item h4 {
+    padding: 10px 0 0 0;
+  }
+}
+/* line 39, ../scss/partials/_footer.scss */
+footer .contact-item p {
+  font-size: 0.8em;
+}
+@media (max-width: 605px) {
+  /* line 18, ../scss/partials/_footer.scss */
+  footer .contact-item {
+    width: 80%;
+  }
+}
+/* line 48, ../scss/partials/_footer.scss */
+footer .social-container {
+  margin: 20px 5px 70px 5px;
+}
+/* line 50, ../scss/partials/_footer.scss */
+footer .social-container div {
+  background-size: 37px 37px;
+  width: 37px;
+  height: 37px;
+  margin: auto;
+  display: inline-block;
+  margin: 0 25px;
+}
+/* line 61, ../scss/partials/_footer.scss */
+footer #footer-logo {
+  background-size: 290px 24px;
+  width: 290px;
+  height: 24px;
+  margin: 10px auto;
+}
+/* line 68, ../scss/partials/_footer.scss */
+footer .footer-credits {
+  padding: 0 4px;
+}
+/* line 70, ../scss/partials/_footer.scss */
+footer .footer-credits p {
+  display: inline-block;
+  font-size: 0.8em;
+  margin: 6px 0 0 0;
+}
+/* line 76, ../scss/partials/_footer.scss */
+footer .footer-credits span {
+  margin: 0 10px;
 }
 
 /*********************

@@ -1,24 +1,63 @@
+<?php 
+    // $my_query = new WP_Query( 'name=contact' ); // I used a category id 1 as an example
+    ?>
+    <?php //if ( $my_query->have_posts() ) : 
+
+
+    // $address = get_field('address'); ?>
+
+
+    <!-- <div id="post-<?php the_ID(); ?>" <?php post_class(); ?>> -->
+    <?php //while ($my_query->have_posts()) : $my_query->the_post(); ?>
+
+
+    <?php //endwhile; ?>
+
+    <!-- </div> -->
+
+    <?php
+    // wp_reset_postdata(); 
+    // endif;
+    ?>
+
+<div class="gold-line" style="background-image: url(<?php echo get_template_directory_uri(); ?>/library/images/gold-border-bottom.png);"></div>
+
 			<footer class="footer" role="contentinfo" itemscope itemtype="http://schema.org/WPFooter">
 
-				<div id="inner-footer" class="wrap cf">
+				<div id="inner-footer" class="cf">
 
-					<nav role="navigation">
-						<?php wp_nav_menu(array(
-    					'container' => 'div',                           // enter '' to remove nav container (just make sure .footer-links in _base.scss isn't wrapping)
-    					'container_class' => 'footer-links cf',         // class of container (should you choose to use it)
-    					'menu' => __( 'Footer Links', 'bonestheme' ),   // nav name
-    					'menu_class' => 'nav footer-nav cf',            // adding custom nav class
-    					'theme_location' => 'footer-links',             // where it's located in the theme
-    					'before' => '',                                 // before the menu
-    					'after' => '',                                  // after the menu
-    					'link_before' => '',                            // before each link
-    					'link_after' => '',                             // after each link
-    					'depth' => 0,                                   // limit the depth of the nav
-    					'fallback_cb' => 'bones_footer_links_fallback'  // fallback function
-						)); ?>
-					</nav>
+					<ul>
+						<li class="contact-item">
+							<div class="footer-icon" style="background-image: url(<?php echo get_template_directory_uri(); ?>/library/images/logo-icon.svg);"></div>
+							<h4>Address</h4>
+							<p>54 West 21st Street, RM 508<br>NYC, NY 10010</p>
+						</li>
 
-					<p class="source-org copyright">&copy; <?php echo date('Y'); ?> <?php bloginfo( 'name' ); ?>.</p>
+						<li class="contact-item">
+							<div class="footer-icon" style="background-image: url(<?php echo get_template_directory_uri(); ?>/library/images/logo-icon.svg);"></div>
+							<h4>Email</h4>
+							<p>reps@thefamilynyc.com</p>
+						</li>
+
+						<li class="contact-item">
+							<div class="footer-icon" style="background-image: url(<?php echo get_template_directory_uri(); ?>/library/images/logo-icon.svg);"></div>
+							<h4>Phone</h4>
+							<p>T: 212 477 4248</p>
+						</li>
+					</ul>
+
+					<div class="social-container">
+						<a href="#" target="_blank"><div id="facebook" style="background-image: url(<?php echo get_template_directory_uri(); ?>/library/images/social/fb.svg);"></div></a>						
+						<a href="#" target="_blank"><div id="twitter" style="background-image: url(<?php echo get_template_directory_uri(); ?>/library/images/social/twitter.svg);"></div></a>
+						<a href="#" target="blank"><div id="instagram" style="background-image: url(<?php echo get_template_directory_uri(); ?>/library/images/social/instagram.svg);"></div></a>
+					</div>
+
+					<div id="footer-logo" style="background-image: url(<?php echo get_template_directory_uri(); ?>/library/images/footer_logo.svg);"></div>
+					<div class="footer-credits">
+						<p>Branding by The Second Column.<span>|</span></p>
+						<p>&copy; <?php echo date('Y'); ?> <?php bloginfo( 'name' ); ?>.<span>|</span></p>
+						<p>Website by ClickFire Media.</p>
+					</div>
 
 				</div>
 
