@@ -282,7 +282,10 @@ POSTS & CONTENT STYLES
 			background-color: $white;
 			margin-bottom:0;
 
-			header { padding: 1.5em; }
+			header { 
+				// padding: 1.5em; 
+				padding:0; 
+			}
 
 			footer {
 				padding: 1.5em;

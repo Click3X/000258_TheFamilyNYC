@@ -1,7 +1,10 @@
 // PROJECTS
 // HIDE HEADER BG IMAGE AND LOGO ON WORK PAGE
-.page-id-13 #triangle-header {
-	display: none;
+.page-id-13 {
+	
+	#triangle-header { display: none; }
+	 
+	.article-header { margin:6em auto 3em; }
 }
 
 // CENTER TABLE

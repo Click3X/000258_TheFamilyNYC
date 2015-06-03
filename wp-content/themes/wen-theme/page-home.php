@@ -18,16 +18,19 @@
 // TEAM MEMBERS AND PROJECTS DATA
 $pKey = 0;
 $tmKey = 0;
+$fmKey = 0;
 
 // POST DATA VARS
 $teamMembers = [];
 $projects = [];
-$partners = [];
+// $partners = [];
+$familyMembers = [];
 
 
 // GET FAMILY MEMBERS AND PROJECTS
 $args = array(
-  'post_type' => array('family-member', 'project')
+  'post_type' => array('family-member', 'project', 'team-member'),
+  'posts_per_page' => -1
 );
 
 $the_query = new WP_Query( $args );
@@ -36,7 +39,7 @@ $the_query = new WP_Query( $args );
 if ( $the_query->have_posts() ) {
 	while ( $the_query->have_posts() ) {
 		$the_query->the_post();
-		if($post->post_type == 'family-member') {
+		if($post->post_type == 'team-member') {
 			$teamMembers[$tmKey] = $post;
 			$tmKey++;
 		} elseif($post->post_type == 'project') {
@@ -59,26 +62,20 @@ if ( $the_query->have_posts() ) {
 				$projects[] = $project;
 			}	
 			$pKey++;
+		} elseif($post->post_type == 'family-member' ) {
+			$fam = $post;
+			$familyMembers[] = $fam;
+			$fmKey++;
 		}
 	}
 }
 /* Restore original Post Data */
 wp_reset_postdata();
 
-
-// STANDARD LOOP
-if (have_posts()) : while (have_posts()) : the_post(); 
-	$partners = get_field('partners');
-endwhile;
-endif;
-/* Restore original Post Data */
-wp_reset_postdata();
-
-
-
-// helper($teamMembers);
-// helper($projects);
-// helper($partners);
+// OUR VARS
+helper($familyMembers);
+helper($teamMembers);
+helper($projects);
 
 
 ?>
