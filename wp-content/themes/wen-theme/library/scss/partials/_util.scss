@@ -26,20 +26,28 @@ ul { margin:0; }
 .page-title {
 	font-size: 1.5em;
 	margin:0.05em auto;
-	@media(min-width: 768px) {
-		font-size: 2em;
+	position: relative;
+	display: block;
+	@media(min-width: 768px) { font-size: 2em; }
+
+	&:after {
+		content: "";
+		display: block;
+		border-bottom: 1px dashed $border-gray;
+		width: 15%; max-width: 144px;
+		margin: 0.85em auto 1em;
 	}
 }
 
 .page-sub-title {
 	font-size: 1.2em;
-	@media(min-width: 768px) {
-		font-size: 1.6em;
-	}
+	@media(min-width: 768px) { font-size: 1.6em; }
 }
 
 .article-header {
-	margin:2em auto;
+	// margin:3em auto;
+	margin:6em auto 3em;
+	text-align: center;
 }
 
 
@@ -47,4 +55,17 @@ video {
 	display: block;
 	width: 100% !important;
 	height: 100% !important;
+}
+
+.btn {
+	text-decoration: none;
+	outline: none;
+	text-transform: uppercase;
+	background:$project-gold; color:white;
+	display: inline-block;
+	margin: 0 auto;
+	font-size: 0.8em;
+	padding:0.4em 1.5em 0.25em;
+	font-weight: 800;
+	letter-spacing: 0.05em;
 }

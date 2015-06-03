@@ -2386,6 +2386,8 @@ ul {
 .page-title {
   font-size: 1.5em;
   margin: 0.05em auto;
+  position: relative;
+  display: block;
 }
 @media (min-width: 768px) {
   /* line 26, ../scss/partials/_util.scss */
@@ -2393,43 +2395,73 @@ ul {
     font-size: 2em;
   }
 }
+/* line 33, ../scss/partials/_util.scss */
+.page-title:after {
+  content: "";
+  display: block;
+  border-bottom: 1px dashed #a8b2a8;
+  width: 15%;
+  max-width: 144px;
+  margin: 0.85em auto 1em;
+}
 
-/* line 34, ../scss/partials/_util.scss */
+/* line 42, ../scss/partials/_util.scss */
 .page-sub-title {
   font-size: 1.2em;
 }
 @media (min-width: 768px) {
-  /* line 34, ../scss/partials/_util.scss */
+  /* line 42, ../scss/partials/_util.scss */
   .page-sub-title {
     font-size: 1.6em;
   }
 }
 
-/* line 41, ../scss/partials/_util.scss */
+/* line 47, ../scss/partials/_util.scss */
 .article-header {
-  margin: 2em auto;
+  margin: 6em auto 3em;
+  text-align: center;
 }
 
-/* line 46, ../scss/partials/_util.scss */
+/* line 54, ../scss/partials/_util.scss */
 video {
   display: block;
   width: 100% !important;
   height: 100% !important;
 }
 
-/* line 2, ../scss/partials/_projects.scss */
+/* line 60, ../scss/partials/_util.scss */
+.btn {
+  text-decoration: none;
+  outline: none;
+  text-transform: uppercase;
+  background: #d4a551;
+  color: white;
+  display: inline-block;
+  margin: 0 auto;
+  font-size: 0.8em;
+  padding: 0.4em 1.5em 0.25em;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+}
+
+/* line 3, ../scss/partials/_projects.scss */
+.page-id-13 #triangle-header {
+  display: none;
+}
+
+/* line 8, ../scss/partials/_projects.scss */
 .center-table > div {
   width: 50%;
   display: block;
   margin: 0 auto;
 }
-/* line 6, ../scss/partials/_projects.scss */
+/* line 12, ../scss/partials/_projects.scss */
 .center-table > div img {
   width: 100%;
   display: block;
 }
 
-/* line 9, ../scss/partials/_projects.scss */
+/* line 15, ../scss/partials/_projects.scss */
 .center-table {
   display: table;
   height: auto;
@@ -2437,30 +2469,30 @@ video {
   border-collapse: collapse;
 }
 
-/* line 16, ../scss/partials/_projects.scss */
+/* line 22, ../scss/partials/_projects.scss */
 .center-table > div {
   width: auto;
 }
 
 @media (min-width: 768px) {
-  /* line 20, ../scss/partials/_projects.scss */
+  /* line 26, ../scss/partials/_projects.scss */
   .center-table > div {
     display: table-cell;
     margin: 0;
     width: 50%;
     vertical-align: middle;
   }
-  /* line 27, ../scss/partials/_projects.scss */
+  /* line 33, ../scss/partials/_projects.scss */
   .center-table > .txt-container {
     width: 30%;
   }
 }
-/* line 34, ../scss/partials/_projects.scss */
+/* line 40, ../scss/partials/_projects.scss */
 .bg-img {
   background-size: 0;
 }
 @media (min-width: 768px) {
-  /* line 34, ../scss/partials/_projects.scss */
+  /* line 40, ../scss/partials/_projects.scss */
   .bg-img {
     background-repeat: no-repeat;
     background-size: cover;
@@ -2468,41 +2500,41 @@ video {
   }
 }
 
-/* line 45, ../scss/partials/_projects.scss */
+/* line 51, ../scss/partials/_projects.scss */
 .project {
   font-size: 15px;
   background: #f7f6f1;
 }
-/* line 51, ../scss/partials/_projects.scss */
+/* line 56, ../scss/partials/_projects.scss */
 .project h1, .project h2 {
   margin: .35em auto;
   letter-spacing: 0.05em;
   line-height: 1.15em;
 }
-/* line 57, ../scss/partials/_projects.scss */
+/* line 62, ../scss/partials/_projects.scss */
 .project h1 {
   color: #1b381d;
   font-size: 1.1em;
   margin: 0 auto 0.35em;
 }
 @media (min-width: 1060px) {
-  /* line 57, ../scss/partials/_projects.scss */
+  /* line 62, ../scss/partials/_projects.scss */
   .project h1 {
     font-size: 1.25em;
   }
 }
-/* line 67, ../scss/partials/_projects.scss */
+/* line 72, ../scss/partials/_projects.scss */
 .project h2 {
   color: #d4a551;
   font-size: 0.9em;
 }
 @media (min-width: 1060px) {
-  /* line 67, ../scss/partials/_projects.scss */
+  /* line 72, ../scss/partials/_projects.scss */
   .project h2 {
     font-size: 1em;
   }
 }
-/* line 75, ../scss/partials/_projects.scss */
+/* line 80, ../scss/partials/_projects.scss */
 .project p {
   font-size: 15px;
   line-height: 1.65em;
@@ -2510,42 +2542,42 @@ video {
   max-width: 26em;
   margin: 1em auto 2em;
 }
-/* line 82, ../scss/partials/_projects.scss */
+/* line 87, ../scss/partials/_projects.scss */
 .project .txt-container {
   padding: 1.2em;
 }
 @media (min-width: 768px) {
-  /* line 85, ../scss/partials/_projects.scss */
+  /* line 90, ../scss/partials/_projects.scss */
   .project p {
     margin: 1em auto 0;
     font-size: 13px;
   }
 }
 @media (min-width: 900px) {
-  /* line 45, ../scss/partials/_projects.scss */
+  /* line 51, ../scss/partials/_projects.scss */
   .project {
     font-size: 20px;
   }
-  /* line 97, ../scss/partials/_projects.scss */
+  /* line 98, ../scss/partials/_projects.scss */
   .project p {
     font-size: 0.75em;
     margin: 1em auto 0;
   }
 }
 @media (max-width: 767px) {
-  /* line 105, ../scss/partials/_projects.scss */
+  /* line 106, ../scss/partials/_projects.scss */
   .project .table-header,
   .project .img-container {
     display: table-header-group;
   }
-  /* line 110, ../scss/partials/_projects.scss */
-  .project .img-container {
-    height: 200px;
-  }
-  /* line 115, ../scss/partials/_projects.scss */
+  /* line 109, ../scss/partials/_projects.scss */
   .project .table-footer,
   .project .text-container {
     display: table-footer-group;
+  }
+  /* line 112, ../scss/partials/_projects.scss */
+  .project .img-container {
+    height: 200px;
   }
 }
 

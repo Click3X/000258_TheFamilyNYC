@@ -1,3 +1,9 @@
+// PROJECTS
+// HIDE HEADER BG IMAGE AND LOGO ON WORK PAGE
+.page-id-13 #triangle-header {
+	display: none;
+}
+
 // CENTER TABLE
 .center-table > div {
 	width: 50%; display: block;
@@ -45,7 +51,6 @@
 .project {
 	// DECLARE FONT-SIZE AT TOP OF CLASS TO MAKE RELATVIVE
 	font-size: 15px;
-
 	background: $project-peach;
 
 	h1, h2 {
@@ -86,10 +91,6 @@
 			margin: 1em auto 0; 
 			font-size: 13px;
 		}
-
-		// .txt-container {
-		// 	padding:2em 1.2em;
-		// }
 	}
 
 	@media(min-width:900px) {
@@ -103,17 +104,13 @@
 	// BACKWARDS MEDIA QUERY
 	@media(max-width: 767px) {
 		.table-header,
-		.img-container { 
-			display: table-header-group; 
-		}
-
-		.img-container {
-			// padding-bottom: 50%; display: block;
-			height: 200px;
-		}
+		.img-container { display: table-header-group; }
 		
 		.table-footer,
 		.text-container { display: table-footer-group; }
+
+		.img-container { height: 200px; }
+
 	}
 
 }

@@ -29,6 +29,7 @@
 								<header class="article-header">
 										<h2 class="page-sub-title italic"><?php bloginfo('title');?></h2>
 										<h1 class="page-title"><?php the_title(); ?></h1>
+										<a id="sort-by" href="#" class="btn sort-by">Sort By</a>
 								</header>
 						<?php 
 							endwhile; 
@@ -38,7 +39,7 @@
 						?>
 
 						<?php 
-							// WORK PROJECTS ARRAY TO STORE VARS
+							// WORK PROJECTS ARRAY TO STORE VAR
 							$projects = [];
 							// WORK PROJECT POSTS
 							$args = array(
