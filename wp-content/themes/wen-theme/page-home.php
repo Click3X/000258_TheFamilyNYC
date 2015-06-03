@@ -91,15 +91,14 @@ wp_reset_postdata();
 
 						<article id="post-<?php the_ID(); ?>" <?php post_class( 'cf' ); ?> role="article" itemscope itemtype="http://schema.org/BlogPosting">
 
-							<header class="article-header">
-								<h1 class="page-title"><?php the_title(); ?></h1>
-							</header>
+						</article>
 
-							<section class="entry-content cf" itemprop="articleBody">
-								<?php
-									the_content();
-								?>
-							</section>
+						<article id="featured-posts" class="cs featured-posts" role="article" itemscope itemtype="http://schema.org/BlogPosting">
+
+							<header class="article-header">
+									<h2 class="page-sub-title italic">Featured</h2>
+									<h1 class="page-title">Posts</h1>
+							</header>
 
 							<section id="projects-list" class="projects-list cf" itemprop="articleBody">
 								<?php printProject($projects); ?>
