@@ -72,11 +72,31 @@ if ( $the_query->have_posts() ) {
 /* Restore original Post Data */
 wp_reset_postdata();
 
-// OUR VARS
-helper($familyMembers);
-helper($teamMembers);
-helper($projects);
 
+// VARS WE WANT FROM HOME PAGE
+$sub_title = "";
+$content = "";
+// STANDARD LOOP for HOME PAGE FIELDS
+if (have_posts()) : while (have_posts()) : the_post(); 
+	// $partners = get_field('partners');
+	$sub_title = get_field('sub-title');
+	$content = get_the_content();
+endwhile;
+endif;
+/* Restore original Post Data */
+wp_reset_postdata();
+
+// OUR VARS
+// helper($familyMembers);
+// helper($teamMembers);
+// helper($projects);
+
+// PAGE VARS 
+// $sub_title
+// $content
+// $familyMembers
+// $teamMembers
+// $projects
 
 ?>
 
