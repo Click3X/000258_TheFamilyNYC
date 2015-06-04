@@ -1,0 +1,92 @@
+// TEAM MEMBERS
+.team-members-module {
+// .family-member-list-container { 
+	position: relative; 
+	padding: 0 30px;
+	max-width: 1260px;
+	margin:0 auto;
+}
+
+.team-member-list {
+	.team-member { font-size: 20px; }
+
+	.img-container {
+		width: auto;
+
+		@media(min-width: 768px) { width:42.857143%; }
+		
+		img {
+			width:60%; max-width: 275px;
+			margin: 0 auto;
+			padding-top: 0.5em; 
+
+			@media(min-width: 768px) { 
+				// max-width: 435px; 
+				max-width: 406px; 
+				// max-height: 373px;
+				max-height: 348px;
+				width: auto; 
+				float: right;
+				padding-right: 1em; padding-top: 1em; 
+			}
+		}
+	}
+
+	.txt-container {
+		width:auto;
+		text-align: center;
+		padding:0 30px;
+
+		@media(min-width: 768px) { 
+			width:57.142857%; 
+			padding:0;
+		}
+		
+		.txt-wrapper {
+			text-align: center;
+			color:$project-green;
+			max-width: 23em;
+			float: none;
+			margin: 0.5em auto 1.25em;
+
+			@media(min-width: 768px) { margin:0 1.5em; }
+			
+			h1 { font-size: 1em; }
+			
+			p { 
+				font-size: 0.75em;
+				max-width:none;
+				margin-left:auto; margin-right:auto;
+			}
+			
+			.team-member-email { 
+				font-weight: 700;
+				text-decoration: none;
+				color:$project-green;
+				font-size: 0.75em;
+			}
+		}
+	}
+
+
+	@media(min-width: 768px) {
+		.team-member .img-container img { float:right; }
+		.team-member:nth-child(odd) {
+			.img-container img { float:left; }
+			.txt-wrapper { float:right; }
+		}
+	}
+
+		// BACKWARDS MEDIA QUERY
+	@media(max-width: 767px) {
+		.table-header,
+		.img-container { display: table-header-group; }
+		
+		.table-footer,
+		.text-container { display: table-footer-group; }
+
+		// .img-container { height: 200px; }
+
+	}
+
+}

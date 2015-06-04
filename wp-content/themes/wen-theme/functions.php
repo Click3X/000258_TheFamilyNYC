@@ -345,6 +345,63 @@ function printProject($projects) {
 	echo '</ul>';
 }
 
+// TEAM MEMBERS
+function printTemaMembers($teamMembers) {
+	echo '<section class="team-member-list-container cf">'; // START TEAM MEMBERS SECTION
+		echo '<ul id="team-member-list" class="cf team-member-list">';
+				foreach ($teamMembers as $key => $teamMember) {
+					// IMAGE SRC
+					$src = $teamMember['image'];
+					// TITLE
+					$title = cleanString($teamMember['title']);
+
+					// OUTPUT PROJECT
+					echo '<li id="team-member-'.$teamMember['id'].'" class="cf team-member">';
+						echo '<!-- TOP GOLD LINE -->
+							<div class="gold-line" style="background-image: url('.get_template_directory_uri().'/library/images/gold-border-bottom.png);"></div>';
+						echo '<div class="center-table wrap">';
+							// MODOLU TESTING IS FOR FRONT-END 'CHECKERED LOOK'
+							if($key % 2 != 0) {
+								// IMAGE
+								echo '<div class="img-container">';
+									echo '<div class="img-wrapper">';
+										echo '<img src="'.$src[0].'">';
+									echo '</div>';
+								echo '</div>';
+
+								// TEXT
+								echo '<div class="txt-container">';
+									echo '<div class="txt-wrapper">';
+										echo '<h1 class="p-title">'.$teamMember['title'].'</h1>';
+										echo $teamMember['description'];
+										echo '<a href="mailto:'.$teamMember['email'].'" class="team-member-email">'.$teamMember['email'].'</a>';
+									echo '</div>';
+								echo '</div>';
+							} else {
+								// TEXT
+								echo '<div class="txt-container">';
+									echo '<div class="txt-wrapper">';
+										echo '<h1 class="p-title">'.$teamMember['title'].'</h1>';
+										echo $teamMember['description'];
+										echo '<a href="mailto:'.$teamMember['email'].'" class="team-member-email">'.$teamMember['email'].'</a>';
+									echo '</div>';
+								echo '</div>';
+
+								// IMAGE
+								echo '<div class="img-container">';
+									echo '<div class="img-wrapper">';
+										echo '<img src="'.$src[0].'">';
+									echo '</div>';
+								echo '</div>';
+							}
+						echo '</div>';
+					echo '</li>';
+				}
+		echo '</ul>';
+	echo '</section>'; // END TEAM MEMBERS SECTION
+}
+
+
 // FAMILY MEMBERS
 function printFamilyMembers($familyMembers) {
 	echo '<section class="family-member-list-container cf">'; // START FAMILY MEMBERS SECTION
