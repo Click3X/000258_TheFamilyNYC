@@ -8,7 +8,7 @@
 }
 
 .team-member-list {
-	.team-member { font-size: 20px; }
+	// .team-member { font-size: 20px; }
 
 	.img-container {
 		width: auto;
@@ -39,7 +39,6 @@
 
 		@media(min-width: 768px) { 
 			width:57.142857%; 
-			padding:0;
 		}
 		
 		.txt-wrapper {
@@ -54,7 +53,7 @@
 			h1 { font-size: 1em; }
 			
 			p { 
-				font-size: 0.75em;
+  				line-height: 1.3em;
 				max-width:none;
 				margin-left:auto; margin-right:auto;
 			}
@@ -63,7 +62,18 @@
 				font-weight: 700;
 				text-decoration: none;
 				color:$project-green;
-				font-size: 0.75em;
+			}
+
+			p, .team-member-email { 
+				font-size: 0.875em;
+			}
+
+			@media(min-width: 768px) { 
+				h1 { font-size: 1.5em; }	
+				p, 
+				.team-member-email { 
+					font-size: 1em;
+				}
 			}
 		}
 	}

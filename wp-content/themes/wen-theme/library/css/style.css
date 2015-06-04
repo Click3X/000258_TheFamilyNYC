@@ -3094,10 +3094,6 @@ a.arrow-right {
   margin: 0 auto;
 }
 
-/* line 11, ../scss/partials/_team-members-module.scss */
-.team-member-list .team-member {
-  font-size: 20px;
-}
 /* line 13, ../scss/partials/_team-members-module.scss */
 .team-member-list .img-container {
   width: auto;
@@ -3136,10 +3132,9 @@ a.arrow-right {
   /* line 35, ../scss/partials/_team-members-module.scss */
   .team-member-list .txt-container {
     width: 57.142857%;
-    padding: 0;
   }
 }
-/* line 45, ../scss/partials/_team-members-module.scss */
+/* line 44, ../scss/partials/_team-members-module.scss */
 .team-member-list .txt-container .txt-wrapper {
   text-align: center;
   color: #1b381d;
@@ -3148,50 +3143,64 @@ a.arrow-right {
   margin: 0.5em auto 1.25em;
 }
 @media (min-width: 768px) {
-  /* line 45, ../scss/partials/_team-members-module.scss */
+  /* line 44, ../scss/partials/_team-members-module.scss */
   .team-member-list .txt-container .txt-wrapper {
     margin: 0 1.5em;
   }
 }
-/* line 54, ../scss/partials/_team-members-module.scss */
+/* line 53, ../scss/partials/_team-members-module.scss */
 .team-member-list .txt-container .txt-wrapper h1 {
   font-size: 1em;
 }
-/* line 56, ../scss/partials/_team-members-module.scss */
+/* line 55, ../scss/partials/_team-members-module.scss */
 .team-member-list .txt-container .txt-wrapper p {
-  font-size: 0.75em;
+  line-height: 1.3em;
   max-width: none;
   margin-left: auto;
   margin-right: auto;
 }
-/* line 62, ../scss/partials/_team-members-module.scss */
+/* line 61, ../scss/partials/_team-members-module.scss */
 .team-member-list .txt-container .txt-wrapper .team-member-email {
   font-weight: 700;
   text-decoration: none;
   color: #1b381d;
-  font-size: 0.75em;
+}
+/* line 67, ../scss/partials/_team-members-module.scss */
+.team-member-list .txt-container .txt-wrapper p, .team-member-list .txt-container .txt-wrapper .team-member-email {
+  font-size: 0.875em;
 }
 @media (min-width: 768px) {
+  /* line 72, ../scss/partials/_team-members-module.scss */
+  .team-member-list .txt-container .txt-wrapper h1 {
+    font-size: 1.5em;
+  }
   /* line 73, ../scss/partials/_team-members-module.scss */
+  .team-member-list .txt-container .txt-wrapper p,
+  .team-member-list .txt-container .txt-wrapper .team-member-email {
+    font-size: 1em;
+  }
+}
+@media (min-width: 768px) {
+  /* line 83, ../scss/partials/_team-members-module.scss */
   .team-member-list .team-member .img-container img {
     float: right;
   }
-  /* line 75, ../scss/partials/_team-members-module.scss */
+  /* line 85, ../scss/partials/_team-members-module.scss */
   .team-member-list .team-member:nth-child(odd) .img-container img {
     float: left;
   }
-  /* line 76, ../scss/partials/_team-members-module.scss */
+  /* line 86, ../scss/partials/_team-members-module.scss */
   .team-member-list .team-member:nth-child(odd) .txt-wrapper {
     float: right;
   }
 }
 @media (max-width: 767px) {
-  /* line 82, ../scss/partials/_team-members-module.scss */
+  /* line 92, ../scss/partials/_team-members-module.scss */
   .team-member-list .table-header,
   .team-member-list .img-container {
     display: table-header-group;
   }
-  /* line 85, ../scss/partials/_team-members-module.scss */
+  /* line 95, ../scss/partials/_team-members-module.scss */
   .team-member-list .table-footer,
   .team-member-list .text-container {
     display: table-footer-group;
