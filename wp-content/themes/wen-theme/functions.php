@@ -364,4 +364,35 @@ function printFamilyMembers($familyMembers) {
 	echo '</ul>';
 }
 
+// NEWS MODULE
+// - PASS IN AN ARRAY OF NEWS POSTS (DEFAULT WP POST)
+function printNews($newss) {
+
+	echo '<ul id="news-list" class="cf news-list">';
+	foreach ($newss as $key => $news) {
+		// OUTPUT news
+		echo '<li id="news-'.$key.'" class="cf news">';
+			echo '<div class="center-table">';
+				// IMAGE
+				echo '<div class="img-container">';
+					echo '<img src="'.$news['image'][0].'">';
+				echo '</div>';
+
+				// TEXT
+				echo '<div class="txt-container">';
+					echo '<div class="txt-wrapper">';
+						// TITLE
+						echo '<h1 class="p-title">'.$news['title'].'</h1>';
+						// CONTENT
+						echo '<p class="excerpt">'.$news['excerpt'].'</p>';
+						// BUTTON
+						echo '<a href="'.$news['link'].'" class="btn news-link">Learn More</a>';
+					echo '</div>';
+				echo '</div>';
+			echo '</div>';
+		echo '</li>';
+	}
+	echo '</ul>';
+}
+
 /* DON'T DELETE THIS CLOSING TAG */ ?>

@@ -2917,6 +2917,30 @@ video {
   }
 }
 
+/* line 3, ../scss/partials/_news-module.scss */
+.news-list .img-container {
+  width: 35%;
+}
+/* line 5, ../scss/partials/_news-module.scss */
+.news-list .img-container img {
+  width: 90%;
+  float: right;
+  max-width: 435px;
+}
+/* line 12, ../scss/partials/_news-module.scss */
+.news-list .txt-container {
+  width: 65%;
+  text-align: center;
+}
+/* line 17, ../scss/partials/_news-module.scss */
+.news-list .txt-container .txt-wrapper p {
+  font-size: 1.4em;
+  max-width: 23em;
+  margin: 1.75em auto;
+  color: #000;
+  line-height: 1.3em;
+}
+
 /*********************
 LARGER MOBILE DEVICES
 This is for devices like the Galaxy Note or something that's

@@ -19,17 +19,18 @@
 $pKey = 0;
 $tmKey = 0;
 $fmKey = 0;
+$nsKey = 0;
 
 // POST DATA VARS
 $teamMembers = [];
-$projects = [];
-// $partners = [];
 $familyMembers = [];
+$projects = [];
+$newss = [];
 
 
 // GET FAMILY MEMBERS AND PROJECTS
 $args = array(
-  'post_type' => array('family-member', 'project', 'team-member'),
+  'post_type' => array('family-member', 'project', 'team-member', 'post'),
   'posts_per_page' => -1
 );
 
@@ -72,6 +73,20 @@ if ( $the_query->have_posts() ) {
 				);
 			$familyMembers[] = $fam;
 			$fmKey++;
+		// NEWS POSTS
+		} elseif($post->post_type == 'post' ) {
+			// GET POST THUMBNAIL SRC
+			$url_src = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID) , 'full' );
+			// FILTER OUT FAMILY MEMBERS
+			$news = array(
+				'title'=>get_the_title(),
+				'image'=>$url_src,
+				'excerpt'=>get_the_excerpt(),
+				'content'=>get_the_content(),
+				'link'=>get_the_permalink()
+				);
+			$newss[] = $news;
+			$nsKey++;
 		}
 	}
 }
@@ -96,6 +111,7 @@ wp_reset_postdata();
 // helper($familyMembers);
 // helper($teamMembers);
 // helper($projects);
+// helper($newss);
 
 // PAGE VARS 
 // $sub_title
@@ -103,6 +119,7 @@ wp_reset_postdata();
 // $familyMembers
 // $teamMembers
 // $projects
+// $newss
 
 ?>
 
@@ -131,6 +148,7 @@ wp_reset_postdata();
 							<!-- END HEADER BG -->
 						</article>
 
+
 						<!-- FAMILY MEMBERS -->
 						<div class="family-members-container">
 							<!-- TOP GOLD LINE -->
@@ -142,7 +160,7 @@ wp_reset_postdata();
 										<h1 class="page-title">Members</h1>
 								</header>
 								<!-- FAMILY MEMBER LIST -->
-								<section class="family-member-list cf">
+								<section class="family-member-list-container cf">
 									<?php 
 									printFamilyMembers($familyMembers);
 									?>
@@ -151,6 +169,7 @@ wp_reset_postdata();
 							<!-- BOTTOM GOLD LINE -->
 							<div class="gold-line" style="background-image: url(<?php echo get_template_directory_uri(); ?>/library/images/gold-border-bottom.png);"></div>
 						</div>
+
 
 						<!-- HOME PART 2 -->
 						<article id="post-<?php the_ID(); ?>-2" class="cf wrap home-content-2" role="article" itemscope itemtype="http://schema.org/BlogPosting">
@@ -162,17 +181,26 @@ wp_reset_postdata();
 
 
 						<!-- NEWS -->
-						<!-- TOP GOLD LINE -->
-						<div class="gold-line" style="background-image: url(<?php echo get_template_directory_uri(); ?>/library/images/gold-border-bottom.png);"></div>
-						<article id="news" class="cf wrap news" role="article" itemscope itemtype="http://schema.org/BlogPosting">
-							<!-- TITLE -->
-							<header class="article-header">
-									<h2 class="page-sub-title italic">The Family</h2>
-									<h1 class="page-title">News</h1>
-							</header>
-						</article>
-						<!-- BOTTOM GOLD LINE -->
-						<div class="gold-line" style="background-image: url(<?php echo get_template_directory_uri(); ?>/library/images/gold-border-bottom.png);"></div>
+						<!-- FAMILY MEMBERS -->
+						<div class="news-container">
+							<!-- TOP GOLD LINE -->
+							<div class="gold-line" style="background-image: url(<?php echo get_template_directory_uri(); ?>/library/images/gold-border-bottom.png);"></div>
+							<article id="news" class="cf wrap news" role="article" itemscope itemtype="http://schema.org/BlogPosting">
+								<!-- TITLE -->
+								<header class="article-header">
+										<h2 class="page-sub-title italic">The Family</h2>
+										<h1 class="page-title">News</h1>
+								</header>
+								<!-- NEWS LIST -->
+								<section class="news-list-container cf">
+									<?php 
+										printNews($newss);
+									?>
+								</section>
+							</article>
+							<!-- BOTTOM GOLD LINE -->
+							<div class="gold-line" style="background-image: url(<?php echo get_template_directory_uri(); ?>/library/images/gold-border-bottom.png);"></div>
+						</div>
 
 						<article id="featured-posts" class="cf warp featured-posts" role="article" itemscope itemtype="http://schema.org/BlogPosting">
 							<header class="article-header">

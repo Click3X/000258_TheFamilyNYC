@@ -1,0 +1,26 @@
+// NEWS MODULE
+.news-list {
+	.img-container {
+		width: 35%;
+		img {
+			width:90%;
+			float: right;
+			max-width: 435px;
+		}
+	}
+
+	.txt-container {
+		width: 65%;
+		text-align: center;
+
+		.txt-wrapper {
+			p {
+				font-size: 1.4em;
+				max-width: 23em;
+				margin: 1.75em auto;
+				color: #000;
+				line-height: 1.3em;
+			}
+		}
+	}
+}
