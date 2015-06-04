@@ -311,7 +311,8 @@ function printProject($projects) {
 				echo '<div class="txt-container">';
 					echo '<div class="txt-wrapper">';
 						echo '<h1 class="p-title">'.$project['title'].'</h1>';
-						echo '<h2 class="p-client">'.$project['client'].'</h2>';
+						// echo '<h2 class="p-client">'.$project['client'].'</h2>';
+						echo '<div class="client-wrap"><img src="'.get_bloginfo("template_url").'/library/images/by.png" class="by"><h2 class="p-client">'.$project['client'].'</h2></div>';
 						echo $project['description'];
 					echo '</div>';
 				echo '</div>';
@@ -346,53 +347,61 @@ function printProject($projects) {
 
 // FAMILY MEMBERS
 function printFamilyMembers($familyMembers) {
-	echo '<ul id="family-member-list" class="cf family-member-list">';
-		foreach ($familyMembers as $key => $familyMember) {
-			// IF NO LINK SUPPLIED, THEN HREF IS HASH #
-			if($familyMember['link'] == '') { $link = '#'; } 
-				else { $link = $familyMember['link']; }
+	echo '<section class="family-member-list-container cf">'; // START FAMILY MEMBERS SECTION
+		echo '<a href="#" class="arrow arrow-left"></a>';
+		echo '<ul id="family-member-list" class="cf family-member-list">';
+			foreach ($familyMembers as $key => $familyMember) {
+				// IF NO LINK SUPPLIED, THEN HREF IS HASH #
+				if($familyMember['link'] == '') { $link = '#'; } 
+					else { $link = $familyMember['link']; }
 
-			// IMAGE SRC
-			$src = $familyMember['image'];
+				// IMAGE SRC
+				$src = $familyMember['image'];
 
-			echo '<li id="family-member-'.$key.'" class="cf family-member">';
-					echo '<a href="'.$link.'" class="family-member-link">';
-						echo '<img src="'.$src['url'].'">';
-					echo '</a>';
-			echo '</li>';
-		}
-	echo '</ul>';
+				echo '<li id="family-member-'.$key.'" class="cf family-member">';
+						echo '<a href="'.$link.'" class="family-member-link">';
+							echo '<img src="'.$src['url'].'">';
+						echo '</a>';
+				echo '</li>';
+			}
+		echo '</ul>';
+		echo '<a href="#" class="arrow arrow-right"></a>';
+	echo '</section>'; // END FAMILY MEMBERS SECTION
 }
 
 // NEWS MODULE
 // - PASS IN AN ARRAY OF NEWS POSTS (DEFAULT WP POST)
 function printNews($newss) {
+	echo '<section class="news-list-container cf">'; // START NEWS SECTION
+		echo '<a href="#" class="arrow arrow-left"></a>';
+		echo '<ul id="news-list" class="cf news-list">';
+		foreach ($newss as $key => $news) {
+			// OUTPUT news
+			echo '<li id="news-'.$key.'" class="cf news">';
+				echo '<div class="center-table">';
+					// IMAGE
+					echo '<div class="img-container">';
+						echo '<img src="'.$news['image'][0].'">';
+					echo '</div>';
 
-	echo '<ul id="news-list" class="cf news-list">';
-	foreach ($newss as $key => $news) {
-		// OUTPUT news
-		echo '<li id="news-'.$key.'" class="cf news">';
-			echo '<div class="center-table">';
-				// IMAGE
-				echo '<div class="img-container">';
-					echo '<img src="'.$news['image'][0].'">';
-				echo '</div>';
-
-				// TEXT
-				echo '<div class="txt-container">';
-					echo '<div class="txt-wrapper">';
-						// TITLE
-						echo '<h1 class="p-title">'.$news['title'].'</h1>';
-						// CONTENT
-						echo '<p class="excerpt">'.$news['excerpt'].'</p>';
-						// BUTTON
-						echo '<a href="'.$news['link'].'" class="btn news-link">Learn More</a>';
+					// TEXT
+					echo '<div class="txt-container">';
+						echo '<div class="txt-wrapper">';
+							// NEWS - FAMILY
+							echo '<h2 class="page-sub-title italic">The Family</h2>
+									<h1 class="page-title">News</h1>';
+							// CONTENT
+							echo '<p class="excerpt">'.$news['excerpt'].'</p>';
+							// BUTTON
+							echo '<a href="'.$news['link'].'" class="btn news-link">Learn More</a>';
+						echo '</div>';
 					echo '</div>';
 				echo '</div>';
-			echo '</div>';
-		echo '</li>';
-	}
-	echo '</ul>';
+			echo '</li>';
+		}
+		echo '</ul>';
+		echo '<a href="#" class="arrow arrow-right"></a>';
+	echo '</section>'; // END NEWS SECITION
 }
 
 /* DON'T DELETE THIS CLOSING TAG */ ?>

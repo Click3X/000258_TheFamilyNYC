@@ -22,16 +22,20 @@ ul { margin:0; }
 }
 
 .page-title {
-	font-size: 1.5em;
-	margin:0.05em auto;
+	font-size: 1.125em;
+	margin:0.1em auto;
 	position: relative;
 	display: block;
+	@media(min-width: 768px) {
+		font-size: 1.5em;
+		margin:0.05em auto;
+	}
 }
 
 .sub-title,
 	h2.sub-title {
 		line-height: 1.6em;
-		font-size: 1.0125em;
+		font-size: 1em;
 		max-width: 23em;
 		margin: 0 auto;
 		font-weight: 800;
@@ -99,4 +103,30 @@ video {
 		.page-title { font-size: 2em; }
 		.page-sub-title {font-size: 1.6em; }
 	}
+}
+// SLIDER ARROWS
+a.arrow,
+a.arrow {
+	display: block;
+	position: absolute;
+	top:0; bottom:0;
+	margin: auto;
+	z-index: 10;
+	// width: 0; height: 0;
+	height: 30px; width: 24px;
+	border-style: solid;
+
+	@include prefix( transform,rotate(360deg) );
+}
+.arrow-left,
+a.arrow-left {
+	border-width: 15px 20px 15px 0;
+	border-color: transparent $project-gold transparent transparent;
+	left:0;
+}
+.arrow-right,
+a.arrow-right {
+	border-width: 15px 0 15px 20px;
+	border-color: transparent transparent transparent $project-gold;
+	right:0;
 }

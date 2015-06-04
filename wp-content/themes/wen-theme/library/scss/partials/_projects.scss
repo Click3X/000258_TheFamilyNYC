@@ -65,19 +65,15 @@
 	h1 {
 		color:$project-green;
 		font-size: 1.1em;
-		margin: 0 auto 0.35em;
+		margin: 0 auto 0.15em;
 
-		@media(min-width: 1060px) {
-			font-size: 1.25em;
-		}
+		@media(min-width: 1060px) { font-size: 1.25em; }
 	}
 
 	h2 {
 		color:$project-gold;
 		font-size: 0.9em;
-		@media(min-width: 1060px) {
-			font-size: 1em;
-		}
+		@media(min-width: 1060px) { font-size: 1em; }
 	}
 	
 	p {
@@ -88,6 +84,33 @@
 	}
 
 	.txt-container { padding:1.2em; }
+	.txt-wrapper {text-align: center; }
+
+	.client-wrap {
+		text-align: center;
+		margin:0 auto;
+		position: relative;
+		display: inline-block;
+		h2 {
+			display: inline-block;
+			margin:0 0 0 0.35em;
+		}
+		img.by {
+			display: inline;
+			width:26px; height:22px;
+			padding:0;
+			vertical-align: middle;
+			vertical-align: -webkit-baseline-middle;
+			vertical-align: -moz-baseline-middle;
+			vertical-align: -o-baseline-middle;
+			vertical-align: -ms-baseline-middle;
+			vertical-align: baseline-middle;
+
+			@media(min-width:900px) {
+				width: 35px; height: 31px;
+			}
+		}
+	}
 
 	@media(min-width: 768px) {
 		p { 

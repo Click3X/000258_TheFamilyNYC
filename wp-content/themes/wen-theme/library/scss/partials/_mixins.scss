@@ -71,3 +71,10 @@ probably best not to use it. I mean, were you going to anyway? */
 }
 
 
+
+// PREFIX
+@mixin prefix($property, $value, $prefixes: ("-webkit-","-moz-","-o-","-ms-","")) {
+  @each $prefix in $prefixes {
+    #{$prefix}#{$property}: #{$value};
+  }
+}

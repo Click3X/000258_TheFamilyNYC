@@ -160,11 +160,7 @@ wp_reset_postdata();
 										<h1 class="page-title">Members</h1>
 								</header>
 								<!-- FAMILY MEMBER LIST -->
-								<section class="family-member-list-container cf">
-									<?php 
-									printFamilyMembers($familyMembers);
-									?>
-								</section>
+								<?php printFamilyMembers($familyMembers); ?>
 							</article>
 							<!-- BOTTOM GOLD LINE -->
 							<div class="gold-line" style="background-image: url(<?php echo get_template_directory_uri(); ?>/library/images/gold-border-bottom.png);"></div>
@@ -186,17 +182,8 @@ wp_reset_postdata();
 							<!-- TOP GOLD LINE -->
 							<div class="gold-line" style="background-image: url(<?php echo get_template_directory_uri(); ?>/library/images/gold-border-bottom.png);"></div>
 							<article id="news" class="cf wrap news" role="article" itemscope itemtype="http://schema.org/BlogPosting">
-								<!-- TITLE -->
-								<header class="article-header">
-										<h2 class="page-sub-title italic">The Family</h2>
-										<h1 class="page-title">News</h1>
-								</header>
 								<!-- NEWS LIST -->
-								<section class="news-list-container cf">
-									<?php 
-										printNews($newss);
-									?>
-								</section>
+								<?php printNews($newss); ?>
 							</article>
 							<!-- BOTTOM GOLD LINE -->
 							<div class="gold-line" style="background-image: url(<?php echo get_template_directory_uri(); ?>/library/images/gold-border-bottom.png);"></div>
