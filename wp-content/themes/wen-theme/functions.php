@@ -344,4 +344,24 @@ function printProject($projects) {
 	echo '</ul>';
 }
 
+// FAMILY MEMBERS
+function printFamilyMembers($familyMembers) {
+	echo '<ul id="family-member-list" class="cf family-member-list">';
+		foreach ($familyMembers as $key => $familyMember) {
+			// IF NO LINK SUPPLIED, THEN HREF IS HASH #
+			if($familyMember['link'] == '') { $link = '#'; } 
+				else { $link = $familyMember['link']; }
+
+			// IMAGE SRC
+			$src = $familyMember['image'];
+
+			echo '<li id="family-member-'.$key.'" class="cf family-member">';
+					echo '<a href="'.$link.'" class="family-member-link">';
+						echo '<img src="'.$src['url'].'">';
+					echo '</a>';
+			echo '</li>';
+		}
+	echo '</ul>';
+}
+
 /* DON'T DELETE THIS CLOSING TAG */ ?>

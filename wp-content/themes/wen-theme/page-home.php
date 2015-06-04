@@ -63,7 +63,13 @@ if ( $the_query->have_posts() ) {
 			}	
 			$pKey++;
 		} elseif($post->post_type == 'family-member' ) {
-			$fam = $post;
+			// $fam = $post;
+			// FILTER OUT FAMILY MEMBERS
+			$fam = array(
+				'title'=>get_the_title(),
+				'image'=>get_field('image'),
+				'link'=>get_field('link')
+				);
 			$familyMembers[] = $fam;
 			$fmKey++;
 		}
@@ -126,24 +132,25 @@ wp_reset_postdata();
 						</article>
 
 						<!-- FAMILY MEMBERS -->
-						<!-- TOP GOLD LINE -->
-						<div class="gold-line" style="background-image: url(<?php echo get_template_directory_uri(); ?>/library/images/gold-border-bottom.png);"></div>
-						<article id="family-members" class="cs wrap family-members" role="article" itemscope itemtype="http://schema.org/BlogPosting">
-							<!-- TITLE -->
-							<header class="article-header">
-									<h2 class="page-sub-title italic">Family</h2>
-									<h1 class="page-title">Members</h1>
-							</header>
-							<!-- FAMILY MEMBER LIST -->
-							<section class="family-member-list cf">
-								<?php 
-								// printFamilyMembers(); 
-								?>
-							</section>
-						</article>
-						<!-- BOTTOM GOLD LINE -->
-						<div class="gold-line" style="background-image: url(<?php echo get_template_directory_uri(); ?>/library/images/gold-border-bottom.png);"></div>
-
+						<div class="family-members-container">
+							<!-- TOP GOLD LINE -->
+							<div class="gold-line" style="background-image: url(<?php echo get_template_directory_uri(); ?>/library/images/gold-border-bottom.png);"></div>
+							<article id="family-members" class="cs wrap family-members" role="article" itemscope itemtype="http://schema.org/BlogPosting">
+								<!-- TITLE -->
+								<header class="article-header">
+										<h2 class="page-sub-title italic">Family</h2>
+										<h1 class="page-title">Members</h1>
+								</header>
+								<!-- FAMILY MEMBER LIST -->
+								<section class="family-member-list cf">
+									<?php 
+									printFamilyMembers($familyMembers);
+									?>
+								</section>
+							</article>
+							<!-- BOTTOM GOLD LINE -->
+							<div class="gold-line" style="background-image: url(<?php echo get_template_directory_uri(); ?>/library/images/gold-border-bottom.png);"></div>
+						</div>
 
 						<!-- HOME PART 2 -->
 						<article id="post-<?php the_ID(); ?>-2" class="cf wrap home-content-2" role="article" itemscope itemtype="http://schema.org/BlogPosting">

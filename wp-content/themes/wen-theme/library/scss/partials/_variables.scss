@@ -16,6 +16,17 @@ COLORS
 Need help w/ choosing your colors? Try this site out:
 http://0to255.com/
 *********************/
+// THE FAMILY STYLES
+$footer-green: #1c391e;
+$gold: #cc9c40;
+$light-gold: #f7f6f1;
+
+$project-green: #1b381d;
+$project-gold:#d4a551;
+$project-peach: #f7f6f1;
+$border-gray: #a8b2a8;
+
+// BONES DEFAULT
 
 $alert-yellow:      #ebe16f;
 $alert-red:         #fbe3e4;
@@ -37,21 +48,13 @@ $green:             #7dd667;
 $bones-pink:        #f01d4f;
 $blue:              #2980b9;
 
-$link-color:        $bones-pink;
-$link-hover:        darken($link-color, 9%);
+// $link-color:        $bones-pink;
+$link-color:        white;
+// $link-hover:        darken($link-color, 9%);
+$link-hover:        white;
 
 $border-color:      #ccc;
 $disabled-gray:     #cfcfcf;
-
-// THE FAMILY STYLES
-$footer-green: #1c391e;
-$gold: #cc9c40;
-$light-gold: #f7f6f1;
-
-$project-green: #1b381d;
-$project-gold:#d4a551;
-$project-peach: #f7f6f1;
-$border-gray: #a8b2a8;
 
 /** ---- window sizes ----**/
 $tablet-small : 480px;

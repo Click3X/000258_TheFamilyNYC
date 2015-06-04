@@ -1897,7 +1897,7 @@ LINK STYLES
 *********************/
 /* line 89, ../scss/breakpoints/_base.scss */
 a, a:visited {
-  color: #f01d4f;
+  color: white;
   outline: none;
   border: none;
   border-color: transparent;
@@ -1907,7 +1907,7 @@ a, a:visited {
 }
 /* line 96, ../scss/breakpoints/_base.scss */
 a:hover, a:focus, a:visited:hover, a:visited:focus {
-  color: #d10e3c;
+  color: white;
   outline: none;
   border: none;
   border-color: transparent;
@@ -2833,12 +2833,23 @@ video {
 
 /* line 34, ../scss/partials/_home.scss */
 .family-members header.article-header {
-  margin: 1.75em auto;
+  margin: 1.75em auto 0;
 }
 
 /* line 40, ../scss/partials/_home.scss */
 .featured-posts header.article-header {
   margin: 8em auto 5em;
+}
+
+/* line 46, ../scss/partials/_home.scss */
+.family-members-container {
+  padding-top: 11%;
+}
+@media (min-width: 1400px) {
+  /* line 46, ../scss/partials/_home.scss */
+  .family-members-container {
+    padding-top: 154px;
+  }
 }
 
 /* line 3, ../scss/partials/_family-members.scss */
@@ -2863,6 +2874,47 @@ video {
   text-align: center;
   margin: auto;
   padding: 20px 40px;
+}
+
+/* line 4, ../scss/partials/_family-members-module.scss */
+.family-member-list li {
+  display: block;
+  width: 50%;
+  height: 0;
+  float: left;
+  position: relative;
+  padding-bottom: 50%;
+}
+@media (min-width: 480px) {
+  /* line 4, ../scss/partials/_family-members-module.scss */
+  .family-member-list li {
+    width: 33.3333333%;
+    padding-bottom: 33.3333333%;
+  }
+}
+@media (min-width: 768px) {
+  /* line 4, ../scss/partials/_family-members-module.scss */
+  .family-member-list li {
+    width: 25%;
+    padding-bottom: 21%;
+  }
+}
+/* line 20, ../scss/partials/_family-members-module.scss */
+.family-member-list li .family-member-link img {
+  width: 70%;
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+@media (min-width: 480px) {
+  /* line 20, ../scss/partials/_family-members-module.scss */
+  .family-member-list li .family-member-link img {
+    width: 50%;
+  }
 }
 
 /*********************
