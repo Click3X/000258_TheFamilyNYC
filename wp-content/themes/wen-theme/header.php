@@ -84,7 +84,7 @@
 			</header>
 
 			<!-- ONLY PRINT HEADER IF NOT HOME PAGE -->
-			<?php // if(!is_page(6)) { ?>
+			<?php if(!is_page(6)) { ?>
 				<!-- TRANGLES HEADER BG-->
 				<div id="triangle-header" style="background-image: url(<?php echo get_template_directory_uri(); ?>/library/images/header-bg.png);">
 					<div class="logo-wrapper cf">
@@ -92,4 +92,4 @@
 						<div id="down-arrow" style="background-image: url(<?php echo get_template_directory_uri(); ?>/library/images/down-arrow.png);"></div>
 					</div>
 				</div>
-			<?php // } ?>
+			<?php } ?>

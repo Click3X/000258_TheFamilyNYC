@@ -9,6 +9,22 @@
 	@media(min-width: 920px) { padding-bottom: 700px; }
 }
 
+// HOME PAGE NO BACKGROUND, INSTEAD USE WRAPPER
+.page-id-6 {
+	#triangle-header {
+		background:none;
+	}
+	.tri-logo-wrapper {
+		text-align: center;
+
+		.article-header {
+			display: inline-block;
+			background: #fff;
+			margin-bottom:0; padding-bottom:3em;
+		}
+	}
+}
+
 #family-logo {
 	background-repeat:no-repeat;
 	background-size: cover;
@@ -28,6 +44,10 @@
 		position: absolute;
 		top: 0; bottom: 0; left: 0; right: 0;
 		margin: auto;
+	}
+
+	@media(min-width: 768px) {
+		bottom: -8%;
 	}
 	
 	@media(min-width: 920px) { height: 423px; }

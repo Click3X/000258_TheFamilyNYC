@@ -68,10 +68,17 @@ video {
 	padding:0.4em 1.5em;
 	font-weight: 800;
 	letter-spacing: 0.05em;
-<<<<<<< HEAD
 	@media(min-width: 768px) {
 		font-size: 0.8em;
 		padding:0.4em 1.5em 0.25em;
+	}
+
+	cursor: pointer;
+	@include transition(all 0.2s ease-in-out);
+
+	&:hover {
+		color: $project-gold;
+		background-color: $footer-green;
 	}
 }
 
@@ -91,14 +98,5 @@ video {
 	@media(min-width: 768px) { 
 		.page-title { font-size: 2em; }
 		.page-sub-title {font-size: 1.6em; }
-=======
-	cursor: pointer;
-	@include transition(all 0.2s ease-in-out);
-
-
-	&:hover {
-		color: $white;
-		background-color: $footer-green;
->>>>>>> ad928e69585ee53180d8990d34592a1be7fe8d27
 	}
 }
