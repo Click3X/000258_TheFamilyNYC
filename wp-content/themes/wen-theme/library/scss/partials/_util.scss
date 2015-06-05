@@ -43,9 +43,7 @@ ul { margin:0; }
 
 .sub-title,
 	h2.sub-title {
-		line-height: 1.6em;
-		// font-size: 1em;
-		font-size: 0.8em;
+		line-height: 1.6em; font-size: 0.8em;
 		max-width: 23em;
 		margin: 0 auto;
 		font-weight: 800;
@@ -59,8 +57,12 @@ ul { margin:0; }
 .page-sub-title { font-size: 1.2em; }
 
 .article-header {
-	margin:3em auto;
+	// margin:3em auto 2em;
+	margin:2em auto;
 	text-align: center;
+	@media(min-width: 768px) { 
+		margin:3em auto;
+	}
 }
 
 

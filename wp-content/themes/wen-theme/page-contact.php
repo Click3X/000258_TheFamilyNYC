@@ -15,8 +15,14 @@
 
 						<?php 
 							// PAGE INFO
+							$contact = [];
 							// LOOP 1: NORMAL LOOP
-							if (have_posts()) : while (have_posts()) : the_post(); ?>
+							if (have_posts()) : while (have_posts()) : the_post(); 
+								$contact['sub-title'] = get_field('sub-title');
+								$contact['address'] = get_field('address');
+								$contact['phone'] = get_field('phone');
+								$contact['email'] = get_field('email');
+								?>
 								<header class="article-header">
 										<h2 class="page-sub-title italic"><?php bloginfo('title');?></h2>
 										<h1 class="page-title">Team</h1>
@@ -59,11 +65,30 @@
 							endif;
 							wp_reset_postdata(); 
 							// END LOOP 2: WP QUERY LOOP
-
-							// helper($teamMembers);
-							// PRINT CUSTOM PROJECTS FUNCTION DECLARED IN FUNCTIONS PHP
-							printTemaMembers($teamMembers);
 						?>
+						
+						<article id="team-members-container" class="team-members-container cf">
+							<?php
+								// PRINT CUSTOM PROJECTS FUNCTION DECLARED IN FUNCTIONS PHP
+								printTemaMembers($teamMembers);
+							?>
+						</article>
+
+						<!-- CONTACT PAGE CONTENT -->
+						<div class="gold-line" style="background-image: url(<?php echo get_template_directory_uri(); ?>/library/images/gold-border-bottom.png);"></div>
+						<article id="contact-page-content" class="contact-page-content cf">
+							<h3><?php echo $contact['sub-title']; ?></h3>
+							<address><?php echo $contact['address']; ?></address>
+							<a class="phone" href="tel:<?php echo $contact['phone'];?>">T <?php echo $contact['phone'];?></a>
+							<a class="email" href="mailto:<?php echo $content['email'];?>"><?php echo $contact['email'];?></a>
+						</article>
+
+						<!-- MAP CONTENT -->
+						<div class="gold-line" style="background-image: url(<?php echo get_template_directory_uri(); ?>/library/images/gold-border-bottom.png);"></div>
+						<article id="contact-map" class="contact-map cf">
+							<div id="map-canvas" class="map-canvas cf"></div>
+						</article>
+						
 
 					</main>
 

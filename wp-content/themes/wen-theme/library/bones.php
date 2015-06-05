@@ -141,6 +141,11 @@ function bones_scripts_and_styles() {
 		//adding scripts file in the footer
 		wp_register_script( 'bones-js', get_stylesheet_directory_uri() . '/library/js/scripts.js', array( 'jquery' ), '', true );
 
+		// REGISTER GOOGLE MAP SCRIPTS
+		wp_register_script( 'google-maps-base-js', 'https://maps.googleapis.com/maps/api/js?v=3.exp&amp;sensor=false', '', '', false );
+		wp_register_script( 'google-maps-js', get_stylesheet_directory_uri() . '/library/js/google-maps.js', array('google-maps-base-js'), '', false );
+		
+
 		// enqueue styles and scripts
 		wp_enqueue_script( 'bones-modernizr' );
 		wp_enqueue_style( 'bones-stylesheet' );
@@ -156,6 +161,10 @@ function bones_scripts_and_styles() {
 		wp_enqueue_script( 'jquery' );
 		wp_enqueue_script( 'bones-js' );
 
+		if(is_page(42)) {
+			wp_enqueue_script( 'google-maps-base-js' );
+			wp_enqueue_script( 'google-maps-js' );			
+		}
 	}
 }
 

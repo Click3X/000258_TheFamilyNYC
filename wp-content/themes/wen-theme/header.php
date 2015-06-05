@@ -37,7 +37,7 @@
 
 		<?php // drop Google Analytics Here ?>
 		<?php // end analytics ?>
-
+		
 	</head>
 
 	<body <?php body_class(); ?> itemscope itemtype="http://schema.org/WebPage" id="<?php echo $post->post_name; ?>">

@@ -1307,7 +1307,7 @@ them however you see fit.
 }
 /* line 92, ../scss/partials/_triangle_header.scss */
 .non-home-header #triangle-header {
-  padding-bottom: 40%;
+  padding-bottom: 50%;
 }
 @media (min-width: 1400px) {
   /* line 92, ../scss/partials/_triangle_header.scss */
@@ -1363,17 +1363,22 @@ footer .contact-item h4 {
 footer .contact-item p {
   font-size: 0.8em;
 }
+/* line 43, ../scss/partials/_footer.scss */
+footer .contact-item a {
+  color: white;
+  text-decoration: none;
+}
 @media (max-width: 605px) {
   /* line 18, ../scss/partials/_footer.scss */
   footer .contact-item {
     width: 80%;
   }
 }
-/* line 49, ../scss/partials/_footer.scss */
+/* line 52, ../scss/partials/_footer.scss */
 footer .social-container {
   margin: 20px 5px 70px 5px;
 }
-/* line 51, ../scss/partials/_footer.scss */
+/* line 54, ../scss/partials/_footer.scss */
 footer .social-container div {
   background-size: 37px 37px;
   width: 37px;
@@ -1382,24 +1387,24 @@ footer .social-container div {
   display: inline-block;
   margin: 0 25px;
 }
-/* line 62, ../scss/partials/_footer.scss */
+/* line 65, ../scss/partials/_footer.scss */
 footer #footer-logo {
   background-size: 290px 24px;
   width: 290px;
   height: 24px;
   margin: 10px auto;
 }
-/* line 69, ../scss/partials/_footer.scss */
+/* line 72, ../scss/partials/_footer.scss */
 footer .footer-credits {
   padding: 0 4px;
 }
-/* line 71, ../scss/partials/_footer.scss */
+/* line 74, ../scss/partials/_footer.scss */
 footer .footer-credits p {
   display: inline-block;
   font-size: 0.8em;
   margin: 6px 0 0 0;
 }
-/* line 77, ../scss/partials/_footer.scss */
+/* line 80, ../scss/partials/_footer.scss */
 footer .footer-credits span {
   margin: 0 10px;
 }
@@ -2631,25 +2636,31 @@ h2.sub-title {
   }
 }
 
-/* line 59, ../scss/partials/_util.scss */
+/* line 57, ../scss/partials/_util.scss */
 .page-sub-title {
   font-size: 1.2em;
 }
 
-/* line 61, ../scss/partials/_util.scss */
+/* line 59, ../scss/partials/_util.scss */
 .article-header {
-  margin: 3em auto;
+  margin: 2em auto;
   text-align: center;
 }
+@media (min-width: 768px) {
+  /* line 59, ../scss/partials/_util.scss */
+  .article-header {
+    margin: 3em auto;
+  }
+}
 
-/* line 67, ../scss/partials/_util.scss */
+/* line 69, ../scss/partials/_util.scss */
 video {
   display: block;
   width: 100% !important;
   height: 100% !important;
 }
 
-/* line 73, ../scss/partials/_util.scss */
+/* line 75, ../scss/partials/_util.scss */
 .btn {
   text-decoration: none;
   outline: none;
@@ -2667,19 +2678,19 @@ video {
   transition: all 0.2s ease-in-out;
 }
 @media (min-width: 768px) {
-  /* line 73, ../scss/partials/_util.scss */
+  /* line 75, ../scss/partials/_util.scss */
   .btn {
     font-size: 0.8em;
     padding: 0.4em 1.5em 0.25em;
   }
 }
-/* line 93, ../scss/partials/_util.scss */
+/* line 95, ../scss/partials/_util.scss */
 .btn:hover {
   color: #d4a551;
   background-color: #1c391e;
 }
 
-/* line 103, ../scss/partials/_util.scss */
+/* line 105, ../scss/partials/_util.scss */
 .page-id-13 .page-title:after {
   content: "";
   display: block;
@@ -2689,17 +2700,17 @@ video {
   margin: 0.85em auto 1em;
 }
 @media (min-width: 768px) {
-  /* line 113, ../scss/partials/_util.scss */
+  /* line 115, ../scss/partials/_util.scss */
   .page-id-13 .page-title {
     font-size: 2em;
   }
-  /* line 114, ../scss/partials/_util.scss */
+  /* line 116, ../scss/partials/_util.scss */
   .page-id-13 .page-sub-title {
     font-size: 1.6em;
   }
 }
 
-/* line 118, ../scss/partials/_util.scss */
+/* line 120, ../scss/partials/_util.scss */
 a.arrow,
 a.arrow {
   display: block;
@@ -2718,7 +2729,7 @@ a.arrow {
   transform: rotate(360deg);
 }
 
-/* line 131, ../scss/partials/_util.scss */
+/* line 133, ../scss/partials/_util.scss */
 .arrow-left,
 a.arrow-left {
   border-width: 15px 20px 15px 0;
@@ -2726,7 +2737,7 @@ a.arrow-left {
   left: 0;
 }
 
-/* line 137, ../scss/partials/_util.scss */
+/* line 139, ../scss/partials/_util.scss */
 .arrow-right,
 a.arrow-right {
   border-width: 15px 0 15px 20px;
@@ -3015,6 +3026,50 @@ a.arrow-right {
   text-align: center;
   margin: auto;
   padding: 20px 40px;
+}
+
+/* line 2, ../scss/partials/_contact.scss */
+.contact-page-content {
+  margin: 1.5em auto;
+  text-align: center;
+}
+@media (min-width: 768px) {
+  /* line 2, ../scss/partials/_contact.scss */
+  .contact-page-content {
+    margin: 3.8em auto;
+  }
+}
+/* line 10, ../scss/partials/_contact.scss */
+.contact-page-content h3 {
+  margin: 1.15em auto;
+}
+/* line 11, ../scss/partials/_contact.scss */
+.contact-page-content a, .contact-page-content address {
+  display: block;
+  color: #1b381d;
+  text-decoration: none;
+  font-weight: 800;
+  font-style: normal;
+  font-size: 0.85em;
+  margin: 1em auto;
+  line-height: 1.3em;
+}
+
+/* line 24, ../scss/partials/_contact.scss */
+.map-canvas {
+  padding-bottom: 300px;
+}
+@media (min-width: 960px) {
+  /* line 24, ../scss/partials/_contact.scss */
+  .map-canvas {
+    padding-bottom: 32.142857%;
+  }
+}
+@media (min-width: 1400px) {
+  /* line 24, ../scss/partials/_contact.scss */
+  .map-canvas {
+    padding-bottom: 450px;
+  }
 }
 
 /* line 2, ../scss/partials/_family-members-module.scss */

@@ -1,0 +1,35 @@
+// CONTACT 
+.contact-page-content {
+	margin: 1.5em auto;
+	text-align: center;
+
+	@media(min-width: 768px) {
+		margin: 3.8em auto;
+	}
+
+	h3 {margin:1.15em auto;}
+	a, address {
+		display: block;
+		color:$project-green;
+		text-decoration: none;
+		font-weight: 800;
+		font-style: normal;
+		font-size: 0.85em;
+		margin: 1em auto;
+		line-height: 1.3em;
+	}
+}
+
+// .contact-map,
+.map-canvas {
+	// padding-bottom: 50%;
+	// height: 450px;
+	padding-bottom: 300px; 
+	@media(min-width: 960px) {
+		padding-bottom: 32.142857%;
+	}
+	@media(min-width: 1400px) {
+		padding-bottom: 450px;	
+	}
+	
+}

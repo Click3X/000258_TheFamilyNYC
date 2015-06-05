@@ -1,25 +1,4 @@
-<?php 
-    // $my_query = new WP_Query( 'name=contact' ); // I used a category id 1 as an example
-    ?>
-    <?php //if ( $my_query->have_posts() ) : 
-
-
-    // $address = get_field('address'); ?>
-
-
-    <!-- <div id="post-<?php the_ID(); ?>" <?php post_class(); ?>> -->
-    <?php //while ($my_query->have_posts()) : $my_query->the_post(); ?>
-
-
-    <?php //endwhile; ?>
-
-    <!-- </div> -->
-
-    <?php
-    // wp_reset_postdata(); 
-    // endif;
-    ?>
-
+<?php // FOOTER PHP ?>
 			<div class="gold-line" style="background-image: url(<?php echo get_template_directory_uri(); ?>/library/images/gold-border-bottom.png);"></div>
 
 			<footer class="footer" role="contentinfo" itemscope itemtype="http://schema.org/WPFooter">
