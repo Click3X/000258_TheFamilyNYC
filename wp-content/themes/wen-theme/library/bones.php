@@ -147,6 +147,10 @@ function bones_scripts_and_styles() {
 
 		// TABS
 		wp_register_script( 'tabs-js', get_stylesheet_directory_uri() . '/library/js/tabs.js', '', '', true );
+
+		// SWIPER
+		wp_register_script( 'swiper-js', get_stylesheet_directory_uri() . '/library/js/swiper/swiper.min.js', '', '', true );
+		wp_register_style( 'swiper-css', get_stylesheet_directory_uri() . '/library/js/swiper/swiper.min.css', array(), '' );
 		
 
 		// enqueue styles and scripts
@@ -155,6 +159,11 @@ function bones_scripts_and_styles() {
 		wp_enqueue_style( 'bones-ie-only' );
 
 		$wp_styles->add_data( 'bones-ie-only', 'conditional', 'lt IE 9' ); // add conditional wrapper around ie stylesheet
+
+
+		// ENQUEUE SWIPER
+		wp_enqueue_style( 'swiper-css' );
+		wp_enqueue_script( 'swiper-js' );
 
 		/*
 		I recommend using a plugin to call jQuery
