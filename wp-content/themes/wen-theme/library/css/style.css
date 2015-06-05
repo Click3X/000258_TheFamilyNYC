@@ -1072,7 +1072,7 @@ them however you see fit.
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: 5;
+  z-index: 1005;
   top: 100%;
   opacity: 0;
   -webkit-transition: opacity 0.4s;
@@ -2049,7 +2049,7 @@ HEADER STYLES
   position: fixed;
   width: 100%;
   top: 0;
-  z-index: 6;
+  z-index: 1006;
 }
 
 /* line 189, ../scss/breakpoints/_base.scss */
@@ -3093,13 +3093,18 @@ a.arrow-right {
   }
 }
 
+/* line 154, ../scss/partials/_projects.scss */
+video {
+  cursor: pointer;
+}
+
 @media (min-width: 768px) {
-  /* line 157, ../scss/partials/_projects.scss */
+  /* line 160, ../scss/partials/_projects.scss */
   .mobile .video-container {
     position: relative;
     padding-top: 50.15%;
   }
-  /* line 162, ../scss/partials/_projects.scss */
+  /* line 165, ../scss/partials/_projects.scss */
   .mobile .video-container video, .mobile .video-container object {
     display: block;
     position: absolute;
