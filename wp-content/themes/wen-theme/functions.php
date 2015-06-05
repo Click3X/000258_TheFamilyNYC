@@ -349,8 +349,6 @@ function printTemaMembers($teamMembers) {
 	echo '<section class="team-member-list-container cf">'; // START TEAM MEMBERS SECTION
 		echo '<ul id="team-member-list" class="cf team-member-list">';
 				foreach ($teamMembers as $key => $teamMember) {
-					// IMAGE SRC
-					$src = $teamMember['image'];
 					// TITLE
 					$title = cleanString($teamMember['title']);
 
@@ -364,7 +362,7 @@ function printTemaMembers($teamMembers) {
 								// IMAGE
 								echo '<div class="img-container">';
 									echo '<div class="img-wrapper">';
-										echo '<img src="'.$src[0].'">';
+										echo '<img src="'.$teamMember['image'][0].'">';
 									echo '</div>';
 								echo '</div>';
 
@@ -389,7 +387,7 @@ function printTemaMembers($teamMembers) {
 								// IMAGE
 								echo '<div class="img-container">';
 									echo '<div class="img-wrapper">';
-										echo '<img src="'.$src[0].'">';
+										echo '<img src="'.$teamMember['image'][0].'">';
 									echo '</div>';
 								echo '</div>';
 							}
@@ -450,6 +448,41 @@ function printNews($newss) {
 							echo '<p class="excerpt">'.$news['excerpt'].'</p>';
 							// BUTTON
 							echo '<a href="'.$news['link'].'" class="btn news-link">Learn More</a>';
+						echo '</div>';
+					echo '</div>';
+				echo '</div>';
+			echo '</li>';
+		}
+		echo '</ul>';
+		echo '<a href="#" class="arrow arrow-right"></a>';
+	echo '</section>'; // END NEWS SECITION
+}
+
+// -TEAM MEMBER SLIDER FOR TEAM HISTORY PAGE
+function printTeamMemberSlider($teamMembers) {
+	echo '<section class="team-member-list-container wrap cf">'; // START NEWS SECTION
+		echo '<a href="#" class="arrow arrow-left"></a>';
+		echo '<ul id="team-member-list-slider" class="cf news-list team-member-list">';
+		foreach ($teamMembers as $key => $teamMember) {
+			// OUTPUT news
+			echo '<li id="tm-'.$key.'" class="cf news tm">';
+				echo '<div class="center-table">';
+					// IMAGE
+					echo '<div class="img-container">';
+						echo '<img src="'.$teamMember['image'][0].'">';
+					echo '</div>';
+
+					// TEXT
+					echo '<div class="txt-container">';
+						echo '<div class="txt-wrapper">';
+							// NEWS - FAMILY
+							echo '<h2 class="page-sub-title italic">The Family</h2>
+									<h1 class="page-title">Team</h1>';
+							// CONTENT
+							echo $teamMember['description'];
+							// EMAIL
+							echo '<a href="mailto:'.$teamMember['email'].'" class="team-member-email">'.$teamMember['email'].'</a>';
+
 						echo '</div>';
 					echo '</div>';
 				echo '</div>';

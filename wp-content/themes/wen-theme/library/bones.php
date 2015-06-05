@@ -144,6 +144,9 @@ function bones_scripts_and_styles() {
 		// REGISTER GOOGLE MAP SCRIPTS
 		wp_register_script( 'google-maps-base-js', 'https://maps.googleapis.com/maps/api/js?v=3.exp&amp;sensor=false', '', '', false );
 		wp_register_script( 'google-maps-js', get_stylesheet_directory_uri() . '/library/js/google-maps.js', array('google-maps-base-js'), '', false );
+
+		// TABS
+		wp_register_script( 'tabs-js', get_stylesheet_directory_uri() . '/library/js/tabs.js', '', '', true );
 		
 
 		// enqueue styles and scripts
@@ -161,9 +164,15 @@ function bones_scripts_and_styles() {
 		wp_enqueue_script( 'jquery' );
 		wp_enqueue_script( 'bones-js' );
 
+		// IF CONTACT PAGE GET GOOGLE MAPS CODE
 		if(is_page(42)) {
 			wp_enqueue_script( 'google-maps-base-js' );
 			wp_enqueue_script( 'google-maps-js' );			
+		}
+
+		// IF FAMILY MEMBERS PAGE GET TAB CODE
+		if( is_page(19) ) {
+			wp_enqueue_script( 'tabs-js' );	
 		}
 	}
 }
