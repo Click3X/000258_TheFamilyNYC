@@ -87,14 +87,14 @@ LINK STYLES
 *********************/
 
 a, a:visited {
-	color: $link-color;
+	// color: $link-color;
 	outline: none;
 	border: none;
 	border-color: transparent;
 
 	/* on hover */
 	&:hover, &:focus {
-		color: $link-hover;
+		// color: $link-hover;
 		outline: none;
 		border: none;
 		border-color: transparent;

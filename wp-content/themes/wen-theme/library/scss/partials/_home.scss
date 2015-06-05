@@ -9,8 +9,12 @@
 
 .home-content-2 {
 	.article-header {
-		margin:7.75em auto;
-	}
+		margin:3.5em auto;
+		padding:0 1.2em;
+		@media(min-width: 768px) {
+			margin:7.75em auto;
+		}
+	}	
 }
 
 .page-content {
@@ -21,18 +25,22 @@
 	font-size: 1em; line-height: 1.7em;
 
 	h3 { 
-	  	font-size: 1.5em;
+	  	font-size: 1.2em;
   		margin: 0.3em auto;
   	}
   	h4 {
-  		font-size: 1.2em;
+  		font-size: 1em;
   	}
   	p { margin: 2em auto 1em; }
+
+  	@media(min-width: 768px) {
+  		h3 { font-size: 1.5em; }
+  		h4 { font-size: 1.2em; }
+  	}
 }
 
 .family-members {
 	header.article-header {
-		// margin:1.75em auto 0;
 		margin:0 auto;
 		padding-top:1.75em;
 	}	
@@ -40,7 +48,10 @@
 
 .featured-posts {
 	header.article-header {
-		margin:8em auto 5em;
+		margin:3.5em auto 3em;
+		@media(min-width: 768px) {
+			margin:8em auto 5em;
+		}
 	}	
 }
 

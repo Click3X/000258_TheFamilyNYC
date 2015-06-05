@@ -311,7 +311,6 @@ function printProject($projects) {
 				echo '<div class="txt-container">';
 					echo '<div class="txt-wrapper">';
 						echo '<h1 class="p-title">'.$project['title'].'</h1>';
-						// echo '<h2 class="p-client">'.$project['client'].'</h2>';
 						echo '<div class="client-wrap"><img src="'.get_bloginfo("template_url").'/library/images/by.png" class="by"><h2 class="p-client">'.$project['client'].'</h2></div>';
 						echo $project['description'];
 					echo '</div>';
@@ -321,7 +320,7 @@ function printProject($projects) {
 				echo '<div class="txt-container">';
 					echo '<div class="txt-wrapper">';
 						echo '<h1 class="p-title">'.$project['title'].'</h1>';
-						echo '<h2 class="p-client">'.$project['client'].'</h2>';
+						echo '<div class="client-wrap"><img src="'.get_bloginfo("template_url").'/library/images/by.png" class="by"><h2 class="p-client">'.$project['client'].'</h2></div>';
 						echo $project['description'];
 					echo '</div>';
 				echo '</div>';

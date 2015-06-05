@@ -4,7 +4,12 @@
 	
 	#triangle-header { display: none; }
 	 
-	.article-header { margin:6em auto 3em; }
+	.article-header { 
+		margin: 2.25em auto 1.5em;
+		@media(min-width: 768px) {
+			margin:6em auto 3em; 
+		}
+	}
 }
 
 // CENTER TABLE
@@ -77,7 +82,7 @@
 	}
 	
 	p {
-		font-size:15px; line-height: 1.65em;
+		// font-size:15px; line-height: 1.65em;
 		color:#000;
 		max-width: 26em;
 		margin: 1em auto 2em;
