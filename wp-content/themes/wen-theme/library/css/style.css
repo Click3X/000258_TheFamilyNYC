@@ -2812,7 +2812,7 @@ a.arrow-right {
   }
 }
 
-/* line 28, ../scss/partials/_tabs.scss */
+/* line 26, ../scss/partials/_tabs.scss */
 .tabs nav ul {
   padding: 0;
   margin: 0;
@@ -2820,7 +2820,7 @@ a.arrow-right {
   display: inline-block;
 }
 
-/* line 35, ../scss/partials/_tabs.scss */
+/* line 32, ../scss/partials/_tabs.scss */
 .tabs nav ul li {
   border-bottom: none;
   margin: 0 0.25em;
@@ -2829,25 +2829,25 @@ a.arrow-right {
   position: relative;
 }
 
-/* line 44, ../scss/partials/_tabs.scss */
+/* line 40, ../scss/partials/_tabs.scss */
 .tabs nav li.tab-current {
   z-index: 100;
 }
 
-/* line 68, ../scss/partials/_tabs.scss */
+/* line 61, ../scss/partials/_tabs.scss */
 .tabs nav li a {
   color: white;
   background-color: #1b381d;
 }
 
-/* line 78, ../scss/partials/_tabs.scss */
+/* line 66, ../scss/partials/_tabs.scss */
 .tabs nav li.tab-current a {
   color: white;
   background-color: #d4a551;
 }
 
 /* Content */
-/* line 86, ../scss/partials/_tabs.scss */
+/* line 73, ../scss/partials/_tabs.scss */
 .content section {
   padding: 0 1em;
   display: none;
@@ -2855,33 +2855,32 @@ a.arrow-right {
   margin: 0 auto;
 }
 @media (min-width: 768px) {
-  /* line 86, ../scss/partials/_tabs.scss */
+  /* line 73, ../scss/partials/_tabs.scss */
   .content section {
     padding: 1.5em 1em;
   }
 }
 
-/* line 97, ../scss/partials/_tabs.scss */
+/* line 84, ../scss/partials/_tabs.scss */
 .content section:before,
 .content section:after {
   content: '';
   display: table;
 }
 
-/* line 103, ../scss/partials/_tabs.scss */
+/* line 90, ../scss/partials/_tabs.scss */
 .content section:after {
   clear: both;
 }
 
 /* Fallback example */
-/* line 108, ../scss/partials/_tabs.scss */
+/* line 95, ../scss/partials/_tabs.scss */
 .no-js .content section {
   display: block;
   padding-bottom: 2em;
-  border-bottom: 1px solid #47a3da;
 }
 
-/* line 114, ../scss/partials/_tabs.scss */
+/* line 100, ../scss/partials/_tabs.scss */
 .content section.content-current {
   display: block;
 }
