@@ -298,11 +298,14 @@ function printProject($projects) {
 				echo '<div class="img-container">';
 					echo '<div class="img-wrapper">';
 						// VIDEO
-						echo '<video poster="'.$project['poster'].'" controls="controls" preload="none" >';
-							if($project['mp4']) { echo '<source src="'.$project['mp4'].'" type="video/mp4" />'; }
-							if($project['ogg']) { echo '<source src="'.$project['ogg'].'" type="video/ogg" />'; }
-							if($project['webm']) { echo '<source src="'.$project['webm'].'" type="video/webm" />'; }
-						echo '</video>';
+							// NEW VIDEO WRAPPER
+						echo '<div class="video-container">';
+							echo '<video poster="'.$project['poster'].'" controls="controls" preload="none" >';
+								if($project['mp4']) { echo '<source src="'.$project['mp4'].'" type="video/mp4" />'; }
+								if($project['ogg']) { echo '<source src="'.$project['ogg'].'" type="video/ogg" />'; }
+								if($project['webm']) { echo '<source src="'.$project['webm'].'" type="video/webm" />'; }
+							echo '</video>';
+						echo '</div>';
 						// END VIDEO
 					echo '</div>';
 				echo '</div>';
@@ -329,11 +332,14 @@ function printProject($projects) {
 				echo '<div class="img-container">';
 					echo '<div class="img-wrapper">';
 					// VIDEO
-						echo '<video poster="'.$project['poster'].'" controls="controls" preload="none" >';
-							if($project['mp4']) { echo '<source src="'.$project['mp4'].'" type="video/mp4" />'; }
-							if($project['ogg']) { echo '<source src="'.$project['ogg'].'" type="video/ogg" />'; }
-							if($project['webm']) { echo '<source src="'.$project['webm'].'" type="video/webm" />'; }
-						echo '</video>';
+						// NEW VIDEO WRAPPER
+						echo '<div class="video-container">';
+							echo '<video poster="'.$project['poster'].'" controls="controls" preload="none" >';
+								if($project['mp4']) { echo '<source src="'.$project['mp4'].'" type="video/mp4" />'; }
+								if($project['ogg']) { echo '<source src="'.$project['ogg'].'" type="video/ogg" />'; }
+								if($project['webm']) { echo '<source src="'.$project['webm'].'" type="video/webm" />'; }
+							echo '</video>';
+						echo '</div>';
 						// END VIDEO
 					echo '</div>';
 				echo '</div>';

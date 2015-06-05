@@ -102,10 +102,28 @@ function loadGravatars() {
     jQuery(this).attr('src',jQuery(this).attr('data-gravatar'));
   });
 	}
-} 
+}
+
+
+
+// MOBILE
+var mobile = false;
+// CHECK FOR MOBILE DEVICE
+if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+    mobile = true;
+}
+
+console.log('This is mobile: ' + mobile);
+// IF MOBILE - ADD CLASS
+if(mobile) {
+    jQuery('body').addClass('mobile');
+}
+
+
 
 
 jQuery(document).ready(function($) {
+  // MENU
   $('#hamburger,#menu-close').click(toggleOverlay);
 
   // highlight selected menu item
@@ -124,4 +142,14 @@ jQuery(document).ready(function($) {
       $('html,body').removeClass('noScroll');
     }
   }
+
+  // HTML VIDEO CONTROLS
+  $("video").hover(function(event) {
+      if(event.type === "mouseenter") {
+          $(this).attr("controls", "");
+      } else if(event.type === "mouseleave") {
+          $(this).removeAttr("controls");
+      }
+  });
+
 }); 

@@ -12,7 +12,11 @@ footer {
 		text-align: center;
 		max-width: 1400px;
 		margin: auto;
-		padding: 60px 0;
+		padding: 4.75em 0;
+
+		@media(min-width: 768px) { padding: 4.75em 0 8em; }
+		@media(min-width: 1060px) { padding: 4.75em 0 13em; }
+
 	}
 
 	.contact-item {
@@ -38,26 +42,33 @@ footer {
 		}
 
 		p {
-			font-size: 0.8em;
+			  font-size: 0.9em;
+			  line-height: 1.3em;
+			  font-weight: 500;
 		}
 		a {
 			color:white; text-decoration: none;
 		}
 
-		@media (max-width: 605px) {
-			width: 80%;
-		}
+		@media (max-width: 605px) { width: 80%; }
 	}
 
 	.social-container {
-		margin: 20px 5px 70px 5px;
+		// margin: 20px 5px 70px 5px;
+		margin: 2.25em 0.25em;
+
+		@media (min-width: 768px) {
+			margin: 2.25em 0.25em 6em;
+		}
+
+		a { display: inline-block; }
+		
 		div {
-			background-size: 37px 37px;
-			width: 37px;
-			height: 37px;
+			background-size: 44px 44px;
+			width: 44px; height: 44px;
 			margin: auto;
 			display: inline-block;	
-			margin: 0 25px;		
+			margin: 0 1.3em;
 		}
 
 	}

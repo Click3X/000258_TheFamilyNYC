@@ -43,10 +43,14 @@
 			@media(min-width: 768px) {
 				float: left;
 				p {
-					font-size: 1.4em;
+					font-size: 1.2em;
 					margin: 1.75em auto;
 				}
 			}
+			@media(min-width: 930px) {
+				p { font-size: 1.4em; }
+			}
+
 		}
 	}
 

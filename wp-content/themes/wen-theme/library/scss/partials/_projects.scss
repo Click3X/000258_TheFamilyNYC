@@ -88,7 +88,10 @@
 		margin: 1em auto 2em;
 	}
 
-	.txt-container { padding:1.2em; }
+	.txt-container { 
+		// padding:1.2em; 
+		padding:1em; 
+	}
 	.txt-wrapper {text-align: center; }
 
 	.client-wrap {
@@ -121,14 +124,16 @@
 		p { 
 			margin: 1em auto 0; 
 			font-size: 13px;
+			line-height: 1.45em;
 		}
 	}
 
-	@media(min-width:900px) {
+	@media(min-width:930px) {
 		font-size: 20px;
 		p {
 			font-size: 0.75em;
 			margin: 1em auto 0;
+			line-height: 1.7em;
 		}
 	}
 
@@ -144,4 +149,23 @@
 
 	}
 
+}
+
+
+// VIDEO IPAD FIX FALLBACK
+.mobile {
+	.video-container {
+		@media(min-width: 768px) {
+			position: relative;
+			padding-top: 50.15%;
+
+			video, object {
+				display: block;
+				position: absolute;
+				width: 100%;
+				height: 100%;
+				top: 0;
+			}
+		}
+	}
 }
