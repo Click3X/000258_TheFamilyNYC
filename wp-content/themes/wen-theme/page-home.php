@@ -22,10 +22,10 @@ $fmKey = 0;
 $nsKey = 0;
 
 // POST DATA VARS
-$teamMembers = [];
-$familyMembers = [];
-$projects = [];
-$newss = [];
+$teamMembers = array();
+$familyMembers = array();
+$projects = array();
+$newss = array();
 
 
 // GET FAMILY MEMBERS AND PROJECTS
