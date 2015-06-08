@@ -79,6 +79,38 @@
 	                        <a id="menu-close"><img src="<?php echo get_template_directory_uri(); ?>/library/images/menu-close.png"></a>
 	                    </div>
 	                </div>
+
+	                <!-- // SORTING MENU -->
+	                <!-- ONLY APPEARS ON WORK & NEWS PAGE -->
+	                <?php if( is_page(13) ) { ?>
+	                <div id="work-menu" class="family-navigation mobile-menu work-menu">
+	                    <div class="mobile-menu-inner">
+	                    	<h2 id="work-menu-title">MENU</h2>
+	                    	<div class="dashed-border"></div>
+
+			                <nav role="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
+								<?php wp_nav_menu(array(
+		    					         'container' => false,                           // remove nav container
+		    					         'container_class' => 'menu cf work-menu-container',                 // class of container (should you choose to use it)
+		    					         'menu' => __( 'Footer Links', 'bonestheme' ),  // nav name
+		    					         'menu_class' => 'nav cf',               // adding custom nav class
+		    					         'theme_location' => 'footer-links',                 // where it's located in the theme
+		    					         'before' => '',                                 // before the menu
+		        			               'after' => '',                                  // after the menu
+		        			               'link_before' => '',                            // before each link
+		        			               'link_after' => '',                             // after each link
+		        			               'depth' => 0,                                   // limit the depth of the nav
+		    					         'fallback_cb' => ''                             // fallback function (if there is one)
+								)); ?>
+							</nav>
+
+							<div class="dashed-border"></div>
+
+	                        <a id="work-menu-close"><img src="<?php echo get_template_directory_uri(); ?>/library/images/menu-close.png"></a>
+	                    </div>
+	                </div>
+	                <!-- END SORTING MENU -->
+	                <?php } ?>
 				</div>
 
 			</header>

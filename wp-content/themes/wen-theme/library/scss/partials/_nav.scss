@@ -42,12 +42,19 @@
 	overflow-y: scroll; 
 }
 
-.family-navigation.mobile-menu .mobile-menu-inner {
-	height: 100%;
+
+.mobile-menu-inner {
   	background: $light-gold;
 }
 
-#menu-close {
+#mobile-menu.family-navigation.mobile-menu .mobile-menu-inner {
+	height: 100%;
+  	// background: $light-gold;
+}
+
+
+#menu-close,
+#work-menu-close {
 	display: inline-block;
 	cursor: pointer;
 	position: absolute;
@@ -58,12 +65,14 @@
     }
 }
 
-#menu-main-menu {
+#menu-main-menu,
+#menu-work-menu {
 	text-align: center;
 	padding: 20px 0;
 }
 
-#menu-main-menu li {
+#menu-main-menu li,
+#menu-work-menu li {
 	margin: 0;
 	padding: 0;
 	display: block;
@@ -79,7 +88,8 @@
     }
 }
 
-#menu-main-menu li a {
+#menu-main-menu li a,
+#menu-work-menu li a {
 	font-family: 'gotham-book';
 	font-size: 1.8em;
 	text-transform: uppercase;
@@ -95,7 +105,8 @@
 	}
 }
 
-#menu-title {
+#menu-title,
+#work-menu-title {
 	font-style: italic;
 	color: $gold;
 	font-size: 1.2em;

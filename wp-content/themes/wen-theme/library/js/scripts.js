@@ -123,8 +123,13 @@ if(mobile) {
 
 
 jQuery(document).ready(function($) {
-  // MENU
-  $('#hamburger,#menu-close').click(toggleOverlay);
+  // MAIN MENU
+  // $('#hamburger, #menu-close').click(toggleOverlay);
+  $('#hamburger').click(toggleOverlay);
+  // WORK
+  $('#work-menu-link').click(toggleWorkOverlay);
+  // CLOSE MENU
+  $('#menu-close, #work-menu-close').click(closeWorkOverlay);
 
   // highlight selected menu item
   var url = window.location;
@@ -134,13 +139,30 @@ jQuery(document).ready(function($) {
     $('body').addClass('non-home-header');
   }
 
+  // TOGGLE MAIN MENU
   function toggleOverlay() {
-    $('.mobile-menu').toggleClass('menu-open');
-    if ($('.mobile-menu').hasClass('menu-open')) {
+    $('#mobile-menu').toggleClass('menu-open');
+    if ($('#mobile-menu').hasClass('menu-open')) {
       $('html,body').addClass('noScroll');
     } else {
       $('html,body').removeClass('noScroll');
     }
+  }
+
+  // TOGGLE WORK MENU
+  function toggleWorkOverlay() {
+    $('#work-menu').toggleClass('menu-open');
+    if ($('#work-menu').hasClass('menu-open')) {
+      $('html,body').addClass('noScroll');
+    } else {
+      $('html,body').removeClass('noScroll');
+    }
+  }
+
+  // CLOSE MENU 
+  function closeWorkOverlay() {
+    console.log('I have been clicked!');
+    $('.menu-open').toggleClass('menu-open');
   }
 
   // HTML VIDEO CONTROLS

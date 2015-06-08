@@ -1089,33 +1089,41 @@ them however you see fit.
   overflow-y: scroll;
 }
 
-/* line 45, ../scss/partials/_nav.scss */
-.family-navigation.mobile-menu .mobile-menu-inner {
-  height: 100%;
+/* line 46, ../scss/partials/_nav.scss */
+.mobile-menu-inner {
   background: #f7f6f1;
 }
 
 /* line 50, ../scss/partials/_nav.scss */
-#menu-close {
+#mobile-menu.family-navigation.mobile-menu .mobile-menu-inner {
+  height: 100%;
+}
+
+/* line 56, ../scss/partials/_nav.scss */
+#menu-close,
+#work-menu-close {
   display: inline-block;
   cursor: pointer;
   position: absolute;
   top: 12px;
   right: 20px;
 }
-/* line 56, ../scss/partials/_nav.scss */
-#menu-close img {
+/* line 63, ../scss/partials/_nav.scss */
+#menu-close img,
+#work-menu-close img {
   width: 34px;
 }
 
-/* line 61, ../scss/partials/_nav.scss */
-#menu-main-menu {
+/* line 68, ../scss/partials/_nav.scss */
+#menu-main-menu,
+#menu-work-menu {
   text-align: center;
   padding: 20px 0;
 }
 
-/* line 66, ../scss/partials/_nav.scss */
-#menu-main-menu li {
+/* line 74, ../scss/partials/_nav.scss */
+#menu-main-menu li,
+#menu-work-menu li {
   margin: 0;
   padding: 0;
   display: block;
@@ -1123,17 +1131,20 @@ them however you see fit.
   -webkit-transition: background-color 0.1s ease;
   transition: background-color 0.1s ease;
 }
-/* line 73, ../scss/partials/_nav.scss */
-#menu-main-menu li:hover {
+/* line 82, ../scss/partials/_nav.scss */
+#menu-main-menu li:hover,
+#menu-work-menu li:hover {
   background-color: #1c391e;
 }
-/* line 75, ../scss/partials/_nav.scss */
-#menu-main-menu li:hover a {
+/* line 84, ../scss/partials/_nav.scss */
+#menu-main-menu li:hover a,
+#menu-work-menu li:hover a {
   color: #fff;
 }
 
-/* line 82, ../scss/partials/_nav.scss */
-#menu-main-menu li a {
+/* line 91, ../scss/partials/_nav.scss */
+#menu-main-menu li a,
+#menu-work-menu li a {
   font-family: 'gotham-book';
   font-size: 1.8em;
   text-transform: uppercase;
@@ -1146,14 +1157,16 @@ them however you see fit.
   transition: color 0.1s ease;
 }
 @media (max-width: 480px) {
-  /* line 82, ../scss/partials/_nav.scss */
-  #menu-main-menu li a {
+  /* line 91, ../scss/partials/_nav.scss */
+  #menu-main-menu li a,
+  #menu-work-menu li a {
     font-size: 1.4em;
   }
 }
 
-/* line 98, ../scss/partials/_nav.scss */
-#menu-title {
+/* line 108, ../scss/partials/_nav.scss */
+#menu-title,
+#work-menu-title {
   font-style: italic;
   color: #cc9c40;
   font-size: 1.2em;
@@ -1162,22 +1175,23 @@ them however you see fit.
   text-align: center;
 }
 @media (max-width: 480px) {
-  /* line 98, ../scss/partials/_nav.scss */
-  #menu-title {
+  /* line 108, ../scss/partials/_nav.scss */
+  #menu-title,
+  #work-menu-title {
     padding: 40px 0 40px 0;
   }
 }
 
-/* line 110, ../scss/partials/_nav.scss */
+/* line 121, ../scss/partials/_nav.scss */
 .main-menu-selected {
   background-color: #1c391e;
 }
-/* line 112, ../scss/partials/_nav.scss */
+/* line 123, ../scss/partials/_nav.scss */
 .main-menu-selected a {
   color: #fff !important;
 }
 
-/* line 119, ../scss/partials/_nav.scss */
+/* line 130, ../scss/partials/_nav.scss */
 #container {
   padding-top: 56px;
 }
