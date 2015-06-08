@@ -34,7 +34,7 @@
 
 						<?php 
 							// WORK PROJECTS ARRAY TO STORE VAR
-							$teamMembers = [];
+							$teamMembers = array();
 							// WORK PROJECT POSTS
 							$args = array(
 								'post_type' => 'team-member'
