@@ -409,9 +409,10 @@ function printTemaMembers($teamMembers) {
 
 // FAMILY MEMBERS
 function printFamilyMembers($familyMembers) {
-	echo '<section class="family-member-list-container cf">'; // START FAMILY MEMBERS SECTION
+	// echo '<section class="family-member-list-container cf">'; // START FAMILY MEMBERS SECTION
+	echo '<section id="family-member-list-container" class="family-member-list-container cf swiper-container">'; // START NEWS SECTION
 		echo '<a href="#" class="arrow arrow-left"></a>';
-		echo '<ul id="family-member-list" class="cf family-member-list">';
+		echo '<ul id="family-member-list" class="cf family-member-list swiper-wrapper">';
 			foreach ($familyMembers as $key => $familyMember) {
 				// IF NO LINK SUPPLIED, THEN HREF IS HASH #
 				if($familyMember['link'] == '') { $link = '#'; } 
@@ -423,7 +424,7 @@ function printFamilyMembers($familyMembers) {
 				// ONLY PRINT FAMILY MEMBER IF THERE IS AN IMAGE ASSOCIATED WITH IT
 				if($src['url'] != "") {
 
-					echo '<li id="family-member-'.$key.'" class="cf family-member">';
+					echo '<li id="family-member-'.$key.'" class="cf family-member swiper-slide">';
 							echo '<a href="'.$link.'" class="family-member-link">';
 								echo '<img src="'.$src['url'].'">';
 							echo '</a>';
@@ -437,49 +438,13 @@ function printFamilyMembers($familyMembers) {
 }
 
 // NEWS MODULE
-// - PASS IN AN ARRAY OF NEWS POSTS (DEFAULT WP POST)
-// function printNews($newss) {
-// 	echo '<section class="news-list-container cf">'; // START NEWS SECTION
-// 		echo '<a href="#" class="arrow arrow-left"></a>';
-// 		echo '<ul id="news-list" class="cf news-list">';
-// 		foreach ($newss as $key => $news) {
-// 			// OUTPUT news
-// 			echo '<li id="news-'.$key.'" class="cf news">';
-// 				echo '<div class="center-table">';
-// 					// IMAGE
-// 					echo '<div class="img-container">';
-// 						echo '<img src="'.$news['image'][0].'">';
-// 					echo '</div>';
-
-// 					// TEXT
-// 					echo '<div class="txt-container">';
-// 						echo '<div class="txt-wrapper">';
-// 							// NEWS - FAMILY
-// 							echo '<h2 class="page-sub-title italic">The Family</h2>
-// 									<h1 class="page-title">News</h1>';
-// 							// CONTENT
-// 							echo '<p class="excerpt">'.$news['excerpt'].'</p>';
-// 							// BUTTON
-// 							echo '<a href="'.$news['link'].'" class="btn news-link">Learn More</a>';
-// 						echo '</div>';
-// 					echo '</div>';
-// 				echo '</div>';
-// 			echo '</li>';
-// 		}
-// 		echo '</ul>';
-// 		echo '<a href="#" class="arrow arrow-right"></a>';
-// 	echo '</section>'; // END NEWS SECITION
-// }
-
 function printNews($newss) {
-	// echo '<section class="news-list-container cf">'; // START NEWS SECTION
-	echo '<section class="news-list-container cf swiper-container">'; // START NEWS SECTION
+	echo '<section id="news-container" class="news-list-container cf swiper-container">'; // START NEWS SECTION
 		echo '<a href="#" class="arrow arrow-left"></a>';
-		// echo '<a href="#" class="swiper-button-prev"></a>';
 		echo '<ul id="news-list" class="cf news-list swiper-wrapper">';
 		foreach ($newss as $key => $news) {
 			// OUTPUT news
-			echo '<li id="news-'.$key.'" class="swiper-slide cf news">';
+			echo '<li id="news-'.$key.'" class="cf news swiper-slide">';
 				echo '<div class="center-table">';
 					// IMAGE
 					echo '<div class="img-container">';

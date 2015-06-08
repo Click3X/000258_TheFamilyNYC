@@ -61,21 +61,6 @@
                 </script>";
             }
         ?>
-        <!-- Initialize Swiper -->
-	    <script>
-	    var swiper = new Swiper('.swiper-container', {
-	        // pagination: '.swiper-pagination',
-	        // nextButton: '.swiper-button-next',
-	        nextButton: '.arrow-left',
-	        // prevButton: '.swiper-button-prev',
-	        prevButton: '.arrow-right',
-	        paginationClickable: true,
-	        spaceBetween: 0,
-	        // centeredSlides: true,
-	        // autoplay: 2500,
-	        autoplayDisableOnInteraction: false
-	    });
-	    </script>
 
 	</body>
 

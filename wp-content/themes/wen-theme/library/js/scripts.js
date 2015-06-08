@@ -94,13 +94,13 @@ var timeToWaitForLast = 100;
  * then we can swap out those images since they are located in a data attribute.
 */
 function loadGravatars() {
-  // set the viewport using the function above
-  viewport = updateViewportDimensions();
-  // if the viewport is tablet or larger, we load in the gravatars
-  if (viewport.width >= 768) {
-  jQuery('.comment img[data-gravatar]').each(function(){
-    jQuery(this).attr('src',jQuery(this).attr('data-gravatar'));
-  });
+	// set the viewport using the function above
+	viewport = updateViewportDimensions();
+	// if the viewport is tablet or larger, we load in the gravatars
+	if (viewport.width >= 768) {
+	jQuery('.comment img[data-gravatar]').each(function(){
+		jQuery(this).attr('src',jQuery(this).attr('data-gravatar'));
+	});
 	}
 }
 
@@ -108,85 +108,106 @@ function loadGravatars() {
 var mobile = false;
 // CHECK FOR MOBILE DEVICE
 if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
-    mobile = true;
+		mobile = true;
 }
 
 console.log('This is mobile: ' + mobile);
 // IF MOBILE - ADD CLASS
 if(mobile) {
-    jQuery('body').addClass('mobile');
+		jQuery('body').addClass('mobile');
 }
 
 
 jQuery(document).ready(function($) {
-  
-  // DISABLE HOVER ON SCROLL FOR SMOOTHER PERFORMANCE
-  var body = document.body,
-  timer;
+	
+	// DISABLE HOVER ON SCROLL FOR SMOOTHER PERFORMANCE
+	var body = document.body,
+	timer;
 
-  window.addEventListener('scroll', function() {
-      clearTimeout(timer);
+	window.addEventListener('scroll', function() {
+			clearTimeout(timer);
 
-      if(! $('body').hasClass('disable-hover')) {
-          $('body').addClass('disable-hover');
-      }
+			if(! $('body').hasClass('disable-hover')) {
+					$('body').addClass('disable-hover');
+			}
 
-      timer = setTimeout(function(){
-          $('body').removeClass('disable-hover');
-      }, 90);
-  }, false);
+			timer = setTimeout(function(){
+					$('body').removeClass('disable-hover');
+			}, 90);
+	}, false);
 
 
-  // MAIN MENU
-  $('#hamburger, #menu-close').click(toggleOverlay);
-  // WORK
-  $('#work-menu-link').click(toggleWorkOverlay);
-  // CLOSE MENU
-  $('#work-menu-close').click(closeWorkOverlay);
+	// MAIN MENU
+	$('#hamburger, #menu-close').click(toggleOverlay);
+	// WORK
+	$('#work-menu-link').click(toggleWorkOverlay);
+	// CLOSE MENU
+	$('#work-menu-close').click(closeWorkOverlay);
 
-  // highlight selected menu item
-  var url = window.location;
-  $('a[href="'+url+'"]').parent('#menu-main-menu>li').addClass('main-menu-selected');
+	// highlight selected menu item
+	var url = window.location;
+	$('a[href="'+url+'"]').parent('#menu-main-menu>li').addClass('main-menu-selected');
 
-  if ($('body').attr('id') != "home" ) {
-    $('body').addClass('non-home-header');
-  }
+	if ($('body').attr('id') != "home" ) {
+		$('body').addClass('non-home-header');
+	}
 
-  // TOGGLE MAIN MENU
-  function toggleOverlay() {
-    $('#mobile-menu').toggleClass('menu-open');
-    if ($('#mobile-menu').hasClass('menu-open')) {
-      $('html,body').addClass('noScroll');
-    } else {
-      $('html,body').removeClass('noScroll');
-    }
-  }
+	// TOGGLE MAIN MENU
+	function toggleOverlay() {
+		$('#mobile-menu').toggleClass('menu-open');
+		if ($('#mobile-menu').hasClass('menu-open')) {
+			$('html,body').addClass('noScroll');
+		} else {
+			$('html,body').removeClass('noScroll');
+		}
+	}
 
-  // TOGGLE WORK MENU
-  function toggleWorkOverlay() {
-    $('#work-menu').toggleClass('menu-open');
-    if ($('#work-menu').hasClass('menu-open')) {
-      $('html,body').addClass('noScroll');
-    } else {
-      $('html,body').removeClass('noScroll');
-    }
-  }
+	// TOGGLE WORK MENU
+	function toggleWorkOverlay() {
+		$('#work-menu').toggleClass('menu-open');
+		if ($('#work-menu').hasClass('menu-open')) {
+			$('html,body').addClass('noScroll');
+		} else {
+			$('html,body').removeClass('noScroll');
+		}
+	}
 
-  // CLOSE MENU 
-  function closeWorkOverlay() {
-    console.log('I have been clicked!');
-    $('.menu-open').toggleClass('menu-open');
-    $('html,body').removeClass('noScroll');
-  }
+	// CLOSE MENU 
+	function closeWorkOverlay() {
+		console.log('I have been clicked!');
+		$('.menu-open').toggleClass('menu-open');
+		$('html,body').removeClass('noScroll');
+	}
 
-  // HTML VIDEO CONTROLS
-  $("video").hover(function(event) {
-      if(event.type === "mouseenter") {
-          $(this).attr("controls", "");
-      } else if(event.type === "mouseleave") {
-          $(this).removeAttr("controls");
-      }
-  });
+	// HTML VIDEO CONTROLS
+	$("video").hover(function(event) {
+			if(event.type === "mouseenter") {
+					$(this).attr("controls", "");
+			} else if(event.type === "mouseleave") {
+					$(this).removeAttr("controls");
+			}
+	});
+
+
+	// SLIDERS
+	var newsSwiper = new Swiper('#news-container', {
+		nextButton: '#news-container .arrow-left',
+		prevButton: '#news-container .arrow-right',
+		paginationClickable: true,
+		spaceBetween: 0,
+		autoplay: 2500,
+		autoplayDisableOnInteraction: false,
+		loop: true
+	});
+
+	var familyMemSwiper = new Swiper('#family-member-list-container', {
+		nextButton: '#family-member-list-container .arrow-left',
+		prevButton: '#family-member-list-container .arrow-right',
+		paginationClickable: true,
+		spaceBetween: 0,
+		slidesPerView: 'auto',
+		autoplayDisableOnInteraction: false
+	});
 
 
 }); 

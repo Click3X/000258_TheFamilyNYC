@@ -3457,7 +3457,6 @@ h4.tt-date {
 /* line 2, ../scss/partials/_family-members-module.scss */
 .family-members {
   position: relative;
-  padding: 0 30px;
   max-width: 1260px;
   margin: 0 auto;
 }
