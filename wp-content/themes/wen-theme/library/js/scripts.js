@@ -104,23 +104,6 @@ function loadGravatars() {
 	}
 }
 
-// DISABLE HOVER ON SCROLL FOR SMOOTHER PERFORMANCE
-var body = document.body,
-timer;
-
-window.addEventListener('scroll', function() {
-    clearTimeout(timer);
-
-    if(! $('body').hasClass('disable-hover')) {
-        $('body').addClass('disable-hover');
-    }
-
-    timer = setTimeout(function(){
-        $('body').removeClass('disable-hover');
-    }, 90);
-}, false);
-
-
 // MOBILE
 var mobile = false;
 // CHECK FOR MOBILE DEVICE
@@ -136,6 +119,24 @@ if(mobile) {
 
 
 jQuery(document).ready(function($) {
+  
+  // DISABLE HOVER ON SCROLL FOR SMOOTHER PERFORMANCE
+  var body = document.body,
+  timer;
+
+  window.addEventListener('scroll', function() {
+      clearTimeout(timer);
+
+      if(! $('body').hasClass('disable-hover')) {
+          $('body').addClass('disable-hover');
+      }
+
+      timer = setTimeout(function(){
+          $('body').removeClass('disable-hover');
+      }, 90);
+  }, false);
+
+
   // MAIN MENU
   $('#hamburger, #menu-close').click(toggleOverlay);
   // WORK

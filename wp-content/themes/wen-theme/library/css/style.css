@@ -3537,25 +3537,25 @@ h4.tt-date {
     width: auto;
     float: right;
     padding-right: 1em;
-    padding-top: 1em;
+    padding-top: 2em;
   }
 }
-/* line 27, ../scss/partials/_news-module.scss */
+/* line 29, ../scss/partials/_news-module.scss */
 .news-list .txt-container {
   width: auto;
   text-align: center;
 }
 @media (min-width: 768px) {
-  /* line 27, ../scss/partials/_news-module.scss */
+  /* line 29, ../scss/partials/_news-module.scss */
   .news-list .txt-container {
     width: 57.142857%;
   }
 }
-/* line 33, ../scss/partials/_news-module.scss */
+/* line 35, ../scss/partials/_news-module.scss */
 .news-list .txt-container .txt-wrapper {
   margin: 0.5em auto 1.25em;
 }
-/* line 36, ../scss/partials/_news-module.scss */
+/* line 38, ../scss/partials/_news-module.scss */
 .news-list .txt-container .txt-wrapper p {
   font-size: 0.875em;
   line-height: 1.3em;
@@ -3564,29 +3564,21 @@ h4.tt-date {
   max-width: 27em;
 }
 @media (min-width: 768px) {
-  /* line 33, ../scss/partials/_news-module.scss */
+  /* line 35, ../scss/partials/_news-module.scss */
   .news-list .txt-container .txt-wrapper {
     float: left;
   }
-  /* line 45, ../scss/partials/_news-module.scss */
+  /* line 47, ../scss/partials/_news-module.scss */
   .news-list .txt-container .txt-wrapper p {
     font-size: 1.2em;
     margin: 1.75em auto;
   }
 }
 @media (min-width: 930px) {
-  /* line 51, ../scss/partials/_news-module.scss */
+  /* line 53, ../scss/partials/_news-module.scss */
   .news-list .txt-container .txt-wrapper p {
     font-size: 1.4em;
   }
-}
-/* line 59, ../scss/partials/_news-module.scss */
-.news-list li {
-  display: none;
-}
-/* line 61, ../scss/partials/_news-module.scss */
-.news-list li:first-child {
-  display: list-item;
 }
 
 /* line 2, ../scss/partials/_team-members-module.scss */

@@ -184,25 +184,6 @@ wp_reset_postdata();
 							<article id="news" class="cf wrap news" role="article" itemscope itemtype="http://schema.org/BlogPosting">
 								<!-- NEWS LIST -->
 								<?php printNews($newss); ?>
-								<!-- Swiper -->
-		<!-- 					    <div class="swiper-container">
-							        <div class="swiper-wrapper">
-							            <div class="swiper-slide">Slide 1</div>
-							            <div class="swiper-slide">Slide 2</div>
-							            <div class="swiper-slide">Slide 3</div>
-							            <div class="swiper-slide">Slide 4</div>
-							            <div class="swiper-slide">Slide 5</div>
-							            <div class="swiper-slide">Slide 6</div>
-							            <div class="swiper-slide">Slide 7</div>
-							            <div class="swiper-slide">Slide 8</div>
-							            <div class="swiper-slide">Slide 9</div>
-							            <div class="swiper-slide">Slide 10</div>
-							        </div>
-							        <div class="swiper-pagination"></div>
-							        <div class="swiper-button-next"></div>
-							        <div class="swiper-button-prev"></div>
-							    </div> -->
-							    <!-- END SWIPER CONTAINER -->
 							</article>
 							<!-- BOTTOM GOLD LINE -->
 							<div class="gold-line" style="background-image: url(<?php echo get_template_directory_uri(); ?>/library/images/gold-border-bottom.png);"></div>

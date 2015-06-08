@@ -19,7 +19,9 @@
 			@media(min-width: 768px) { 
 				max-width: 435px; max-height: 373px;
 				width: auto; float: right;
-				padding-right: 1em; padding-top: 1em; 
+				padding-right: 1em; 
+				// padding-top: 1em; 
+				padding-top: 2em; 
 			}
 		}
 	}
@@ -56,9 +58,9 @@
 
 	// TEMPORARLY HIDE OTHER LI ITEMS UNTIL
 	// JS IS IMPLEMENTED
-	li {
-		display: none;
-		&:first-child { display:list-item; }
-	}
+	// li {
+	// 	display: none;
+	// 	&:first-child { display:list-item; }
+	// }
 
 } 

@@ -438,13 +438,48 @@ function printFamilyMembers($familyMembers) {
 
 // NEWS MODULE
 // - PASS IN AN ARRAY OF NEWS POSTS (DEFAULT WP POST)
+// function printNews($newss) {
+// 	echo '<section class="news-list-container cf">'; // START NEWS SECTION
+// 		echo '<a href="#" class="arrow arrow-left"></a>';
+// 		echo '<ul id="news-list" class="cf news-list">';
+// 		foreach ($newss as $key => $news) {
+// 			// OUTPUT news
+// 			echo '<li id="news-'.$key.'" class="cf news">';
+// 				echo '<div class="center-table">';
+// 					// IMAGE
+// 					echo '<div class="img-container">';
+// 						echo '<img src="'.$news['image'][0].'">';
+// 					echo '</div>';
+
+// 					// TEXT
+// 					echo '<div class="txt-container">';
+// 						echo '<div class="txt-wrapper">';
+// 							// NEWS - FAMILY
+// 							echo '<h2 class="page-sub-title italic">The Family</h2>
+// 									<h1 class="page-title">News</h1>';
+// 							// CONTENT
+// 							echo '<p class="excerpt">'.$news['excerpt'].'</p>';
+// 							// BUTTON
+// 							echo '<a href="'.$news['link'].'" class="btn news-link">Learn More</a>';
+// 						echo '</div>';
+// 					echo '</div>';
+// 				echo '</div>';
+// 			echo '</li>';
+// 		}
+// 		echo '</ul>';
+// 		echo '<a href="#" class="arrow arrow-right"></a>';
+// 	echo '</section>'; // END NEWS SECITION
+// }
+
 function printNews($newss) {
-	echo '<section class="news-list-container cf">'; // START NEWS SECTION
+	// echo '<section class="news-list-container cf">'; // START NEWS SECTION
+	echo '<section class="news-list-container cf swiper-container">'; // START NEWS SECTION
 		echo '<a href="#" class="arrow arrow-left"></a>';
-		echo '<ul id="news-list" class="cf news-list">';
+		// echo '<a href="#" class="swiper-button-prev"></a>';
+		echo '<ul id="news-list" class="cf news-list swiper-wrapper">';
 		foreach ($newss as $key => $news) {
 			// OUTPUT news
-			echo '<li id="news-'.$key.'" class="cf news">';
+			echo '<li id="news-'.$key.'" class="swiper-slide cf news">';
 				echo '<div class="center-table">';
 					// IMAGE
 					echo '<div class="img-container">';
@@ -468,6 +503,7 @@ function printNews($newss) {
 		}
 		echo '</ul>';
 		echo '<a href="#" class="arrow arrow-right"></a>';
+		// echo '<a href="#" class="swiper-button-next"></a>';
 	echo '</section>'; // END NEWS SECITION
 }
 
