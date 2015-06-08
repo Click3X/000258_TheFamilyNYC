@@ -15,7 +15,7 @@
 
 						<?php 
 							// PAGE INFO
-							$contact = [];
+							$contact = array();
 							// LOOP 1: NORMAL LOOP
 							if (have_posts()) : while (have_posts()) : the_post(); 
 								$contact['sub-title'] = get_field('sub-title');

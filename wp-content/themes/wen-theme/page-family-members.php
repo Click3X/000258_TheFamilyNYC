@@ -8,7 +8,7 @@
 
 <?php
 // POST DATA VARS
-$familyMembers = [];
+$familyMembers = array();
 
 // GET FAMILY MEMBERS AND PROJECTS
 $args = array(

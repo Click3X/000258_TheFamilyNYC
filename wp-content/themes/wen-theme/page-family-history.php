@@ -9,7 +9,7 @@
 
 <?php 
 	// PAGE INFO
-	$history = [];
+	$history = array();
 	// LOOP 1: NORMAL LOOP
 	if (have_posts()) : while (have_posts()) : the_post(); 
 		$history['title'] = get_the_title();

@@ -40,7 +40,7 @@
 
 						<?php 
 							// WORK PROJECTS ARRAY TO STORE VAR
-							$projects = [];
+							$projects = array();
 							// WORK PROJECT POSTS
 							$args = array(
 								'post_type' => 'project'
