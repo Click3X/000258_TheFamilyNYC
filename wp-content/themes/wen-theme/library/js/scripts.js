@@ -200,6 +200,16 @@ jQuery(document).ready(function($) {
 		loop: true
 	});
 
+	var teaMemberSwiper = new Swiper('#team-member-list-container', {
+		nextButton: '#team-member-list-container .arrow-left',
+		prevButton: '#team-member-list-container .arrow-right',
+		paginationClickable: true,
+		spaceBetween: 0,
+		autoplay: 2500,
+		autoplayDisableOnInteraction: false,
+		loop: true
+	});
+
 	var familyMemSwiper = new Swiper('#family-member-list-container', {
 		nextButton: '#family-member-list-container .arrow-left',
 		prevButton: '#family-member-list-container .arrow-right',
@@ -208,6 +218,7 @@ jQuery(document).ready(function($) {
 		slidesPerView: 'auto',
 		autoplayDisableOnInteraction: false
 	});
+
 
 
 }); 

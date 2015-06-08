@@ -74,7 +74,6 @@
 							?>
 						</article>
 
-
 						<!-- CHRONOLOGY & TIMELINE -->
 						<div class="gold-line" style="background-image: url(<?php echo get_template_directory_uri(); ?>/library/images/gold-border-bottom.png);"></div>
 						<article id="tab-holder" class="cf tab-holder">
@@ -94,7 +93,6 @@
 												// helper($who_what); 
 												foreach ($who_what as $key => $ww) {
 													echo '<div class="page-content">';
-														// echo '<header class="article-header">'.helper($ww).'</header>';
 														echo '<header class="article-header">'.$ww['headline'].'</header>';
 														echo $ww['copy'];
 													echo '</div>';

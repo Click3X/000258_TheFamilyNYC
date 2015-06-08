@@ -409,7 +409,6 @@ function printTemaMembers($teamMembers) {
 
 // FAMILY MEMBERS
 function printFamilyMembers($familyMembers) {
-	// echo '<section class="family-member-list-container cf">'; // START FAMILY MEMBERS SECTION
 	echo '<section id="family-member-list-container" class="family-member-list-container cf swiper-container">'; // START NEWS SECTION
 		echo '<a href="#" class="arrow arrow-left"></a>';
 		echo '<ul id="family-member-list" class="cf family-member-list swiper-wrapper">';
@@ -417,20 +416,17 @@ function printFamilyMembers($familyMembers) {
 				// IF NO LINK SUPPLIED, THEN HREF IS HASH #
 				if($familyMember['link'] == '') { $link = '#'; } 
 					else { $link = $familyMember['link']; }
-
 				// IMAGE SRC
 				$src = $familyMember['image'];
 
 				// ONLY PRINT FAMILY MEMBER IF THERE IS AN IMAGE ASSOCIATED WITH IT
 				if($src['url'] != "") {
-
 					echo '<li id="family-member-'.$key.'" class="cf family-member swiper-slide">';
 							echo '<a href="'.$link.'" class="family-member-link">';
 								echo '<img src="'.$src['url'].'">';
 							echo '</a>';
 					echo '</li>';
 				}
-				
 			}
 		echo '</ul>';
 		echo '<a href="#" class="arrow arrow-right"></a>';
@@ -472,14 +468,15 @@ function printNews($newss) {
 	echo '</section>'; // END NEWS SECITION
 }
 
+
 // -TEAM MEMBER SLIDER FOR TEAM HISTORY PAGE
 function printTeamMemberSlider($teamMembers) {
-	echo '<section class="team-member-list-container wrap cf">'; // START NEWS SECTION
+	echo '<section id="team-member-list-container" class="team-member-list-container wrap cf swiper-container">'; // START NEWS SECTION
 		echo '<a href="#" class="arrow arrow-left"></a>';
-		echo '<ul id="team-member-list-slider" class="cf news-list team-member-list">';
+		echo '<ul id="team-member-list-slider" class="cf news-list team-member-list swiper-wrapper">';
 		foreach ($teamMembers as $key => $teamMember) {
 			// OUTPUT news
-			echo '<li id="tm-'.$key.'" class="cf news tm">';
+			echo '<li id="tm-'.$key.'" class="cf news tm swiper-slide">';
 				echo '<div class="center-table">';
 					// IMAGE
 					echo '<div class="img-container">';
@@ -506,5 +503,40 @@ function printTeamMemberSlider($teamMembers) {
 		echo '<a href="#" class="arrow arrow-right"></a>';
 	echo '</section>'; // END NEWS SECITION
 }
+
+// // -TEAM MEMBER SLIDER FOR TEAM HISTORY PAGE
+// function printTeamMemberSlider($teamMembers) {
+// 	echo '<section class="team-member-list-container wrap cf">'; // START NEWS SECTION
+// 		echo '<a href="#" class="arrow arrow-left"></a>';
+// 		echo '<ul id="team-member-list-slider" class="cf news-list team-member-list">';
+// 		foreach ($teamMembers as $key => $teamMember) {
+// 			// OUTPUT news
+// 			echo '<li id="tm-'.$key.'" class="cf news tm">';
+// 				echo '<div class="center-table">';
+// 					// IMAGE
+// 					echo '<div class="img-container">';
+// 						echo '<img src="'.$teamMember['image'][0].'">';
+// 					echo '</div>';
+
+// 					// TEXT
+// 					echo '<div class="txt-container">';
+// 						echo '<div class="txt-wrapper">';
+// 							// NEWS - FAMILY
+// 							echo '<h2 class="page-sub-title italic">The Family</h2>
+// 									<h1 class="page-title">Team</h1>';
+// 							// CONTENT
+// 							echo $teamMember['description'];
+// 							// EMAIL
+// 							echo '<a href="mailto:'.$teamMember['email'].'" class="team-member-email">'.$teamMember['email'].'</a>';
+
+// 						echo '</div>';
+// 					echo '</div>';
+// 				echo '</div>';
+// 			echo '</li>';
+// 		}
+// 		echo '</ul>';
+// 		echo '<a href="#" class="arrow arrow-right"></a>';
+// 	echo '</section>'; // END NEWS SECITION
+// }
 
 /* DON'T DELETE THIS CLOSING TAG */ ?>
