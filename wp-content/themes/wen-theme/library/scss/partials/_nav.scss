@@ -30,7 +30,8 @@
 	overflow-y: scroll; 
 }
 
-.mobile-menu-inner { background: $light-gold; }
+.mobile-menu-inner,
+.mobile-menu-inner nav { background: $light-gold; }
 
 #work-menu {
 	background: $light-gold;

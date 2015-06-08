@@ -1090,54 +1090,55 @@ them however you see fit.
 }
 
 /* line 33, ../scss/partials/_nav.scss */
-.mobile-menu-inner {
+.mobile-menu-inner,
+.mobile-menu-inner nav {
   background: #f7f6f1;
 }
 
-/* line 35, ../scss/partials/_nav.scss */
+/* line 36, ../scss/partials/_nav.scss */
 #work-menu {
   background: #f7f6f1;
 }
-/* line 37, ../scss/partials/_nav.scss */
+/* line 38, ../scss/partials/_nav.scss */
 #work-menu > div > header {
   margin: 0 auto;
 }
-/* line 40, ../scss/partials/_nav.scss */
+/* line 41, ../scss/partials/_nav.scss */
 #work-menu .mobile-menu-inner {
   padding-top: 2.5em;
 }
 @media (min-width: 768px) {
-  /* line 40, ../scss/partials/_nav.scss */
+  /* line 41, ../scss/partials/_nav.scss */
   #work-menu .mobile-menu-inner {
     padding-top: 5em;
   }
 }
-/* line 45, ../scss/partials/_nav.scss */
+/* line 46, ../scss/partials/_nav.scss */
 #work-menu .sort-title {
   font-size: 1.4em;
   padding-bottom: 0.25em;
 }
-/* line 49, ../scss/partials/_nav.scss */
+/* line 50, ../scss/partials/_nav.scss */
 #work-menu .dashed-border {
   padding-top: 0.5em;
   padding-bottom: 0.85em;
 }
 
-/* line 54, ../scss/partials/_nav.scss */
+/* line 55, ../scss/partials/_nav.scss */
 .page-id-13 #work-menu .page-title {
   padding-bottom: 0.85em;
 }
-/* line 56, ../scss/partials/_nav.scss */
+/* line 57, ../scss/partials/_nav.scss */
 .page-id-13 #work-menu .page-title:after {
   display: none;
 }
 
-/* line 59, ../scss/partials/_nav.scss */
+/* line 60, ../scss/partials/_nav.scss */
 #mobile-menu.family-navigation.mobile-menu .mobile-menu-inner {
   height: 100%;
 }
 
-/* line 62, ../scss/partials/_nav.scss */
+/* line 63, ../scss/partials/_nav.scss */
 #menu-close,
 #work-menu-close {
   display: inline-block;
@@ -1146,24 +1147,24 @@ them however you see fit.
   top: 12px;
   right: 20px;
 }
-/* line 69, ../scss/partials/_nav.scss */
+/* line 70, ../scss/partials/_nav.scss */
 #menu-close img,
 #work-menu-close img {
   width: 34px;
 }
 
-/* line 72, ../scss/partials/_nav.scss */
+/* line 73, ../scss/partials/_nav.scss */
 #menu-main-menu {
   text-align: center;
   padding: 20px 0;
 }
 
-/* line 77, ../scss/partials/_nav.scss */
+/* line 78, ../scss/partials/_nav.scss */
 #menu-work-menu {
   text-align: center;
 }
 
-/* line 79, ../scss/partials/_nav.scss */
+/* line 80, ../scss/partials/_nav.scss */
 #menu-main-menu li,
 #menu-work-menu li {
   margin: 0;
@@ -1173,18 +1174,18 @@ them however you see fit.
   -webkit-transition: background-color 0.1s ease;
   transition: background-color 0.1s ease;
 }
-/* line 86, ../scss/partials/_nav.scss */
+/* line 87, ../scss/partials/_nav.scss */
 #menu-main-menu li:hover,
 #menu-work-menu li:hover {
   background-color: #1c391e;
 }
-/* line 88, ../scss/partials/_nav.scss */
+/* line 89, ../scss/partials/_nav.scss */
 #menu-main-menu li:hover a,
 #menu-work-menu li:hover a {
   color: #fff;
 }
 
-/* line 92, ../scss/partials/_nav.scss */
+/* line 93, ../scss/partials/_nav.scss */
 #menu-main-menu li a,
 #menu-work-menu li a {
   font-family: 'gotham-book';
@@ -1199,38 +1200,38 @@ them however you see fit.
   transition: color 0.1s ease;
 }
 @media (max-width: 480px) {
-  /* line 92, ../scss/partials/_nav.scss */
+  /* line 93, ../scss/partials/_nav.scss */
   #menu-main-menu li a,
   #menu-work-menu li a {
     font-size: 1.4em;
   }
 }
 
-/* line 105, ../scss/partials/_nav.scss */
+/* line 106, ../scss/partials/_nav.scss */
 #menu-work-menu li a {
   font-size: 1.1em;
   line-height: 1.8em;
   padding: 0;
 }
 @media (min-width: 768px) {
-  /* line 105, ../scss/partials/_nav.scss */
+  /* line 106, ../scss/partials/_nav.scss */
   #menu-work-menu li a {
     font-size: 1.3em;
   }
 }
 
-/* line 112, ../scss/partials/_nav.scss */
+/* line 113, ../scss/partials/_nav.scss */
 #menu-work-menu li a[href="#title"] {
   color: #d4a551;
   font-size: 0.85em;
 }
 @media (min-width: 768px) {
-  /* line 112, ../scss/partials/_nav.scss */
+  /* line 113, ../scss/partials/_nav.scss */
   #menu-work-menu li a[href="#title"] {
     font-size: 1.1em;
   }
 }
-/* line 118, ../scss/partials/_nav.scss */
+/* line 119, ../scss/partials/_nav.scss */
 #menu-work-menu li a[href="#title"]:before {
   content: "";
   display: block;
@@ -1240,7 +1241,7 @@ them however you see fit.
   margin: 1em auto 1.3em;
 }
 
-/* line 126, ../scss/partials/_nav.scss */
+/* line 127, ../scss/partials/_nav.scss */
 #menu-work-menu:after {
   content: "";
   display: block;
@@ -1250,21 +1251,21 @@ them however you see fit.
   margin: 2.1em auto 1.3em;
 }
 
-/* line 133, ../scss/partials/_nav.scss */
+/* line 134, ../scss/partials/_nav.scss */
 #work-menu nav {
   padding-bottom: 3em;
 }
 
-/* line 137, ../scss/partials/_nav.scss */
+/* line 138, ../scss/partials/_nav.scss */
 #menu-work-menu li.menu-item-type-custom:hover {
   background-color: inherit;
 }
-/* line 139, ../scss/partials/_nav.scss */
+/* line 140, ../scss/partials/_nav.scss */
 #menu-work-menu li.menu-item-type-custom:hover a {
   color: #d4a551;
 }
 
-/* line 143, ../scss/partials/_nav.scss */
+/* line 144, ../scss/partials/_nav.scss */
 #menu-title,
 #work-menu-title {
   font-style: italic;
@@ -1275,23 +1276,23 @@ them however you see fit.
   text-align: center;
 }
 @media (max-width: 480px) {
-  /* line 143, ../scss/partials/_nav.scss */
+  /* line 144, ../scss/partials/_nav.scss */
   #menu-title,
   #work-menu-title {
     padding: 40px 0 40px 0;
   }
 }
 
-/* line 154, ../scss/partials/_nav.scss */
+/* line 155, ../scss/partials/_nav.scss */
 .main-menu-selected {
   background-color: #1c391e;
 }
-/* line 156, ../scss/partials/_nav.scss */
+/* line 157, ../scss/partials/_nav.scss */
 .main-menu-selected a {
   color: #fff !important;
 }
 
-/* line 161, ../scss/partials/_nav.scss */
+/* line 162, ../scss/partials/_nav.scss */
 #container {
   padding-top: 56px;
 }
@@ -2696,36 +2697,41 @@ override these styles for the desktop
 view.
 */
 /* end .footer-links */
-/* line 3, ../scss/partials/_util.scss */
+/* line 4, ../scss/partials/_util.scss */
+.disable-hover {
+  pointer-events: none;
+}
+
+/* line 8, ../scss/partials/_util.scss */
 .italic {
   font-style: italic;
 }
 
-/* line 6, ../scss/partials/_util.scss */
+/* line 11, ../scss/partials/_util.scss */
 #content {
   margin-top: 0;
 }
 
-/* line 8, ../scss/partials/_util.scss */
+/* line 13, ../scss/partials/_util.scss */
 p {
   font-size: 0.875em;
   line-height: 1.45em;
 }
 @media (min-width: 768px) {
-  /* line 8, ../scss/partials/_util.scss */
+  /* line 13, ../scss/partials/_util.scss */
   p {
     font-size: 1em;
     line-height: 1.7em;
   }
 }
 
-/* line 17, ../scss/partials/_util.scss */
+/* line 22, ../scss/partials/_util.scss */
 a {
   color: inherit;
   text-decoration: none;
 }
 
-/* line 22, ../scss/partials/_util.scss */
+/* line 27, ../scss/partials/_util.scss */
 h1, h2, h3, h4, h5, h6,
 h1.h1, h2.h2, h3.h3, h4.h4, h5.h5, h6.h6 {
   text-transform: uppercase;
@@ -2735,19 +2741,19 @@ h1.h1, h2.h2, h3.h3, h4.h4, h5.h5, h6.h6 {
   color: #1b381d;
 }
 
-/* line 31, ../scss/partials/_util.scss */
+/* line 36, ../scss/partials/_util.scss */
 ul {
   margin: 0;
 }
 
 @media (min-width: 768px) {
-  /* line 33, ../scss/partials/_util.scss */
+  /* line 38, ../scss/partials/_util.scss */
   .mobile-only {
     display: none;
   }
 }
 
-/* line 37, ../scss/partials/_util.scss */
+/* line 42, ../scss/partials/_util.scss */
 .page-title {
   font-size: 1.125em;
   margin: 0.1em auto;
@@ -2755,14 +2761,14 @@ ul {
   display: block;
 }
 @media (min-width: 768px) {
-  /* line 37, ../scss/partials/_util.scss */
+  /* line 42, ../scss/partials/_util.scss */
   .page-title {
     font-size: 1.5em;
     margin: 0.05em auto;
   }
 }
 
-/* line 48, ../scss/partials/_util.scss */
+/* line 53, ../scss/partials/_util.scss */
 .sub-title,
 h2.sub-title {
   line-height: 1.6em;
@@ -2773,38 +2779,38 @@ h2.sub-title {
   padding: 0 1em;
 }
 @media (min-width: 768px) {
-  /* line 48, ../scss/partials/_util.scss */
+  /* line 53, ../scss/partials/_util.scss */
   .sub-title,
   h2.sub-title {
     font-size: 1.35em;
   }
 }
 
-/* line 61, ../scss/partials/_util.scss */
+/* line 66, ../scss/partials/_util.scss */
 .page-sub-title {
   font-size: 1.2em;
 }
 
-/* line 63, ../scss/partials/_util.scss */
+/* line 68, ../scss/partials/_util.scss */
 .article-header {
   margin: 2em auto;
   text-align: center;
 }
 @media (min-width: 768px) {
-  /* line 63, ../scss/partials/_util.scss */
+  /* line 68, ../scss/partials/_util.scss */
   .article-header {
     margin: 3em auto;
   }
 }
 
-/* line 73, ../scss/partials/_util.scss */
+/* line 78, ../scss/partials/_util.scss */
 video {
   display: block;
   width: 100% !important;
   height: 100% !important;
 }
 
-/* line 79, ../scss/partials/_util.scss */
+/* line 84, ../scss/partials/_util.scss */
 .btn {
   text-decoration: none;
   outline: none;
@@ -2822,44 +2828,44 @@ video {
   transition: all 0.2s ease-in-out;
 }
 @media (min-width: 768px) {
-  /* line 79, ../scss/partials/_util.scss */
+  /* line 84, ../scss/partials/_util.scss */
   .btn {
     font-size: 0.8em;
     padding: 0.4em 1.5em 0.25em;
   }
 }
-/* line 99, ../scss/partials/_util.scss */
+/* line 104, ../scss/partials/_util.scss */
 .btn:hover {
   color: #d4a551;
   background-color: #1c391e;
 }
 
 @media (min-width: 768px) {
-  /* line 109, ../scss/partials/_util.scss */
+  /* line 114, ../scss/partials/_util.scss */
   .page-id-13 .page-title {
     font-size: 2em;
   }
-  /* line 110, ../scss/partials/_util.scss */
+  /* line 115, ../scss/partials/_util.scss */
   .page-id-13 .page-sub-title {
     font-size: 1.6em;
   }
 }
 
 @media (min-width: 768px) {
-  /* line 115, ../scss/partials/_util.scss */
+  /* line 120, ../scss/partials/_util.scss */
   .page-id-19 .tab-holder .page-title {
     font-size: 1.8em;
     letter-spacing: 0.05em;
     margin: 0.2em auto;
   }
-  /* line 116, ../scss/partials/_util.scss */
+  /* line 121, ../scss/partials/_util.scss */
   .page-id-19 .tab-holder .page-sub-title {
     font-size: 1.4em;
     letter-spacing: 0.05em;
   }
 }
 
-/* line 122, ../scss/partials/_util.scss */
+/* line 127, ../scss/partials/_util.scss */
 .page-id-13 .page-title:after {
   content: "";
   display: block;
@@ -2869,7 +2875,7 @@ video {
   margin: 0.85em auto 1em;
 }
 
-/* line 134, ../scss/partials/_util.scss */
+/* line 139, ../scss/partials/_util.scss */
 .page-id-19 .tab-holder .page-sub-title:after {
   content: "";
   display: block;
@@ -2879,7 +2885,7 @@ video {
   margin: 1.6em auto 0;
 }
 
-/* line 145, ../scss/partials/_util.scss */
+/* line 150, ../scss/partials/_util.scss */
 a.arrow,
 a.arrow {
   display: block;
@@ -2898,7 +2904,7 @@ a.arrow {
   transform: rotate(360deg);
 }
 
-/* line 158, ../scss/partials/_util.scss */
+/* line 163, ../scss/partials/_util.scss */
 .arrow-left,
 a.arrow-left {
   border-width: 15px 20px 15px 0;
@@ -2906,7 +2912,7 @@ a.arrow-left {
   left: 0;
 }
 
-/* line 164, ../scss/partials/_util.scss */
+/* line 169, ../scss/partials/_util.scss */
 .arrow-right,
 a.arrow-right {
   border-width: 15px 0 15px 20px;

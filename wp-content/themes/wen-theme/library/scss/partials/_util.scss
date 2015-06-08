@@ -1,5 +1,10 @@
 // UTILITES
 
+// NO HOVER EVENTS ON SCROLL
+.disable-hover {
+	pointer-events: none;
+}
+
 .italic { font-style: italic; }
 
 // RESET MARGINS

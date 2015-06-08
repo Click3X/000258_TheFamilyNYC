@@ -420,11 +420,16 @@ function printFamilyMembers($familyMembers) {
 				// IMAGE SRC
 				$src = $familyMember['image'];
 
-				echo '<li id="family-member-'.$key.'" class="cf family-member">';
-						echo '<a href="'.$link.'" class="family-member-link">';
-							echo '<img src="'.$src['url'].'">';
-						echo '</a>';
-				echo '</li>';
+				// ONLY PRINT FAMILY MEMBER IF THERE IS AN IMAGE ASSOCIATED WITH IT
+				if($src['url'] != "") {
+
+					echo '<li id="family-member-'.$key.'" class="cf family-member">';
+							echo '<a href="'.$link.'" class="family-member-link">';
+								echo '<img src="'.$src['url'].'">';
+							echo '</a>';
+					echo '</li>';
+				}
+				
 			}
 		echo '</ul>';
 		echo '<a href="#" class="arrow arrow-right"></a>';

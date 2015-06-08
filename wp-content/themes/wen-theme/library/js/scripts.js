@@ -104,6 +104,21 @@ function loadGravatars() {
 	}
 }
 
+// DISABLE HOVER ON SCROLL FOR SMOOTHER PERFORMANCE
+var body = document.body,
+timer;
+
+window.addEventListener('scroll', function() {
+    clearTimeout(timer);
+
+    if(! $('body').hasClass('disable-hover')) {
+        $('body').addClass('disable-hover');
+    }
+
+    timer = setTimeout(function(){
+        $('body').removeClass('disable-hover');
+    }, 90);
+}, false);
 
 
 // MOBILE
@@ -120,11 +135,8 @@ if(mobile) {
 }
 
 
-
-
 jQuery(document).ready(function($) {
   // MAIN MENU
-  // $('#hamburger, #menu-close').click(toggleOverlay);
   $('#hamburger, #menu-close').click(toggleOverlay);
   // WORK
   $('#work-menu-link').click(toggleWorkOverlay);
@@ -163,6 +175,7 @@ jQuery(document).ready(function($) {
   function closeWorkOverlay() {
     console.log('I have been clicked!');
     $('.menu-open').toggleClass('menu-open');
+    $('html,body').removeClass('noScroll');
   }
 
   // HTML VIDEO CONTROLS
