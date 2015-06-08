@@ -539,6 +539,18 @@ span.amp {
   font-style: italic;
 }
 
+@font-face {
+  font-family: gotham-light;
+  src: url(../fonts/gotham-light.ttf);
+}
+@font-face {
+  font-family: gotham-book;
+  src: url(../fonts/gotham-book.ttf);
+}
+@font-face {
+  font-family: gotham-bold;
+  src: url(../fonts/gotham-bold.ttf);
+}
 /******************************************************************
 Site Name:
 Author:
@@ -1027,18 +1039,6 @@ them however you see fit.
     padding-right: 0.75em;
     width: 8.33%;
   }
-}
-@font-face {
-  font-family: gotham-light;
-  src: url(../fonts/gotham-light.ttf);
-}
-@font-face {
-  font-family: gotham-book;
-  src: url(../fonts/gotham-book.ttf);
-}
-@font-face {
-  font-family: gotham-bold;
-  src: url(../fonts/gotham-bold.ttf);
 }
 /* line 1, ../scss/partials/_nav.scss */
 .noScroll {

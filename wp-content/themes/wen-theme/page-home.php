@@ -142,7 +142,7 @@ wp_reset_postdata();
 								<!-- END HEADER BG -->
 								<header class="article-header">
 									<?php echo '<h2 class="sub-title">'.$sub_title.'</h2>'; ?>
-									<a href="#" class="btn learn-more">Learn More</a>
+									<a href="#post-6-2" class="btn learn-more">Learn More</a>
 								</header>
 							</div>
 							<!-- END HEADER BG -->

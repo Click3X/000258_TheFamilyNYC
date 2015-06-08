@@ -26,6 +26,9 @@ the whole project.
 // normalize: http://necolas.github.io/normalize.css/
 @import "partials/normalize";
 
+// fonts
+@import "partials/fonts";
+
 // Sass variables
 @import "partials/variables";
 
@@ -41,8 +44,8 @@ the whole project.
 // the grid
 @import "partials/grid";
 
-// fonts
-@import "partials/fonts";
+// // fonts
+// @import "partials/fonts";
 
 // nav
 @import "partials/nav";
