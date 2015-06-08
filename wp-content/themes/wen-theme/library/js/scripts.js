@@ -125,11 +125,11 @@ if(mobile) {
 jQuery(document).ready(function($) {
   // MAIN MENU
   // $('#hamburger, #menu-close').click(toggleOverlay);
-  $('#hamburger').click(toggleOverlay);
+  $('#hamburger, #menu-close').click(toggleOverlay);
   // WORK
   $('#work-menu-link').click(toggleWorkOverlay);
   // CLOSE MENU
-  $('#menu-close, #work-menu-close').click(closeWorkOverlay);
+  $('#work-menu-close').click(closeWorkOverlay);
 
   // highlight selected menu item
   var url = window.location;

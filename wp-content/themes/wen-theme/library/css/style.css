@@ -1045,35 +1045,35 @@ them however you see fit.
   overflow: hidden;
 }
 
-/* line 5, ../scss/partials/_nav.scss */
+/* line 3, ../scss/partials/_nav.scss */
 #inner-header {
   padding: 6px 20px 0 20px;
 }
-/* line 8, ../scss/partials/_nav.scss */
+/* line 6, ../scss/partials/_nav.scss */
 #inner-header #hamburger {
   float: right;
   display: inline-block;
   cursor: pointer;
   margin-top: 6px;
 }
-/* line 13, ../scss/partials/_nav.scss */
+/* line 12, ../scss/partials/_nav.scss */
 #inner-header #hamburger img {
   width: 34px;
 }
-/* line 18, ../scss/partials/_nav.scss */
+/* line 15, ../scss/partials/_nav.scss */
 #inner-header #logo img {
   width: 34px;
 }
 
-/* line 23, ../scss/partials/_nav.scss */
+/* line 18, ../scss/partials/_nav.scss */
 .family-navigation.mobile-menu {
   position: fixed;
   top: 0;
   left: 0;
+  top: 100%;
   width: 100%;
   height: 100%;
   z-index: 1005;
-  top: 100%;
   opacity: 0;
   -webkit-transition: opacity 0.4s;
   -moz-transition: opacity 0.4s;
@@ -1082,24 +1082,62 @@ them however you see fit.
   transition: opacity 0.4s;
 }
 
-/* line 39, ../scss/partials/_nav.scss */
+/* line 27, ../scss/partials/_nav.scss */
 .menu-open.mobile-menu {
   top: 0;
   opacity: 1;
   overflow-y: scroll;
 }
 
-/* line 46, ../scss/partials/_nav.scss */
+/* line 33, ../scss/partials/_nav.scss */
 .mobile-menu-inner {
   background: #f7f6f1;
 }
 
-/* line 50, ../scss/partials/_nav.scss */
+/* line 35, ../scss/partials/_nav.scss */
+#work-menu {
+  background: #f7f6f1;
+}
+/* line 37, ../scss/partials/_nav.scss */
+#work-menu > div > header {
+  margin: 0 auto;
+}
+/* line 40, ../scss/partials/_nav.scss */
+#work-menu .mobile-menu-inner {
+  padding-top: 2.5em;
+}
+@media (min-width: 768px) {
+  /* line 40, ../scss/partials/_nav.scss */
+  #work-menu .mobile-menu-inner {
+    padding-top: 5em;
+  }
+}
+/* line 45, ../scss/partials/_nav.scss */
+#work-menu .sort-title {
+  font-size: 1.4em;
+  padding-bottom: 0.25em;
+}
+/* line 49, ../scss/partials/_nav.scss */
+#work-menu .dashed-border {
+  padding-top: 0.5em;
+  padding-bottom: 0.85em;
+}
+
+/* line 54, ../scss/partials/_nav.scss */
+.page-id-13 #work-menu .page-title {
+  padding-bottom: 0.85em;
+}
+/* line 56, ../scss/partials/_nav.scss */
+.page-id-13 #work-menu .page-title:after {
+  display: none;
+}
+
+/* line 59, ../scss/partials/_nav.scss */
 #mobile-menu.family-navigation.mobile-menu .mobile-menu-inner {
   height: 100%;
 }
 
-/* line 56, ../scss/partials/_nav.scss */
+/* line 62, ../scss/partials/_nav.scss */
 #menu-close,
 #work-menu-close {
   display: inline-block;
@@ -1108,20 +1146,24 @@ them however you see fit.
   top: 12px;
   right: 20px;
 }
-/* line 63, ../scss/partials/_nav.scss */
+/* line 69, ../scss/partials/_nav.scss */
 #menu-close img,
 #work-menu-close img {
   width: 34px;
 }
 
-/* line 68, ../scss/partials/_nav.scss */
-#menu-main-menu,
-#menu-work-menu {
+/* line 72, ../scss/partials/_nav.scss */
+#menu-main-menu {
   text-align: center;
   padding: 20px 0;
 }
 
-/* line 74, ../scss/partials/_nav.scss */
+/* line 77, ../scss/partials/_nav.scss */
+#menu-work-menu {
+  text-align: center;
+}
+
+/* line 79, ../scss/partials/_nav.scss */
 #menu-main-menu li,
 #menu-work-menu li {
   margin: 0;
@@ -1131,40 +1173,98 @@ them however you see fit.
   -webkit-transition: background-color 0.1s ease;
   transition: background-color 0.1s ease;
 }
-/* line 82, ../scss/partials/_nav.scss */
+/* line 86, ../scss/partials/_nav.scss */
 #menu-main-menu li:hover,
 #menu-work-menu li:hover {
   background-color: #1c391e;
 }
-/* line 84, ../scss/partials/_nav.scss */
+/* line 88, ../scss/partials/_nav.scss */
 #menu-main-menu li:hover a,
 #menu-work-menu li:hover a {
   color: #fff;
 }
 
-/* line 91, ../scss/partials/_nav.scss */
+/* line 92, ../scss/partials/_nav.scss */
 #menu-main-menu li a,
 #menu-work-menu li a {
   font-family: 'gotham-book';
+  font-weight: 700;
   font-size: 1.8em;
+  line-height: 1.1em;
   text-transform: uppercase;
   display: block;
   color: #323944;
   text-decoration: none;
-  line-height: 1.1em;
-  font-weight: 700;
   -webkit-transition: color 0.1s ease;
   transition: color 0.1s ease;
 }
 @media (max-width: 480px) {
-  /* line 91, ../scss/partials/_nav.scss */
+  /* line 92, ../scss/partials/_nav.scss */
   #menu-main-menu li a,
   #menu-work-menu li a {
     font-size: 1.4em;
   }
 }
 
-/* line 108, ../scss/partials/_nav.scss */
+/* line 105, ../scss/partials/_nav.scss */
+#menu-work-menu li a {
+  font-size: 1.1em;
+  line-height: 1.8em;
+  padding: 0;
+}
+@media (min-width: 768px) {
+  /* line 105, ../scss/partials/_nav.scss */
+  #menu-work-menu li a {
+    font-size: 1.3em;
+  }
+}
+
+/* line 112, ../scss/partials/_nav.scss */
+#menu-work-menu li a[href="#title"] {
+  color: #d4a551;
+  font-size: 0.85em;
+}
+@media (min-width: 768px) {
+  /* line 112, ../scss/partials/_nav.scss */
+  #menu-work-menu li a[href="#title"] {
+    font-size: 1.1em;
+  }
+}
+/* line 118, ../scss/partials/_nav.scss */
+#menu-work-menu li a[href="#title"]:before {
+  content: "";
+  display: block;
+  border-bottom: 1px dashed #a8b2a8;
+  width: 15%;
+  max-width: 144px;
+  margin: 1em auto 1.3em;
+}
+
+/* line 126, ../scss/partials/_nav.scss */
+#menu-work-menu:after {
+  content: "";
+  display: block;
+  border-bottom: 1px dashed #a8b2a8;
+  width: 15%;
+  max-width: 144px;
+  margin: 2.1em auto 1.3em;
+}
+
+/* line 133, ../scss/partials/_nav.scss */
+#work-menu nav {
+  padding-bottom: 3em;
+}
+
+/* line 137, ../scss/partials/_nav.scss */
+#menu-work-menu li.menu-item-type-custom:hover {
+  background-color: inherit;
+}
+/* line 139, ../scss/partials/_nav.scss */
+#menu-work-menu li.menu-item-type-custom:hover a {
+  color: #d4a551;
+}
+
+/* line 143, ../scss/partials/_nav.scss */
 #menu-title,
 #work-menu-title {
   font-style: italic;
@@ -1175,23 +1275,23 @@ them however you see fit.
   text-align: center;
 }
 @media (max-width: 480px) {
-  /* line 108, ../scss/partials/_nav.scss */
+  /* line 143, ../scss/partials/_nav.scss */
   #menu-title,
   #work-menu-title {
     padding: 40px 0 40px 0;
   }
 }
 
-/* line 121, ../scss/partials/_nav.scss */
+/* line 154, ../scss/partials/_nav.scss */
 .main-menu-selected {
   background-color: #1c391e;
 }
-/* line 123, ../scss/partials/_nav.scss */
+/* line 156, ../scss/partials/_nav.scss */
 .main-menu-selected a {
   color: #fff !important;
 }
 
-/* line 130, ../scss/partials/_nav.scss */
+/* line 161, ../scss/partials/_nav.scss */
 #container {
   padding-top: 56px;
 }

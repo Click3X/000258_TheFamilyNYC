@@ -1,6 +1,4 @@
-.noScroll {
-	overflow: hidden;
-}
+.noScroll { overflow: hidden; }
 
 #inner-header {
 	padding: 6px 20px 0 20px;
@@ -10,30 +8,20 @@
 		display: inline-block;
 		cursor: pointer;
 		margin-top: 6px;	
-		img {
-			width: 34px;
-		}	
+		
+		img { width: 34px; }	
 	}
 
-	#logo img {
-		width: 34px;
-	}
+	#logo img { width: 34px; }
 }
 
 .family-navigation.mobile-menu {
 	position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 1005;
-  top: 100%;
-  opacity: 0;
-  -webkit-transition: opacity 0.4s;
-  -moz-transition: opacity 0.4s;
-  -o-transition: opacity 0.4s;
-  -ms-transition: opacity 0.4s;
-  transition: opacity 0.4s;
+	top: 0; left: 0; top: 100%;
+	width: 100%; height: 100%;
+	z-index: 1005;
+	opacity: 0;
+	@include prefix(transition, opacity 0.4s);
 }
 
 .menu-open.mobile-menu {
@@ -42,15 +30,33 @@
 	overflow-y: scroll; 
 }
 
+.mobile-menu-inner { background: $light-gold; }
 
-.mobile-menu-inner {
-  	background: $light-gold;
+#work-menu {
+	background: $light-gold;
+	> div > header {
+		margin: 0 auto;
+	}
+	.mobile-menu-inner {
+		padding-top: 2.5em;
+		@media(min-width: 768px) { padding-top:5em; }
+	}
+
+	.sort-title {
+		font-size: 1.4em;
+		padding-bottom: 0.25em;
+	}
+	.dashed-border {
+		padding-top: 0.5em; padding-bottom: 0.85em;
+	}
 }
 
-#mobile-menu.family-navigation.mobile-menu .mobile-menu-inner {
-	height: 100%;
-  	// background: $light-gold;
+.page-id-13 #work-menu .page-title { 
+	padding-bottom: 0.85em;
+	&:after { display: none; }
 }
+
+#mobile-menu.family-navigation.mobile-menu .mobile-menu-inner { height: 100%; }
 
 
 #menu-close,
@@ -58,51 +64,80 @@
 	display: inline-block;
 	cursor: pointer;
 	position: absolute;
-    top: 12px;
-    right: 20px;
-    img {
-    	width: 34px;
-    }
+    top: 12px; right: 20px;
+    
+    img { width: 34px; }
 }
 
-#menu-main-menu,
-#menu-work-menu {
+#menu-main-menu {
 	text-align: center;
 	padding: 20px 0;
 }
 
+#menu-work-menu { text-align: center; }
+
 #menu-main-menu li,
 #menu-work-menu li {
-	margin: 0;
-	padding: 0;
+	margin: 0; padding: 0;
 	display: block;
 	float: none;
 	@include transition(background-color 0.1s ease);
 
     &:hover {
     	background-color: $footer-green;
-    	a {
-    		color: $white;
-    	}
-    	
+    	a { color: $white; }
     }
 }
 
 #menu-main-menu li a,
 #menu-work-menu li a {
-	font-family: 'gotham-book';
-	font-size: 1.8em;
+	font-family: 'gotham-book'; font-weight: 700;
+	font-size: 1.8em; line-height: 1.1em;
 	text-transform: uppercase;
 	display: block;
 	color: $black;
 	text-decoration: none;
-	line-height: 1.1em;
-	font-weight: 700;
-	@include transition(color 0.1s ease);
 
-	@media (max-width: $tablet-small) {
-		font-size: 1.4em;
+	@include transition(color 0.1s ease);
+	@media (max-width: $tablet-small) { font-size: 1.4em; }
+}
+
+#menu-work-menu li a {
+	font-size: 1.1em; line-height: 1.8em;
+	padding:0;
+
+	@media(min-width: 768px) { font-size: 1.3em; }
+}
+
+#menu-work-menu li a[href="#title"] { 
+	color:$project-gold;
+	font-size: 0.85em;
+
+	@media(min-width: 768px) { font-size: 1.1em; }
+
+	&:before {
+	  content: ""; display: block;
+	  border-bottom: 1px dashed #a8b2a8;
+	  width: 15%; max-width: 144px;
+	  margin: 1em auto 1.3em;
 	}
+}
+
+#menu-work-menu:after {
+  content: ""; display: block;
+  border-bottom: 1px dashed #a8b2a8;
+  width: 15%; max-width: 144px;
+  margin: 2.1em auto 1.3em;
+}
+
+#work-menu nav { padding-bottom: 3em; }
+
+// NO HOVERS FOR MENU LABELS
+#menu-work-menu li.menu-item-type-custom {
+	 &:hover {
+    	background-color:inherit;
+    	a { color:$project-gold; }
+    }
 }
 
 #menu-title,
@@ -113,20 +148,14 @@
 	margin: 0;
 	padding: 100px 0 40px 0;
 	text-align: center;
-	@media (max-width: $tablet-small) {
-		padding: 40px 0 40px 0;
-	}
+	@media (max-width: $tablet-small) { padding: 40px 0 40px 0; }
 }
 
 .main-menu-selected {
 	background-color: $footer-green;
-	a {
-		color: $white !important;
-	}
+	a { color: $white !important; }
 }
 
 
 // ADD PADDING TO OFFSET NAV MENU
-#container {
-	padding-top:56px;
-}
+#container { padding-top:56px; }
