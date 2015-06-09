@@ -3396,31 +3396,46 @@ video {
 /* line 22, ../scss/partials/_family-history.scss */
 .tt-title,
 h3.tt-title {
-  font-size: 1.2em;
+  font-size: 1em;
+  line-height: 1.2em;
   color: #d4a551;
 }
-
-/* line 28, ../scss/partials/_family-history.scss */
-.tt-date,
-h4.tt-date {
-  font-size: 1em;
-  font-weight: 800;
+@media (min-width: 768px) {
+  /* line 22, ../scss/partials/_family-history.scss */
+  .tt-title,
+  h3.tt-title {
+    font-size: 1.2em;
+  }
 }
 
-/* line 35, ../scss/partials/_family-history.scss */
+/* line 32, ../scss/partials/_family-history.scss */
+.tt-date,
+h4.tt-date {
+  font-size: 0.85em;
+  font-weight: 800;
+}
+@media (min-width: 768px) {
+  /* line 32, ../scss/partials/_family-history.scss */
+  .tt-date,
+  h4.tt-date {
+    font-size: 1em;
+  }
+}
+
+/* line 43, ../scss/partials/_family-history.scss */
 .tabs .article-header {
   margin-bottom: 1.5em;
 }
-/* line 38, ../scss/partials/_family-history.scss */
+/* line 46, ../scss/partials/_family-history.scss */
 .tabs .page-content {
   max-width: 41.5em;
 }
-/* line 40, ../scss/partials/_family-history.scss */
+/* line 48, ../scss/partials/_family-history.scss */
 .tabs .page-content p {
   margin-top: 1.5em;
 }
 
-/* line 44, ../scss/partials/_family-history.scss */
+/* line 52, ../scss/partials/_family-history.scss */
 #section-1 > div:nth-child(2) > header > h3:nth-child(3) {
   margin: 1em auto 1.5em;
   max-width: 23em;
@@ -3429,13 +3444,13 @@ h4.tt-date {
   letter-spacing: 0.05em;
 }
 @media (min-width: 768px) {
-  /* line 44, ../scss/partials/_family-history.scss */
+  /* line 52, ../scss/partials/_family-history.scss */
   #section-1 > div:nth-child(2) > header > h3:nth-child(3) {
     font-size: 1.35em;
   }
 }
 
-/* line 56, ../scss/partials/_family-history.scss */
+/* line 64, ../scss/partials/_family-history.scss */
 #section-1 .page-content > header > h4:after {
   content: "";
   display: block;
@@ -3632,47 +3647,56 @@ h4.tt-date {
   margin: 0 auto;
 }
 
-/* line 13, ../scss/partials/_team-members-module.scss */
+/* line 11, ../scss/partials/_team-members-module.scss */
 .team-member-list .img-container {
   width: auto;
 }
 @media (min-width: 768px) {
-  /* line 13, ../scss/partials/_team-members-module.scss */
+  /* line 11, ../scss/partials/_team-members-module.scss */
   .team-member-list .img-container {
     width: 42.857143%;
   }
 }
-/* line 18, ../scss/partials/_team-members-module.scss */
+/* line 31, ../scss/partials/_team-members-module.scss */
 .team-member-list .img-container img {
-  width: 60%;
-  max-width: 275px;
   margin: 0 auto;
   padding-top: 0.5em;
+  width: auto;
+  max-width: 200px;
+  height: auto;
+  max-height: 200px;
+}
+@media (min-width: 480px) {
+  /* line 31, ../scss/partials/_team-members-module.scss */
+  .team-member-list .img-container img {
+    max-width: 275px;
+    max-height: 275px;
+  }
 }
 @media (min-width: 768px) {
-  /* line 18, ../scss/partials/_team-members-module.scss */
+  /* line 31, ../scss/partials/_team-members-module.scss */
   .team-member-list .img-container img {
-    max-width: 406px;
-    max-height: 348px;
+    max-width: 435px;
+    max-height: 373px;
     width: auto;
     float: right;
     padding-right: 1em;
-    padding-top: 1em;
+    padding-top: 2em;
   }
 }
-/* line 35, ../scss/partials/_team-members-module.scss */
+/* line 48, ../scss/partials/_team-members-module.scss */
 .team-member-list .txt-container {
   width: auto;
   text-align: center;
   padding: 0 30px;
 }
 @media (min-width: 768px) {
-  /* line 35, ../scss/partials/_team-members-module.scss */
+  /* line 48, ../scss/partials/_team-members-module.scss */
   .team-member-list .txt-container {
     width: 57.142857%;
   }
 }
-/* line 44, ../scss/partials/_team-members-module.scss */
+/* line 57, ../scss/partials/_team-members-module.scss */
 .team-member-list .txt-container .txt-wrapper {
   text-align: center;
   color: #1b381d;
@@ -3681,64 +3705,64 @@ h4.tt-date {
   margin: 0.5em auto 1.25em;
 }
 @media (min-width: 768px) {
-  /* line 44, ../scss/partials/_team-members-module.scss */
+  /* line 57, ../scss/partials/_team-members-module.scss */
   .team-member-list .txt-container .txt-wrapper {
     margin: 0 1.5em;
   }
 }
-/* line 53, ../scss/partials/_team-members-module.scss */
+/* line 66, ../scss/partials/_team-members-module.scss */
 .team-member-list .txt-container .txt-wrapper h1 {
   font-size: 1em;
 }
-/* line 55, ../scss/partials/_team-members-module.scss */
+/* line 68, ../scss/partials/_team-members-module.scss */
 .team-member-list .txt-container .txt-wrapper p {
   line-height: 1.3em;
   max-width: none;
   margin-left: auto;
   margin-right: auto;
 }
-/* line 61, ../scss/partials/_team-members-module.scss */
+/* line 74, ../scss/partials/_team-members-module.scss */
 .team-member-list .txt-container .txt-wrapper .team-member-email {
   font-weight: 700;
   text-decoration: none;
   color: #1b381d;
 }
-/* line 67, ../scss/partials/_team-members-module.scss */
+/* line 80, ../scss/partials/_team-members-module.scss */
 .team-member-list .txt-container .txt-wrapper p, .team-member-list .txt-container .txt-wrapper .team-member-email {
   font-size: 0.875em;
 }
 @media (min-width: 768px) {
-  /* line 72, ../scss/partials/_team-members-module.scss */
+  /* line 85, ../scss/partials/_team-members-module.scss */
   .team-member-list .txt-container .txt-wrapper h1 {
     font-size: 1.5em;
   }
-  /* line 73, ../scss/partials/_team-members-module.scss */
+  /* line 86, ../scss/partials/_team-members-module.scss */
   .team-member-list .txt-container .txt-wrapper p,
   .team-member-list .txt-container .txt-wrapper .team-member-email {
     font-size: 1em;
   }
 }
 @media (min-width: 768px) {
-  /* line 83, ../scss/partials/_team-members-module.scss */
+  /* line 96, ../scss/partials/_team-members-module.scss */
   .team-member-list .team-member .img-container img {
     float: right;
   }
-  /* line 85, ../scss/partials/_team-members-module.scss */
+  /* line 98, ../scss/partials/_team-members-module.scss */
   .team-member-list .team-member:nth-child(odd) .img-container img {
     float: left;
   }
-  /* line 86, ../scss/partials/_team-members-module.scss */
+  /* line 99, ../scss/partials/_team-members-module.scss */
   .team-member-list .team-member:nth-child(odd) .txt-wrapper {
     float: right;
   }
 }
 @media (max-width: 767px) {
-  /* line 92, ../scss/partials/_team-members-module.scss */
+  /* line 105, ../scss/partials/_team-members-module.scss */
   .team-member-list .table-header,
   .team-member-list .img-container {
     display: table-header-group;
   }
-  /* line 95, ../scss/partials/_team-members-module.scss */
+  /* line 108, ../scss/partials/_team-members-module.scss */
   .team-member-list .table-footer,
   .team-member-list .text-container {
     display: table-footer-group;
