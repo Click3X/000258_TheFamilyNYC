@@ -109,7 +109,8 @@ video {
 
 
 // DOTS AFTER TITLES ON CERTAIN PAGES:
-.page-id-13 {
+.page-id-13,
+.single-family-member {
 	@media(min-width: 768px) { 
 		.page-title { font-size: 2em; }
 		.page-sub-title {font-size: 1.6em; }
@@ -122,7 +123,8 @@ video {
 	}
 }
 // WORK
-.page-id-13 {
+.page-id-13,
+.single-family-member {
 	.page-title {
 		&:after {
 			content: "";

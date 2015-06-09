@@ -7,7 +7,7 @@
 
 			<div id="content">
 
-				<div id="inner-content" class="wrap cf">
+				<div id="inner-content" class="cf">
 
 					<main id="main" class="m-all t-3of3 d-7of7 cf" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
 
@@ -15,6 +15,7 @@
 							<header class="article-header">
 								<h2 class="page-sub-title italic"><?php bloginfo('title');?></h2>
 								<h1 class="page-title"><?php the_title(); ?></h1>
+								<a id="work-menu-link" href="#" class="btn sort-by work-menu-link">Sort By</a>
 							</header>
 
 							<?php
@@ -41,7 +42,7 @@
 									// STORE PROJECT IN PROJECTS ARRAY
 									$projects[] = $project;
 								}
-								
+
 								// PRINT CUSTOM PROJECTS FUNCTION DECLARED IN FUNCTIONS PHP
 								printProject($projects);
 
