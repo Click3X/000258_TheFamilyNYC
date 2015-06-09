@@ -19,15 +19,11 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1"/>
 
 		<?php // icons & favicons (for more: http://www.jonathantneal.com/blog/understand-the-favicon/) ?>
-		<link rel="apple-touch-icon" href="<?php echo get_template_directory_uri(); ?>/library/images/apple-touch-icon.png">
-		<!-- 
-		<link rel="icon" href="<?php echo get_template_directory_uri(); ?>/favicon.png">
-		<link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png"> 
-		-->
-		<link rel="apple-touch-icon" sizes="60x60" href="apple-touch-icon-60x60.png">
-		<link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32">
-		<link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16">
-		<link rel="manifest" href="manifest.json">
+		<link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png">
+		<link rel="apple-touch-icon" sizes="60x60" href="/apple-touch-icon-60x60.png">
+		<link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+		<link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
+		<link rel="manifest" href="/manifest.json">
 		<meta name="msapplication-TileColor" content="#da532c">
 		<meta name="theme-color" content="#ffffff">
 
@@ -37,8 +33,7 @@
 		<?php // or, set /favicon.ico for IE10 win ?>
 		<meta name="msapplication-TileColor" content="#f01d4f">
 		<meta name="msapplication-TileImage" content="<?php echo get_template_directory_uri(); ?>/library/images/win8-tile-icon.png">
-            <meta name="theme-color" content="#121212">
-
+        <meta name="theme-color" content="#121212">
 		<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
 
 		<?php // wordpress head functions ?>
