@@ -33,7 +33,6 @@
 										echo '<div class="img-container">';
 											echo '<div class="img-wrapper">';
 												// VIDEO
-													// NEW VIDEO WRAPPER
 												echo '<div class="video-container">';
 													echo '<video poster="'.$project['poster'].'" preload="none" >';
 														if($project['mp4']) { echo '<source src="'.$project['mp4'].'" type="video/mp4" />'; }

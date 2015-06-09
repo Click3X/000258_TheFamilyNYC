@@ -58,13 +58,13 @@ if ( $the_query->have_posts() ) {
 				$projects[] = $project;
 			}	
 		} elseif($post->post_type == 'family-member' ) {
-			// $fam = $post;
 			// FILTER OUT FAMILY MEMBERS
 			$fam = array(
 				'title'=>get_the_title(),
 				'image'=>get_field('image'),
-				'link'=>get_field('link')
-				);
+				'link'=>get_field('link'),
+				'permalink'=>get_the_permalink()
+			);
 			$familyMembers[] = $fam;
 		// NEWS POSTS
 		} elseif($post->post_type == 'post' ) {
@@ -77,14 +77,13 @@ if ( $the_query->have_posts() ) {
 				'excerpt'=>get_the_excerpt(),
 				'content'=>get_the_content(),
 				'link'=>get_the_permalink()
-				);
+			);
 			$newss[] = $news;
 		}
 	}
 }
 /* Restore original Post Data */
 wp_reset_postdata();
-
 
 // VARS WE WANT FROM HOME PAGE
 $sub_title = "";

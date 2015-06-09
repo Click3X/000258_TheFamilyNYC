@@ -26,9 +26,12 @@ if ( $the_query->have_posts() ) {
 		$fam = array(
 			'title'=>get_the_title(),
 			'image'=>get_field('image'),
-			'link'=>get_field('link')
-			);
+			'link'=>get_field('link'),
+			'permalink'=>get_the_permalink(),
+			'affiliated-projects' => get_field('affiliated_projects')
+		);
 		$familyMembers[] = $fam;
+
 	}
 }
 /* Restore original Post Data */

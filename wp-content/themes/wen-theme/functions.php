@@ -298,7 +298,6 @@ function printProject($projects) {
 				echo '<div class="img-container">';
 					echo '<div class="img-wrapper">';
 						// VIDEO
-							// NEW VIDEO WRAPPER
 						echo '<div class="video-container">';
 							echo '<video poster="'.$project['poster'].'" preload="none" >';
 								if($project['mp4']) { echo '<source src="'.$project['mp4'].'" type="video/mp4" />'; }
@@ -331,10 +330,8 @@ function printProject($projects) {
 				// IMAGE / VIDEO
 				echo '<div class="img-container">';
 					echo '<div class="img-wrapper">';
-					// VIDEO
-						// NEW VIDEO WRAPPER
+						// VIDEO
 						echo '<div class="video-container">';
-							// echo '<video poster="'.$project['poster'].'" controls="controls" preload="none" >';
 							echo '<video poster="'.$project['poster'].'" preload="none" >';
 								if($project['mp4']) { echo '<source src="'.$project['mp4'].'" type="video/mp4" />'; }
 								if($project['ogg']) { echo '<source src="'.$project['ogg'].'" type="video/ogg" />'; }
@@ -417,11 +414,14 @@ function printFamilyMembers($familyMembers) {
 					else { $link = $familyMember['link']; }
 				// IMAGE SRC
 				$src = $familyMember['image'];
+				// PERMALINK
+				$permalink = $familyMember['permalink'];
 
 				// ONLY PRINT FAMILY MEMBER IF THERE IS AN IMAGE ASSOCIATED WITH IT
 				if($src['url'] != "") {
 					echo '<li id="family-member-'.$key.'" class="cf family-member swiper-slide">';
-							echo '<a href="'.$link.'" class="family-member-link">';
+							// echo '<a href="'.$link.'" class="family-member-link">';
+							echo '<a href="'.$permalink.'" class="family-member-link">';
 								echo '<img src="'.$src['url'].'">';
 							echo '</a>';
 					echo '</li>';
