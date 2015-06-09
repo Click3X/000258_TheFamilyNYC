@@ -110,6 +110,7 @@ video {
 
 // DOTS AFTER TITLES ON CERTAIN PAGES:
 .page-id-13,
+.archive,
 .single-family-member {
 	@media(min-width: 768px) { 
 		.page-title { font-size: 2em; }
@@ -124,6 +125,7 @@ video {
 }
 // WORK
 .page-id-13,
+.archive,
 .single-family-member {
 	.page-title {
 		&:after {
@@ -132,6 +134,21 @@ video {
 			border-bottom: 1px dashed $border-gray;
 			width: 15%; max-width: 144px;
 			margin: 0.85em auto 1em;
+		}
+	}
+}
+
+// HIDE HEADER BG IMAGE AND LOGO ON WORK PAGE
+.page-id-13,
+.archive,
+.single-family-member {
+	
+	#triangle-header { display: none; }
+	 
+	.article-header { 
+		margin: 2.25em auto 1.5em;
+		@media(min-width: 768px) {
+			margin:6em auto 3em; 
 		}
 	}
 }
@@ -173,4 +190,10 @@ a.arrow-right {
 	border-width: 15px 0 15px 20px;
 	border-color: transparent transparent transparent $project-gold;
 	right:0;
+}
+
+// CURRENT PAGE HIGHLIGHT CLASS
+#menu-work-menu li.current_page_item > a,
+#menu-main-menu li.current_page_item > a {
+	color:$project-gold;
 }

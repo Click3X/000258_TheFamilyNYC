@@ -274,6 +274,17 @@ function cleanString($string){
 
 }
 
+// ADD PROJECTS CUSTOM POST TYPE TO ARCHIVE.PHP
+function namespace_add_custom_types( $query ) {
+  if( is_category() || is_tag() && empty( $query->query_vars['suppress_filters'] ) ) {
+    $query->set( 'post_type', array(
+     'post', 'nav_menu_item', 'project'
+		));
+	  return $query;
+	}
+}
+add_filter( 'pre_get_posts', 'namespace_add_custom_types' );
+
 
 // PROJECTS FUNCXTION - PASS IN AN ARRAY OF PROJECTS
 function printProject($projects) {
@@ -282,12 +293,15 @@ function printProject($projects) {
 	foreach ($projects as $key => $project) {
 		// GET PROJECT VIDEO FIELDS
 		$video_source = $project['video_files'];
-		// FOR EACH OF THE FOLLOWING VIDEO TYPES, MAKE A NEW PROJECT ARRAY KEY AND STORE THE VALUE
-		foreach ($video_source as $vidKey => $source) {
-	        if( $source['file']['mime_type'] == 'video/mp4' ) { $project['mp4'] = $source['file']['url']; }
-	        if( $source['file']['mime_type'] == 'video/ogg' ) { $project['ogg'] = $source['file']['url']; }
-	        if( $source['file']['mime_type'] == 'video/webm' ) { $project['webm'] = $source['file']['url']; }
-	    }
+
+		if($video_source) {
+			// FOR EACH OF THE FOLLOWING VIDEO TYPES, MAKE A NEW PROJECT ARRAY KEY AND STORE THE VALUE
+			foreach ($video_source as $vidKey => $source) {
+		        if( $source['file']['mime_type'] == 'video/mp4' ) { $project['mp4'] = $source['file']['url']; }
+		        if( $source['file']['mime_type'] == 'video/ogg' ) { $project['ogg'] = $source['file']['url']; }
+		        if( $source['file']['mime_type'] == 'video/webm' ) { $project['webm'] = $source['file']['url']; }
+		    }
+		}
 
 		// OUTPUT PROJECT
 		echo '<li id="project-'.$project['id'].'" class="cf project">';

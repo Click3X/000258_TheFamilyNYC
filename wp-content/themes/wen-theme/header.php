@@ -44,15 +44,13 @@
 
 		<div id="container">
 
+			<!-- HEADER IS FIXED -->
 			<header class="header" role="banner" itemscope itemtype="http://schema.org/WPHeader">
-
 				<div id="inner-header" class="cf">
 
-					<?php // to use a image just replace the bloginfo('name') with your img src and remove the surrounding <p> ?>
+					<!-- START MAIN MENU -->
 					<a id="logo" href="<?php echo home_url(); ?>" rel="nofollow"><img src="<?php echo get_template_directory_uri(); ?>/library/images/gold_logo.png"></a>
 					<a id="hamburger"><img src="<?php echo get_template_directory_uri(); ?>/library/images/hamburger.png"></a>
-
-
 					<div id="mobile-menu" class="family-navigation mobile-menu">
 	                    <div class="mobile-menu-inner">
 	                    	<h2 id="menu-title">MENU</h2>
@@ -79,10 +77,11 @@
 	                        <a id="menu-close"><img src="<?php echo get_template_directory_uri(); ?>/library/images/menu-close.png"></a>
 	                    </div>
 	                </div>
+	                <!-- END MAIN MENU -->
 
 	                <!-- // SORTING MENU -->
-	                <!-- ONLY APPEARS ON WORK & NEWS PAGE -->
-	                <?php if( is_page(13) || is_singular('family-member') ) { ?>
+	                <!-- ONLY APPEARS ON WORK & NEWS PAGE & FAMILY MEMBER PATE & ARCHIVE-->
+	                <?php if( is_page(13) || is_singular('family-member') || is_archive() ) { ?>
 	                <div id="work-menu" class="family-navigation mobile-menu work-menu">
 	                    <div class="mobile-menu-inner">
 	                    	
@@ -91,7 +90,6 @@
 									<h1 class="page-title">Work &amp; News</h1>
 									<h3 class="sort-title">Sort</h3>
 									<div class="client-wrap"><img src="//localhost:3000/wp-content/themes/wen-theme/library/images/by.png" class="by"></div>
-									<!-- <div class="dashed-border"></div> -->
 							</header>
 
 			                <nav role="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
@@ -109,16 +107,13 @@
 		    					         'fallback_cb' => ''                             // fallback function (if there is one)
 								)); ?>
 							</nav>
-
 	                        <a id="work-menu-close"><img src="<?php echo get_template_directory_uri(); ?>/library/images/menu-close.png"></a>
-	                        
 	                    </div>
 	                </div>
 	                <!-- END SORTING MENU -->
 	                <?php } ?>
 				</div>
-
-			</header>
+			</header><!--  END FIXED HEADER -->
 
 			<!-- ONLY PRINT HEADER IF NOT HOME PAGE -->
 			<?php if(!is_page(6)) { ?>

@@ -86,7 +86,10 @@
 
     &:hover {
     	background-color: $footer-green;
-    	a { color: $white; }
+    	a { 
+    		// color: $white; 
+    		color: $project-gold; 
+    	}
     }
 }
 
@@ -152,9 +155,12 @@
 	@media (max-width: $tablet-small) { padding: 40px 0 40px 0; }
 }
 
-.main-menu-selected {
+// NAV PAGE TITLE HIGHTLIGHT CONDITIONS:
+.main-menu-selected,
+.single-family-member #mobile-menu #menu-item-17,
+#menu-work-menu .current-menu-item {
 	background-color: $footer-green;
-	a { color: $white !important; }
+	a { color: $project-gold; }
 }
 
 
