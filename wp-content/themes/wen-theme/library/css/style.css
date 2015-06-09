@@ -1438,13 +1438,25 @@ them however you see fit.
 /* line 1, ../scss/partials/_footer.scss */
 .gold-line {
   background-size: cover;
-  padding-bottom: 8px;
-  width: 100%;
   background-repeat: no-repeat;
   background-position: center center;
+  padding-bottom: 4px;
+  width: 100%;
+}
+@media (min-width: 481px) {
+  /* line 1, ../scss/partials/_footer.scss */
+  .gold-line {
+    padding-bottom: 6px;
+  }
+}
+@media (min-width: 768px) {
+  /* line 1, ../scss/partials/_footer.scss */
+  .gold-line {
+    padding-bottom: 8px;
+  }
 }
 
-/* line 11, ../scss/partials/_footer.scss */
+/* line 13, ../scss/partials/_footer.scss */
 footer #inner-footer {
   text-align: center;
   max-width: 1400px;
@@ -1452,32 +1464,32 @@ footer #inner-footer {
   padding: 4.75em 0;
 }
 @media (min-width: 768px) {
-  /* line 11, ../scss/partials/_footer.scss */
+  /* line 13, ../scss/partials/_footer.scss */
   footer #inner-footer {
     padding: 4.75em 0 8em;
   }
 }
 @media (min-width: 1060px) {
-  /* line 11, ../scss/partials/_footer.scss */
+  /* line 13, ../scss/partials/_footer.scss */
   footer #inner-footer {
     padding: 4.75em 0 13em;
   }
 }
-/* line 22, ../scss/partials/_footer.scss */
+/* line 24, ../scss/partials/_footer.scss */
 footer .contact-item {
   width: 30%;
   display: inline-block;
   padding: 10px 0;
   vertical-align: top;
 }
-/* line 27, ../scss/partials/_footer.scss */
+/* line 29, ../scss/partials/_footer.scss */
 footer .contact-item .footer-icon {
   background-size: 24px 34px;
   width: 24px;
   height: 34px;
   margin: auto;
 }
-/* line 34, ../scss/partials/_footer.scss */
+/* line 36, ../scss/partials/_footer.scss */
 footer .contact-item h4 {
   padding: 22px 0;
   font-size: 1em;
@@ -1485,43 +1497,43 @@ footer .contact-item h4 {
   color: #fff;
 }
 @media (max-width: 605px) {
-  /* line 34, ../scss/partials/_footer.scss */
+  /* line 36, ../scss/partials/_footer.scss */
   footer .contact-item h4 {
     padding: 10px 0 0 0;
   }
 }
-/* line 44, ../scss/partials/_footer.scss */
+/* line 46, ../scss/partials/_footer.scss */
 footer .contact-item p {
   font-size: 0.9em;
   line-height: 1.3em;
   font-weight: 500;
 }
-/* line 49, ../scss/partials/_footer.scss */
+/* line 51, ../scss/partials/_footer.scss */
 footer .contact-item a {
   color: white;
   text-decoration: none;
 }
 @media (max-width: 605px) {
-  /* line 22, ../scss/partials/_footer.scss */
+  /* line 24, ../scss/partials/_footer.scss */
   footer .contact-item {
     width: 80%;
   }
 }
-/* line 56, ../scss/partials/_footer.scss */
+/* line 58, ../scss/partials/_footer.scss */
 footer .social-container {
   margin: 2.25em 0.25em;
 }
 @media (min-width: 768px) {
-  /* line 56, ../scss/partials/_footer.scss */
+  /* line 58, ../scss/partials/_footer.scss */
   footer .social-container {
     margin: 2.25em 0.25em 6em;
   }
 }
-/* line 64, ../scss/partials/_footer.scss */
+/* line 66, ../scss/partials/_footer.scss */
 footer .social-container a {
   display: inline-block;
 }
-/* line 66, ../scss/partials/_footer.scss */
+/* line 68, ../scss/partials/_footer.scss */
 footer .social-container div {
   background-size: 44px 44px;
   width: 44px;
@@ -1530,24 +1542,24 @@ footer .social-container div {
   display: inline-block;
   margin: 0 1.3em;
 }
-/* line 76, ../scss/partials/_footer.scss */
+/* line 78, ../scss/partials/_footer.scss */
 footer #footer-logo {
   background-size: 290px 24px;
   width: 290px;
   height: 24px;
   margin: 10px auto;
 }
-/* line 83, ../scss/partials/_footer.scss */
+/* line 85, ../scss/partials/_footer.scss */
 footer .footer-credits {
   padding: 0 4px;
 }
-/* line 85, ../scss/partials/_footer.scss */
+/* line 87, ../scss/partials/_footer.scss */
 footer .footer-credits p {
   display: inline-block;
   font-size: 0.8em;
   margin: 6px 0 0 0;
 }
-/* line 91, ../scss/partials/_footer.scss */
+/* line 93, ../scss/partials/_footer.scss */
 footer .footer-credits span {
   margin: 0 10px;
 }
@@ -3551,10 +3563,19 @@ h4.tt-date {
 }
 /* line 13, ../scss/partials/_news-module.scss */
 .news-list .img-container img {
-  width: 60%;
   margin: 0 auto;
-  max-width: 275px;
   padding-top: 0.5em;
+  width: auto;
+  max-width: 200px;
+  height: auto;
+  max-height: 200px;
+}
+@media (min-width: 480px) {
+  /* line 13, ../scss/partials/_news-module.scss */
+  .news-list .img-container img {
+    max-width: 275px;
+    max-height: 275px;
+  }
 }
 @media (min-width: 768px) {
   /* line 13, ../scss/partials/_news-module.scss */
@@ -3567,22 +3588,22 @@ h4.tt-date {
     padding-top: 2em;
   }
 }
-/* line 29, ../scss/partials/_news-module.scss */
+/* line 30, ../scss/partials/_news-module.scss */
 .news-list .txt-container {
   width: auto;
   text-align: center;
 }
 @media (min-width: 768px) {
-  /* line 29, ../scss/partials/_news-module.scss */
+  /* line 30, ../scss/partials/_news-module.scss */
   .news-list .txt-container {
     width: 57.142857%;
   }
 }
-/* line 35, ../scss/partials/_news-module.scss */
+/* line 36, ../scss/partials/_news-module.scss */
 .news-list .txt-container .txt-wrapper {
   margin: 0.5em auto 1.25em;
 }
-/* line 38, ../scss/partials/_news-module.scss */
+/* line 39, ../scss/partials/_news-module.scss */
 .news-list .txt-container .txt-wrapper p {
   font-size: 0.875em;
   line-height: 1.3em;
@@ -3591,18 +3612,18 @@ h4.tt-date {
   max-width: 27em;
 }
 @media (min-width: 768px) {
-  /* line 35, ../scss/partials/_news-module.scss */
+  /* line 36, ../scss/partials/_news-module.scss */
   .news-list .txt-container .txt-wrapper {
     float: left;
   }
-  /* line 47, ../scss/partials/_news-module.scss */
+  /* line 48, ../scss/partials/_news-module.scss */
   .news-list .txt-container .txt-wrapper p {
     font-size: 1.2em;
     margin: 1.75em auto;
   }
 }
 @media (min-width: 930px) {
-  /* line 53, ../scss/partials/_news-module.scss */
+  /* line 54, ../scss/partials/_news-module.scss */
   .news-list .txt-container .txt-wrapper p {
     font-size: 1.4em;
   }

@@ -1,9 +1,11 @@
 .gold-line {
 	background-size: cover;
-	padding-bottom: 8px;
-	width: 100%;
 	background-repeat: no-repeat;
 	background-position: center center;
+	padding-bottom: 4px;
+	width: 100%;
+	@media(min-width: 481px) { padding-bottom: 6px; }
+	@media(min-width: 768px) { padding-bottom: 8px; }
 }
 
 footer {

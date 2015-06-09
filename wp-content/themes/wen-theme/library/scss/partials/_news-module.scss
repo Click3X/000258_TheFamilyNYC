@@ -11,17 +11,18 @@
 		@media(min-width: 768px) { width:42.857143%; }
 		
 		img {
-			width:60%; 
-			margin: 0 auto;
-			max-width: 275px;
-			padding-top: 0.5em; 
+			margin: 0 auto; padding-top: 0.5em; 
+			width: auto; max-width: 200px;
+			height: auto; max-height: 200px;
+
+			@media(min-width: 480px) {
+				max-width: 275px; max-height: 275px;
+			}
 
 			@media(min-width: 768px) { 
 				max-width: 435px; max-height: 373px;
 				width: auto; float: right;
-				padding-right: 1em; 
-				// padding-top: 1em; 
-				padding-top: 2em; 
+				padding-right: 1em; padding-top: 2em; 
 			}
 		}
 	}

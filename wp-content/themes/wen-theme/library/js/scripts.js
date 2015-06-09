@@ -116,6 +116,7 @@ console.log('This is mobile: ' + mobile);
 if(mobile) {
 	jQuery('body').addClass('mobile');
 }
+// END MOBILE CHECL
 
 
 jQuery(document).ready(function($) {
@@ -135,8 +136,10 @@ jQuery(document).ready(function($) {
 					$('body').removeClass('disable-hover');
 			}, 90);
 	}, false);
+	// END DISABLE HOVER
 
 
+	// MENUS
 	// MAIN MENU
 	$('#hamburger, #menu-close').click(toggleOverlay);
 	// WORK
@@ -144,7 +147,7 @@ jQuery(document).ready(function($) {
 	// CLOSE MENU
 	$('#work-menu-close').click(closeWorkOverlay);
 
-	// highlight selected menu item
+	// HIGHLIGHT SELECTED MENU ITEM
 	var url = window.location;
 	$('a[href="'+url+'"]').parent('#menu-main-menu>li').addClass('main-menu-selected');
 
@@ -178,15 +181,19 @@ jQuery(document).ready(function($) {
 		$('.menu-open').toggleClass('menu-open');
 		$('html,body').removeClass('noScroll');
 	}
+	// END MENUS
+
 
 	// HTML VIDEO CONTROLS
+	// SHOW CONTROLS ON HOVER
 	$("video").hover(function(event) {
-			if(event.type === "mouseenter") {
-					$(this).attr("controls", "");
-			} else if(event.type === "mouseleave") {
-					$(this).removeAttr("controls");
-			}
+		if(event.type === "mouseenter") {
+				$(this).attr("controls", "");
+		} else if(event.type === "mouseleave") {
+				$(this).removeAttr("controls");
+		}
 	});
+	// END HTML VIDEO CONTROLS
 
 
 	// SLIDERS
@@ -195,7 +202,7 @@ jQuery(document).ready(function($) {
 		prevButton: '#news-container .arrow-right',
 		paginationClickable: true,
 		spaceBetween: 0,
-		autoplay: 2500,
+		// autoplay: 2500,
 		autoplayDisableOnInteraction: false,
 		loop: true
 	});
@@ -218,7 +225,8 @@ jQuery(document).ready(function($) {
 		slidesPerView: 'auto',
 		autoplayDisableOnInteraction: false
 	});
+	// END SLIDERS
 
-
+	
 
 }); 
