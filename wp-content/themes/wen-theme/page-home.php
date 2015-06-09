@@ -16,17 +16,12 @@
 <?php get_header(); 
 
 // TEAM MEMBERS AND PROJECTS DATA
-$pKey = 0;
-$tmKey = 0;
-$fmKey = 0;
-$nsKey = 0;
 
 // POST DATA VARS
 $teamMembers = array();
 $familyMembers = array();
 $projects = array();
 $newss = array();
-
 
 // GET FAMILY MEMBERS AND PROJECTS
 $args = array(
@@ -41,8 +36,8 @@ if ( $the_query->have_posts() ) {
 	while ( $the_query->have_posts() ) {
 		$the_query->the_post();
 		if($post->post_type == 'team-member') {
-			$teamMembers[$tmKey] = $post;
-			$tmKey++;
+			// PUT POST IN TEAM MEMBER ARRAY
+			$teamMembers[] = $post;
 		} elseif($post->post_type == 'project') {
 			$project = $post;
 			// GET POST THUMBNAIL SRC
@@ -62,7 +57,6 @@ if ( $the_query->have_posts() ) {
 				// PUSH PROJECT INTO PROJECTS ARRAY FOR LATER USE
 				$projects[] = $project;
 			}	
-			$pKey++;
 		} elseif($post->post_type == 'family-member' ) {
 			// $fam = $post;
 			// FILTER OUT FAMILY MEMBERS
@@ -72,7 +66,6 @@ if ( $the_query->have_posts() ) {
 				'link'=>get_field('link')
 				);
 			$familyMembers[] = $fam;
-			$fmKey++;
 		// NEWS POSTS
 		} elseif($post->post_type == 'post' ) {
 			// GET POST THUMBNAIL SRC
@@ -86,7 +79,6 @@ if ( $the_query->have_posts() ) {
 				'link'=>get_the_permalink()
 				);
 			$newss[] = $news;
-			$nsKey++;
 		}
 	}
 }
@@ -107,19 +99,6 @@ endif;
 /* Restore original Post Data */
 wp_reset_postdata();
 
-// OUR VARS
-// helper($familyMembers);
-// helper($teamMembers);
-// helper($projects);
-// helper($newss);
-
-// PAGE VARS 
-// $sub_title
-// $content
-// $familyMembers
-// $teamMembers
-// $projects
-// $newss
 
 ?>
 

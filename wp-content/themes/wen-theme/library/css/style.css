@@ -1372,7 +1372,7 @@ them however you see fit.
 }
 
 @media (min-width: 464px) {
-  /* line 58, ../scss/partials/_triangle_header.scss */
+  /* line 63, ../scss/partials/_triangle_header.scss */
   .logo-wrapper {
     display: inline-block;
     width: 100%;
@@ -1386,19 +1386,19 @@ them however you see fit.
   }
 }
 @media (min-width: 768px) {
-  /* line 58, ../scss/partials/_triangle_header.scss */
+  /* line 63, ../scss/partials/_triangle_header.scss */
   .logo-wrapper {
     bottom: -8%;
   }
 }
 @media (min-width: 920px) {
-  /* line 58, ../scss/partials/_triangle_header.scss */
+  /* line 63, ../scss/partials/_triangle_header.scss */
   .logo-wrapper {
     height: 423px;
   }
 }
 
-/* line 74, ../scss/partials/_triangle_header.scss */
+/* line 79, ../scss/partials/_triangle_header.scss */
 #down-arrow {
   width: 7px;
   height: 30px;
@@ -1409,23 +1409,23 @@ them however you see fit.
   background-repeat: no-repeat;
 }
 @media (min-width: 920px) {
-  /* line 74, ../scss/partials/_triangle_header.scss */
+  /* line 79, ../scss/partials/_triangle_header.scss */
   #down-arrow {
     margin-top: 80px;
     height: 70px;
   }
 }
 
-/* line 90, ../scss/partials/_triangle_header.scss */
+/* line 95, ../scss/partials/_triangle_header.scss */
 .non-home-header #down-arrow {
   display: none;
 }
-/* line 92, ../scss/partials/_triangle_header.scss */
+/* line 97, ../scss/partials/_triangle_header.scss */
 .non-home-header #triangle-header {
   padding-bottom: 50%;
 }
 @media (min-width: 1400px) {
-  /* line 92, ../scss/partials/_triangle_header.scss */
+  /* line 97, ../scss/partials/_triangle_header.scss */
   .non-home-header #triangle-header {
     padding-bottom: 560px;
   }
@@ -3324,14 +3324,20 @@ video {
   }
 }
 
-/* line 3, ../scss/partials/_family-members.scss */
-.page-id-16 #triangle-header {
-  padding-bottom: 38%;
+@media (min-width: 1400px) {
+  /* line 3, ../scss/partials/_family-members.scss */
+  .page-id-16 #triangle-header {
+    padding-bottom: 532px;
+  }
 }
-/* line 5, ../scss/partials/_family-members.scss */
+/* line 13, ../scss/partials/_family-members.scss */
 .page-id-16 .article-header .page-title:after {
   content: none;
   display: none;
+}
+/* line 18, ../scss/partials/_family-members.scss */
+.page-id-16 .family-members-container {
+  padding-top: 0;
 }
 
 /* line 1, ../scss/partials/_family-history.scss */

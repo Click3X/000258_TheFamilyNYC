@@ -300,7 +300,6 @@ function printProject($projects) {
 						// VIDEO
 							// NEW VIDEO WRAPPER
 						echo '<div class="video-container">';
-							// echo '<video poster="'.$project['poster'].'" controls="controls" preload="none" >';
 							echo '<video poster="'.$project['poster'].'" preload="none" >';
 								if($project['mp4']) { echo '<source src="'.$project['mp4'].'" type="video/mp4" />'; }
 								if($project['ogg']) { echo '<source src="'.$project['ogg'].'" type="video/ogg" />'; }
