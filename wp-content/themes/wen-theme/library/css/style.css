@@ -1350,11 +1350,6 @@ them however you see fit.
     padding-bottom: 3em;
   }
 }
-/* line 34, ../scss/partials/_triangle_header.scss */
-.page-id-6 .tri-logo-wrapper .article-header .sub-title {
-  padding-left: 0;
-  padding-right: 0;
-}
 
 /* line 41, ../scss/partials/_triangle_header.scss */
 #family-logo {
