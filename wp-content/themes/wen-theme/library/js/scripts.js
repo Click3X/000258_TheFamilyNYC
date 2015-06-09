@@ -202,7 +202,7 @@ jQuery(document).ready(function($) {
 		prevButton: '#news-container .arrow-right',
 		paginationClickable: true,
 		spaceBetween: 0,
-		// autoplay: 2500,
+		autoplay: 2500,
 		autoplayDisableOnInteraction: false,
 		loop: true
 	});
