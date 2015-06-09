@@ -3489,7 +3489,7 @@ h4.tt-date {
   margin: 0 auto;
 }
 
-/* line 12, ../scss/partials/_family-members-module.scss */
+/* line 10, ../scss/partials/_family-members-module.scss */
 .family-member-list li {
   display: block;
   width: 50%;
@@ -3499,22 +3499,22 @@ h4.tt-date {
   padding-bottom: 50%;
 }
 @media (min-width: 480px) {
-  /* line 12, ../scss/partials/_family-members-module.scss */
+  /* line 10, ../scss/partials/_family-members-module.scss */
   .family-member-list li {
     width: 33.3333333%;
     padding-bottom: 33.3333333%;
   }
 }
 @media (min-width: 768px) {
-  /* line 12, ../scss/partials/_family-members-module.scss */
+  /* line 10, ../scss/partials/_family-members-module.scss */
   .family-member-list li {
     width: 25%;
     padding-bottom: 21%;
   }
 }
-/* line 28, ../scss/partials/_family-members-module.scss */
+/* line 26, ../scss/partials/_family-members-module.scss */
 .family-member-list li .family-member-link img {
-  width: 70%;
+  width: 60%;
   display: block;
   position: absolute;
   top: 0;
@@ -3524,7 +3524,7 @@ h4.tt-date {
   margin: auto;
 }
 @media (min-width: 480px) {
-  /* line 28, ../scss/partials/_family-members-module.scss */
+  /* line 26, ../scss/partials/_family-members-module.scss */
   .family-member-list li .family-member-link img {
     width: 50%;
   }
