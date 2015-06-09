@@ -106,25 +106,15 @@ function loadGravatars() {
 
 // MOBILE
 var mobile = false;
-var smallMobile = false;
 // CHECK FOR MOBILE DEVICE
 if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
 		mobile = true;
-}
-
-if( /webOS|iPhone|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
-		smallMobile = true;
 }
 
 console.log('This is mobile: ' + mobile);
 // IF MOBILE - ADD CLASS
 if(mobile) {
 	jQuery('body').addClass('mobile');
-}
-
-// DIABLE HOVER EVENTS IF DEVICE IS SMALL MOBILE (IPHONE)
-if(smallMobile) {
-	jQuery('body').addClass('disable-hover');
 }
 
 
