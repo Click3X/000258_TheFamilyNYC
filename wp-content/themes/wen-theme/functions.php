@@ -242,7 +242,7 @@ function bones_fonts() {
   wp_enqueue_style('googleFonts', 'http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic');
 }
 
-add_action('wp_enqueue_scripts', 'bones_fonts');
+// add_action('wp_enqueue_scripts', 'bones_fonts');
 
 
 // CHARLES FUNCTIONS
@@ -303,6 +303,8 @@ function printProject($projects) {
 		    }
 		}
 
+		// helper($project);
+
 		// OUTPUT PROJECT
 		echo '<li id="project-'.$project['id'].'" class="cf project">';
 			echo '<div class="center-table">';
@@ -314,9 +316,9 @@ function printProject($projects) {
 						// VIDEO
 						echo '<div class="video-container">';
 							echo '<video poster="'.$project['poster'].'" preload="none" >';
-								if($project['mp4']) { echo '<source src="'.$project['mp4'].'" type="video/mp4" />'; }
-								if($project['ogg']) { echo '<source src="'.$project['ogg'].'" type="video/ogg" />'; }
-								if($project['webm']) { echo '<source src="'.$project['webm'].'" type="video/webm" />'; }
+								if( isset($project['mp4']) ) { echo '<source src="'.$project['mp4'].'" type="video/mp4" />'; }
+								if( isset($project['ogg']) ) { echo '<source src="'.$project['ogg'].'" type="video/ogg" />'; }
+								if( isset($project['webm']) ) { echo '<source src="'.$project['webm'].'" type="video/webm" />'; }
 							echo '</video>';
 						echo '</div>';
 						// END VIDEO
@@ -347,9 +349,9 @@ function printProject($projects) {
 						// VIDEO
 						echo '<div class="video-container">';
 							echo '<video poster="'.$project['poster'].'" preload="none" >';
-								if($project['mp4']) { echo '<source src="'.$project['mp4'].'" type="video/mp4" />'; }
-								if($project['ogg']) { echo '<source src="'.$project['ogg'].'" type="video/ogg" />'; }
-								if($project['webm']) { echo '<source src="'.$project['webm'].'" type="video/webm" />'; }
+								if( isset($project['mp4']) ) { echo '<source src="'.$project['mp4'].'" type="video/mp4" />'; }
+								if( isset($project['ogg']) ) { echo '<source src="'.$project['ogg'].'" type="video/ogg" />'; }
+								if( isset($project['webm']) ) { echo '<source src="'.$project['webm'].'" type="video/webm" />'; }
 							echo '</video>';
 						echo '</div>';
 						// END VIDEO

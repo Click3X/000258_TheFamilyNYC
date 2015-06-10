@@ -188,11 +188,29 @@ jQuery(document).ready(function($) {
 	// SHOW CONTROLS ON HOVER
 	$("video").hover(function(event) {
 		if(event.type === "mouseenter") {
-				$(this).attr("controls", "");
+			$(this).attr("controls", "");
 		} else if(event.type === "mouseleave") {
-				$(this).removeAttr("controls");
+			$(this).removeAttr("controls");
 		}
 	});
+
+	// ON VIDEO CLICK PLAY/PAUSE VIDEO
+	var videos = $('video');
+
+	$.each(videos, function(i, elem) {
+		// STORE THIS VAR
+		var _t = this;
+		// ON CLICK FUNCTION
+		$(_t).click(function() {
+			if (_t.paused == true) {
+			    // PLAY THE VIDEO
+			    _t.play();
+			} else {
+			    // PAUSE THE VIDEO
+			    _t.pause();
+			}
+		});
+	})
 	// END HTML VIDEO CONTROLS
 
 
