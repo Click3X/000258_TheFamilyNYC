@@ -261,4 +261,17 @@ jQuery(document).ready(function($) {
 	// END SMOOTH SCROLL
 
 
+	// FADE IN ELEMENTS ON PAGE LOAD
+	$("body").find("[data-transition-delay]").each(function(){
+	    var _t = $(this);
+
+	    setTimeout(function(){
+	    	_t.removeClass("hidden");
+	    }, _t.attr("data-transition-delay")*150 );
+
+	    console.log( "transition in: ", $(this).attr("data-transition-delay") );
+	});
+	// END FADE IN
+
+
 }); 

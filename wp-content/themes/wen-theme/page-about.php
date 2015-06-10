@@ -17,25 +17,12 @@
 
 	$sub_title = get_field('sub-title'); ?>
 
-			<div id="content">
+			<div id="content" data-transition-delay="1" class="hidden">
 
 				<div id="inner-content" class="wrap cf">
 
 					<main id="main" class="m-all cf" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
-<!-- 
-						<article id="featured-posts" class="cs featured-posts" role="article" itemscope itemtype="http://schema.org/BlogPosting">
 
-							<header class="article-header">
-									<h2 class="page-sub-title italic">Featured</h2>
-									<h1 class="page-title">Posts</h1>
-							</header>
-
-							<section id="projects-list" class="projects-list cf" itemprop="articleBody">
-								<?php printProject($projects); ?>
-							</section>
-
-						</article> -->
-						<!-- <div class="sub-title"><?php echo $sub_title; ?></div> -->
 						<div class="tabs-container">
 							<a class="btn history-tab">WHO? WHAT?</a>
 							<a class="btn history-tab">CHRONOLOGY</a>

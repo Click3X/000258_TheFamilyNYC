@@ -26,7 +26,7 @@
 	$time_line = $history['time_line'];
 ?>
 
-			<div id="content">
+			<div id="content" data-transition-delay="1" class="hidden">
 
 				<div id="inner-content" class="cf">
 

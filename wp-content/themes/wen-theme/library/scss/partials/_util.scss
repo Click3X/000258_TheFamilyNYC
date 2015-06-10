@@ -173,7 +173,6 @@ a.arrow {
 	top:0; bottom:0;
 	margin: auto;
 	z-index: 10;
-	// width: 0; height: 0;
 	height: 30px; width: 24px;
 	border-style: solid;
 
@@ -196,4 +195,12 @@ a.arrow-right {
 #menu-work-menu li.current_page_item > a,
 #menu-main-menu li.current_page_item > a {
 	color:$project-gold;
+}
+
+// HIDDEN
+.hidden { opacity:0; }
+
+// FADE IN ELEMENTS CLASS
+*[data-transition-delay] {
+   @include prefix(transition, opacity 0.2s ease-in-out);
 }

@@ -101,7 +101,7 @@ wp_reset_postdata();
 
 ?>
 
-			<div id="content">
+			<div id="content" data-transition-delay="1" class="hidden">
 
 				<div id="inner-content" class="cf">
 

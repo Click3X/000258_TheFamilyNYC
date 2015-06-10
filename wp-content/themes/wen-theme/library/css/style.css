@@ -2942,7 +2942,7 @@ a.arrow {
   transform: rotate(360deg);
 }
 
-/* line 182, ../scss/partials/_util.scss */
+/* line 181, ../scss/partials/_util.scss */
 .arrow-left,
 a.arrow-left {
   border-width: 15px 20px 15px 0;
@@ -2950,7 +2950,7 @@ a.arrow-left {
   left: 0;
 }
 
-/* line 188, ../scss/partials/_util.scss */
+/* line 187, ../scss/partials/_util.scss */
 .arrow-right,
 a.arrow-right {
   border-width: 15px 0 15px 20px;
@@ -2958,10 +2958,24 @@ a.arrow-right {
   right: 0;
 }
 
-/* line 196, ../scss/partials/_util.scss */
+/* line 195, ../scss/partials/_util.scss */
 #menu-work-menu li.current_page_item > a,
 #menu-main-menu li.current_page_item > a {
   color: #d4a551;
+}
+
+/* line 201, ../scss/partials/_util.scss */
+.hidden {
+  opacity: 0;
+}
+
+/* line 204, ../scss/partials/_util.scss */
+*[data-transition-delay] {
+  -webkit-transition: opacity 0.2s ease-in-out;
+  -moz-transition: opacity 0.2s ease-in-out;
+  -o-transition: opacity 0.2s ease-in-out;
+  -ms-transition: opacity 0.2s ease-in-out;
+  transition: opacity 0.2s ease-in-out;
 }
 
 /* line 2, ../scss/partials/_tabs.scss */

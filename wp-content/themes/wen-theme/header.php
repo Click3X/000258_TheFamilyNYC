@@ -50,7 +50,7 @@
 		<div id="container">
 
 			<!-- HEADER IS FIXED -->
-			<header class="header" role="banner" itemscope itemtype="http://schema.org/WPHeader">
+			<header class="header hidden" role="banner" itemscope itemtype="http://schema.org/WPHeader" data-transition-delay="0">
 				<div id="inner-header" class="cf">
 
 					<!-- START MAIN MENU -->
