@@ -1,0 +1,121 @@
+.desk {
+
+	#triangle-header-parallax {
+		width: 100%; height: 0; 
+		padding-bottom:75%;
+		position: relative;
+		overflow: hidden;
+
+		@media(min-width: 481px) { padding-bottom: 76%; }
+		@media(min-width: 920px) { padding-bottom: 700px; }
+
+		header {
+			position: absolute;
+			bottom: 0;
+			width: 100%;
+		}
+	}
+
+	// HOME PAGE NO BACKGROUND, INSTEAD USE WRAPPER
+	.page-id-6 {
+		#triangle-header-parallax { background:none; }
+		.tri-logo-wrapper {
+			text-align: center;
+			background-size: contain;
+			background-position: center center;
+
+			.article-header {
+				display: block;
+				background: #fff;
+				margin-top:0; margin-bottom:0; 
+				padding-bottom:1.5em; padding-top:1em;
+				@media(min-width: 768px) {
+					display: inline-block;
+					padding-bottom:3em;
+				}
+			}
+		}
+	}
+
+	#family-logo {
+		background-color:#fff;
+		background-repeat:no-repeat;
+		background-size: 95%;
+		background-position: 50% 0;
+		width:29.14275%; max-width: 180px;
+		height: 0; padding-bottom: 44.3%;
+		margin: auto;
+
+		@media(min-width: 617px) { padding-bottom:273px; }
+	}
+
+	.logo-wrapper {
+		@media(min-width: 464px) {
+			display: inline-block;
+			width: 100%; height: 336px;
+			position: absolute;
+			top: 0; bottom: 0; left: 0; right: 0;
+			margin: auto;
+
+			// position: fixed;
+		}
+
+		@media(min-width: 768px) { bottom: -8%; }
+		@media(min-width: 920px) { height: 423px; }
+	}
+
+	#down-arrow {	
+		width: 7px; height: 30px;
+		background-size: 7px 70px;
+		margin: auto; margin-top: 25px;
+		background-position: 0% 100%;
+		background-repeat: no-repeat;
+
+		@media(min-width: 920px) {
+			margin-top: 80px;
+			height: 70px;
+		}
+	}
+
+	.non-home-header {
+		#down-arrow { display: none; }
+
+		// #triangle-header-parallax { 
+		// 	padding-bottom: 50%;
+		// 	@media(min-width: 1400px) { padding-bottom: 560px; }
+		// }
+	}  
+
+	// PARALLAX
+	.bg-parallax {
+		background-color:transparent;
+		// background-size:100%;
+		background-size:75%;
+		background-position: 50% 0%;
+		background-repeat: repeat;
+		width: 100%;
+		// padding-bottom: 100%;
+
+		position: absolute; top:0; left:0;
+
+		padding-bottom:150%;
+
+		@media(min-width: 481px) { padding-bottom: 152%; }
+		// @media(min-width: 920px) { padding-bottom: 1400px; }
+		@media(min-width: 920px) { padding-bottom: 1800px; }
+	}
+
+	.bg-parallax.gold { 
+		background-image:url('../images/gold-parallax.png');
+	}
+
+	.bg-parallax.green { 
+		background-image:url('../images/green-parallax.png');
+		z-index: -1;
+	}
+
+	.bg-parallax.stripe { 
+		background-image:url('../images/stripe-parallax.png');
+		z-index: 10;
+	}
+}

@@ -204,3 +204,7 @@ a.arrow-right {
 *[data-transition-delay] {
    @include prefix(transition, opacity 0.2s ease-in-out);
 }
+
+main > article {
+	background-color:white;
+}

@@ -22,11 +22,7 @@
 								$contact['address'] = get_field('address');
 								$contact['phone'] = get_field('phone');
 								$contact['email'] = get_field('email');
-								?>
-								<header class="article-header">
-										<h2 class="page-sub-title italic"><?php bloginfo('title');?></h2>
-										<h1 class="page-title">Team</h1>
-								</header>
+							?>
 						<?php 
 							endwhile; 
 							endif;

@@ -52,6 +52,8 @@ the whole project.
 
 // triangle header
 @import "partials/triangle_header";
+// TRIANGLE PARALLAX
+@import "partials/triangle_header-parallax";
 
 // triangle header
 @import "partials/footer";
@@ -99,6 +101,9 @@ the other stylesheets. Remember, keep it light: Speed is Important.
 @import "partials/family-members-module";
 @import "partials/news-module";
 @import "partials/team-members-module";
+
+// PARALLAX
+// @import "partials/parallax";
 
 /*********************
 LARGER MOBILE DEVICES
