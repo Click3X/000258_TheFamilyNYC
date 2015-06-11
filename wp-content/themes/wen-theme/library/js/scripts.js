@@ -250,8 +250,9 @@ jQuery(document).ready(function($) {
 		prevButton: '#news-container .arrow-right',
 		paginationClickable: true,
 		spaceBetween: 0,
-		autoplay: 2500,
-		autoplayDisableOnInteraction: false,
+		autoplay: 6000,
+		speed:600,
+		autoplayDisableOnInteraction: true,
 		loop: true
 	});
 
@@ -260,7 +261,8 @@ jQuery(document).ready(function($) {
 		prevButton: '#team-member-list-container .arrow-right',
 		paginationClickable: true,
 		spaceBetween: 0,
-		autoplay: 2500,
+		autoplay: 6000,
+		speed:600,
 		autoplayDisableOnInteraction: false,
 		loop: true
 	});
@@ -271,7 +273,10 @@ jQuery(document).ready(function($) {
 		paginationClickable: true,
 		spaceBetween: 0,
 		slidesPerView: 'auto',
-		autoplayDisableOnInteraction: false
+		autoplayDisableOnInteraction: true,
+		loop: true,
+		loopAdditionalSlides:4,
+		loopedSlides:4
 	});
 	// END SLIDERS
 

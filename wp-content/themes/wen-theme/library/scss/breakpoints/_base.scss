@@ -177,15 +177,12 @@ HEADER STYLES
 	width: 100%;
 	top: 0;
 	z-index: 1006;
+
+	@include prefix(transform, translate3d(0,0,1006) );
+	// @include prefix(transform, translateZ(1006) );
 }
 
-	#logo {
-		margin: 0.75em 0;
-
-		// a {
-		// 	color: $white;
-		// }
-	}
+	#logo { margin: 0.75em 0; }
 
 /*********************
 NAVIGATION STYLES

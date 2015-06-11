@@ -149,7 +149,7 @@ wp_reset_postdata();
 						<article id="post-<?php the_ID(); ?>-2" class="cf wrap home-content-2" role="article" itemscope itemtype="http://schema.org/BlogPosting">
 							<header class="article-header">
 								<?php echo '<div class="page-content">'.$content.'</div>'; ?>
-								<a href="#" class="btn learn-more">Learn More</a>
+								<a href="<?php echo get_the_permalink(19);?>" class="btn learn-more">Learn More</a>
 							</header>
 						</article>
 
