@@ -186,18 +186,27 @@ a.arrow {
 	border-style: solid;
 
 	@include prefix( transform,rotate(360deg) );
+
+	@include prefix( transition, border-color 200ms );
 }
 .arrow-left,
 a.arrow-left {
 	border-width: 15px 20px 15px 0;
 	border-color: transparent $project-gold transparent transparent;
 	left:0;
+
+	&:hover {
+		border-color: transparent $project-green transparent transparent;
+	}
 }
 .arrow-right,
 a.arrow-right {
 	border-width: 15px 0 15px 20px;
 	border-color: transparent transparent transparent $project-gold;
 	right:0;
+	&:hover {
+		border-color: transparent transparent transparent $project-green;
+	}
 }
 
 // CURRENT PAGE HIGHLIGHT CLASS

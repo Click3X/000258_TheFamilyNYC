@@ -92,9 +92,11 @@ a, a:visited {
 	border: none;
 	border-color: transparent;
 
+	@include prefix(transition, color 150ms);
+
 	/* on hover */
 	&:hover, &:focus {
-		// color: $link-hover;
+		color: $project-gold;
 		outline: none;
 		border: none;
 		border-color: transparent;
