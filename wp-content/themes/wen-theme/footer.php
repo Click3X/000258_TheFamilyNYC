@@ -26,9 +26,9 @@
 					</ul>
 
 					<div class="social-container">
-						<a href="#" target="_blank"><div id="facebook" style="background-image: url(<?php echo get_template_directory_uri(); ?>/library/images/social/fb.svg);"></div></a>						
-						<a href="#" target="_blank"><div id="twitter" style="background-image: url(<?php echo get_template_directory_uri(); ?>/library/images/social/twitter.svg);"></div></a>
-						<a href="#" target="blank"><div id="instagram" style="background-image: url(<?php echo get_template_directory_uri(); ?>/library/images/social/instagram.svg);"></div></a>
+						<a href="https://www.facebook.com/pages/The-Family-NYC/317279850808?fref=ts" target="_blank"><div id="facebook" style="background-image: url(<?php echo get_template_directory_uri(); ?>/library/images/social/fb.svg);"></div></a>						
+						<a href="https://twitter.com/thefamilynyc" target="_blank"><div id="twitter" style="background-image: url(<?php echo get_template_directory_uri(); ?>/library/images/social/twitter.svg);"></div></a>
+						<a href="https://instagram.com" target="blank"><div id="instagram" style="background-image: url(<?php echo get_template_directory_uri(); ?>/library/images/social/instagram.svg);"></div></a>
 					</div>
 
 					<div id="footer-logo" style="background-image: url(<?php echo get_template_directory_uri(); ?>/library/images/footer_logo.svg);"></div>

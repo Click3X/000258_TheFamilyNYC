@@ -3670,42 +3670,38 @@ h4.tt-date {
     margin: 3.8em auto;
   }
 }
-/* line 10, ../scss/partials/_contact.scss */
+/* line 8, ../scss/partials/_contact.scss */
 .contact-page-content h3 {
   margin: 1.15em auto;
 }
-/* line 11, ../scss/partials/_contact.scss */
+/* line 9, ../scss/partials/_contact.scss */
 .contact-page-content a, .contact-page-content address {
   display: block;
   color: #1b381d;
+  font-family: gotham-medium;
   text-decoration: none;
-  font-weight: 800;
+  font-weight: normal;
   font-style: normal;
   font-size: 0.85em;
   margin: 1em auto;
   line-height: 1.3em;
 }
 
-/* line 24, ../scss/partials/_contact.scss */
+/* line 23, ../scss/partials/_contact.scss */
 .map-canvas {
   padding-bottom: 300px;
 }
 @media (min-width: 960px) {
-  /* line 24, ../scss/partials/_contact.scss */
+  /* line 23, ../scss/partials/_contact.scss */
   .map-canvas {
     padding-bottom: 32.142857%;
   }
 }
 @media (min-width: 1400px) {
-  /* line 24, ../scss/partials/_contact.scss */
+  /* line 23, ../scss/partials/_contact.scss */
   .map-canvas {
     padding-bottom: 450px;
   }
-}
-
-/* line 37, ../scss/partials/_contact.scss */
-#map-canvas {
-  pointer-events: none;
 }
 
 /* line 2, ../scss/partials/_family-members-module.scss */

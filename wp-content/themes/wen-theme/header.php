@@ -94,7 +94,7 @@
 									<h2 class="page-sub-title italic">The Family</h2>
 									<h1 class="page-title">Work &amp; News</h1>
 									<h3 class="sort-title">Sort</h3>
-									<div class="client-wrap"><img src="//localhost:3000/wp-content/themes/wen-theme/library/images/by.png" class="by"></div>
+									<div class="client-wrap"><img src="<?php echo get_template_directory_uri(); ?>/library/images/by.png" class="by"></div>
 							</header>
 
 			                <nav role="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
