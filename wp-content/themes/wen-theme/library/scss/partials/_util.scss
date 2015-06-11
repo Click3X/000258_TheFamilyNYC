@@ -7,6 +7,14 @@
 
 .italic { font-style: italic; }
 
+h1, h2, h3, h4, h5, h6 {
+	&.italic {
+		font-style: normal;
+		font-family:gotham-medium-italic;
+		font-weight: normal;
+	}
+}
+
 // RESET MARGINS
 #content { margin-top:0; }
 
@@ -55,7 +63,7 @@ ul { margin:0; }
 		line-height: 1.6em; font-size: 0.8em;
 		max-width: 23em;
 		margin: 0 auto;
-		font-weight: 800;
+		font-weight: normal;
 		padding:0 1em;
 		@media(min-width: 768px) { 
 			font-size: 1.35em;
@@ -82,6 +90,7 @@ video {
 }
 
 .btn {
+	font-family:gotham-medium;
 	text-decoration: none;
 	outline: none;
 	text-transform: uppercase;
@@ -91,7 +100,7 @@ video {
 	margin: 0 auto;
 	font-size: 0.65em;
 	padding:0.4em 1.5em;
-	font-weight: 800;
+	font-weight: normal;
 	letter-spacing: 0.05em;
 	@media(min-width: 768px) {
 		font-size: 0.8em;

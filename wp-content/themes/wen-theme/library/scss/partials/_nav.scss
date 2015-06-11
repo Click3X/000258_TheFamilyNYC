@@ -95,7 +95,8 @@
 
 #menu-main-menu li a,
 #menu-work-menu li a {
-	font-family: 'gotham-book'; font-weight: 700;
+	font-family: 'gotham-medium'; 
+	font-weight: normal;
 	font-size: 1.8em; line-height: 1.1em;
 	text-transform: uppercase;
 	display: block;
@@ -146,7 +147,8 @@
 
 #menu-title,
 #work-menu-title {
-	font-style: italic;
+	// font-style: italic;
+	font-family: gotham-medium-italic;
 	color: $gold;
 	font-size: 1.2em;
 	margin: 0;

@@ -176,11 +176,11 @@ function bones_scripts_and_styles() {
 		wp_enqueue_script( 'bones-js' );
 
 
-		// PARALLAX SCRIPT FOR HOME PAGE
-		wp_enqueue_script( 'animate-parallax' );
-
 		// IF CONTACT PAGE GET GOOGLE MAPS CODE
 		if(is_page(42)) {
+			// PARALLAX SCRIPT - TESTING ON CONTACT PAGE
+			wp_enqueue_script( 'animate-parallax' );
+			// GOOGLE MAPS
 			wp_enqueue_script( 'google-maps-base-js' );
 			wp_enqueue_script( 'google-maps-js' );			
 		}
