@@ -427,7 +427,7 @@ function printFamilyMembers($familyMembers) {
 		echo '<ul id="family-member-list" class="cf family-member-list swiper-wrapper">';
 			foreach ($familyMembers as $key => $familyMember) {
 				// IF NO LINK SUPPLIED, THEN HREF IS HASH #
-				if($familyMember['link'] == '') { $link = '#'; } 
+				if($familyMember['link'] == '') { $link = $familyMember['permalink']; } 
 					else { $link = $familyMember['link']; }
 				// IMAGE SRC
 				$src = $familyMember['image'];
@@ -437,8 +437,8 @@ function printFamilyMembers($familyMembers) {
 				// ONLY PRINT FAMILY MEMBER IF THERE IS AN IMAGE ASSOCIATED WITH IT
 				if($src['url'] != "") {
 					echo '<li id="family-member-'.$key.'" class="cf family-member swiper-slide">';
-							// echo '<a href="'.$link.'" class="family-member-link">';
-							echo '<a href="'.$permalink.'" class="family-member-link">';
+							echo '<a href="'.$link.'" class="family-member-link" target="_blank">';
+							// echo '<a href="'.$permalink.'" class="family-member-link">';
 								echo '<img src="'.$src['url'].'">';
 							echo '</a>';
 					echo '</li>';
