@@ -1286,20 +1286,20 @@ them however you see fit.
   }
 }
 
-/* line 162, ../scss/partials/_nav.scss */
+/* line 161, ../scss/partials/_nav.scss */
 .main-menu-selected,
 .single-family-member #mobile-menu #menu-item-17,
 #menu-work-menu .current-menu-item {
   background-color: #1c391e;
 }
-/* line 166, ../scss/partials/_nav.scss */
+/* line 165, ../scss/partials/_nav.scss */
 .main-menu-selected a,
 .single-family-member #mobile-menu #menu-item-17 a,
 #menu-work-menu .current-menu-item a {
   color: #d4a551;
 }
 
-/* line 171, ../scss/partials/_nav.scss */
+/* line 170, ../scss/partials/_nav.scss */
 #container {
   padding-top: 56px;
 }
@@ -3778,7 +3778,7 @@ h4.tt-date {
     padding-bottom: 21%;
   }
 }
-/* line 37, ../scss/partials/_family-members-module.scss */
+/* line 34, ../scss/partials/_family-members-module.scss */
 .family-member-list li .family-member-link img,
 .family-member-list.swiper-wrapper li .family-member-link img {
   display: block;
@@ -3791,43 +3791,43 @@ h4.tt-date {
   margin: auto;
 }
 @media (min-width: 480px) {
-  /* line 37, ../scss/partials/_family-members-module.scss */
+  /* line 34, ../scss/partials/_family-members-module.scss */
   .family-member-list li .family-member-link img,
   .family-member-list.swiper-wrapper li .family-member-link img {
     width: 50%;
   }
 }
 
-/* line 51, ../scss/partials/_family-members-module.scss */
+/* line 48, ../scss/partials/_family-members-module.scss */
 .Center-Container.is-Table {
   display: table;
 }
 
-/* line 52, ../scss/partials/_family-members-module.scss */
+/* line 49, ../scss/partials/_family-members-module.scss */
 .is-Table .Table-Cell {
   display: table-cell;
   vertical-align: middle;
   width: 50%;
 }
 @media (min-width: 480px) {
-  /* line 52, ../scss/partials/_family-members-module.scss */
+  /* line 49, ../scss/partials/_family-members-module.scss */
   .is-Table .Table-Cell {
     width: 33.3333333%;
   }
 }
 @media (min-width: 768px) {
-  /* line 52, ../scss/partials/_family-members-module.scss */
+  /* line 49, ../scss/partials/_family-members-module.scss */
   .is-Table .Table-Cell {
     width: 25%;
   }
 }
 
-/* line 64, ../scss/partials/_family-members-module.scss */
+/* line 61, ../scss/partials/_family-members-module.scss */
 .is-Table .Center-Block {
   width: 60%;
   margin: 0 auto;
 }
-/* line 68, ../scss/partials/_family-members-module.scss */
+/* line 65, ../scss/partials/_family-members-module.scss */
 .is-Table .Center-Block img {
   width: 100%;
 }
