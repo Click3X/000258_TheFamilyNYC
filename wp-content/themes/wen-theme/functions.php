@@ -422,6 +422,7 @@ function printTemaMembers($teamMembers) {
 // FAMILY MEMBERS
 function printFamilyMembers($familyMembers) {
 	echo '<section id="family-member-list-container" class="family-member-list-container cf swiper-container">'; // START NEWS SECTION
+	
 		echo '<a href="#" class="arrow arrow-left"></a>';
 		echo '<ul id="family-member-list" class="cf family-member-list swiper-wrapper">';
 			foreach ($familyMembers as $key => $familyMember) {
@@ -447,6 +448,43 @@ function printFamilyMembers($familyMembers) {
 		echo '<a href="#" class="arrow arrow-right"></a>';
 	echo '</section>'; // END FAMILY MEMBERS SECTION
 }
+
+
+// function printFamilyMembers($familyMembers) {
+// 	// echo '<section id="family-member-list-container" class="family-member-list-container cf swiper-container">'; // START NEWS SECTION
+// 	echo '<section id="family-member-list-container" class="family-member-list-container cf swiper-container">'; // START NEWS SECTION
+// 		echo '<a href="#" class="arrow arrow-left"></a>';
+// 		echo '<div class="swiper-wrapper">';
+// 			// echo '<ul id="family-member-list" class="cf family-member-list swiper-wrapper">';
+// 			echo '<div class="Center-Container is-Table">';
+// 				foreach ($familyMembers as $key => $familyMember) {
+// 					// IF NO LINK SUPPLIED, THEN HREF IS HASH #
+// 					if($familyMember['link'] == '') { $link = '#'; } 
+// 						else { $link = $familyMember['link']; }
+// 					// IMAGE SRC
+// 					$src = $familyMember['image'];
+// 					// PERMALINK
+// 					$permalink = $familyMember['permalink'];
+
+// 					// ONLY PRINT FAMILY MEMBER IF THERE IS AN IMAGE ASSOCIATED WITH IT
+// 					if($src['url'] != "") {
+// 						// echo '<li id="family-member-'.$key.'" class="cf family-member swiper-slide">';
+// 						echo '<div id="family-member-'.$key.'" class="Table-Cell swiper-slide">
+// 			    				<div class="Center-Block">';
+// 								echo '<a href="'.$permalink.'" class="family-member-link">';
+// 									echo '<img src="'.$src['url'].'">';
+// 								echo '</a>';
+// 							echo '</div>';
+// 						echo '</div>';
+// 					}
+// 				}
+// 			// echo '</ul>';
+// 			echo '</div>';
+// 		echo '</div>';
+
+// 		echo '<a href="#" class="arrow arrow-right"></a>';
+// 	echo '</section>'; // END FAMILY MEMBERS SECTION
+// }
 
 // NEWS MODULE
 function printNews($newss) {
