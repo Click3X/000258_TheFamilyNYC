@@ -3698,20 +3698,30 @@ h4.tt-date {
   font-size: 0.85em;
   margin: 1em auto;
   line-height: 1.3em;
+  -webkit-transition: color 150ms;
+  -moz-transition: color 150ms;
+  -o-transition: color 150ms;
+  -ms-transition: color 150ms;
+  transition: color 150ms;
+  /* on hover */
+}
+/* line 23, ../scss/partials/_contact.scss */
+.contact-page-content a:hover, .contact-page-content a:focus, .contact-page-content address:hover, .contact-page-content address:focus {
+  color: #d4a551;
 }
 
-/* line 23, ../scss/partials/_contact.scss */
+/* line 30, ../scss/partials/_contact.scss */
 .map-canvas {
   padding-bottom: 300px;
 }
 @media (min-width: 960px) {
-  /* line 23, ../scss/partials/_contact.scss */
+  /* line 30, ../scss/partials/_contact.scss */
   .map-canvas {
     padding-bottom: 32.142857%;
   }
 }
 @media (min-width: 1400px) {
-  /* line 23, ../scss/partials/_contact.scss */
+  /* line 30, ../scss/partials/_contact.scss */
   .map-canvas {
     padding-bottom: 450px;
   }

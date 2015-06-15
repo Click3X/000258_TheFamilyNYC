@@ -16,6 +16,13 @@
 		font-size: 0.85em;
 		margin: 1em auto;
 		line-height: 1.3em;
+
+		@include prefix(transition, color 150ms);
+
+		/* on hover */
+		&:hover, &:focus {
+			color: $project-gold;
+		}
 	}
 }
 
