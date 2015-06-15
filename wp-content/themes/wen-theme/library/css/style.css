@@ -3071,22 +3071,18 @@ main > .article-header .page-title:after {
   margin: 0.85em auto 1em;
 }
 
-/* line 159, ../scss/partials/_util.scss */
-.page-id-13 .article-header,
-.archive .article-header,
-.single-family-member .article-header {
+/* line 152, ../scss/partials/_util.scss */
+.article-header {
   margin: 2.25em auto 1.5em;
 }
 @media (min-width: 768px) {
-  /* line 159, ../scss/partials/_util.scss */
-  .page-id-13 .article-header,
-  .archive .article-header,
-  .single-family-member .article-header {
+  /* line 152, ../scss/partials/_util.scss */
+  .article-header {
     margin: 6em auto 3em;
   }
 }
 
-/* line 169, ../scss/partials/_util.scss */
+/* line 162, ../scss/partials/_util.scss */
 .page-id-19 .tab-holder .page-sub-title:after {
   content: "";
   display: block;
@@ -3096,7 +3092,7 @@ main > .article-header .page-title:after {
   margin: 1.6em auto 0;
 }
 
-/* line 180, ../scss/partials/_util.scss */
+/* line 173, ../scss/partials/_util.scss */
 a.arrow,
 a.arrow {
   display: block;
@@ -3120,44 +3116,44 @@ a.arrow {
   transition: border-color 200ms;
 }
 
-/* line 194, ../scss/partials/_util.scss */
+/* line 187, ../scss/partials/_util.scss */
 .arrow-left,
 a.arrow-left {
   border-width: 15px 20px 15px 0;
   border-color: transparent #d4a551 transparent transparent;
   left: 0;
 }
-/* line 200, ../scss/partials/_util.scss */
+/* line 193, ../scss/partials/_util.scss */
 .arrow-left:hover,
 a.arrow-left:hover {
   border-color: transparent #1b381d transparent transparent;
 }
 
-/* line 204, ../scss/partials/_util.scss */
+/* line 197, ../scss/partials/_util.scss */
 .arrow-right,
 a.arrow-right {
   border-width: 15px 0 15px 20px;
   border-color: transparent transparent transparent #d4a551;
   right: 0;
 }
-/* line 209, ../scss/partials/_util.scss */
+/* line 202, ../scss/partials/_util.scss */
 .arrow-right:hover,
 a.arrow-right:hover {
   border-color: transparent transparent transparent #1b381d;
 }
 
-/* line 215, ../scss/partials/_util.scss */
+/* line 208, ../scss/partials/_util.scss */
 #menu-work-menu li.current_page_item > a,
 #menu-main-menu li.current_page_item > a {
   color: #d4a551;
 }
 
-/* line 221, ../scss/partials/_util.scss */
+/* line 214, ../scss/partials/_util.scss */
 .hidden {
   opacity: 0;
 }
 
-/* line 224, ../scss/partials/_util.scss */
+/* line 217, ../scss/partials/_util.scss */
 *[data-transition-delay] {
   -webkit-transition: opacity 0.2s ease-in-out;
   -moz-transition: opacity 0.2s ease-in-out;
@@ -3166,7 +3162,7 @@ a.arrow-right:hover {
   transition: opacity 0.2s ease-in-out;
 }
 
-/* line 228, ../scss/partials/_util.scss */
+/* line 221, ../scss/partials/_util.scss */
 main > article {
   background-color: white;
 }

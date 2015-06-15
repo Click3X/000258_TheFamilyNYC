@@ -34,7 +34,7 @@
 						<!-- TITLE -->
 							<header class="article-header">
 								<h2 class="page-sub-title italic">Family</h2>
-								<h1 class="page-title">Family History</h1>
+								<h1 class="page-title">History</h1>
 							</header>
 						<?php 
 							// WORK PROJECTS ARRAY TO STORE VAR

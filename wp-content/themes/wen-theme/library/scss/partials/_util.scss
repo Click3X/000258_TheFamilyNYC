@@ -149,20 +149,13 @@ main > .article-header {
 	}
 }
 
-// HIDE HEADER BG IMAGE AND LOGO ON WORK PAGE
-.page-id-13,
-.archive,
-.single-family-member {
-	
-	// #triangle-header { display: none; }
-	 
-	.article-header { 
-		margin: 2.25em auto 1.5em;
-		@media(min-width: 768px) {
-			margin:6em auto 3em; 
-		}
+.article-header { 
+	margin: 2.25em auto 1.5em;
+	@media(min-width: 768px) {
+		margin:6em auto 3em; 
 	}
 }
+	
 // FAMILY HISTORY
 .page-id-19 .tab-holder {
 	.page-sub-title {
