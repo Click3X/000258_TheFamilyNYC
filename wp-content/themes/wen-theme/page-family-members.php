@@ -47,17 +47,16 @@ wp_reset_postdata();
 				<div id="inner-content" class="cf">
 
 					<main id="main" class="m-all t-3of3 d-7of7 cf" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
-
+							<!-- TITLE -->
+							<header class="article-header">
+									<h2 class="page-sub-title italic">Family</h2>
+									<h1 class="page-title">Members</h1>
+							</header>
 						<!-- FAMILY MEMBERS -->
 						<div class="family-members-container">
 							<!-- TOP GOLD LINE -->
 							<div class="gold-line" style="background-image: url(<?php echo get_template_directory_uri(); ?>/library/images/gold-border-bottom.png);"></div>
 							<article id="family-members" class="cs wrap family-members" role="article" itemscope itemtype="http://schema.org/BlogPosting">
-								<!-- TITLE -->
-								<header class="article-header">
-										<h2 class="page-sub-title italic">Family</h2>
-										<h1 class="page-title">Members</h1>
-								</header>
 								<!-- FAMILY MEMBER LIST -->
 								<?php 
 

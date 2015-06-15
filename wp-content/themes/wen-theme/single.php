@@ -5,7 +5,12 @@
 				<div id="inner-content" class="cf">
 
 					<main id="main" class="m-all t-3of3 d-7of7 cf" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
-						
+						<!-- TITLE -->
+						<header class="article-header">
+							<h2 class="page-sub-title italic">Family</h2>
+							<h1 class="page-title">News</h1>
+						</header>
+
 						<!-- TOP GOLD LINE -->
 						<div class="gold-line" style="background-image: url(<?php echo get_template_directory_uri(); ?>/library/images/gold-border-bottom.png);"></div>
 

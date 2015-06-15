@@ -12,7 +12,12 @@
 				<div id="inner-content" class="cf">
 
 					<main id="main" class="m-all t-3of3 d-7of7 cf" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
-
+						<!-- TITLE -->
+						<header class="article-header">
+							<h2 class="page-sub-title italic">Family</h2>
+							<h1 class="page-title">Contact</h1>
+						</header>
+						
 						<?php 
 							// PAGE INFO
 							$contact = array();

@@ -10,6 +10,11 @@
 				<div id="inner-content" class="wrap cf">
 
 					<main id="main" class="m-all t-3of3 d-7of7 cf" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
+						<!-- TITLE -->
+						<header class="article-header">
+							<h2 class="page-sub-title italic">Family</h2>
+							<h1 class="page-title">Team Member</h1>
+						</header>
 
 						<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 

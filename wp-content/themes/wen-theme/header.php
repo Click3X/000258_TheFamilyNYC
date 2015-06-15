@@ -121,15 +121,13 @@
 			</header><!--  END FIXED HEADER -->
 
 
-			<?php if(is_page(42)) { ?>
-				<div id="triangle-header-parallax" class="cf triangle-header-parallax">
+			<?php
+			// if(is_page(42)) { ?>
+			<!-- 	<div id="triangle-header-parallax" class="cf triangle-header-parallax">
 					
 					<div id="para-gold" class="bg-parallax gold"></div>
 					<div id="para-stipe" class="bg-parallax stripe"></div>
 					<div id="para-green" class="bg-parallax green"></div>
-					<!-- <img id="para-gold" class="img-parallax" src="<?php echo get_template_directory_uri(); ?>/library/images/gold-parallax.png">
-					<img id="para-stipe" class="img-parallax" src="<?php echo get_template_directory_uri(); ?>/library/images/gold-parallax.png">
-					<img id="para-green" class="img-parallax" src="<?php echo get_template_directory_uri(); ?>/library/images/gold-parallax.png"> -->
 
 					<div id="logo-wrapper" class="logo-wrapper cf">
 						<div id="family-logo" style="background-image: url(<?php echo get_template_directory_uri(); ?>/library/images/family_logo_1x.png);"></div>
@@ -141,14 +139,14 @@
 						<h1 class="page-title">Team</h1>
 					</header>
 
-				</div>
-			<?php } elseif(!is_page(6)) { ?>
+				</div> -->
+			<?php // } elseif(!is_page(6)) { ?>
 				<!-- TRANGLES HEADER BG-->
-				<div id="triangle-header" style="background-image: url(<?php echo get_template_directory_uri(); ?>/library/images/header-bg.png);">
+				<!-- <div id="triangle-header" style="background-image: url(<?php echo get_template_directory_uri(); ?>/library/images/header-bg.png);">
 					<div class="logo-wrapper cf">
 						<div id="family-logo" style="background-image: url(<?php echo get_template_directory_uri(); ?>/library/images/family_logo_1x.png);"></div>
 						<div id="down-arrow" style="background-image: url(<?php echo get_template_directory_uri(); ?>/library/images/down-arrow.png);"></div>
 					</div>
-				</div>
+				</div> -->
 
-			<?php } ?>
+			<?php  // } ?>

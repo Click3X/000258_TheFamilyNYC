@@ -120,7 +120,8 @@ video {
 // DOTS AFTER TITLES ON CERTAIN PAGES:
 .page-id-13,
 .archive,
-.single-family-member {
+.single-family-member,
+main > .article-header {
 	@media(min-width: 768px) { 
 		.page-title { font-size: 2em; }
 		.page-sub-title {font-size: 1.6em; }
@@ -135,7 +136,8 @@ video {
 // WORK
 .page-id-13,
 .archive,
-.single-family-member {
+.single-family-member,
+main > .article-header {
 	.page-title {
 		&:after {
 			content: "";
@@ -152,7 +154,7 @@ video {
 .archive,
 .single-family-member {
 	
-	#triangle-header { display: none; }
+	// #triangle-header { display: none; }
 	 
 	.article-header { 
 		margin: 2.25em auto 1.5em;
