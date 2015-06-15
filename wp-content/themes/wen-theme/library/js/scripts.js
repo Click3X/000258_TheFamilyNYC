@@ -267,7 +267,7 @@ jQuery(document).ready(function($) {
 		loop: true
 	});
 
-	var familyMemSwiper = new Swiper('#family-member-list-container', {
+	var familyMemSwiper = new Swiper('.page-id-6 #family-member-list-container', {
 		nextButton: '#family-member-list-container .arrow-left',
 		prevButton: '#family-member-list-container .arrow-right',
 		paginationClickable: true,

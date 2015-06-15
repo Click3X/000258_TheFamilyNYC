@@ -59,7 +59,32 @@ wp_reset_postdata();
 										<h1 class="page-title">Members</h1>
 								</header>
 								<!-- FAMILY MEMBER LIST -->
-								<?php printFamilyMembers($familyMembers); ?>
+								<?php 
+								
+								echo '<section id="family-member-list-container" class="family-member-list-container cf">'; // START NEWS SECTION
+	
+									echo '<ul id="family-member-list" class="cf family-member-list">';
+										foreach ($familyMembers as $key => $familyMember) {
+											// IF NO LINK SUPPLIED, THEN HREF IS HASH #
+											if($familyMember['link'] == '') { $link = '#'; } 
+												else { $link = $familyMember['link']; }
+											// IMAGE SRC
+											$src = $familyMember['image'];
+											// PERMALINK
+											$permalink = $familyMember['permalink'];
+
+											// ONLY PRINT FAMILY MEMBER IF THERE IS AN IMAGE ASSOCIATED WITH IT
+											if($src['url'] != "") {
+												echo '<li id="family-member-'.$key.'" class="cf family-member">';
+														echo '<a href="'.$permalink.'" class="family-member-link">';
+															echo '<img src="'.$src['url'].'">';
+														echo '</a>';
+												echo '</li>';
+											}
+										}
+									echo '</ul>';
+								echo '</section>'; // END FAMILY MEMBERS SECTION
+								?>
 							</article>
 						</div>
 
