@@ -19,6 +19,16 @@ footer {
 		@media(min-width: 768px) { padding: 4.75em 0 8em; }
 		@media(min-width: 1060px) { padding: 4.75em 0 13em; }
 
+
+		svg path.circle {
+			@include prefix(transition, 150ms fill);
+
+			&:hover {
+				fill:$project-gold;
+			}
+
+		}
+
 	}
 
 	.contact-item {
