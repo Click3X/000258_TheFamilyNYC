@@ -1299,7 +1299,12 @@ them however you see fit.
   color: #d4a551;
 }
 
-/* line 170, ../scss/partials/_nav.scss */
+/* line 168, ../scss/partials/_nav.scss */
+#menu-work-menu .current-menu-item {
+  background-color: transparent;
+}
+
+/* line 174, ../scss/partials/_nav.scss */
 #container {
   padding-top: 56px;
 }
