@@ -82,12 +82,11 @@
 	margin: 0; padding: 0;
 	display: block;
 	float: none;
-	@include transition(background-color 0.1s ease);
+	// @include transition(background-color 0.1s ease);
 
     &:hover {
-    	background-color: $footer-green;
+    	// background-color: $footer-green;
     	a { 
-    		// color: $white; 
     		color: $project-gold; 
     	}
     }
@@ -161,7 +160,7 @@
 .main-menu-selected,
 .single-family-member #mobile-menu #menu-item-17,
 #menu-work-menu .current-menu-item {
-	background-color: $footer-green;
+	// background-color: $footer-green;
 	a { color: $project-gold; }
 }
 
