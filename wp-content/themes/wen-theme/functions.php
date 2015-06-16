@@ -315,6 +315,9 @@ function printProject($projects) {
 					echo '<div class="img-wrapper">';
 						// VIDEO
 						echo '<div class="video-container">';
+							// PLAY BUTTON ROLLOVER
+							echo '<div class="cf play-tri-holder"><div class="play-tri"></div></div>';
+							// VIDEO TAG
 							echo '<video poster="'.$project['poster'].'" preload="none" >';
 								if( isset($project['mp4']) ) { echo '<source src="'.$project['mp4'].'" type="video/mp4" />'; }
 								if( isset($project['ogg']) ) { echo '<source src="'.$project['ogg'].'" type="video/ogg" />'; }
@@ -348,6 +351,9 @@ function printProject($projects) {
 					echo '<div class="img-wrapper">';
 						// VIDEO
 						echo '<div class="video-container">';
+							// PLAY BUTTON ROLLOVER
+							echo '<div class="cf play-tri-holder"><div class="play-tri"></div></div>';
+							// VIDEO TAG
 							echo '<video poster="'.$project['poster'].'" preload="none" >';
 								if( isset($project['mp4']) ) { echo '<source src="'.$project['mp4'].'" type="video/mp4" />'; }
 								if( isset($project['ogg']) ) { echo '<source src="'.$project['ogg'].'" type="video/ogg" />'; }
