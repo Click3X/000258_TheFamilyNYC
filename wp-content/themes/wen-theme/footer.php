@@ -7,21 +7,47 @@
 
 					<ul>
 						<li class="contact-item">
-							<div class="footer-icon" style="background-image: url(<?php echo get_template_directory_uri(); ?>/library/images/logo-icon.svg);"></div>
-							<h4>Address</h4>
-							<p>54 West 21st Street, RM 508<br>NYC, NY 10010</p>
+							<!-- <div class="footer-icon" style="background-image: url(<?php echo get_template_directory_uri(); ?>/library/images/logo-icon.svg);"></div> -->
+							<a class="address">
+								<div class="footer-icon">
+									<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+										 viewBox="0 0 93.5 124.7" enable-background="new 0 0 93.5 124.7" xml:space="preserve">
+										<polygon fill="#fff" points="2.7,64 2.7,122.7 90.9,122.7 90.9,2 "/>
+									</svg>
+								</div>
+								<h4>Address</h4>
+								<span class="address">
+									<address>54 West 21st Street, RM 508<br>NYC, NY 10010</address>
+								</span>
+							</a>
 						</li>
 
 						<li class="contact-item">
-							<div class="footer-icon" style="background-image: url(<?php echo get_template_directory_uri(); ?>/library/images/logo-icon.svg);"></div>
-							<h4>Email</h4>
-							<p>reps@thefamilynyc.com</p>
+							<!-- <div class="footer-icon" style="background-image: url(<?php echo get_template_directory_uri(); ?>/library/images/logo-icon.svg);"></div> -->
+							<a class="email" href="mailto:reps@thefamilynyc.com">
+								<div class="footer-icon">
+									<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+										 viewBox="0 0 93.5 124.7" enable-background="new 0 0 93.5 124.7" xml:space="preserve">
+										<polygon fill="#fff" points="2.7,64 2.7,122.7 90.9,122.7 90.9,2 "/>
+									</svg>
+								</div>
+								<h4>Email</h4>
+								<span class="email">reps@thefamilynyc.com</span>
+							</a>
 						</li>
 
 						<li class="contact-item">
-							<div class="footer-icon" style="background-image: url(<?php echo get_template_directory_uri(); ?>/library/images/logo-icon.svg);"></div>
-							<h4>Phone</h4>
-							<p>T: 212 477 4248</p>
+							<!-- <div class="footer-icon" style="background-image: url(<?php echo get_template_directory_uri(); ?>/library/images/logo-icon.svg);"></div> -->
+							<a class="phone" href="tel:2124774248">
+								<div class="footer-icon">
+									<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+										 viewBox="0 0 93.5 124.7" enable-background="new 0 0 93.5 124.7" xml:space="preserve">
+										<polygon fill="#fff" points="2.7,64 2.7,122.7 90.9,122.7 90.9,2 "/>
+									</svg>
+								</div>
+								<h4>Phone</h4>
+								<span class="phone">T: 212 477 4248</span>
+							</a>
 						</li>
 					</ul>
 

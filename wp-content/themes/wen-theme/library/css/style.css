@@ -1635,33 +1635,73 @@ footer #inner-footer {
     padding: 4.75em 0 13em;
   }
 }
-/* line 23, ../scss/partials/_footer.scss */
-footer #inner-footer svg path.circle {
-  -webkit-transition: 150ms fill;
-  -moz-transition: 150ms fill;
-  -o-transition: 150ms fill;
-  -ms-transition: 150ms fill;
-  transition: 150ms fill;
+/* line 24, ../scss/partials/_footer.scss */
+footer #inner-footer svg path {
+  -webkit-transition: 200ms fill;
+  -moz-transition: 200ms fill;
+  -o-transition: 200ms fill;
+  -ms-transition: 200ms fill;
+  transition: 200ms fill;
 }
-/* line 26, ../scss/partials/_footer.scss */
-footer #inner-footer svg path.circle:hover {
+/* line 27, ../scss/partials/_footer.scss */
+footer #inner-footer svg:hover path.circle {
   fill: #d4a551;
 }
 /* line 34, ../scss/partials/_footer.scss */
+footer #inner-footer .contact-item a {
+  -webkit-transition: 200ms color;
+  -moz-transition: 200ms color;
+  -o-transition: 200ms color;
+  -ms-transition: 200ms color;
+  transition: 200ms color;
+}
+/* line 38, ../scss/partials/_footer.scss */
+footer #inner-footer .contact-item a h4 {
+  -webkit-transition: 200ms color;
+  -moz-transition: 200ms color;
+  -o-transition: 200ms color;
+  -ms-transition: 200ms color;
+  transition: 200ms color;
+}
+/* line 40, ../scss/partials/_footer.scss */
+footer #inner-footer .contact-item a svg polygon {
+  -webkit-transition: 200ms fill;
+  -moz-transition: 200ms fill;
+  -o-transition: 200ms fill;
+  -ms-transition: 200ms fill;
+  transition: 200ms fill;
+}
+/* line 42, ../scss/partials/_footer.scss */
+footer #inner-footer .contact-item a:hover {
+  color: #d4a551;
+}
+/* line 45, ../scss/partials/_footer.scss */
+footer #inner-footer .contact-item a:hover h4 {
+  color: #d4a551;
+}
+/* line 47, ../scss/partials/_footer.scss */
+footer #inner-footer .contact-item a:hover svg polygon {
+  fill: #d4a551;
+}
+/* line 52, ../scss/partials/_footer.scss */
+footer #inner-footer .contact-item a address {
+  font-style: normal;
+}
+/* line 60, ../scss/partials/_footer.scss */
 footer .contact-item {
   width: 30%;
   display: inline-block;
   padding: 10px 0;
   vertical-align: top;
 }
-/* line 39, ../scss/partials/_footer.scss */
+/* line 65, ../scss/partials/_footer.scss */
 footer .contact-item .footer-icon {
   background-size: 24px 34px;
   width: 24px;
   height: 34px;
   margin: auto;
 }
-/* line 46, ../scss/partials/_footer.scss */
+/* line 72, ../scss/partials/_footer.scss */
 footer .contact-item h4 {
   padding: 22px 0;
   font-size: 1em;
@@ -1669,43 +1709,43 @@ footer .contact-item h4 {
   color: #fff;
 }
 @media (max-width: 605px) {
-  /* line 46, ../scss/partials/_footer.scss */
+  /* line 72, ../scss/partials/_footer.scss */
   footer .contact-item h4 {
     padding: 10px 0 0 0;
   }
 }
-/* line 56, ../scss/partials/_footer.scss */
+/* line 82, ../scss/partials/_footer.scss */
 footer .contact-item p {
   font-size: 0.9em;
   line-height: 1.3em;
   font-weight: normal;
 }
-/* line 61, ../scss/partials/_footer.scss */
+/* line 87, ../scss/partials/_footer.scss */
 footer .contact-item a {
   color: white;
   text-decoration: none;
 }
 @media (max-width: 605px) {
-  /* line 34, ../scss/partials/_footer.scss */
+  /* line 60, ../scss/partials/_footer.scss */
   footer .contact-item {
     width: 80%;
   }
 }
-/* line 68, ../scss/partials/_footer.scss */
+/* line 94, ../scss/partials/_footer.scss */
 footer .social-container {
   margin: 2.25em 0.25em;
 }
 @media (min-width: 768px) {
-  /* line 68, ../scss/partials/_footer.scss */
+  /* line 94, ../scss/partials/_footer.scss */
   footer .social-container {
     margin: 2.25em 0.25em 6em;
   }
 }
-/* line 75, ../scss/partials/_footer.scss */
+/* line 101, ../scss/partials/_footer.scss */
 footer .social-container a {
   display: inline-block;
 }
-/* line 77, ../scss/partials/_footer.scss */
+/* line 103, ../scss/partials/_footer.scss */
 footer .social-container div {
   background-size: 44px 44px;
   width: 44px;
@@ -1714,24 +1754,24 @@ footer .social-container div {
   display: inline-block;
   margin: 0 1.3em;
 }
-/* line 87, ../scss/partials/_footer.scss */
+/* line 113, ../scss/partials/_footer.scss */
 footer #footer-logo {
   background-size: 290px 24px;
   width: 290px;
   height: 24px;
   margin: 10px auto;
 }
-/* line 94, ../scss/partials/_footer.scss */
+/* line 120, ../scss/partials/_footer.scss */
 footer .footer-credits {
   padding: 0 4px;
 }
-/* line 96, ../scss/partials/_footer.scss */
+/* line 122, ../scss/partials/_footer.scss */
 footer .footer-credits p {
   display: inline-block;
   font-size: 0.8em;
   margin: 6px 0 0 0;
 }
-/* line 102, ../scss/partials/_footer.scss */
+/* line 128, ../scss/partials/_footer.scss */
 footer .footer-credits span {
   margin: 0 10px;
 }

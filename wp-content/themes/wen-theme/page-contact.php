@@ -81,7 +81,7 @@
 							<h3><?php echo $contact['sub-title']; ?></h3>
 							<address><?php echo $contact['address']; ?></address>
 							<a class="phone" href="tel:<?php echo $contact['phone'];?>">T <?php echo $contact['phone'];?></a>
-							<a class="email" href="mailto:<?php echo $content['email'];?>"><?php echo $contact['email'];?></a>
+							<a class="email" href="mailto:<?php echo $contact['email'];?>"><?php echo $contact['email'];?></a>
 						</article>
 
 						<!-- MAP CONTENT -->

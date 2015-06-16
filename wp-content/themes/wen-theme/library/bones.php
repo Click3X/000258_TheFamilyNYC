@@ -179,7 +179,7 @@ function bones_scripts_and_styles() {
 		// IF CONTACT PAGE GET GOOGLE MAPS CODE
 		if(is_page(42)) {
 			// PARALLAX SCRIPT - TESTING ON CONTACT PAGE
-			wp_enqueue_script( 'animate-parallax' );
+			// wp_enqueue_script( 'animate-parallax' );
 			// GOOGLE MAPS
 			wp_enqueue_script( 'google-maps-base-js' );
 			wp_enqueue_script( 'google-maps-js' );			

@@ -20,13 +20,39 @@ footer {
 		@media(min-width: 1060px) { padding: 4.75em 0 13em; }
 
 
-		svg path.circle {
-			@include prefix(transition, 150ms fill);
+		svg { 
+			path { @include prefix(transition, 200ms fill); }
 
 			&:hover {
-				fill:$project-gold;
+				path.circle {
+					fill:$project-gold;
+				}
 			}
+		}
 
+		.contact-item {
+			a {
+				
+				@include prefix(transition, 200ms color);
+
+				h4 { @include prefix(transition, 200ms color); }
+
+				svg polygon { @include prefix(transition, 200ms fill); }
+				
+				&:hover {
+					color:$project-gold;
+
+					h4 {color:$project-gold;}
+
+					svg polygon {
+					fill:$project-gold;
+					}
+				}
+
+				address {
+					font-style: normal;
+				}
+			}
 		}
 
 	}
