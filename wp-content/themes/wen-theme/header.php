@@ -42,6 +42,11 @@
 
 		<?php // drop Google Analytics Here ?>
 		<?php // end analytics ?>
+
+		<?php 
+			// GET BLOG URL AS JS VARIABLE FOR GOOGLE MAPS USE
+			echo '<script>var iconBase ="'; echo bloginfo('url'); echo '"</script>'; 
+		?>
 		
 	</head>
 

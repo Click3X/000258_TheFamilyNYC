@@ -138,7 +138,8 @@ function initialize() {
 
     marker = new google.maps.Marker({
         position: clickLatLong,
-        map: map
+        map: map,
+        icon: iconBase + "wp-content/themes/wen-theme/library/images/map-marker.png"
     });
 
 }
