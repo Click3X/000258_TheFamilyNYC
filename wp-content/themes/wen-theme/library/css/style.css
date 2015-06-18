@@ -3538,11 +3538,11 @@ video {
   left: 0;
   right: 0;
   margin: auto;
-  -webkit-transition: opacity 150ms;
-  -moz-transition: opacity 150ms;
-  -o-transition: opacity 150ms;
-  -ms-transition: opacity 150ms;
-  transition: opacity 150ms;
+  -webkit-transition: opacity 300ms ease-out;
+  -moz-transition: opacity 300ms ease-out;
+  -o-transition: opacity 300ms ease-out;
+  -ms-transition: opacity 300ms ease-out;
+  transition: opacity 300ms ease-out;
 }
 
 /* line 183, ../scss/partials/_projects.scss */
@@ -4137,6 +4137,52 @@ h4.tt-date {
   .team-member-list .text-container {
     display: table-footer-group;
   }
+}
+
+/* line 4, ../scss/partials/_parallax-tri.scss */
+.gold-triangle {
+  width: 14%;
+  max-width: 100px;
+}
+
+/* line 9, ../scss/partials/_parallax-tri.scss */
+.tri-logo-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+/* line 14, ../scss/partials/_parallax-tri.scss */
+#post-6-1 {
+  background: transparent;
+}
+
+/* line 18, ../scss/partials/_parallax-tri.scss */
+.tri {
+  width: 0;
+  height: 0;
+  position: absolute;
+}
+
+/* line 27, ../scss/partials/_parallax-tri.scss */
+.gold-foil {
+  background-image: url("../images/gold.jpg");
+  border-style: solid;
+  border-width: 150px 0 0 120px;
+  border-color: transparent transparent transparent #fff;
+}
+
+/* line 34, ../scss/partials/_parallax-tri.scss */
+.green-tri {
+  border-style: solid;
+  border-width: 150px 0 0 120px;
+  border-color: transparent transparent transparent #1b381d;
+}
+
+/* line 40, ../scss/partials/_parallax-tri.scss */
+.stripe-tri {
+  border-style: solid;
+  border-width: 150px 0 0 120px;
+  border-color: transparent transparent transparent #d4a551;
 }
 
 /*********************

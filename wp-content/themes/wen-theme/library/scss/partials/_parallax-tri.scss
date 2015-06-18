@@ -1,0 +1,45 @@
+// PARALLAX TRIANGLES
+$maxWidth:1400;
+
+.gold-triangle {
+	width: #{ ($maxWidth/100) + "%"};
+	max-width: 100px;
+}
+
+.tri-logo-wrapper {
+	position: relative;
+	overflow: hidden;
+}
+
+#post-6-1 {
+	background: transparent;
+}
+
+.tri {
+	// width: 50px;
+ //  	height: 50px;
+ //  	border: 2px solid $project-gold;
+	width: 0;
+	height: 0;
+  	position: absolute;
+}
+
+.gold-foil {
+	background-image:url('../images/gold.jpg');
+	border-style: solid;
+	border-width: 150px 0 0 120px;
+	border-color: transparent transparent transparent #fff;
+}
+
+.green-tri {
+	border-style: solid;
+	border-width: 150px 0 0 120px;
+	border-color: transparent transparent transparent $project-green;
+}
+
+.stripe-tri {
+	// background-color:$project-gold;
+	border-style: solid;
+	border-width: 150px 0 0 120px;
+	border-color: transparent transparent transparent $project-gold;
+}

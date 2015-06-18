@@ -213,17 +213,6 @@ jQuery(document).ready(function($) {
 	}
 	// END MENUS
 
-
-	// HTML VIDEO CONTROLS
-	// SHOW CONTROLS ON HOVER
-	$("video").hover(function(event) {
-		if(event.type === "mouseenter") {
-			$(this).attr("controls", "");
-		} else if(event.type === "mouseleave") {
-			$(this).removeAttr("controls");
-		}
-	});
-
 	// ON VIDEO CLICK PLAY/PAUSE VIDEO
 	var videos = $('video');
 
@@ -233,9 +222,17 @@ jQuery(document).ready(function($) {
 		// ON CLICK FUNCTION
 		$(_t).click(function() {
 			if (_t.paused == true) {
+				// HIDE OVERLAY
+				$(_t).prev('.play-tri-holder').css('visibility', 'hidden');
+				// SHOW CONTROLS
+				$(this).attr('controls', '');
 			    // PLAY THE VIDEO
 			    _t.play();
 			} else {
+				// OVERLAY NORMAL
+				$(_t).prev('.play-tri-holder').css('visibility', 'initial');
+				// HIDE CONTROLS
+				$(this).removeAttr("controls");
 			    // PAUSE THE VIDEO
 			    _t.pause();
 			}

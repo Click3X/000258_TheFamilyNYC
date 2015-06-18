@@ -109,13 +109,9 @@ wp_reset_postdata();
 						<!-- HOME PART 1 -->
 						<article id="post-<?php the_ID(); ?>-1" class="cf" role="article" itemscope itemtype="http://schema.org/BlogPosting">
 							<!-- TRANGLES HEADER BG-->
-							<!-- <div class="tri-logo-wrapper" style="background-image: url(<?php echo get_template_directory_uri(); ?>/library/images/header-bg.png);"> -->
-							<div id="tri-logo-wrapper" class="tri-logo-wrapper">
+							<div class="tri-logo-wrapper" style="background-image: url(<?php echo get_template_directory_uri(); ?>/library/images/header-bg.png);">
 								<!-- ONLY IN PAGE TEMPLATE ON HOME PAGE - ALL OTHERS IN HEADER -->
 								<div id="triangle-header">
-
-									<?php include('library/svg/gold.php'); ?>
-
 									<div class="logo-wrapper cf">
 										<div id="family-logo" style="background-image: url(<?php echo get_template_directory_uri(); ?>/library/images/family_logo_1x.png);"></div>
 										<div id="down-arrow" style="background-image: url(<?php echo get_template_directory_uri(); ?>/library/images/down-arrow.png);"></div>
