@@ -248,7 +248,7 @@ jQuery(document).ready(function($) {
 		paginationClickable: true,
 		spaceBetween: 0,
 		autoplay: 6000,
-		speed:600,
+		speed:1200,
 		autoplayDisableOnInteraction: true,
 		loop: true
 	});
@@ -259,7 +259,7 @@ jQuery(document).ready(function($) {
 		paginationClickable: true,
 		spaceBetween: 0,
 		autoplay: 6000,
-		speed:600,
+		speed:1200,
 		autoplayDisableOnInteraction: false,
 		loop: true
 	});
