@@ -44,7 +44,6 @@ jQuery(document).ready(function($) {
 		this.element.css('left', getRandomInt(0,120)-10 + '%');
 		this.startTop = getRandomInt(0,120)-10;
 		this.element.css('top', this.startTop + '%');
-		//this.element.css('-webkit-filter', 'blur(' + (Math.abs(this.posZ) / 100 * blurmod) + 'px)').css('filter', 'blur(' + (Math.abs(this.posZ) / 100 * blurmod) + 'px)');
 		if (this.posZ > 0)
 			this.scale = (1 + scalemod * this.posZ / 100);
 		else
@@ -90,7 +89,8 @@ jQuery(document).ready(function($) {
 			count++;
 		}
 		if(oldScrollTop == 0) {
-
+			oldScrollTop = $(window).scrollTop();
+	  		doRenderTick();
 		}
 		if (oldScrollTop == $(window).scrollTop() ) {
 			return;
