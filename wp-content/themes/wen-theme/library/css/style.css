@@ -1321,18 +1321,18 @@ them however you see fit.
 
 /* line 15, ../scss/partials/_triangle_header.scss */
 .page-id-156 #triangle-header {
-  padding-bottom: 73%;
+  padding-bottom: 71%;
 }
 @media (min-width: 481px) {
   /* line 15, ../scss/partials/_triangle_header.scss */
   .page-id-156 #triangle-header {
-    padding-bottom: 74%;
+    padding-bottom: 72%;
   }
 }
 @media (min-width: 920px) {
   /* line 15, ../scss/partials/_triangle_header.scss */
   .page-id-156 #triangle-header {
-    padding-bottom: 680px;
+    padding-bottom: 660px;
   }
 }
 
@@ -1379,16 +1379,15 @@ them however you see fit.
 
 /* line 51, ../scss/partials/_triangle_header.scss */
 .page-id-156 .tri-logo-wrapper {
-  background-position: center -11%;
+  background-position: center 4%;
 }
-@media (min-width: 768px) {
-  /* line 54, ../scss/partials/_triangle_header.scss */
-  .page-id-156 .tri-logo-wrapper .article-header {
-    padding-top: 0;
-  }
+/* line 55, ../scss/partials/_triangle_header.scss */
+.page-id-156 .tri-logo-wrapper .article-header {
+  padding-top: 0;
+  padding-bottom: 0;
 }
 
-/* line 61, ../scss/partials/_triangle_header.scss */
+/* line 60, ../scss/partials/_triangle_header.scss */
 #family-logo {
   background-color: #fff;
   background-repeat: no-repeat;
@@ -1401,14 +1400,14 @@ them however you see fit.
   padding-bottom: 44.3%;
 }
 @media (min-width: 617px) {
-  /* line 61, ../scss/partials/_triangle_header.scss */
+  /* line 60, ../scss/partials/_triangle_header.scss */
   #family-logo {
     padding-bottom: 273px;
   }
 }
 
 @media (min-width: 464px) {
-  /* line 76, ../scss/partials/_triangle_header.scss */
+  /* line 75, ../scss/partials/_triangle_header.scss */
   .logo-wrapper {
     display: inline-block;
     width: 100%;
@@ -1422,19 +1421,19 @@ them however you see fit.
   }
 }
 @media (min-width: 768px) {
-  /* line 76, ../scss/partials/_triangle_header.scss */
+  /* line 75, ../scss/partials/_triangle_header.scss */
   .logo-wrapper {
     bottom: -8%;
   }
 }
 @media (min-width: 920px) {
-  /* line 76, ../scss/partials/_triangle_header.scss */
+  /* line 75, ../scss/partials/_triangle_header.scss */
   .logo-wrapper {
     height: 423px;
   }
 }
 
-/* line 92, ../scss/partials/_triangle_header.scss */
+/* line 91, ../scss/partials/_triangle_header.scss */
 #down-arrow {
   width: 7px;
   height: 30px;
@@ -1445,7 +1444,7 @@ them however you see fit.
   background-repeat: no-repeat;
 }
 @media (min-width: 920px) {
-  /* line 92, ../scss/partials/_triangle_header.scss */
+  /* line 91, ../scss/partials/_triangle_header.scss */
   #down-arrow {
     margin-top: 80px;
     height: 70px;
@@ -3156,21 +3155,23 @@ main > .article-header .page-title:after {
   border-bottom: 1px dashed #a8b2a8;
   width: 28%;
   max-width: 147px;
-  margin: 0.85em auto 1em;
+  margin: 0 auto;
+  padding-top: 0.85;
+  padding-bottom: 1em;
 }
 
-/* line 162, ../scss/partials/_util.scss */
+/* line 165, ../scss/partials/_util.scss */
 .article-header {
   margin: 2.25em auto 1.5em;
 }
 @media (min-width: 768px) {
-  /* line 162, ../scss/partials/_util.scss */
+  /* line 165, ../scss/partials/_util.scss */
   .article-header {
     margin: 6em auto 3em;
   }
 }
 
-/* line 172, ../scss/partials/_util.scss */
+/* line 175, ../scss/partials/_util.scss */
 .page-id-19 .tab-holder .page-sub-title:after {
   content: "";
   display: block;
@@ -3180,7 +3181,7 @@ main > .article-header .page-title:after {
   margin: 1.6em auto 0;
 }
 
-/* line 183, ../scss/partials/_util.scss */
+/* line 186, ../scss/partials/_util.scss */
 a.arrow,
 a.arrow {
   display: block;
@@ -3204,44 +3205,44 @@ a.arrow {
   transition: border-color 200ms;
 }
 
-/* line 197, ../scss/partials/_util.scss */
+/* line 200, ../scss/partials/_util.scss */
 .arrow-left,
 a.arrow-left {
   border-width: 15px 20px 15px 0;
   border-color: transparent #d4a551 transparent transparent;
   left: 0;
 }
-/* line 203, ../scss/partials/_util.scss */
+/* line 206, ../scss/partials/_util.scss */
 .arrow-left:hover,
 a.arrow-left:hover {
   border-color: transparent #1b381d transparent transparent;
 }
 
-/* line 207, ../scss/partials/_util.scss */
+/* line 210, ../scss/partials/_util.scss */
 .arrow-right,
 a.arrow-right {
   border-width: 15px 0 15px 20px;
   border-color: transparent transparent transparent #d4a551;
   right: 0;
 }
-/* line 212, ../scss/partials/_util.scss */
+/* line 215, ../scss/partials/_util.scss */
 .arrow-right:hover,
 a.arrow-right:hover {
   border-color: transparent transparent transparent #1b381d;
 }
 
-/* line 218, ../scss/partials/_util.scss */
+/* line 221, ../scss/partials/_util.scss */
 #menu-work-menu li.current_page_item > a,
 #menu-main-menu li.current_page_item > a {
   color: #d4a551;
 }
 
-/* line 224, ../scss/partials/_util.scss */
+/* line 227, ../scss/partials/_util.scss */
 .hidden {
   opacity: 0;
 }
 
-/* line 227, ../scss/partials/_util.scss */
+/* line 230, ../scss/partials/_util.scss */
 *[data-transition-delay] {
   -webkit-transition: opacity 0.2s ease-in-out;
   -moz-transition: opacity 0.2s ease-in-out;
@@ -3250,12 +3251,12 @@ a.arrow-right:hover {
   transition: opacity 0.2s ease-in-out;
 }
 
-/* line 231, ../scss/partials/_util.scss */
+/* line 234, ../scss/partials/_util.scss */
 main > article {
   background-color: white;
 }
 
-/* line 235, ../scss/partials/_util.scss */
+/* line 238, ../scss/partials/_util.scss */
 .gold-letters {
   color: #d4a551;
 }
@@ -3859,72 +3860,131 @@ h4.tt-date {
 .page-id-156 #container > header {
   display: none;
 }
-/* line 10, ../scss/partials/_splash.scss */
-.page-id-156 .sub-title {
-  max-width: 19.5em;
-  margin-bottom: 2.5em;
-}
-/* line 15, ../scss/partials/_splash.scss */
-.page-id-156 .contact-us {
-  padding: 1em 0;
-}
 @media (min-width: 768px) {
-  /* line 15, ../scss/partials/_splash.scss */
-  .page-id-156 .contact-us {
-    padding: 2em 0;
+  /* line 9, ../scss/partials/_splash.scss */
+  .page-id-156 .logo-wrapper {
+    bottom: -29%;
   }
 }
-/* line 19, ../scss/partials/_splash.scss */
+/* line 13, ../scss/partials/_splash.scss */
+.page-id-156 .sub-title {
+  max-width: 19.5em;
+  background-color: #fff;
+  padding-bottom: 2em;
+  padding-top: 1em;
+}
+/* line 20, ../scss/partials/_splash.scss */
+.page-id-156 .contact-us {
+  padding: 1.5em 0;
+}
+@media (min-width: 768px) {
+  /* line 20, ../scss/partials/_splash.scss */
+  .page-id-156 .contact-us {
+    padding: 2.25em 0;
+  }
+}
+/* line 28, ../scss/partials/_splash.scss */
 .page-id-156 .contact-us h3 {
   font-size: 0.75em;
   line-height: 1.5em;
 }
 @media (min-width: 768px) {
-  /* line 19, ../scss/partials/_splash.scss */
+  /* line 28, ../scss/partials/_splash.scss */
   .page-id-156 .contact-us h3 {
     font-size: 0.95em;
   }
 }
+/* line 36, ../scss/partials/_splash.scss */
+.page-id-156 .contact-us h3 a {
+  color: #d4a551;
+  -webkit-transition: color 200ms;
+  -moz-transition: color 200ms;
+  -o-transition: color 200ms;
+  -ms-transition: color 200ms;
+  transition: color 200ms;
+}
+/* line 39, ../scss/partials/_splash.scss */
+.page-id-156 .contact-us h3 a:hover {
+  color: #1b381d !important;
+}
 @media (min-width: 920px) {
-  /* line 29, ../scss/partials/_splash.scss */
+  /* line 46, ../scss/partials/_splash.scss */
   .page-id-156 #down-arrow {
     margin-top: 80px;
     height: 70px;
   }
 }
-/* line 37, ../scss/partials/_splash.scss */
+/* line 54, ../scss/partials/_splash.scss */
 .page-id-156 .family-members-container {
   padding-top: 0;
 }
-/* line 41, ../scss/partials/_splash.scss */
+/* line 58, ../scss/partials/_splash.scss */
 .page-id-156 .family-members-container .article-header h2 {
   font-size: 1.1em;
   line-height: 1.3em;
 }
-/* line 47, ../scss/partials/_splash.scss */
+/* line 64, ../scss/partials/_splash.scss */
 .page-id-156 .family-members {
   max-width: 960px;
   margin: 0 auto;
 }
-/* line 51, ../scss/partials/_splash.scss */
+/* line 68, ../scss/partials/_splash.scss */
 .page-id-156 .family-members header.article-header {
-  padding-top: 3em;
+  padding-top: 2.5em;
 }
-/* line 56, ../scss/partials/_splash.scss */
+/* line 73, ../scss/partials/_splash.scss */
 .page-id-156 .family-member-list {
   height: auto;
-  padding-bottom: 3em;
+  padding-top: 2em;
+  padding-bottom: 1.5em;
 }
-/* line 61, ../scss/partials/_splash.scss */
+/* line 79, ../scss/partials/_splash.scss */
+.page-id-156 .family-member-list li {
+  padding-bottom: 16.5%;
+}
+/* line 81, ../scss/partials/_splash.scss */
 .page-id-156 .family-member-list li .family-member-link img {
   width: auto;
   max-width: 55%;
 }
 @media (min-width: 768px) {
-  /* line 60, ../scss/partials/_splash.scss */
+  /* line 79, ../scss/partials/_splash.scss */
   .page-id-156 .family-member-list li {
     width: 33.3333333%;
-    padding-bottom: 20%;
+    padding-bottom: 16.5%;
+  }
+}
+/* line 92, ../scss/partials/_splash.scss */
+.page-id-156 .footer {
+  display: none;
+}
+/* line 94, ../scss/partials/_splash.scss */
+.page-id-156 #content + .gold-line {
+  margin-bottom: 14%;
+}
+@media (min-width: 1146px) {
+  /* line 94, ../scss/partials/_splash.scss */
+  .page-id-156 #content + .gold-line {
+    margin-bottom: 160px;
+  }
+}
+/* line 102, ../scss/partials/_splash.scss */
+.page-id-156 .tri-logo-wrapper .article-header {
+  width: 100%;
+  background-color: transparent;
+}
+/* line 106, ../scss/partials/_splash.scss */
+.page-id-156 .tri-logo-wrapper .article-header .splash-content-container {
+  background-color: #fff;
+  width: 75%;
+  max-width: 960px;
+  margin: 0 auto;
+  padding-bottom: 3em;
+}
+@media (min-width: 768px) {
+  /* line 106, ../scss/partials/_splash.scss */
+  .page-id-156 .tri-logo-wrapper .article-header .splash-content-container {
+    padding-bottom: 5em;
   }
 }
 

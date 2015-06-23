@@ -14,7 +14,9 @@ $familyMembers = array();
 // GET FAMILY MEMBERS AND PROJECTS
 $args = array(
   'post_type' => array('family-member'),
-  'posts_per_page' => -1
+  'posts_per_page' => -1,
+  'orderby'=>'title',
+  'order'=>'asc'
 );
 
 $the_query = new WP_Query( $args );
@@ -104,7 +106,7 @@ wp_reset_postdata();
 							
 									echo '<ul id="splash-family-member-list" class="cf family-member-list">';
 										foreach ($familyMembers as $key => $familyMember) {
-											$link = $familyMember['permalink']; 
+											$link = $familyMember['link']; 
 											// IMAGE SRC
 											$src = $familyMember['image'];
 											// PERMALINK

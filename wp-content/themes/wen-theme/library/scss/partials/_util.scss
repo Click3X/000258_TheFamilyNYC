@@ -156,7 +156,10 @@ main > .article-header {
 	display: block;
 	border-bottom: 1px dashed $border-gray;
 	width: 28%; max-width: 147px;
-	margin: 0.85em auto 1em;
+	// margin: 0.85em auto 1em;
+	margin:0 auto;
+	padding-top:0.85;
+	padding-bottom:1em;
 }
 
 .article-header { 
