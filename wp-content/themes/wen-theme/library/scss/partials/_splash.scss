@@ -1,0 +1,65 @@
+// SPLASH
+.page-id-156 {
+	.sub-title {
+		max-width: 19.5em;
+		margin-bottom: 2.5em;
+	}
+
+	.contact-us {
+		padding:1em 0;
+		@media(min-width: 768px) { padding:2em 0; }
+
+		h3 {
+			font-size: 0.75em;
+			line-height: 1.5em; 
+
+			@media(min-width: 768px) {
+				font-size: 0.95em;
+			}
+		}
+	}
+
+	#down-arrow {	
+		@media(min-width: 920px) {
+			margin-top: 80px;
+			height: 70px;
+		}
+	}
+	
+
+	.family-members-container {
+		padding-top:0;
+
+		.article-header {
+			h2 { 
+				font-size: 1.1em; line-height: 1.3em;
+			}
+		}
+	}
+
+	.family-members {
+		max-width: 960px;
+		margin:0 auto;
+
+		header.article-header {
+			padding-top: 3em;
+		}
+	}
+
+	.family-member-list {
+		height: auto;
+  		padding-bottom: 3em;
+
+		li {
+			.family-member-link img {
+				width: auto;
+	  			max-width: 55%;
+			}
+			@media(min-width: 768px) {
+				width: 33.3333333%; 
+				// padding-bottom: 33.3333333%;
+				padding-bottom: 20%;
+			}
+		}
+	}
+}

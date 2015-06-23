@@ -22,7 +22,21 @@ jQuery(document).ready(function($) {
 		[1289, 535],
 		[64, 908],
 		[960, 615]
-	]
+	];
+
+	// ADD TWICE AS MANY COORDS
+	$.each(coords, function(i, elem) {
+		console.log(coords[i][0], coords[i][1]);
+
+		coords.push( [ coords[i][0], coords[i][1] + 700 ] );
+	});
+
+	// CHECK COORDS
+	console.log('These are your coords: ' + coords);
+	console.log(coords.length);
+	console.dir(coords);
+
+
 	// var num = 100;
 	var num = 36;
 	var count=0;
@@ -36,13 +50,19 @@ jQuery(document).ready(function($) {
 
 	var blobs = [];
 
-	function blob() {
+	function blob(count) {
+		console.log('This is coords: ' + coords[count][0]/1400 );
+
 		this.posZ = getRandomInt(1, 150) - 100;
 		this.element = $('<div/>', { 'class':'tri'});
 		this.element.addClass(colors[Math.floor(Math.random() * colors.length)]); //random bg color
 		this.element.css('z-index', this.posZ);
-		this.element.css('left', getRandomInt(0,120)-10 + '%');
-		this.startTop = getRandomInt(0,120)-10;
+		// this.element.css('left', getRandomInt(0,120)-10 + '%');
+		// this.element.css('left', (coords[Math.floor(Math.random() * coords.length)][0]/1400) * 100 + '%');
+		this.element.css('left', (coords[count][0]/1400) * 100 + '%');
+		// this.startTop = getRandomInt(0,120)-10;
+		// this.startTop = (coords[Math.floor(Math.random() * coords.length)][1]/700) * 100;
+		this.startTop = (coords[count][1]/700) * 100;
 		this.element.css('top', this.startTop + '%');
 		if (this.posZ > 0)
 			this.scale = (1 + scalemod * this.posZ / 100);
@@ -73,7 +93,7 @@ jQuery(document).ready(function($) {
 	var index, len;
 
 	function doRenderTick() {
-		console.log('This is $(window).scrollTop():' + $(window).scrollTop());
+		// console.log('This is $(window).scrollTop():' + $(window).scrollTop());
 		scrollTopPercent = 100 * $(window).scrollTop() / ($(document).height() - $(window).height()) * 2 - 100;
 		for (index = 0, len = blobs.length; index < len; ++index) {
 			blobs[index].updateTop();
@@ -84,7 +104,7 @@ jQuery(document).ready(function($) {
 	function checkScroll() {
 		requestAnimationFrame(checkScroll);
 		if(count < num) {
-			blobs.push(new blob());
+			blobs.push(new blob(count));
 			blobs[count].updateTop();
 			count++;
 		}

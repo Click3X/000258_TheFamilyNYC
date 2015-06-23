@@ -1319,17 +1319,42 @@ them however you see fit.
   }
 }
 
-/* line 16, ../scss/partials/_triangle_header.scss */
+/* line 15, ../scss/partials/_triangle_header.scss */
+.page-id-156 #triangle-header {
+  padding-bottom: 65%;
+}
+@media (min-width: 481px) {
+  /* line 15, ../scss/partials/_triangle_header.scss */
+  .page-id-156 #triangle-header {
+    padding-bottom: 66%;
+  }
+}
+@media (min-width: 920px) {
+  /* line 15, ../scss/partials/_triangle_header.scss */
+  .page-id-156 #triangle-header {
+    padding-bottom: 610px;
+  }
+}
+
+/* line 22, ../scss/partials/_triangle_header.scss */
+#down-arrow {
+  display: none;
+}
+
+/* line 27, ../scss/partials/_triangle_header.scss */
+.page-id-156 #triangle-header,
 .page-id-6 #triangle-header {
   background: none;
 }
-/* line 19, ../scss/partials/_triangle_header.scss */
+/* line 30, ../scss/partials/_triangle_header.scss */
+.page-id-156 .tri-logo-wrapper,
 .page-id-6 .tri-logo-wrapper {
   text-align: center;
   background-size: contain;
   background-position: center center;
 }
-/* line 24, ../scss/partials/_triangle_header.scss */
+/* line 35, ../scss/partials/_triangle_header.scss */
+.page-id-156 .tri-logo-wrapper .article-header,
 .page-id-6 .tri-logo-wrapper .article-header {
   display: block;
   background: #fff;
@@ -1339,14 +1364,25 @@ them however you see fit.
   margin-top: 0;
 }
 @media (min-width: 768px) {
-  /* line 24, ../scss/partials/_triangle_header.scss */
+  /* line 35, ../scss/partials/_triangle_header.scss */
+  .page-id-156 .tri-logo-wrapper .article-header,
   .page-id-6 .tri-logo-wrapper .article-header {
     display: inline-block;
     padding-bottom: 3em;
   }
 }
+/* line 47, ../scss/partials/_triangle_header.scss */
+.page-id-156 #down-arrow,
+.page-id-6 #down-arrow {
+  display: block;
+}
 
-/* line 41, ../scss/partials/_triangle_header.scss */
+/* line 50, ../scss/partials/_triangle_header.scss */
+.page-id-156 .tri-logo-wrapper {
+  background-position: center -11%;
+}
+
+/* line 54, ../scss/partials/_triangle_header.scss */
 #family-logo {
   background-color: #fff;
   background-repeat: no-repeat;
@@ -1359,14 +1395,14 @@ them however you see fit.
   padding-bottom: 44.3%;
 }
 @media (min-width: 617px) {
-  /* line 41, ../scss/partials/_triangle_header.scss */
+  /* line 54, ../scss/partials/_triangle_header.scss */
   #family-logo {
     padding-bottom: 273px;
   }
 }
 
 @media (min-width: 464px) {
-  /* line 63, ../scss/partials/_triangle_header.scss */
+  /* line 69, ../scss/partials/_triangle_header.scss */
   .logo-wrapper {
     display: inline-block;
     width: 100%;
@@ -1380,19 +1416,19 @@ them however you see fit.
   }
 }
 @media (min-width: 768px) {
-  /* line 63, ../scss/partials/_triangle_header.scss */
+  /* line 69, ../scss/partials/_triangle_header.scss */
   .logo-wrapper {
     bottom: -8%;
   }
 }
 @media (min-width: 920px) {
-  /* line 63, ../scss/partials/_triangle_header.scss */
+  /* line 69, ../scss/partials/_triangle_header.scss */
   .logo-wrapper {
     height: 423px;
   }
 }
 
-/* line 79, ../scss/partials/_triangle_header.scss */
+/* line 85, ../scss/partials/_triangle_header.scss */
 #down-arrow {
   width: 7px;
   height: 30px;
@@ -1403,25 +1439,10 @@ them however you see fit.
   background-repeat: no-repeat;
 }
 @media (min-width: 920px) {
-  /* line 79, ../scss/partials/_triangle_header.scss */
+  /* line 85, ../scss/partials/_triangle_header.scss */
   #down-arrow {
     margin-top: 80px;
     height: 70px;
-  }
-}
-
-/* line 95, ../scss/partials/_triangle_header.scss */
-.non-home-header #down-arrow {
-  display: none;
-}
-/* line 97, ../scss/partials/_triangle_header.scss */
-.non-home-header #triangle-header {
-  padding-bottom: 50%;
-}
-@media (min-width: 1400px) {
-  /* line 97, ../scss/partials/_triangle_header.scss */
-  .non-home-header #triangle-header {
-    padding-bottom: 560px;
   }
 }
 
@@ -1465,17 +1486,17 @@ them however you see fit.
   height: 140px;
   background: white;
 }
-/* line 36, ../scss/partials/_triangle_header-parallax.scss */
+/* line 32, ../scss/partials/_triangle_header-parallax.scss */
 .desk .page-id-6 #triangle-header-parallax {
   background: none;
 }
-/* line 37, ../scss/partials/_triangle_header-parallax.scss */
+/* line 33, ../scss/partials/_triangle_header-parallax.scss */
 .desk .page-id-6 .tri-logo-wrapper {
   text-align: center;
   background-size: contain;
   background-position: center center;
 }
-/* line 42, ../scss/partials/_triangle_header-parallax.scss */
+/* line 38, ../scss/partials/_triangle_header-parallax.scss */
 .desk .page-id-6 .tri-logo-wrapper .article-header {
   display: block;
   background: #fff;
@@ -1485,13 +1506,13 @@ them however you see fit.
   padding-top: 1em;
 }
 @media (min-width: 768px) {
-  /* line 42, ../scss/partials/_triangle_header-parallax.scss */
+  /* line 38, ../scss/partials/_triangle_header-parallax.scss */
   .desk .page-id-6 .tri-logo-wrapper .article-header {
     display: inline-block;
     padding-bottom: 3em;
   }
 }
-/* line 55, ../scss/partials/_triangle_header-parallax.scss */
+/* line 51, ../scss/partials/_triangle_header-parallax.scss */
 .desk #family-logo {
   background-color: #fff;
   background-repeat: no-repeat;
@@ -1504,13 +1525,13 @@ them however you see fit.
   margin: auto;
 }
 @media (min-width: 617px) {
-  /* line 55, ../scss/partials/_triangle_header-parallax.scss */
+  /* line 51, ../scss/partials/_triangle_header-parallax.scss */
   .desk #family-logo {
     padding-bottom: 273px;
   }
 }
 @media (min-width: 464px) {
-  /* line 67, ../scss/partials/_triangle_header-parallax.scss */
+  /* line 68, ../scss/partials/_triangle_header-parallax.scss */
   .desk .logo-wrapper {
     display: inline-block;
     width: 100%;
@@ -1524,18 +1545,18 @@ them however you see fit.
   }
 }
 @media (min-width: 768px) {
-  /* line 67, ../scss/partials/_triangle_header-parallax.scss */
+  /* line 68, ../scss/partials/_triangle_header-parallax.scss */
   .desk .logo-wrapper {
     bottom: -8%;
   }
 }
 @media (min-width: 920px) {
-  /* line 67, ../scss/partials/_triangle_header-parallax.scss */
+  /* line 68, ../scss/partials/_triangle_header-parallax.scss */
   .desk .logo-wrapper {
     height: 423px;
   }
 }
-/* line 82, ../scss/partials/_triangle_header-parallax.scss */
+/* line 81, ../scss/partials/_triangle_header-parallax.scss */
 .desk #down-arrow {
   width: 7px;
   height: 30px;
@@ -1546,17 +1567,17 @@ them however you see fit.
   background-repeat: no-repeat;
 }
 @media (min-width: 920px) {
-  /* line 82, ../scss/partials/_triangle_header-parallax.scss */
+  /* line 81, ../scss/partials/_triangle_header-parallax.scss */
   .desk #down-arrow {
     margin-top: 80px;
     height: 70px;
   }
 }
-/* line 96, ../scss/partials/_triangle_header-parallax.scss */
+/* line 95, ../scss/partials/_triangle_header-parallax.scss */
 .desk .non-home-header #down-arrow {
   display: none;
 }
-/* line 105, ../scss/partials/_triangle_header-parallax.scss */
+/* line 104, ../scss/partials/_triangle_header-parallax.scss */
 .desk .bg-parallax {
   background-color: transparent;
   background-size: 75%;
@@ -1569,27 +1590,27 @@ them however you see fit.
   padding-bottom: 150%;
 }
 @media (min-width: 481px) {
-  /* line 105, ../scss/partials/_triangle_header-parallax.scss */
+  /* line 104, ../scss/partials/_triangle_header-parallax.scss */
   .desk .bg-parallax {
     padding-bottom: 152%;
   }
 }
 @media (min-width: 920px) {
-  /* line 105, ../scss/partials/_triangle_header-parallax.scss */
+  /* line 104, ../scss/partials/_triangle_header-parallax.scss */
   .desk .bg-parallax {
     padding-bottom: 1800px;
   }
 }
-/* line 123, ../scss/partials/_triangle_header-parallax.scss */
+/* line 122, ../scss/partials/_triangle_header-parallax.scss */
 .desk .bg-parallax.gold {
   background-image: url("../images/gold-parallax.png");
 }
-/* line 127, ../scss/partials/_triangle_header-parallax.scss */
+/* line 126, ../scss/partials/_triangle_header-parallax.scss */
 .desk .bg-parallax.green {
   background-image: url("../images/green-parallax.png");
   z-index: -1;
 }
-/* line 132, ../scss/partials/_triangle_header-parallax.scss */
+/* line 131, ../scss/partials/_triangle_header-parallax.scss */
 .desk .bg-parallax.stripe {
   background-image: url("../images/stripe-parallax.png");
   z-index: 10;
@@ -3010,7 +3031,7 @@ ul {
 .sub-title,
 h2.sub-title {
   line-height: 1.6em;
-  font-size: 0.8em;
+  font-size: 1em;
   max-width: 23em;
   margin: 0 auto;
   font-weight: normal;
@@ -3024,31 +3045,31 @@ h2.sub-title {
   }
 }
 
-/* line 74, ../scss/partials/_util.scss */
+/* line 76, ../scss/partials/_util.scss */
 .page-sub-title {
   font-size: 1.2em;
 }
 
-/* line 76, ../scss/partials/_util.scss */
+/* line 78, ../scss/partials/_util.scss */
 .article-header {
   margin: 2em auto;
   text-align: center;
 }
 @media (min-width: 768px) {
-  /* line 76, ../scss/partials/_util.scss */
+  /* line 78, ../scss/partials/_util.scss */
   .article-header {
     margin: 3em auto;
   }
 }
 
-/* line 86, ../scss/partials/_util.scss */
+/* line 88, ../scss/partials/_util.scss */
 video {
   display: block;
   width: 100% !important;
   height: 100% !important;
 }
 
-/* line 92, ../scss/partials/_util.scss */
+/* line 94, ../scss/partials/_util.scss */
 .btn {
   font-family: gotham-medium;
   text-decoration: none;
@@ -3067,27 +3088,27 @@ video {
   transition: all 0.2s ease-in-out;
 }
 @media (min-width: 768px) {
-  /* line 92, ../scss/partials/_util.scss */
+  /* line 94, ../scss/partials/_util.scss */
   .btn {
     font-size: 0.8em;
     padding: 0.4em 1.5em 0.25em;
   }
 }
-/* line 113, ../scss/partials/_util.scss */
+/* line 115, ../scss/partials/_util.scss */
 .btn:hover {
   color: #d4a551;
   background-color: #1c391e;
 }
 
 @media (min-width: 768px) {
-  /* line 126, ../scss/partials/_util.scss */
+  /* line 128, ../scss/partials/_util.scss */
   .page-id-13 .page-title,
   .archive .page-title,
   .single-family-member .page-title,
   main > .article-header .page-title {
     font-size: 2em;
   }
-  /* line 127, ../scss/partials/_util.scss */
+  /* line 129, ../scss/partials/_util.scss */
   .page-id-13 .page-sub-title,
   .archive .page-sub-title,
   .single-family-member .page-sub-title,
@@ -3097,20 +3118,20 @@ video {
 }
 
 @media (min-width: 768px) {
-  /* line 132, ../scss/partials/_util.scss */
+  /* line 134, ../scss/partials/_util.scss */
   .page-id-19 .tab-holder .page-title {
     font-size: 1.8em;
     letter-spacing: 0.05em;
     margin: 0.2em auto;
   }
-  /* line 133, ../scss/partials/_util.scss */
+  /* line 135, ../scss/partials/_util.scss */
   .page-id-19 .tab-holder .page-sub-title {
     font-size: 1.4em;
     letter-spacing: 0.05em;
   }
 }
 
-/* line 142, ../scss/partials/_util.scss */
+/* line 144, ../scss/partials/_util.scss */
 .page-id-13 .page-title:after,
 .archive .page-title:after,
 .single-family-member .page-title:after,
@@ -3118,23 +3139,32 @@ main > .article-header .page-title:after {
   content: "";
   display: block;
   border-bottom: 1px dashed #a8b2a8;
-  width: 15%;
-  max-width: 144px;
+  width: 30%;
+  max-width: 147px;
   margin: 0.85em auto 1em;
 }
 
-/* line 152, ../scss/partials/_util.scss */
+/* line 155, ../scss/partials/_util.scss */
+.dot-border {
+  display: block;
+  border-bottom: 1px dashed #a8b2a8;
+  width: 28%;
+  max-width: 147px;
+  margin: 0.85em auto 1em;
+}
+
+/* line 162, ../scss/partials/_util.scss */
 .article-header {
   margin: 2.25em auto 1.5em;
 }
 @media (min-width: 768px) {
-  /* line 152, ../scss/partials/_util.scss */
+  /* line 162, ../scss/partials/_util.scss */
   .article-header {
     margin: 6em auto 3em;
   }
 }
 
-/* line 162, ../scss/partials/_util.scss */
+/* line 172, ../scss/partials/_util.scss */
 .page-id-19 .tab-holder .page-sub-title:after {
   content: "";
   display: block;
@@ -3144,7 +3174,7 @@ main > .article-header .page-title:after {
   margin: 1.6em auto 0;
 }
 
-/* line 173, ../scss/partials/_util.scss */
+/* line 183, ../scss/partials/_util.scss */
 a.arrow,
 a.arrow {
   display: block;
@@ -3168,44 +3198,44 @@ a.arrow {
   transition: border-color 200ms;
 }
 
-/* line 187, ../scss/partials/_util.scss */
+/* line 197, ../scss/partials/_util.scss */
 .arrow-left,
 a.arrow-left {
   border-width: 15px 20px 15px 0;
   border-color: transparent #d4a551 transparent transparent;
   left: 0;
 }
-/* line 193, ../scss/partials/_util.scss */
+/* line 203, ../scss/partials/_util.scss */
 .arrow-left:hover,
 a.arrow-left:hover {
   border-color: transparent #1b381d transparent transparent;
 }
 
-/* line 197, ../scss/partials/_util.scss */
+/* line 207, ../scss/partials/_util.scss */
 .arrow-right,
 a.arrow-right {
   border-width: 15px 0 15px 20px;
   border-color: transparent transparent transparent #d4a551;
   right: 0;
 }
-/* line 202, ../scss/partials/_util.scss */
+/* line 212, ../scss/partials/_util.scss */
 .arrow-right:hover,
 a.arrow-right:hover {
   border-color: transparent transparent transparent #1b381d;
 }
 
-/* line 208, ../scss/partials/_util.scss */
+/* line 218, ../scss/partials/_util.scss */
 #menu-work-menu li.current_page_item > a,
 #menu-main-menu li.current_page_item > a {
   color: #d4a551;
 }
 
-/* line 214, ../scss/partials/_util.scss */
+/* line 224, ../scss/partials/_util.scss */
 .hidden {
   opacity: 0;
 }
 
-/* line 217, ../scss/partials/_util.scss */
+/* line 227, ../scss/partials/_util.scss */
 *[data-transition-delay] {
   -webkit-transition: opacity 0.2s ease-in-out;
   -moz-transition: opacity 0.2s ease-in-out;
@@ -3214,9 +3244,14 @@ a.arrow-right:hover {
   transition: opacity 0.2s ease-in-out;
 }
 
-/* line 221, ../scss/partials/_util.scss */
+/* line 231, ../scss/partials/_util.scss */
 main > article {
   background-color: white;
+}
+
+/* line 235, ../scss/partials/_util.scss */
+.gold-letters {
+  color: #d4a551;
 }
 
 /* line 2, ../scss/partials/_tabs.scss */
@@ -3807,6 +3842,75 @@ h4.tt-date {
   /* line 30, ../scss/partials/_contact.scss */
   .map-canvas {
     padding-bottom: 450px;
+  }
+}
+
+/* line 3, ../scss/partials/_splash.scss */
+.page-id-156 .sub-title {
+  max-width: 19.5em;
+  margin-bottom: 2.5em;
+}
+/* line 8, ../scss/partials/_splash.scss */
+.page-id-156 .contact-us {
+  padding: 1em 0;
+}
+@media (min-width: 768px) {
+  /* line 8, ../scss/partials/_splash.scss */
+  .page-id-156 .contact-us {
+    padding: 2em 0;
+  }
+}
+/* line 12, ../scss/partials/_splash.scss */
+.page-id-156 .contact-us h3 {
+  font-size: 0.75em;
+  line-height: 1.5em;
+}
+@media (min-width: 768px) {
+  /* line 12, ../scss/partials/_splash.scss */
+  .page-id-156 .contact-us h3 {
+    font-size: 0.95em;
+  }
+}
+@media (min-width: 920px) {
+  /* line 22, ../scss/partials/_splash.scss */
+  .page-id-156 #down-arrow {
+    margin-top: 80px;
+    height: 70px;
+  }
+}
+/* line 30, ../scss/partials/_splash.scss */
+.page-id-156 .family-members-container {
+  padding-top: 0;
+}
+/* line 34, ../scss/partials/_splash.scss */
+.page-id-156 .family-members-container .article-header h2 {
+  font-size: 1.1em;
+  line-height: 1.3em;
+}
+/* line 40, ../scss/partials/_splash.scss */
+.page-id-156 .family-members {
+  max-width: 960px;
+  margin: 0 auto;
+}
+/* line 44, ../scss/partials/_splash.scss */
+.page-id-156 .family-members header.article-header {
+  padding-top: 3em;
+}
+/* line 49, ../scss/partials/_splash.scss */
+.page-id-156 .family-member-list {
+  height: auto;
+  padding-bottom: 3em;
+}
+/* line 54, ../scss/partials/_splash.scss */
+.page-id-156 .family-member-list li .family-member-link img {
+  width: auto;
+  max-width: 55%;
+}
+@media (min-width: 768px) {
+  /* line 53, ../scss/partials/_splash.scss */
+  .page-id-156 .family-member-list li {
+    width: 33.3333333%;
+    padding-bottom: 20%;
   }
 }
 

@@ -181,9 +181,9 @@ jQuery(document).ready(function($) {
 	var url = window.location;
 	$('a[href="'+url+'"]').parent('#menu-main-menu>li').addClass('main-menu-selected');
 
-	if ($('body').attr('id') != "home" ) {
-		$('body').addClass('non-home-header');
-	}
+	// if ( ($('body').attr('id') != "home") || ($('body').attr('id') != "splash" ) ) {
+	// 	$('body').addClass('non-home-header');
+	// }
 
 	// TOGGLE MAIN MENU
 	function toggleOverlay() {
