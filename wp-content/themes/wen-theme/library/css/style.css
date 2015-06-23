@@ -3972,14 +3972,14 @@ h4.tt-date {
 /* line 106, ../scss/partials/_splash.scss */
 .page-id-156 .tri-logo-wrapper .article-header .splash-content-container {
   background-color: #fff;
-  width: 75%;
-  max-width: 960px;
   margin: 0 auto;
   padding-bottom: 3em;
 }
 @media (min-width: 768px) {
   /* line 106, ../scss/partials/_splash.scss */
   .page-id-156 .tri-logo-wrapper .article-header .splash-content-container {
+    width: 75%;
+    max-width: 960px;
     padding-bottom: 5em;
   }
 }
