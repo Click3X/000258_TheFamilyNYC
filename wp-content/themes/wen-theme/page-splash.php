@@ -14,10 +14,15 @@ $familyMembers = array();
 // GET FAMILY MEMBERS AND PROJECTS
 $args = array(
   'post_type' => array('family-member'),
-  'posts_per_page' => -1,
-  'orderby'=>'title',
-  'order'=>'asc'
+  'posts_per_page' => -1
 );
+
+// $args = array(
+//   'post_type' => array('family-member'),
+//   'posts_per_page' => -1,
+//   'orderby'=>'title',
+//   'order'=>'asc'
+// );
 
 $the_query = new WP_Query( $args );
 
