@@ -13,11 +13,12 @@
 
 .page-id-156 {
 	#triangle-header { 
-		padding-bottom:65%;
-		@media(min-width: 481px) { padding-bottom: 66%; }
-		@media(min-width: 920px) { padding-bottom: 610px; }	
+		padding-bottom:73%;
+		@media(min-width: 481px) { padding-bottom: 74%; }
+		@media(min-width: 920px) { padding-bottom: 680px; }	
 	}
 }
+
 // HIDE ARROW EXCEPT ON SPLASH AND HOME PAGES
 #down-arrow { display: none; }
 
@@ -49,6 +50,10 @@
 
 .page-id-156 .tri-logo-wrapper {
 	background-position: center -11%;
+
+	.article-header {
+		padding-top:0;
+	}
 }
 
 #family-logo {

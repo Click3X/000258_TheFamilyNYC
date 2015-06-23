@@ -1,5 +1,12 @@
 // SPLASH
 .page-id-156 {
+	// HIDE NAV ON SPLASH PAGE
+	#container {
+		padding-top: 0;
+		> header { display: none; }
+	}
+
+
 	.sub-title {
 		max-width: 19.5em;
 		margin-bottom: 2.5em;

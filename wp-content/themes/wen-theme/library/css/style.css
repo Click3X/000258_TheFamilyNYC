@@ -1321,39 +1321,39 @@ them however you see fit.
 
 /* line 15, ../scss/partials/_triangle_header.scss */
 .page-id-156 #triangle-header {
-  padding-bottom: 65%;
+  padding-bottom: 73%;
 }
 @media (min-width: 481px) {
   /* line 15, ../scss/partials/_triangle_header.scss */
   .page-id-156 #triangle-header {
-    padding-bottom: 66%;
+    padding-bottom: 74%;
   }
 }
 @media (min-width: 920px) {
   /* line 15, ../scss/partials/_triangle_header.scss */
   .page-id-156 #triangle-header {
-    padding-bottom: 610px;
+    padding-bottom: 680px;
   }
 }
 
-/* line 22, ../scss/partials/_triangle_header.scss */
+/* line 23, ../scss/partials/_triangle_header.scss */
 #down-arrow {
   display: none;
 }
 
-/* line 27, ../scss/partials/_triangle_header.scss */
+/* line 28, ../scss/partials/_triangle_header.scss */
 .page-id-156 #triangle-header,
 .page-id-6 #triangle-header {
   background: none;
 }
-/* line 30, ../scss/partials/_triangle_header.scss */
+/* line 31, ../scss/partials/_triangle_header.scss */
 .page-id-156 .tri-logo-wrapper,
 .page-id-6 .tri-logo-wrapper {
   text-align: center;
   background-size: contain;
   background-position: center center;
 }
-/* line 35, ../scss/partials/_triangle_header.scss */
+/* line 36, ../scss/partials/_triangle_header.scss */
 .page-id-156 .tri-logo-wrapper .article-header,
 .page-id-6 .tri-logo-wrapper .article-header {
   display: block;
@@ -1364,25 +1364,29 @@ them however you see fit.
   margin-top: 0;
 }
 @media (min-width: 768px) {
-  /* line 35, ../scss/partials/_triangle_header.scss */
+  /* line 36, ../scss/partials/_triangle_header.scss */
   .page-id-156 .tri-logo-wrapper .article-header,
   .page-id-6 .tri-logo-wrapper .article-header {
     display: inline-block;
     padding-bottom: 3em;
   }
 }
-/* line 47, ../scss/partials/_triangle_header.scss */
+/* line 48, ../scss/partials/_triangle_header.scss */
 .page-id-156 #down-arrow,
 .page-id-6 #down-arrow {
   display: block;
 }
 
-/* line 50, ../scss/partials/_triangle_header.scss */
+/* line 51, ../scss/partials/_triangle_header.scss */
 .page-id-156 .tri-logo-wrapper {
   background-position: center -11%;
 }
-
 /* line 54, ../scss/partials/_triangle_header.scss */
+.page-id-156 .tri-logo-wrapper .article-header {
+  padding-top: 0;
+}
+
+/* line 59, ../scss/partials/_triangle_header.scss */
 #family-logo {
   background-color: #fff;
   background-repeat: no-repeat;
@@ -1395,14 +1399,14 @@ them however you see fit.
   padding-bottom: 44.3%;
 }
 @media (min-width: 617px) {
-  /* line 54, ../scss/partials/_triangle_header.scss */
+  /* line 59, ../scss/partials/_triangle_header.scss */
   #family-logo {
     padding-bottom: 273px;
   }
 }
 
 @media (min-width: 464px) {
-  /* line 69, ../scss/partials/_triangle_header.scss */
+  /* line 74, ../scss/partials/_triangle_header.scss */
   .logo-wrapper {
     display: inline-block;
     width: 100%;
@@ -1416,19 +1420,19 @@ them however you see fit.
   }
 }
 @media (min-width: 768px) {
-  /* line 69, ../scss/partials/_triangle_header.scss */
+  /* line 74, ../scss/partials/_triangle_header.scss */
   .logo-wrapper {
     bottom: -8%;
   }
 }
 @media (min-width: 920px) {
-  /* line 69, ../scss/partials/_triangle_header.scss */
+  /* line 74, ../scss/partials/_triangle_header.scss */
   .logo-wrapper {
     height: 423px;
   }
 }
 
-/* line 85, ../scss/partials/_triangle_header.scss */
+/* line 90, ../scss/partials/_triangle_header.scss */
 #down-arrow {
   width: 7px;
   height: 30px;
@@ -1439,7 +1443,7 @@ them however you see fit.
   background-repeat: no-repeat;
 }
 @media (min-width: 920px) {
-  /* line 85, ../scss/partials/_triangle_header.scss */
+  /* line 90, ../scss/partials/_triangle_header.scss */
   #down-arrow {
     margin-top: 80px;
     height: 70px;
@@ -3845,69 +3849,77 @@ h4.tt-date {
   }
 }
 
-/* line 3, ../scss/partials/_splash.scss */
+/* line 4, ../scss/partials/_splash.scss */
+.page-id-156 #container {
+  padding-top: 0;
+}
+/* line 6, ../scss/partials/_splash.scss */
+.page-id-156 #container > header {
+  display: none;
+}
+/* line 10, ../scss/partials/_splash.scss */
 .page-id-156 .sub-title {
   max-width: 19.5em;
   margin-bottom: 2.5em;
 }
-/* line 8, ../scss/partials/_splash.scss */
+/* line 15, ../scss/partials/_splash.scss */
 .page-id-156 .contact-us {
   padding: 1em 0;
 }
 @media (min-width: 768px) {
-  /* line 8, ../scss/partials/_splash.scss */
+  /* line 15, ../scss/partials/_splash.scss */
   .page-id-156 .contact-us {
     padding: 2em 0;
   }
 }
-/* line 12, ../scss/partials/_splash.scss */
+/* line 19, ../scss/partials/_splash.scss */
 .page-id-156 .contact-us h3 {
   font-size: 0.75em;
   line-height: 1.5em;
 }
 @media (min-width: 768px) {
-  /* line 12, ../scss/partials/_splash.scss */
+  /* line 19, ../scss/partials/_splash.scss */
   .page-id-156 .contact-us h3 {
     font-size: 0.95em;
   }
 }
 @media (min-width: 920px) {
-  /* line 22, ../scss/partials/_splash.scss */
+  /* line 29, ../scss/partials/_splash.scss */
   .page-id-156 #down-arrow {
     margin-top: 80px;
     height: 70px;
   }
 }
-/* line 30, ../scss/partials/_splash.scss */
+/* line 37, ../scss/partials/_splash.scss */
 .page-id-156 .family-members-container {
   padding-top: 0;
 }
-/* line 34, ../scss/partials/_splash.scss */
+/* line 41, ../scss/partials/_splash.scss */
 .page-id-156 .family-members-container .article-header h2 {
   font-size: 1.1em;
   line-height: 1.3em;
 }
-/* line 40, ../scss/partials/_splash.scss */
+/* line 47, ../scss/partials/_splash.scss */
 .page-id-156 .family-members {
   max-width: 960px;
   margin: 0 auto;
 }
-/* line 44, ../scss/partials/_splash.scss */
+/* line 51, ../scss/partials/_splash.scss */
 .page-id-156 .family-members header.article-header {
   padding-top: 3em;
 }
-/* line 49, ../scss/partials/_splash.scss */
+/* line 56, ../scss/partials/_splash.scss */
 .page-id-156 .family-member-list {
   height: auto;
   padding-bottom: 3em;
 }
-/* line 54, ../scss/partials/_splash.scss */
+/* line 61, ../scss/partials/_splash.scss */
 .page-id-156 .family-member-list li .family-member-link img {
   width: auto;
   max-width: 55%;
 }
 @media (min-width: 768px) {
-  /* line 53, ../scss/partials/_splash.scss */
+  /* line 60, ../scss/partials/_splash.scss */
   .page-id-156 .family-member-list li {
     width: 33.3333333%;
     padding-bottom: 20%;
