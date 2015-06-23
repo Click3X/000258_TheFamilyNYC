@@ -52,7 +52,9 @@
 	background-position: center -11%;
 
 	.article-header {
-		padding-top:0;
+		@media(min-width: 768px) {
+			padding-top:0;
+		}
 	}
 }
 

@@ -1381,12 +1381,14 @@ them however you see fit.
 .page-id-156 .tri-logo-wrapper {
   background-position: center -11%;
 }
-/* line 54, ../scss/partials/_triangle_header.scss */
-.page-id-156 .tri-logo-wrapper .article-header {
-  padding-top: 0;
+@media (min-width: 768px) {
+  /* line 54, ../scss/partials/_triangle_header.scss */
+  .page-id-156 .tri-logo-wrapper .article-header {
+    padding-top: 0;
+  }
 }
 
-/* line 59, ../scss/partials/_triangle_header.scss */
+/* line 61, ../scss/partials/_triangle_header.scss */
 #family-logo {
   background-color: #fff;
   background-repeat: no-repeat;
@@ -1399,14 +1401,14 @@ them however you see fit.
   padding-bottom: 44.3%;
 }
 @media (min-width: 617px) {
-  /* line 59, ../scss/partials/_triangle_header.scss */
+  /* line 61, ../scss/partials/_triangle_header.scss */
   #family-logo {
     padding-bottom: 273px;
   }
 }
 
 @media (min-width: 464px) {
-  /* line 74, ../scss/partials/_triangle_header.scss */
+  /* line 76, ../scss/partials/_triangle_header.scss */
   .logo-wrapper {
     display: inline-block;
     width: 100%;
@@ -1420,19 +1422,19 @@ them however you see fit.
   }
 }
 @media (min-width: 768px) {
-  /* line 74, ../scss/partials/_triangle_header.scss */
+  /* line 76, ../scss/partials/_triangle_header.scss */
   .logo-wrapper {
     bottom: -8%;
   }
 }
 @media (min-width: 920px) {
-  /* line 74, ../scss/partials/_triangle_header.scss */
+  /* line 76, ../scss/partials/_triangle_header.scss */
   .logo-wrapper {
     height: 423px;
   }
 }
 
-/* line 90, ../scss/partials/_triangle_header.scss */
+/* line 92, ../scss/partials/_triangle_header.scss */
 #down-arrow {
   width: 7px;
   height: 30px;
@@ -1443,7 +1445,7 @@ them however you see fit.
   background-repeat: no-repeat;
 }
 @media (min-width: 920px) {
-  /* line 90, ../scss/partials/_triangle_header.scss */
+  /* line 92, ../scss/partials/_triangle_header.scss */
   #down-arrow {
     margin-top: 80px;
     height: 70px;
