@@ -4346,31 +4346,50 @@ h4.tt-date {
 
 /* line 18, ../scss/partials/_parallax-tri.scss */
 .tri {
-  width: 0;
-  height: 0;
   position: absolute;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
-/* line 27, ../scss/partials/_parallax-tri.scss */
+/* line 24, ../scss/partials/_parallax-tri.scss */
 .gold-foil {
-  background-image: url("../images/gold.jpg");
-  border-style: solid;
-  border-width: 150px 0 0 120px;
-  border-color: transparent transparent transparent #fff;
+  background-image: url("../images/gold-tri.png");
+  width: 17%;
+  padding-bottom: 17%;
 }
 
-/* line 34, ../scss/partials/_parallax-tri.scss */
+/* line 30, ../scss/partials/_parallax-tri.scss */
 .green-tri {
-  border-style: solid;
-  border-width: 150px 0 0 120px;
-  border-color: transparent transparent transparent #1b381d;
+  background-image: url("../images/green-tri.png");
+  width: 5.214%;
+  max-width: 73px;
+  padding-bottom: 7.78571%;
+}
+@media (min-width: 1400px) {
+  /* line 30, ../scss/partials/_parallax-tri.scss */
+  .green-tri {
+    padding-bottom: 109px;
+  }
 }
 
-/* line 40, ../scss/partials/_parallax-tri.scss */
+/* line 42, ../scss/partials/_parallax-tri.scss */
 .stripe-tri {
-  border-style: solid;
-  border-width: 150px 0 0 120px;
-  border-color: transparent transparent transparent #d4a551;
+  background-image: url("../images/stripe-tri.png");
+  width: 7.7785%;
+  max-width: 109px;
+  padding-bottom: 9.42857%;
+}
+@media (min-width: 1400px) {
+  /* line 42, ../scss/partials/_parallax-tri.scss */
+  .stripe-tri {
+    padding-bottom: 132px;
+  }
+}
+
+/* line 54, ../scss/partials/_parallax-tri.scss */
+#triangle-header {
+  height: 0;
+  position: relative;
 }
 
 /*********************
