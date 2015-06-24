@@ -1,0 +1,132 @@
+.gold-line {
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
+	padding-bottom: 4px;
+	width: 100%;
+	@media(min-width: 481px) { padding-bottom: 6px; }
+	@media(min-width: 768px) { padding-bottom: 8px; }
+}
+
+footer {
+
+	#inner-footer {
+		text-align: center;
+		max-width: 1400px;
+		margin: auto;
+		padding: 4.75em 0;
+
+		@media(min-width: 768px) { padding: 4.75em 0 8em; }
+		@media(min-width: 1060px) { padding: 4.75em 0 13em; }
+
+
+		svg { 
+			path { @include prefix(transition, 200ms fill); }
+
+			&:hover {
+				path.circle {
+					fill:$project-gold;
+				}
+			}
+		}
+
+		.contact-item {
+			a {
+				
+				@include prefix(transition, 200ms color);
+
+				h4 { @include prefix(transition, 200ms color); }
+
+				svg polygon { @include prefix(transition, 200ms fill); }
+				
+				&:hover {
+					color:$project-gold;
+
+					h4 {color:$project-gold;}
+
+					svg polygon {
+					fill:$project-gold;
+					}
+				}
+
+				address {
+					font-style: normal;
+				}
+			}
+		}
+
+	}
+
+	.contact-item {
+		width: 30%;
+		display: inline-block;
+		padding: 10px 0;
+		vertical-align: top;
+		.footer-icon {
+			background-size: 24px 34px;
+			width: 24px;
+			height: 34px;
+			margin: auto;
+		}
+
+		h4 {
+			padding: 22px 0;
+			font-size: 1em;
+			text-transform: uppercase;
+			@media (max-width: 605px) {
+				padding: 10px 0 0 0;
+			}
+			color: $white;
+		}
+
+		p {
+			  font-size: 0.9em;
+			  line-height: 1.3em;
+			  font-weight:normal;
+		}
+		a {
+			color:white; text-decoration: none;
+		}
+
+		@media (max-width: 605px) { width: 80%; }
+	}
+
+	.social-container {
+		margin: 2.25em 0.25em;
+
+		@media (min-width: 768px) {
+			margin: 2.25em 0.25em 6em;
+		}
+
+		a { display: inline-block; }
+		
+		div {
+			background-size: 44px 44px;
+			width: 44px; height: 44px;
+			margin: auto;
+			display: inline-block;	
+			margin: 0 1.3em;
+		}
+
+	}
+
+	#footer-logo {
+		background-size: 290px 24px;
+		width: 290px;
+		height: 24px;
+		margin: 10px auto;
+	}
+
+	.footer-credits {
+		padding: 0 4px;
+		p {
+			display: inline-block;
+			font-size: 0.8em;
+			margin: 6px 0 0 0;
+		}
+
+		span {
+			margin: 0 10px;
+		}
+	}
+}
