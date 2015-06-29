@@ -1759,24 +1759,32 @@ footer #inner-footer .c-item a:hover {
 footer #inner-footer .c-item a:hover h4 {
   color: #d4a551;
 }
-/* line 97, ../scss/partials/_footer.scss */
+/* line 100, ../scss/partials/_footer.scss */
+footer #inner-footer .c-item a.phone:hover, footer #inner-footer .c-item a.address:hover {
+  color: inherit;
+}
+/* line 102, ../scss/partials/_footer.scss */
+footer #inner-footer .c-item a.phone:hover h4, footer #inner-footer .c-item a.address:hover h4 {
+  color: inherit;
+}
+/* line 107, ../scss/partials/_footer.scss */
 footer #inner-footer .c-item a address {
   font-style: normal;
 }
-/* line 103, ../scss/partials/_footer.scss */
+/* line 113, ../scss/partials/_footer.scss */
 footer .social-container {
   padding-top: 0.75em;
 }
-/* line 106, ../scss/partials/_footer.scss */
+/* line 116, ../scss/partials/_footer.scss */
 footer .social-container .social-item {
   display: block;
   float: left;
 }
-/* line 111, ../scss/partials/_footer.scss */
+/* line 121, ../scss/partials/_footer.scss */
 footer .social-container a {
   display: inline-block;
 }
-/* line 113, ../scss/partials/_footer.scss */
+/* line 123, ../scss/partials/_footer.scss */
 footer .social-container div {
   background-size: 44px 44px;
   width: 44px;
@@ -1785,33 +1793,33 @@ footer .social-container div {
   display: inline-block;
   margin: 0 1.3em;
 }
-/* line 122, ../scss/partials/_footer.scss */
+/* line 132, ../scss/partials/_footer.scss */
 footer .footer-credits {
   background-color: #182b18;
 }
-/* line 125, ../scss/partials/_footer.scss */
+/* line 135, ../scss/partials/_footer.scss */
 footer .footer-credits .footer-credits-container {
   max-width: 1400px;
   margin: 0 auto;
 }
-/* line 129, ../scss/partials/_footer.scss */
+/* line 139, ../scss/partials/_footer.scss */
 footer .footer-credits .footer-credits-inner {
   text-align: center;
   padding: 1.25em;
   text-align: left;
 }
 @media (min-width: 900px) {
-  /* line 129, ../scss/partials/_footer.scss */
+  /* line 139, ../scss/partials/_footer.scss */
   footer .footer-credits .footer-credits-inner {
     margin-left: 35%;
   }
 }
-/* line 138, ../scss/partials/_footer.scss */
+/* line 148, ../scss/partials/_footer.scss */
 footer .footer-credits p {
   display: inline-block;
   font-size: 0.75em;
 }
-/* line 143, ../scss/partials/_footer.scss */
+/* line 153, ../scss/partials/_footer.scss */
 footer .footer-credits span {
   margin: 0 10px;
 }

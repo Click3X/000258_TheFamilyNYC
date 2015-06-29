@@ -94,6 +94,16 @@ footer {
 					h4 {color:$project-gold;}
 				}
 
+				&.phone,
+				&.address {
+					
+					&:hover {
+						color:inherit;
+						h4 {color:inherit;}
+					}
+
+				}
+
 				address { font-style: normal; }
 			}
 		}
