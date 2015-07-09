@@ -23,15 +23,17 @@ $maxWidth:1400;
 
 .gold-foil {
 	background-image:url('../images/gold-tri.png');
-	width: 17%;
-	padding-bottom: 17%;
+	// width: 17%;
+	// padding-bottom: 17%;
+	background-size: contain;
 }
 
 .green-tri {
 	background-image:url('../images/green-tri.png');
-	width: 5.214%; max-width: 73px;
+	background-size: contain;
+	// width: 5.214%; max-width: 73px;
 	// padding-bottom: 149.315%;
-	padding-bottom:#{ (109/$maxWidth) * 100 + "%"};
+	// padding-bottom:#{ (109/$maxWidth) * 100 + "%"};
 	
 
 	@media(min-width: 1400px) {
@@ -41,17 +43,63 @@ $maxWidth:1400;
 
 .stripe-tri {
 	background-image:url('../images/stripe-tri.png');
-	width: 7.7785%; max-width: 109px;
+	background-size: contain;
+	z-index: 1;
+	// width: 7.7785%; 
+	// max-width: 109px;
 	// padding-bottom: 121.1%;
-	padding-bottom:#{ (132/$maxWidth) * 100 + "%"};
+	// padding-bottom:#{ (132/$maxWidth) * 100 + "%"};
 
 	@media(min-width: 1400px) {
-		padding-bottom: 132px;
+		// padding-bottom: 132px;
 	}
 
 }
 
 #triangle-header {
 	height: 0;
-	position: relative;
+	// position: relative;
+}
+
+.green-tri.down,
+.gold-foil.right { 
+	@include prefix(transform, translateX(-50%) rotate(90deg));
+}
+
+.stripe-tri.right {
+	@include prefix(transform, rotate(90deg) translateX(50%) );
+}
+
+.green-tri.up {
+	@include prefix(transform, rotate(-90deg));	
+}
+
+.reflect {
+	@include prefix(transform, scale(1, -1));		
+}
+
+.stripe-tri.half {
+	@include prefix(transform, translateX(-100%) scale(1, -1));		
+}
+
+.stripe-tri.reflect.left {
+	@include prefix(transform, translateX(-100%) scale(1, -1) rotate(-90deg));
+}
+
+.stripe-tri.reflect.half {
+	@include prefix(transform, translateY(50%) scale(1, -1) rotate(90deg) );		
+}
+
+
+.gold-foil.reflect.right { 
+	@include prefix(transform, translateY(-50%) scale(1, -1) rotate(-90deg));
+}
+
+
+.gold-foil.left {
+	@include prefix(transform, translateX(-100%) translateY(50%) rotate(90deg) );	
+}
+
+.green-tri.left {
+	@include prefix(transform, rotate(180deg) );		
 }

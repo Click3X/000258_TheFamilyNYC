@@ -60,10 +60,6 @@
 		@media(min-width: 617px) { padding-bottom:273px; }
 	}
 
-	// SPLASH PAGE ARROW IS LOWER THAN THE OTHERS
-	// &.page-id-156 #family-logo {
-	// 	top:10%;
-	// }
 
 	.logo-wrapper {
 		@media(min-width: 464px) {
@@ -74,7 +70,7 @@
 			margin: auto;
 		}
 
-		@media(min-width: 768px) { bottom: -8%; }
+		// @media(min-width: 768px) { bottom: -8%; }
 		@media(min-width: 920px) { height: 423px; }
 	}
 
@@ -94,10 +90,6 @@
 	.non-home-header {
 		#down-arrow { display: none; }
 
-		// #triangle-header-parallax { 
-		// 	padding-bottom: 50%;
-		// 	@media(min-width: 1400px) { padding-bottom: 560px; }
-		// }
 	}  
 
 	// PARALLAX

@@ -6,8 +6,14 @@
 	background-position: center center;
 	position: relative;
 
-	@media(min-width: 481px) { padding-bottom: 76%; }
-	@media(min-width: 920px) { padding-bottom: 700px; }
+	@media(min-width: 481px) { 
+		// padding-bottom: 76%; 
+		padding-bottom: 86%; 
+	}
+	@media(min-width: 920px) { 
+		// padding-bottom: 700px; 
+		padding-bottom: 800px; 
+	}
 }
 
 

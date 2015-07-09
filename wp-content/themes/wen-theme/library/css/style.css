@@ -1309,51 +1309,51 @@ them however you see fit.
 @media (min-width: 481px) {
   /* line 1, ../scss/partials/_triangle_header.scss */
   #triangle-header {
-    padding-bottom: 76%;
+    padding-bottom: 86%;
   }
 }
 @media (min-width: 920px) {
   /* line 1, ../scss/partials/_triangle_header.scss */
   #triangle-header {
-    padding-bottom: 700px;
+    padding-bottom: 800px;
   }
 }
 
-/* line 15, ../scss/partials/_triangle_header.scss */
+/* line 21, ../scss/partials/_triangle_header.scss */
 .page-id-156 #triangle-header {
   padding-bottom: 71%;
 }
 @media (min-width: 481px) {
-  /* line 15, ../scss/partials/_triangle_header.scss */
+  /* line 21, ../scss/partials/_triangle_header.scss */
   .page-id-156 #triangle-header {
     padding-bottom: 72%;
   }
 }
 @media (min-width: 920px) {
-  /* line 15, ../scss/partials/_triangle_header.scss */
+  /* line 21, ../scss/partials/_triangle_header.scss */
   .page-id-156 #triangle-header {
     padding-bottom: 660px;
   }
 }
 
-/* line 23, ../scss/partials/_triangle_header.scss */
+/* line 29, ../scss/partials/_triangle_header.scss */
 #down-arrow {
   display: none;
 }
 
-/* line 28, ../scss/partials/_triangle_header.scss */
+/* line 34, ../scss/partials/_triangle_header.scss */
 .page-id-156 #triangle-header,
 .page-id-6 #triangle-header {
   background: none;
 }
-/* line 31, ../scss/partials/_triangle_header.scss */
+/* line 37, ../scss/partials/_triangle_header.scss */
 .page-id-156 .tri-logo-wrapper,
 .page-id-6 .tri-logo-wrapper {
   text-align: center;
   background-size: contain;
   background-position: center center;
 }
-/* line 36, ../scss/partials/_triangle_header.scss */
+/* line 42, ../scss/partials/_triangle_header.scss */
 .page-id-156 .tri-logo-wrapper .article-header,
 .page-id-6 .tri-logo-wrapper .article-header {
   display: block;
@@ -1364,30 +1364,30 @@ them however you see fit.
   margin-top: 0;
 }
 @media (min-width: 768px) {
-  /* line 36, ../scss/partials/_triangle_header.scss */
+  /* line 42, ../scss/partials/_triangle_header.scss */
   .page-id-156 .tri-logo-wrapper .article-header,
   .page-id-6 .tri-logo-wrapper .article-header {
     display: inline-block;
     padding-bottom: 3em;
   }
 }
-/* line 48, ../scss/partials/_triangle_header.scss */
+/* line 54, ../scss/partials/_triangle_header.scss */
 .page-id-156 #down-arrow,
 .page-id-6 #down-arrow {
   display: block;
 }
 
-/* line 51, ../scss/partials/_triangle_header.scss */
+/* line 57, ../scss/partials/_triangle_header.scss */
 .page-id-156 .tri-logo-wrapper {
   background-position: center 4%;
 }
-/* line 54, ../scss/partials/_triangle_header.scss */
+/* line 60, ../scss/partials/_triangle_header.scss */
 .page-id-156 .tri-logo-wrapper .article-header {
   padding-top: 0;
   padding-bottom: 0;
 }
 
-/* line 59, ../scss/partials/_triangle_header.scss */
+/* line 65, ../scss/partials/_triangle_header.scss */
 #family-logo {
   background-color: #fff;
   background-repeat: no-repeat;
@@ -1400,14 +1400,14 @@ them however you see fit.
   padding-bottom: 44.3%;
 }
 @media (min-width: 617px) {
-  /* line 59, ../scss/partials/_triangle_header.scss */
+  /* line 65, ../scss/partials/_triangle_header.scss */
   #family-logo {
     padding-bottom: 273px;
   }
 }
 
 @media (min-width: 464px) {
-  /* line 74, ../scss/partials/_triangle_header.scss */
+  /* line 80, ../scss/partials/_triangle_header.scss */
   .logo-wrapper {
     display: inline-block;
     width: 100%;
@@ -1421,19 +1421,19 @@ them however you see fit.
   }
 }
 @media (min-width: 768px) {
-  /* line 74, ../scss/partials/_triangle_header.scss */
+  /* line 80, ../scss/partials/_triangle_header.scss */
   .logo-wrapper {
     bottom: -8%;
   }
 }
 @media (min-width: 920px) {
-  /* line 74, ../scss/partials/_triangle_header.scss */
+  /* line 80, ../scss/partials/_triangle_header.scss */
   .logo-wrapper {
     height: 423px;
   }
 }
 
-/* line 90, ../scss/partials/_triangle_header.scss */
+/* line 96, ../scss/partials/_triangle_header.scss */
 #down-arrow {
   width: 7px;
   height: 30px;
@@ -1444,7 +1444,7 @@ them however you see fit.
   background-repeat: no-repeat;
 }
 @media (min-width: 920px) {
-  /* line 90, ../scss/partials/_triangle_header.scss */
+  /* line 96, ../scss/partials/_triangle_header.scss */
   #down-arrow {
     margin-top: 80px;
     height: 70px;
@@ -1536,7 +1536,7 @@ them however you see fit.
   }
 }
 @media (min-width: 464px) {
-  /* line 68, ../scss/partials/_triangle_header-parallax.scss */
+  /* line 64, ../scss/partials/_triangle_header-parallax.scss */
   .desk .logo-wrapper {
     display: inline-block;
     width: 100%;
@@ -1549,19 +1549,13 @@ them however you see fit.
     margin: auto;
   }
 }
-@media (min-width: 768px) {
-  /* line 68, ../scss/partials/_triangle_header-parallax.scss */
-  .desk .logo-wrapper {
-    bottom: -8%;
-  }
-}
 @media (min-width: 920px) {
-  /* line 68, ../scss/partials/_triangle_header-parallax.scss */
+  /* line 64, ../scss/partials/_triangle_header-parallax.scss */
   .desk .logo-wrapper {
     height: 423px;
   }
 }
-/* line 81, ../scss/partials/_triangle_header-parallax.scss */
+/* line 77, ../scss/partials/_triangle_header-parallax.scss */
 .desk #down-arrow {
   width: 7px;
   height: 30px;
@@ -1572,17 +1566,17 @@ them however you see fit.
   background-repeat: no-repeat;
 }
 @media (min-width: 920px) {
-  /* line 81, ../scss/partials/_triangle_header-parallax.scss */
+  /* line 77, ../scss/partials/_triangle_header-parallax.scss */
   .desk #down-arrow {
     margin-top: 80px;
     height: 70px;
   }
 }
-/* line 95, ../scss/partials/_triangle_header-parallax.scss */
+/* line 91, ../scss/partials/_triangle_header-parallax.scss */
 .desk .non-home-header #down-arrow {
   display: none;
 }
-/* line 104, ../scss/partials/_triangle_header-parallax.scss */
+/* line 96, ../scss/partials/_triangle_header-parallax.scss */
 .desk .bg-parallax {
   background-color: transparent;
   background-size: 75%;
@@ -1595,27 +1589,27 @@ them however you see fit.
   padding-bottom: 150%;
 }
 @media (min-width: 481px) {
-  /* line 104, ../scss/partials/_triangle_header-parallax.scss */
+  /* line 96, ../scss/partials/_triangle_header-parallax.scss */
   .desk .bg-parallax {
     padding-bottom: 152%;
   }
 }
 @media (min-width: 920px) {
-  /* line 104, ../scss/partials/_triangle_header-parallax.scss */
+  /* line 96, ../scss/partials/_triangle_header-parallax.scss */
   .desk .bg-parallax {
     padding-bottom: 1800px;
   }
 }
-/* line 122, ../scss/partials/_triangle_header-parallax.scss */
+/* line 114, ../scss/partials/_triangle_header-parallax.scss */
 .desk .bg-parallax.gold {
   background-image: url("../images/gold-parallax.png");
 }
-/* line 126, ../scss/partials/_triangle_header-parallax.scss */
+/* line 118, ../scss/partials/_triangle_header-parallax.scss */
 .desk .bg-parallax.green {
   background-image: url("../images/green-parallax.png");
   z-index: -1;
 }
-/* line 131, ../scss/partials/_triangle_header-parallax.scss */
+/* line 123, ../scss/partials/_triangle_header-parallax.scss */
 .desk .bg-parallax.stripe {
   background-image: url("../images/stripe-parallax.png");
   z-index: 10;
@@ -4362,42 +4356,122 @@ h4.tt-date {
 /* line 24, ../scss/partials/_parallax-tri.scss */
 .gold-foil {
   background-image: url("../images/gold-tri.png");
-  width: 17%;
-  padding-bottom: 17%;
+  background-size: contain;
 }
 
-/* line 30, ../scss/partials/_parallax-tri.scss */
+/* line 31, ../scss/partials/_parallax-tri.scss */
 .green-tri {
   background-image: url("../images/green-tri.png");
-  width: 5.214%;
-  max-width: 73px;
-  padding-bottom: 7.78571%;
+  background-size: contain;
 }
 @media (min-width: 1400px) {
-  /* line 30, ../scss/partials/_parallax-tri.scss */
+  /* line 31, ../scss/partials/_parallax-tri.scss */
   .green-tri {
     padding-bottom: 109px;
   }
 }
 
-/* line 42, ../scss/partials/_parallax-tri.scss */
+/* line 44, ../scss/partials/_parallax-tri.scss */
 .stripe-tri {
   background-image: url("../images/stripe-tri.png");
-  width: 7.7785%;
-  max-width: 109px;
-  padding-bottom: 9.42857%;
-}
-@media (min-width: 1400px) {
-  /* line 42, ../scss/partials/_parallax-tri.scss */
-  .stripe-tri {
-    padding-bottom: 132px;
-  }
+  background-size: contain;
+  z-index: 1;
 }
 
-/* line 54, ../scss/partials/_parallax-tri.scss */
+/* line 59, ../scss/partials/_parallax-tri.scss */
 #triangle-header {
   height: 0;
-  position: relative;
+}
+
+/* line 64, ../scss/partials/_parallax-tri.scss */
+.green-tri.down,
+.gold-foil.right {
+  -webkit-transform: translateX(-50%) rotate(90deg);
+  -moz-transform: translateX(-50%) rotate(90deg);
+  -o-transform: translateX(-50%) rotate(90deg);
+  -ms-transform: translateX(-50%) rotate(90deg);
+  transform: translateX(-50%) rotate(90deg);
+}
+
+/* line 69, ../scss/partials/_parallax-tri.scss */
+.stripe-tri.right {
+  -webkit-transform: rotate(90deg) translateX(50%);
+  -moz-transform: rotate(90deg) translateX(50%);
+  -o-transform: rotate(90deg) translateX(50%);
+  -ms-transform: rotate(90deg) translateX(50%);
+  transform: rotate(90deg) translateX(50%);
+}
+
+/* line 73, ../scss/partials/_parallax-tri.scss */
+.green-tri.up {
+  -webkit-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
+  -o-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+}
+
+/* line 77, ../scss/partials/_parallax-tri.scss */
+.reflect {
+  -webkit-transform: scale(1, -1);
+  -moz-transform: scale(1, -1);
+  -o-transform: scale(1, -1);
+  -ms-transform: scale(1, -1);
+  transform: scale(1, -1);
+}
+
+/* line 81, ../scss/partials/_parallax-tri.scss */
+.stripe-tri.half {
+  -webkit-transform: translateX(-100%) scale(1, -1);
+  -moz-transform: translateX(-100%) scale(1, -1);
+  -o-transform: translateX(-100%) scale(1, -1);
+  -ms-transform: translateX(-100%) scale(1, -1);
+  transform: translateX(-100%) scale(1, -1);
+}
+
+/* line 85, ../scss/partials/_parallax-tri.scss */
+.stripe-tri.reflect.left {
+  -webkit-transform: translateX(-100%) scale(1, -1) rotate(-90deg);
+  -moz-transform: translateX(-100%) scale(1, -1) rotate(-90deg);
+  -o-transform: translateX(-100%) scale(1, -1) rotate(-90deg);
+  -ms-transform: translateX(-100%) scale(1, -1) rotate(-90deg);
+  transform: translateX(-100%) scale(1, -1) rotate(-90deg);
+}
+
+/* line 89, ../scss/partials/_parallax-tri.scss */
+.stripe-tri.reflect.half {
+  -webkit-transform: translateY(50%) scale(1, -1) rotate(90deg);
+  -moz-transform: translateY(50%) scale(1, -1) rotate(90deg);
+  -o-transform: translateY(50%) scale(1, -1) rotate(90deg);
+  -ms-transform: translateY(50%) scale(1, -1) rotate(90deg);
+  transform: translateY(50%) scale(1, -1) rotate(90deg);
+}
+
+/* line 94, ../scss/partials/_parallax-tri.scss */
+.gold-foil.reflect.right {
+  -webkit-transform: translateY(-50%) scale(1, -1) rotate(-90deg);
+  -moz-transform: translateY(-50%) scale(1, -1) rotate(-90deg);
+  -o-transform: translateY(-50%) scale(1, -1) rotate(-90deg);
+  -ms-transform: translateY(-50%) scale(1, -1) rotate(-90deg);
+  transform: translateY(-50%) scale(1, -1) rotate(-90deg);
+}
+
+/* line 99, ../scss/partials/_parallax-tri.scss */
+.gold-foil.left {
+  -webkit-transform: translateX(-100%) translateY(50%) rotate(90deg);
+  -moz-transform: translateX(-100%) translateY(50%) rotate(90deg);
+  -o-transform: translateX(-100%) translateY(50%) rotate(90deg);
+  -ms-transform: translateX(-100%) translateY(50%) rotate(90deg);
+  transform: translateX(-100%) translateY(50%) rotate(90deg);
+}
+
+/* line 103, ../scss/partials/_parallax-tri.scss */
+.green-tri.left {
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
 }
 
 /*********************

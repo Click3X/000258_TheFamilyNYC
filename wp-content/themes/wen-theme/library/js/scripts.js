@@ -152,20 +152,20 @@ if(mobile) {
 jQuery(document).ready(function($) {
 	
 	// DISABLE HOVER ON SCROLL FOR SMOOTHER PERFORMANCE
-	// var body = document.body,
-	// timer;
+	var body = document.body,
+	timer;
 
-	// window.addEventListener('scroll', function() {
-	// 		clearTimeout(timer);
+	window.addEventListener('scroll', function() {
+			clearTimeout(timer);
 
-	// 		if(! $('body').hasClass('disable-hover')) {
-	// 				$('body').addClass('disable-hover');
-	// 		}
+			if(! $('body').hasClass('disable-hover')) {
+					$('body').addClass('disable-hover');
+			}
 
-	// 		timer = setTimeout(function(){
-	// 				$('body').removeClass('disable-hover');
-	// 		}, 90);
-	// }, false);
+			timer = setTimeout(function(){
+					$('body').removeClass('disable-hover');
+			}, 90);
+	}, false);
 	// // END DISABLE HOVER
 
 
