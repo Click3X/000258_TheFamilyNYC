@@ -35,8 +35,10 @@
 										echo '<div class="center-table">';
 											// IMAGE / VIDEO
 											echo '<div class="img-container">';
+												if($news['image'][0]) {
 													// IMAGE
 													echo '<img src="'.$news['image'][0].'">';
+												}
 											echo '</div>';
 
 											// TEXT

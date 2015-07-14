@@ -40,23 +40,6 @@
 	z-index: 100;
 }
 
-// .tabs nav li.tab-current:before,
-// .tabs nav li.tab-current:after {
-// 	content: '';
-// 	position: absolute;
-// 	height: 1px;
-// 	right: 100%;
-// 	bottom: 0;
-// 	width: 1000px;
-// 	background: #47a3da;
-// }
-
-// .tabs nav li.tab-current:after {
-// 	right: auto;
-// 	left: 100%;
-// 	width: 4000px;
-// }
-
 .tabs nav li a {
 	color: white;
 	background-color:$project-green;
@@ -99,4 +82,16 @@
 
 .content section.content-current {
 	display: block;
+}
+
+
+// NEW STYLES FOR HIDING CHRONOLOGY
+.no-chronology {
+	.tabs > nav { 
+		display: none;
+	}
+	.content section.who-what {
+		display: block;
+		padding-top:0;
+	}
 }

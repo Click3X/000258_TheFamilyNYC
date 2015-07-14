@@ -196,9 +196,9 @@ function bones_scripts_and_styles() {
 		}
 
 		// IF FAMILY MEMBERS PAGE GET TAB CODE
-		if( is_page(19) ) {
-			wp_enqueue_script( 'tabs-js' );	
-		}
+		// if( is_page(19) ) {
+		// 	wp_enqueue_script( 'tabs-js' );	
+		// }
 	}
 }
 

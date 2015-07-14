@@ -3335,21 +3335,21 @@ main > article {
   z-index: 100;
 }
 
-/* line 60, ../scss/partials/_tabs.scss */
+/* line 43, ../scss/partials/_tabs.scss */
 .tabs nav li a {
   color: white;
   background-color: #1b381d;
   line-height: 1.5em;
 }
 
-/* line 66, ../scss/partials/_tabs.scss */
+/* line 49, ../scss/partials/_tabs.scss */
 .tabs nav li.tab-current a {
   color: white;
   background-color: #d4a551;
 }
 
 /* Content */
-/* line 73, ../scss/partials/_tabs.scss */
+/* line 56, ../scss/partials/_tabs.scss */
 .content section {
   padding: 0 1em;
   display: none;
@@ -3357,34 +3357,44 @@ main > article {
   margin: 0 auto;
 }
 @media (min-width: 768px) {
-  /* line 73, ../scss/partials/_tabs.scss */
+  /* line 56, ../scss/partials/_tabs.scss */
   .content section {
     padding: 1.5em 1em;
   }
 }
 
-/* line 84, ../scss/partials/_tabs.scss */
+/* line 67, ../scss/partials/_tabs.scss */
 .content section:before,
 .content section:after {
   content: '';
   display: table;
 }
 
-/* line 90, ../scss/partials/_tabs.scss */
+/* line 73, ../scss/partials/_tabs.scss */
 .content section:after {
   clear: both;
 }
 
 /* Fallback example */
-/* line 95, ../scss/partials/_tabs.scss */
+/* line 78, ../scss/partials/_tabs.scss */
 .no-js .content section {
   display: block;
   padding-bottom: 2em;
 }
 
-/* line 100, ../scss/partials/_tabs.scss */
+/* line 83, ../scss/partials/_tabs.scss */
 .content section.content-current {
   display: block;
+}
+
+/* line 90, ../scss/partials/_tabs.scss */
+.no-chronology .tabs > nav {
+  display: none;
+}
+/* line 93, ../scss/partials/_tabs.scss */
+.no-chronology .content section.who-what {
+  display: block;
+  padding-top: 0;
 }
 
 /* line 3, ../scss/partials/_projects.scss */
