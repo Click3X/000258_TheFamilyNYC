@@ -128,13 +128,18 @@
 							$projects = array();
 							// WORK PROJECT POSTS
 							$args = array(
-								'post_type' => 'project'
+								'post_type' => array(
+									'project',
+									'post'
+								)
 							);
 							// QUERY
 							$the_query = new WP_Query( $args );
 							
 							// LOOP 2: WP QUERY LOOP
 							if ($the_query->have_posts()) : while ($the_query->have_posts()) : $the_query->the_post();
+
+
 								// GET POST THUMBNAIL SRC
 								$url_src = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID) , 'full' );
 								// GET PROJECT FIELDS
@@ -147,6 +152,18 @@
 									'poster'=>$url_src[0],
 									'id'=>$post->ID
 								);
+
+								if(get_the_content() != '') {
+									$project['description'] = '<p style="margin:1.75em auto;">'.get_the_excerpt().'</p><a href="http://thefamily.dev/?p=196" class="btn news-link">Learn More</a>';
+								}
+
+								// YOU TUBE LINK
+								if(get_field('youtube_link_post')) {
+									$project['youtube_link'] = get_field('youtube_link_post');
+								} else if(get_field('youtube_link')) {
+									$project['youtube_link'] = get_field('youtube_link');
+								}
+
 								// PUSH PROJECT INTO PROJECTS ARRAY FOR LATER USE
 								$projects[] = $project;
 						
