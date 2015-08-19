@@ -465,17 +465,26 @@ function printNews($newss) {
 			// OUTPUT news
 			echo '<li id="news-'.$key.'" class="cf news swiper-slide">';
 				echo '<div class="center-table">';
-					// IMAGE
-					echo '<div class="img-container">';
-						echo '<img src="'.$news['image'][0].'">';
-					echo '</div>';
+
+                    // IMAGE / VIDEO
+                    echo '<div class="vid-container">';
+                        if( isset($news['youtube_link_post'] ) ) {
+                            echo '<div class="responsive-container">
+                                    <iframe src="'.$news['youtube_link_post'].'" frameborder="0" allowfullscreen></iframe>
+                                </div>';
+                        } else if($news['image'][0]) {
+                            echo '<div class="responsive-container">';
+                                echo '<img src="'.$news['image'][0].'">';
+                            echo '</div>';
+                        }
+                    echo '</div>';
 
 					// TEXT
 					echo '<div class="txt-container">';
 						echo '<div class="txt-wrapper">';
 							// NEWS - FAMILY
 							echo '<h2 class="page-sub-title italic">The Family</h2>
-									<h1 class="page-title">News</h1>';
+									<h1 class="page-title">'.$news['title'].'</h1>';
 							// CONTENT
 							echo '<p class="excerpt">'.$news['excerpt'].'</p>';
 							// BUTTON
@@ -526,5 +535,16 @@ function printTeamMemberSlider($teamMembers) {
 	echo '</section>'; // END NEWS SECITION
 }
 
+
+// CHANGE THE LENGTH OF THE EXCERPT
+function custom_excerpt_length( $length ) {
+    return 35;
+}
+add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
+
+function new_excerpt_more( $more ) {
+    return '[...]';
+}
+add_filter('excerpt_more', 'new_excerpt_more');
 
 /* DON'T DELETE THIS CLOSING TAG */ ?>

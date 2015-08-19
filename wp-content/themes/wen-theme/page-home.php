@@ -70,6 +70,7 @@ if ( $the_query->have_posts() ) {
 		} elseif($post->post_type == 'post' ) {
 			// GET POST THUMBNAIL SRC
 			$url_src = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID) , 'full' );
+
 			// FILTER OUT FAMILY MEMBERS
 			$news = array(
 				'title'=>get_the_title(),
@@ -78,6 +79,12 @@ if ( $the_query->have_posts() ) {
 				'content'=>get_the_content(),
 				'link'=>get_the_permalink()
 			);
+
+			if( get_field('youtube_link_post') ) {
+				$link = get_field('youtube_link_post');
+				$news['youtube_link_post'] = $link;
+			}
+
 			$newss[] = $news;
 		}
 	}
@@ -125,6 +132,12 @@ wp_reset_postdata();
 										<div id="family-logo" style="background-image: url(<?php echo get_template_directory_uri(); ?>/library/images/family_logo_1x.png);"></div>
 										<div id="down-arrow" style="background-image: url(<?php echo get_template_directory_uri(); ?>/library/images/down-arrow.png);"></div>
 									</div>
+
+									<?php 
+										if($server == '127.0.0.1') {
+											include('php/tri-header.php');
+										}
+									?>
 								</div>
 								<!-- END HEADER BG -->
 								<header class="article-header">

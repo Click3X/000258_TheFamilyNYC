@@ -1,0 +1,34 @@
+// style-tweaks
+// h1, h2, h3, h4, h5, h6 {
+//     color: #1b381d;
+//     display: block;
+//     font-family: gotham-medium;
+//     // text-rendering: optimizeLegibility;
+//     // text-transform: uppercase;
+//     a {
+//             color: #1b381d !important;
+//         // display: block;
+//         // font-family: gotham-medium;
+//         // text-rendering: optimizeLegibility;
+//         text-transform: uppercase;
+//     }
+// }
+
+// h1, h1 a,
+// .spot h2, .spot h2 a {
+//     text-transform: uppercase;
+//     color: #1b381d;
+// }
+
+h1, .h1,
+.archive,
+.sidebar {
+    h1,
+    h3, h3 a,
+    h4, h4 a {
+        text-transform: uppercase !important;
+        color: #1b381d !important;
+        font-family: gotham-medium;
+        text-rendering: optimizeLegibility;
+    }
+}

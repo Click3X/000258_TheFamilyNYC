@@ -7,8 +7,9 @@
 					<main id="main" class="m-all t-3of3 d-7of7 cf" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
 						<!-- TITLE -->
 						<header class="article-header">
-							<h2 class="page-sub-title italic">Family</h2>
-							<h1 class="page-title">News</h1>
+							<h2 class="page-sub-title italic">The Family</h2>
+							<!-- <h1 class="page-title">News</h1> -->
+							<h1 class="page-title"><?php the_title(); ?></h1>
 						</header>
 
 						<!-- TOP GOLD LINE -->
@@ -30,23 +31,35 @@
 										'link'=>get_the_permalink()
 									);
 
+									$youtube_link_post;
+									if( get_field('youtube_link_post') ) {
+										$youtube_link_post = get_field('youtube_link_post');
+									}
+
 									echo '<article id="news-'.$post->ID.'" class="cf news">';
 
 										echo '<div class="center-table">';
 											// IMAGE / VIDEO
-											echo '<div class="img-container">';
-												if($news['image'][0]) {
-													// IMAGE
-													echo '<img src="'.$news['image'][0].'">';
-												}
-											echo '</div>';
+											if( isset($youtube_link_post) ) {
+												echo '<div class="vid-container">';
+													echo '<div class="responsive-container">';
+														echo '<iframe src="'.$youtube_link_post.'" frameborder="0" allowfullscreen></iframe>';
+													echo '</div>';
+												echo '</div>';
+											} else if($news['image'][0]) {
+												echo '<div class="img-container">';
+													echo '<div class="responsive-container">';
+														echo '<img src="'.$news['image'][0].'">';
+														'</div>';
+												echo '</div>';
+											}
 
 											// TEXT
 											echo '<div class="txt-container">';
 												echo '<div class="txt-wrapper">';
 													// NEWS - FAMILY
-													echo '<h2 class="page-sub-title italic">The Family</h2>
-															<h1 class="page-title">'.$news['title'].'</h1>';
+													// echo '<h2 class="page-sub-title italic">The Family</h2>';'
+													echo '<h1 class="page-title">'.$news['title'].'</h1>';
 													// CONTENT
 													echo '<p class="excerpt content">'.$news['content'].'</p>';
 												echo '</div>';

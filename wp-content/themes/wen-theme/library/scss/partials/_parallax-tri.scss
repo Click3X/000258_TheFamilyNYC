@@ -103,3 +103,20 @@ $maxWidth:1400;
 .green-tri.left {
 	@include prefix(transform, rotate(180deg) );		
 }
+
+
+// NEW STYLES TRI
+.inner-tri-wrap {
+	padding-bottom: 800px;
+	width: 100%;
+	position: relative;
+}
+
+.gold-wrap,
+.green-wrap,
+.stripe-wrap {
+	position: absolute;
+	width: 100%;
+	top:0;
+	padding-bottom: 800px;
+}

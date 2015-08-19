@@ -1,0 +1,370 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+@font-face {
+  font-family: gotham-light;
+  src: url(../fonts/gotham-light.ttf);
+}
+@font-face {
+  font-family: gotham-book;
+  src: url(../fonts/gotham-book.ttf);
+}
+@font-face {
+  font-family: gotham-bold;
+  src: url(../fonts/gotham-bold.ttf);
+}
+@font-face {
+  font-family: gotham-medium;
+  src: url(../fonts/gotham-medium.ttf);
+}
+@font-face {
+  font-family: gotham-medium-italic;
+  src: url(../fonts/gotham-medium-italic.ttf);
+}
+/** ---- window sizes ----**/
+/* line 66, ../sass/partials/_nav.scss */
+.cf:before,
+.cf:after {
+  content: "";
+  display: table;
+}
+
+/* line 71, ../sass/partials/_nav.scss */
+.cf:after {
+  clear: both;
+}
+
+/* line 74, ../sass/partials/_nav.scss */
+.cf {
+  zoom: 1;
+  /* For IE 6/7 (trigger hasLayout) */
+}
+
+/* line 79, ../sass/partials/_nav.scss */
+#logo {
+  float: none;
+  width: auto;
+  padding-right: 0;
+}
+
+/* line 85, ../sass/partials/_nav.scss */
+#container {
+  margin-top: 20px;
+}
+
+/* line 89, ../sass/partials/_nav.scss */
+header[role=banner] {
+  border-bottom: 0;
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+
+/* line 95, ../sass/partials/_nav.scss */
+nav[role=navigation] {
+  width: auto;
+  float: none;
+  margin-top: 0;
+}
+
+/* line 101, ../sass/partials/_nav.scss */
+.nav li a {
+  display: block;
+  padding: 0.75em;
+}
+
+/* line 106, ../sass/partials/_nav.scss */
+.header {
+  background-color: #f7f6f1;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1006;
+  -webkit-transform: translate3d(0, 0, 1006);
+  -moz-transform: translate3d(0, 0, 1006);
+  -o-transform: translate3d(0, 0, 1006);
+  -ms-transform: translate3d(0, 0, 1006);
+  transform: translate3d(0, 0, 1006);
+}
+
+/* line 120, ../sass/partials/_nav.scss */
+header.header {
+  background-color: #f7f6f1;
+}
+
+/* line 124, ../sass/partials/_nav.scss */
+#inner-header {
+  padding: 6px 20px 0 20px;
+}
+/* line 127, ../sass/partials/_nav.scss */
+#inner-header #hamburger {
+  float: right;
+  display: inline-block;
+  cursor: pointer;
+  margin-top: 6px;
+}
+/* line 133, ../sass/partials/_nav.scss */
+#inner-header #hamburger img {
+  width: 34px;
+}
+/* line 136, ../sass/partials/_nav.scss */
+#inner-header #logo img {
+  width: 34px;
+}
+
+/* line 139, ../sass/partials/_nav.scss */
+.family-navigation.mobile-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  top: 100%;
+  width: 100%;
+  height: 100%;
+  z-index: 1005;
+  opacity: 0;
+  -webkit-transition: opacity 0.4s;
+  -moz-transition: opacity 0.4s;
+  -o-transition: opacity 0.4s;
+  -ms-transition: opacity 0.4s;
+  transition: opacity 0.4s;
+}
+
+/* line 148, ../sass/partials/_nav.scss */
+.menu-open.mobile-menu {
+  top: 0;
+  opacity: 1;
+  overflow-y: scroll;
+}
+
+/* line 154, ../sass/partials/_nav.scss */
+.mobile-menu-inner,
+.mobile-menu-inner nav {
+  background: #f7f6f1;
+}
+
+/* line 157, ../sass/partials/_nav.scss */
+#work-menu {
+  background: #f7f6f1;
+}
+/* line 159, ../sass/partials/_nav.scss */
+#work-menu > div > header {
+  margin: 0 auto;
+}
+/* line 162, ../sass/partials/_nav.scss */
+#work-menu .mobile-menu-inner {
+  padding-top: 2.5em;
+}
+@media (min-width: 768px) {
+  /* line 162, ../sass/partials/_nav.scss */
+  #work-menu .mobile-menu-inner {
+    padding-top: 5em;
+  }
+}
+/* line 167, ../sass/partials/_nav.scss */
+#work-menu .sort-title {
+  font-size: 1.4em;
+  padding-bottom: 0.25em;
+}
+/* line 171, ../sass/partials/_nav.scss */
+#work-menu .dashed-border {
+  padding-top: 0.5em;
+  padding-bottom: 0.85em;
+}
+
+/* line 176, ../sass/partials/_nav.scss */
+.page-id-13 #work-menu .page-title {
+  padding-bottom: 0.85em;
+}
+/* line 178, ../sass/partials/_nav.scss */
+.page-id-13 #work-menu .page-title:after {
+  display: none;
+}
+
+/* line 181, ../sass/partials/_nav.scss */
+#mobile-menu.family-navigation.mobile-menu .mobile-menu-inner {
+  height: 100%;
+}
+
+/* line 184, ../sass/partials/_nav.scss */
+#menu-close,
+#work-menu-close {
+  display: inline-block;
+  cursor: pointer;
+  position: absolute;
+  top: 12px;
+  right: 20px;
+}
+/* line 191, ../sass/partials/_nav.scss */
+#menu-close img,
+#work-menu-close img {
+  width: 34px;
+}
+
+/* line 194, ../sass/partials/_nav.scss */
+#menu-main-menu {
+  text-align: center;
+  padding: 20px 0;
+}
+
+/* line 199, ../sass/partials/_nav.scss */
+#menu-work-menu {
+  text-align: center;
+}
+
+/* line 201, ../sass/partials/_nav.scss */
+#menu-main-menu li,
+#menu-work-menu li {
+  margin: 0;
+  padding: 0;
+  display: block;
+  float: none;
+}
+/* line 210, ../sass/partials/_nav.scss */
+#menu-main-menu li:hover a,
+#menu-work-menu li:hover a {
+  color: #d4a551;
+}
+
+/* line 216, ../sass/partials/_nav.scss */
+#menu-main-menu li a,
+#menu-work-menu li a {
+  font-family: 'gotham-medium';
+  font-weight: normal;
+  font-size: 1.8em;
+  line-height: 1.1em;
+  text-transform: uppercase;
+  display: inline-block;
+  color: #323944;
+  text-decoration: none;
+  -webkit-transition: color 0.1s ease;
+  transition: color 0.1s ease;
+}
+@media (max-width: 480px) {
+  /* line 216, ../sass/partials/_nav.scss */
+  #menu-main-menu li a,
+  #menu-work-menu li a {
+    font-size: 1.4em;
+  }
+}
+
+/* line 231, ../sass/partials/_nav.scss */
+#menu-work-menu li a {
+  font-size: 1.1em;
+  line-height: 1.8em;
+  padding: 0;
+}
+@media (min-width: 768px) {
+  /* line 231, ../sass/partials/_nav.scss */
+  #menu-work-menu li a {
+    font-size: 1.3em;
+  }
+}
+
+/* line 238, ../sass/partials/_nav.scss */
+#menu-work-menu li a[href="#title"] {
+  color: #d4a551;
+  font-size: 0.85em;
+}
+@media (min-width: 768px) {
+  /* line 238, ../sass/partials/_nav.scss */
+  #menu-work-menu li a[href="#title"] {
+    font-size: 1.1em;
+  }
+}
+/* line 244, ../sass/partials/_nav.scss */
+#menu-work-menu li a[href="#title"]:before {
+  content: "";
+  display: block;
+  border-bottom: 1px dashed #a8b2a8;
+  width: 15%;
+  max-width: 144px;
+  margin: 1em auto 1.3em;
+}
+
+/* line 252, ../sass/partials/_nav.scss */
+#menu-work-menu:after {
+  content: "";
+  display: block;
+  border-bottom: 1px dashed #a8b2a8;
+  width: 15%;
+  max-width: 144px;
+  margin: 2.1em auto 1.3em;
+}
+
+/* line 259, ../sass/partials/_nav.scss */
+#work-menu nav {
+  padding-bottom: 3em;
+}
+
+/* line 263, ../sass/partials/_nav.scss */
+#menu-work-menu li.menu-item-type-custom:hover {
+  background-color: inherit;
+}
+/* line 265, ../sass/partials/_nav.scss */
+#menu-work-menu li.menu-item-type-custom:hover a {
+  color: #d4a551;
+}
+
+/* line 269, ../sass/partials/_nav.scss */
+#menu-title,
+#work-menu-title {
+  font-family: gotham-medium-italic;
+  color: #cc9c40;
+  font-size: 1.2em;
+  margin: 0;
+  padding: 100px 0 40px 0;
+  text-align: center;
+}
+@media (max-width: 480px) {
+  /* line 269, ../sass/partials/_nav.scss */
+  #menu-title,
+  #work-menu-title {
+    padding: 40px 0 40px 0;
+  }
+}
+
+/* line 285, ../sass/partials/_nav.scss */
+.main-menu-selected a,
+.single-family-member #mobile-menu #menu-item-17 a,
+#menu-work-menu .current-menu-item a {
+  color: #d4a551;
+}
+
+/* line 288, ../sass/partials/_nav.scss */
+#menu-work-menu .current-menu-item {
+  background-color: transparent;
+}
+
+/* line 295, ../sass/partials/_nav.scss */
+body {
+  padding-top: 56px;
+}
+
+/* line 297, ../sass/partials/_nav.scss */
+.dashed-border {
+  border-bottom: 1px dashed #666;
+  width: 100px;
+  margin: auto;
+}
+
+/* line 26, ../sass/partials/_style-tweaks.scss */
+h1 h1,
+h1 h3, h1 h3 a,
+h1 h4, h1 h4 a, .h1 h1,
+.h1 h3, .h1 h3 a,
+.h1 h4, .h1 h4 a,
+.archive h1,
+.archive h3,
+.archive h3 a,
+.archive h4,
+.archive h4 a,
+.sidebar h1,
+.sidebar h3,
+.sidebar h3 a,
+.sidebar h4,
+.sidebar h4 a {
+  text-transform: uppercase !important;
+  color: #1b381d !important;
+  font-family: gotham-medium;
+  text-rendering: optimizeLegibility;
+}
