@@ -123,6 +123,10 @@
 							// END LOOP 1: 
 						?>
 
+
+						<div id="player"></div>
+
+
 						<?php 
 							// WORK PROJECTS ARRAY TO STORE VAR
 							$projects = array();

@@ -4177,6 +4177,20 @@ h4.tt-date {
   width: 100%;
 }
 
+/* line 109, ../scss/partials/_family-members-module.scss */
+.iframe-poster {
+  position: absolute;
+  top: 0;
+  left: 0;
+  cursor: pointer;
+}
+
+/* line 115, ../scss/partials/_family-members-module.scss */
+.img-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
 /* line 2, ../scss/partials/_news-module.scss */
 .news-list-container {
   position: relative;

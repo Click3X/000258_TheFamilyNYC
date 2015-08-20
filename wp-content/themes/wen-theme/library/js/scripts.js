@@ -215,8 +215,11 @@ jQuery(document).ready(function($) {
 
 	// ON VIDEO CLICK PLAY/PAUSE VIDEO
 	var videos = $('video');
+	var iframePosters = $('.iframe-poster');
 
 	$.each(videos, function(i, elem) {
+		console.log('This is video!!!!', i, elem);
+		console.dir(elem);
 		// STORE THIS VAR
 		var _t = this;
 		// ON CLICK FUNCTION
@@ -237,7 +240,61 @@ jQuery(document).ready(function($) {
 			    _t.pause();
 			}
 		});
-	})
+	});
+
+// $('.video-thumb').click(function() {
+//       // ADDING PRELOADER
+//       $(this).next().find('.myLoader').show();
+//       video = '<iframe src="'+ $(this).attr('data-video') +'"></iframe>';
+//       $(this).next().find('iframe').replaceWith(video);
+//       $(this).next().find('iframe').on('load', function () {
+//           $(this).prev().hide();
+//       });
+//   });
+
+
+	$.each(iframePosters, function(i, elem) {
+		console.log('This is iframe poster!!!!', i, elem);
+		console.dir(elem);
+		// STORE THIS VAR
+		var _t = this;
+		// ON CLICK FUNCTION
+		$(_t).click(function() {
+
+			var iframe = $(_t).parent().find('iframe');
+			var iframeSrc = $(_t).data('video');
+			
+			// console.log('This is your iframe: ',iframe);
+			// console.dir(iframe);
+			// console.log('This is your iframe: ',iframeSrc);
+
+			// SET SRC ON IFRAME
+			var video = '<iframe src="'+ iframeSrc +'?autoplay=1'+'"></iframe>';
+			iframe.replaceWith(video);
+			$(_t).parent().find('iframe').on('load', function () {
+				// $(this).prev().hide();
+				console.log('Loaded!');
+				// $(_t).css('visibility', 'hidden').find('.play-tri-holder').css('visibility', 'hidden');
+				$(_t).fadeOut().find('.play-tri-holder').fadeOut();
+			});
+
+			// if (_t.paused == true) {
+			// 	// HIDE OVERLAY
+			// 	$(_t).prev('.play-tri-holder').css('visibility', 'hidden');
+			// 	// SHOW CONTROLS
+			// 	$(this).attr('controls', '');
+			//     // PLAY THE VIDEO
+			//     _t.play();
+			// } else {
+			// 	// OVERLAY NORMAL
+			// 	$(_t).prev('.play-tri-holder').css('visibility', 'initial');
+			// 	// HIDE CONTROLS
+			// 	$(this).removeAttr("controls");
+			//     // PAUSE THE VIDEO
+			//     _t.pause();
+			// }
+		});
+	});
 	// END HTML VIDEO CONTROLS
 
 
