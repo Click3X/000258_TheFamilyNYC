@@ -124,9 +124,6 @@
 						?>
 
 
-						<div id="player"></div>
-
-
 						<?php 
 							// WORK PROJECTS ARRAY TO STORE VAR
 							$projects = array();
@@ -177,7 +174,9 @@
 							// END LOOP 2: WP QUERY LOOP
 
 							// PRINT CUSTOM PROJECTS FUNCTION DECLARED IN FUNCTIONS PHP
-							printProject($projects);
+							// printProject($projects);
+							
+							printNewProject($projects);
 						?>
 
 					</main>

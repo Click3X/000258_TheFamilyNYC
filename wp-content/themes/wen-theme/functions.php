@@ -286,6 +286,86 @@ function namespace_add_custom_types( $query ) {
 add_filter( 'pre_get_posts', 'namespace_add_custom_types' );
 
 
+function printText($project) {
+    echo '<div class="txt-container">';
+        echo '<div class="txt-wrapper">';
+            echo '<h1 class="p-title">'.$project['title'].'</h1>';
+            if( $project['client']) {
+                echo '<div class="client-wrap"><img src="'.get_bloginfo("template_url").'/library/images/by.png" class="by"><h2 class="p-client">'.$project['client'].'</h2></div>';
+            }
+            echo $project['description'];
+        echo '</div>';
+    echo '</div>';
+}
+
+function printImageVideo($project) {
+    // GET PROJECT VIDEO FIELDS
+    $video_source = $project['video_files'];
+
+    if($video_source) {
+        // FOR EACH OF THE FOLLOWING VIDEO TYPES, MAKE A NEW PROJECT ARRAY KEY AND STORE THE VALUE
+        foreach ($video_source as $vidKey => $source) {
+            if( $source['file']['mime_type'] == 'video/mp4' ) { $project['mp4'] = $source['file']['url']; }
+            if( $source['file']['mime_type'] == 'video/ogg' ) { $project['ogg'] = $source['file']['url']; }
+            if( $source['file']['mime_type'] == 'video/webm' ) { $project['webm'] = $source['file']['url']; }
+        }
+    }
+
+    echo '<div class="img-container">';
+        echo '<div class="responsive-container">';
+            // YOUTUBE LINKE
+            if( isset($project['youtube_link'] ) ) {
+                // RESPSONSIVE CONTAINER NEEDS PERCENTAGE TO BE (484/964)
+                echo '<iframe src="" frameborder="0" allowfullscreen></iframe>
+                      <div class="poster-bg" style="background-image:url('.$project['poster'].');"></div>
+                      <div class="cf play-tri-holder iframe-poster-new" data-video="'.$project['youtube_link'].'"><div class="play-tri"></div></div>';
+            // VIDEO FILE
+            } else if($video_source) {
+                echo '<div class="video-container">';
+                    echo '<div class="cf play-tri-holder"><div class="play-tri"></div></div>';
+                    // VIDEO TAG
+                    echo '<video poster="'.$project['poster'].'" preload="none" >';
+                        if( isset($project['mp4']) ) { echo '<source src="'.$project['mp4'].'" type="video/mp4" />'; }
+                        if( isset($project['ogg']) ) { echo '<source src="'.$project['ogg'].'" type="video/ogg" />'; }
+                        if( isset($project['webm']) ) { echo '<source src="'.$project['webm'].'" type="video/webm" />'; }
+                    echo '</video>';                            
+                echo '</div>';
+            //IMAGE
+            } else if($project['poster']) {
+                echo '<div class="poster-bg" style="background-image:url('.$project['poster'].');"></div>';
+            }
+        echo '</div>'; // .responsdive container
+
+    echo '</div>';
+}
+
+function printNewProject($projects) {
+    echo '<ul id="project-list" class="cf projects-list">';
+
+    foreach ($projects as $key => $project) {
+        // helper($project);
+
+        // OUTPUT PROJECT
+        echo '<li id="project-'.$project['id'].'" class="cf project">';
+            echo '<div class="center-table">';
+                // MODOLU TESTING IS FOR FRONT-END 'CHECKERED LOOK'
+                if($key % 2 != 0) {
+                    printImageVideo($project);
+                    printText($project);
+                } else {
+                    printText($project);
+                    printImageVideo($project);
+                }
+
+
+            echo '</div>'; //.center-table
+        echo '</li>'; //.project
+    }
+
+    echo '</ul>'; //.projects-list
+}
+
+
 // PROJECTS FUNCXTION - PASS IN AN ARRAY OF PROJECTS
 function printProject($projects) {
 	echo '<ul id="project-list" class="cf projects-list">';
@@ -323,17 +403,18 @@ function printProject($projects) {
                                         <iframe src="" frameborder="0" allowfullscreen></iframe>
                                     </div>';
                                 echo '<div class="responsive-container iframe-poster" data-video="'.$project['youtube_link'].'">';
-                                    echo '<div class="cf play-tri-holder"><div class="play-tri"></div></div>';
+                                    echo '<div class="cf play-tri-holder" style="background-image:url('.$project['poster'].');"><div class="play-tri"></div></div>';
                                     echo '<img src="'.$project['poster'].'">';
                                 echo '</div>';
                             } else if($video_source) {                               
-                                echo '<div class="cf play-tri-holder"><div class="play-tri"></div></div>';
+                                echo '<div class="cf play-tri-holder" style="background-image:url('.$project['poster'].');"><div class="play-tri"></div></div>';
                                 // VIDEO TAG
                                 echo '<video poster="'.$project['poster'].'" preload="none" >';
                                     if( isset($project['mp4']) ) { echo '<source src="'.$project['mp4'].'" type="video/mp4" />'; }
                                     if( isset($project['ogg']) ) { echo '<source src="'.$project['ogg'].'" type="video/ogg" />'; }
                                     if( isset($project['webm']) ) { echo '<source src="'.$project['webm'].'" type="video/webm" />'; }
                                 echo '</video>';
+
                             } else if($project['poster']) {
                             echo '<div class="responsive-container">';
                                 echo '<img src="'.$project['poster'].'">';
@@ -377,11 +458,11 @@ function printProject($projects) {
                                         <iframe src="" frameborder="0" allowfullscreen></iframe>
                                     </div>';
                                 echo '<div class="responsive-container iframe-poster" data-video="'.$project['youtube_link'].'">';
-                                    echo '<div class="cf play-tri-holder"><div class="play-tri"></div></div>';
+                                    echo '<div class="cf play-tri-holder" style="background-image:url('.$project['poster'].');""><div class="play-tri"></div></div>';
                                     echo '<img src="'.$project['poster'].'">';
                                 echo '</div>';
                             } else if($video_source) {
-                                echo '<div class="cf play-tri-holder"><div class="play-tri"></div></div>';
+                                echo '<div class="cf play-tri-holder" style="background-image:url('.$project['poster'].');"><div class="play-tri"></div></div>';
                             // VIDEO TAG
                                 echo '<video poster="'.$project['poster'].'" preload="none" >';
                                     if( isset($project['mp4']) ) { echo '<source src="'.$project['mp4'].'" type="video/mp4" />'; }

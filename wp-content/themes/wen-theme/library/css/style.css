@@ -3607,7 +3607,16 @@ video {
   opacity: 0.7;
 }
 
-/* line 185, ../scss/partials/_projects.scss */
+/* line 186, ../scss/partials/_projects.scss */
+.responsive-container {
+  cursor: pointer;
+}
+/* line 189, ../scss/partials/_projects.scss */
+.responsive-container:hover .play-tri-holder {
+  opacity: 0.7;
+}
+
+/* line 193, ../scss/partials/_projects.scss */
 .play-tri-holder {
   width: 100%;
   background: rgba(0, 0, 0, 0.6);
@@ -3625,7 +3634,7 @@ video {
   transition: opacity 300ms ease-out;
 }
 
-/* line 196, ../scss/partials/_projects.scss */
+/* line 204, ../scss/partials/_projects.scss */
 .play-tri {
   width: 0;
   height: 0;
@@ -3641,10 +3650,18 @@ video {
   margin: auto;
 }
 @media (min-width: 768px) {
-  /* line 196, ../scss/partials/_projects.scss */
+  /* line 204, ../scss/partials/_projects.scss */
   .play-tri {
     border-width: 67.5px 0 67.5px 150px;
   }
+}
+
+/* line 220, ../scss/partials/_projects.scss */
+.project {
+  margin-bottom: -1px;
+  margin-top: -1px;
+  position: relative;
+  overflow: hidden;
 }
 
 /* line 4, ../scss/partials/_home.scss */
@@ -4112,29 +4129,23 @@ h4.tt-date {
 /* line 55, ../scss/partials/_family-members-module.scss */
 .responsive-container {
   position: relative;
-  padding-bottom: 56.25%;
+  padding-bottom: 50.346021%;
   height: 0;
   overflow: hidden;
 }
 @media (min-width: 1000px) {
   /* line 55, ../scss/partials/_family-members-module.scss */
   .responsive-container {
-    padding-bottom: 600px;
+    padding-bottom: 537px;
   }
 }
 
-/* line 67, ../scss/partials/_family-members-module.scss */
+/* line 68, ../scss/partials/_family-members-module.scss */
 .img-container .responsive-container {
-  padding-bottom: 45%;
-}
-@media (min-width: 1000px) {
-  /* line 67, ../scss/partials/_family-members-module.scss */
-  .img-container .responsive-container {
-    padding-bottom: 480px;
-  }
+  padding-bottom: 50.346021%;
 }
 
-/* line 77, ../scss/partials/_family-members-module.scss */
+/* line 80, ../scss/partials/_family-members-module.scss */
 .responsive-container iframe {
   position: absolute;
   top: 0;
@@ -4143,41 +4154,41 @@ h4.tt-date {
   height: 100%;
 }
 
-/* line 87, ../scss/partials/_family-members-module.scss */
+/* line 90, ../scss/partials/_family-members-module.scss */
 .Center-Container.is-Table {
   display: table;
 }
 
-/* line 88, ../scss/partials/_family-members-module.scss */
+/* line 91, ../scss/partials/_family-members-module.scss */
 .is-Table .Table-Cell {
   display: table-cell;
   vertical-align: middle;
   width: 50%;
 }
 @media (min-width: 480px) {
-  /* line 88, ../scss/partials/_family-members-module.scss */
+  /* line 91, ../scss/partials/_family-members-module.scss */
   .is-Table .Table-Cell {
     width: 33.3333333%;
   }
 }
 @media (min-width: 768px) {
-  /* line 88, ../scss/partials/_family-members-module.scss */
+  /* line 91, ../scss/partials/_family-members-module.scss */
   .is-Table .Table-Cell {
     width: 25%;
   }
 }
 
-/* line 100, ../scss/partials/_family-members-module.scss */
+/* line 103, ../scss/partials/_family-members-module.scss */
 .is-Table .Center-Block {
   width: 60%;
   margin: 0 auto;
 }
-/* line 104, ../scss/partials/_family-members-module.scss */
+/* line 107, ../scss/partials/_family-members-module.scss */
 .is-Table .Center-Block img {
   width: 100%;
 }
 
-/* line 109, ../scss/partials/_family-members-module.scss */
+/* line 112, ../scss/partials/_family-members-module.scss */
 .iframe-poster {
   position: absolute;
   top: 0;
@@ -4185,10 +4196,24 @@ h4.tt-date {
   cursor: pointer;
 }
 
-/* line 115, ../scss/partials/_family-members-module.scss */
+/* line 118, ../scss/partials/_family-members-module.scss */
 .img-wrapper {
   position: relative;
   overflow: hidden;
+}
+
+/* line 124, ../scss/partials/_family-members-module.scss */
+.poster-bg {
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
 }
 
 /* line 2, ../scss/partials/_news-module.scss */

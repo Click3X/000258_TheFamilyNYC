@@ -215,7 +215,8 @@ jQuery(document).ready(function($) {
 
 	// ON VIDEO CLICK PLAY/PAUSE VIDEO
 	var videos = $('video');
-	var iframePosters = $('.iframe-poster');
+	// var iframePosters = $('.iframe-poster');
+	var iframePosters = $('.iframe-poster-new');
 
 	$.each(videos, function(i, elem) {
 		console.log('This is video!!!!', i, elem);
@@ -264,18 +265,17 @@ jQuery(document).ready(function($) {
 			var iframe = $(_t).parent().find('iframe');
 			var iframeSrc = $(_t).data('video');
 			
-			// console.log('This is your iframe: ',iframe);
-			// console.dir(iframe);
-			// console.log('This is your iframe: ',iframeSrc);
-
 			// SET SRC ON IFRAME
 			var video = '<iframe src="'+ iframeSrc +'?autoplay=1'+'"></iframe>';
 			iframe.replaceWith(video);
 			$(_t).parent().find('iframe').on('load', function () {
-				// $(this).prev().hide();
+				
 				console.log('Loaded!');
-				// $(_t).css('visibility', 'hidden').find('.play-tri-holder').css('visibility', 'hidden');
-				$(_t).fadeOut().find('.play-tri-holder').fadeOut();
+				// FADE OUT POSTER AND PLAY TRIAB
+				var posterBg = $(_t).parent().find('.poster-bg');
+				posterBg.fadeOut();
+				$(_t).fadeOut();
+
 			});
 
 			// if (_t.paused == true) {
