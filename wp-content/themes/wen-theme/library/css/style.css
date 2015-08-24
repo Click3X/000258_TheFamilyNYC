@@ -3592,17 +3592,84 @@ main > article {
 }
 
 /* line 154, ../scss/partials/_projects.scss */
+.news {
+  font-size: 15px;
+}
+/* line 157, ../scss/partials/_projects.scss */
+.news h1, .news h2 {
+  margin: .35em auto;
+  letter-spacing: 0.05em;
+  line-height: 1.15em;
+}
+/* line 163, ../scss/partials/_projects.scss */
+.news h1 {
+  color: #1b381d;
+  font-size: 1.1em;
+  margin: 0 auto 0.15em;
+}
+@media (min-width: 1060px) {
+  /* line 163, ../scss/partials/_projects.scss */
+  .news h1 {
+    font-size: 1.25em;
+  }
+}
+/* line 171, ../scss/partials/_projects.scss */
+.news h2 {
+  color: #d4a551;
+  font-size: 0.9em;
+}
+@media (min-width: 1060px) {
+  /* line 171, ../scss/partials/_projects.scss */
+  .news h2 {
+    font-size: 1em;
+  }
+}
+/* line 177, ../scss/partials/_projects.scss */
+.news p,
+.news .excerpt,
+.news .news-list .txt-container .txt-wrapper p {
+  color: #000;
+  max-width: 26em;
+  margin: 1em auto 2em;
+  padding-left: 0;
+  padding-right: 0;
+}
+@media (min-width: 768px) {
+  /* line 189, ../scss/partials/_projects.scss */
+  .news p,
+  .news .excerpt,
+  .news .news-list .txt-container .txt-wrapper p {
+    margin: 2em auto;
+    font-size: 13px;
+    line-height: 1.45em;
+  }
+}
+@media (min-width: 930px) {
+  /* line 154, ../scss/partials/_projects.scss */
+  .news {
+    font-size: 20px;
+  }
+  /* line 200, ../scss/partials/_projects.scss */
+  .news p,
+  .news .excerpt,
+  .news .news-list .txt-container .txt-wrapper p {
+    font-size: 0.75em;
+    line-height: 1.7em;
+  }
+}
+
+/* line 209, ../scss/partials/_projects.scss */
 video {
   cursor: pointer;
 }
 
 @media (min-width: 768px) {
-  /* line 160, ../scss/partials/_projects.scss */
+  /* line 215, ../scss/partials/_projects.scss */
   .mobile .video-container {
     position: relative;
     padding-top: 50.15%;
   }
-  /* line 165, ../scss/partials/_projects.scss */
+  /* line 220, ../scss/partials/_projects.scss */
   .mobile .video-container video, .mobile .video-container object {
     display: block;
     position: absolute;
@@ -3612,25 +3679,25 @@ video {
   }
 }
 
-/* line 178, ../scss/partials/_projects.scss */
+/* line 233, ../scss/partials/_projects.scss */
 .video-container {
   position: relative;
 }
-/* line 182, ../scss/partials/_projects.scss */
+/* line 237, ../scss/partials/_projects.scss */
 .video-container:hover .play-tri-holder {
   opacity: 0.7;
 }
 
-/* line 186, ../scss/partials/_projects.scss */
+/* line 241, ../scss/partials/_projects.scss */
 .responsive-container {
   cursor: pointer;
 }
-/* line 189, ../scss/partials/_projects.scss */
+/* line 244, ../scss/partials/_projects.scss */
 .responsive-container:hover .play-tri-holder {
   opacity: 0.7;
 }
 
-/* line 193, ../scss/partials/_projects.scss */
+/* line 248, ../scss/partials/_projects.scss */
 .play-tri-holder {
   width: 100%;
   background: rgba(0, 0, 0, 0.6);
@@ -3648,7 +3715,7 @@ video {
   transition: opacity 300ms ease-out;
 }
 
-/* line 204, ../scss/partials/_projects.scss */
+/* line 259, ../scss/partials/_projects.scss */
 .play-tri {
   width: 0;
   height: 0;
@@ -3664,13 +3731,13 @@ video {
   margin: auto;
 }
 @media (min-width: 768px) {
-  /* line 204, ../scss/partials/_projects.scss */
+  /* line 259, ../scss/partials/_projects.scss */
   .play-tri {
     border-width: 67.5px 0 67.5px 150px;
   }
 }
 
-/* line 220, ../scss/partials/_projects.scss */
+/* line 275, ../scss/partials/_projects.scss */
 .project {
   margin-bottom: -1px;
   margin-top: -1px;
@@ -4711,7 +4778,7 @@ h4.tt-date {
   }
 }
 
-/* line 163, ../scss/partials/_parallax-tri.scss */
+/* line 165, ../scss/partials/_parallax-tri.scss */
 .family-members-container article,
 .news-container article {
   background: #ffffff;

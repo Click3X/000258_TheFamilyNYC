@@ -153,7 +153,7 @@ function bones_scripts_and_styles() {
 		wp_register_style( 'swiper-css', get_stylesheet_directory_uri() . '/library/js/swiper/swiper.css', array(), '' );
 		
 		// ANIMATE PARALLAX
-		wp_register_script( 'parallax-tri', get_stylesheet_directory_uri() . '/library/js/parallax-tri.js', array( 'jquery' ), '', true );
+		wp_register_script( 'parallax-tri', get_stylesheet_directory_uri() . '/library/js/parallax-tri.js', array( 'jquery', 'bones-js' ), '', true );
 
 		// enqueue styles and scripts
 		wp_enqueue_script( 'bones-modernizr' );

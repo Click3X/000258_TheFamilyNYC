@@ -304,7 +304,7 @@ jQuery(document).ready(function($) {
 		prevButton: '#news-container .arrow-right',
 		paginationClickable: true,
 		spaceBetween: 0,
-		// autoplay: 6000,
+		autoplay: 6000,
 		speed:1200,
 		autoplayDisableOnInteraction: true,
 		loop: true
