@@ -40,6 +40,7 @@
 													echo '</video>';
 												echo '</div>';
 												// END VIDEO
+
 											echo '</div>';
 										echo '</div>';
 

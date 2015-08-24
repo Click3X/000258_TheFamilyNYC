@@ -86,7 +86,7 @@
 								<nav>
 									<ul>
 										<li><a href="#section-1" class="btn tab-btn">Who? What?</a></li>
-										<li><a href="#section-2" class="btn tab-btn">Chronology</a></li>
+										<li><a href="#section-2" class="btn tab-btn chronology">Chronology</a></li>
 									</ul>
 								</nav>
 

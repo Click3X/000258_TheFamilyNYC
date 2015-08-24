@@ -3952,6 +3952,11 @@ h4.tt-date {
   position: static;
 }
 
+/* line 83, ../scss/partials/_family-history.scss */
+.chronology {
+  display: none;
+}
+
 /* line 2, ../scss/partials/_contact.scss */
 .contact-page-content {
   margin: 1.5em auto;
@@ -4244,6 +4249,12 @@ h4.tt-date {
 .img-container .responsive-container {
   padding-bottom: 50.346021%;
 }
+@media (min-width: 1000px) {
+  /* line 68, ../scss/partials/_family-members-module.scss */
+  .img-container .responsive-container {
+    padding-bottom: 537px;
+  }
+}
 
 /* line 80, ../scss/partials/_family-members-module.scss */
 .responsive-container iframe {
@@ -4314,6 +4325,20 @@ h4.tt-date {
   left: 0;
   right: 0;
   margin: auto;
+}
+
+/* line 150, ../scss/partials/_family-members-module.scss */
+#project-list .txt-container .news-link {
+  margin-top: 0;
+  margin-bottom: 1em;
+  font-size: 0.7em;
+}
+@media (min-width: 768px) {
+  /* line 150, ../scss/partials/_family-members-module.scss */
+  #project-list .txt-container .news-link {
+    margin-top: 2em;
+    margin-bottom: 0;
+  }
 }
 
 /* line 2, ../scss/partials/_news-module.scss */
@@ -4400,39 +4425,33 @@ h4.tt-date {
 @media (min-width: 768px) {
   /* line 70, ../scss/partials/_news-module.scss */
   .news-list .txt-container .txt-wrapper p {
-    font-size: 1.2em;
+    font-size: 1em;
     margin: 1.75em auto;
   }
 }
-@media (min-width: 930px) {
-  /* line 76, ../scss/partials/_news-module.scss */
-  .news-list .txt-container .txt-wrapper p {
-    font-size: 1.4em;
-  }
-}
 @media (min-width: 768px) {
-  /* line 82, ../scss/partials/_news-module.scss */
+  /* line 83, ../scss/partials/_news-module.scss */
   .news-list .vid-container {
     width: 57.142857%;
   }
 }
 @media (min-width: 768px) {
-  /* line 87, ../scss/partials/_news-module.scss */
+  /* line 88, ../scss/partials/_news-module.scss */
   .news-list .vid-container + .txt-container {
     width: 42.857143%;
   }
 }
 
-/* line 105, ../scss/partials/_news-module.scss */
+/* line 106, ../scss/partials/_news-module.scss */
 .single .news-list .txt-container .txt-wrapper p {
-  max-width: 38em;
+  max-width: 36em;
 }
-/* line 110, ../scss/partials/_news-module.scss */
+/* line 111, ../scss/partials/_news-module.scss */
 .single .news-list .txt-container .txt-wrapper {
-  margin: 2.5em auto;
+  margin: 2.5em auto 4em;
 }
 @media (min-width: 768px) {
-  /* line 115, ../scss/partials/_news-module.scss */
+  /* line 116, ../scss/partials/_news-module.scss */
   .single .news-list .txt-container {
     width: auto;
   }
@@ -4778,10 +4797,37 @@ h4.tt-date {
   }
 }
 
-/* line 165, ../scss/partials/_parallax-tri.scss */
+/* line 162, ../scss/partials/_parallax-tri.scss */
+.desk .green-wrap-png,
+.desk .gold-wrap-png,
+.desk .stripe-wrap-png {
+  background-size: 75%;
+  background-position-x: 50%;
+}
+@media (min-width: 1400px) {
+  /* line 162, ../scss/partials/_parallax-tri.scss */
+  .desk .green-wrap-png,
+  .desk .gold-wrap-png,
+  .desk .stripe-wrap-png {
+    background-size: initial;
+  }
+}
+
+/* line 176, ../scss/partials/_parallax-tri.scss */
 .family-members-container article,
 .news-container article {
   background: #ffffff;
+}
+
+/* line 183, ../scss/partials/_parallax-tri.scss */
+#family-logo-holder {
+  position: static;
+}
+@media (min-width: 480px) {
+  /* line 183, ../scss/partials/_parallax-tri.scss */
+  #family-logo-holder {
+    position: fixed;
+  }
 }
 
 /* line 3, ../scss/partials/_new-archive-btn.scss */
@@ -4815,6 +4861,16 @@ h4.tt-date {
   border-style: solid;
   border-width: 7px 7.5px 0 7.5px;
   border-color: #ffffff transparent transparent transparent;
+}
+
+/* line 5, ../scss/partials/_single-post.scss */
+.single-project .news-list .img-container img,
+.single-project .news-list .vid-container img,
+.single-post .news-list .img-container img,
+.single-post .news-list .vid-container img {
+  width: 100%;
+  max-width: none;
+  max-height: none;
 }
 
 /*********************

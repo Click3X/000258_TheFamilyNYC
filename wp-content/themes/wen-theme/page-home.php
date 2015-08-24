@@ -21,6 +21,7 @@
 $teamMembers = array();
 $familyMembers = array();
 $projects = array();
+$featuredProjects = array();
 $newss = array();
 
 // GET FAMILY MEMBERS AND PROJECTS
@@ -60,13 +61,18 @@ if ( $the_query->have_posts() ) {
 				}
 
 				// YOU TUBE LINK
-				if(get_field('youtube_link_post')) {
-					$project['youtube_link'] = get_field('youtube_link_post');
-				} else if(get_field('youtube_link')) {
+				if(get_field('youtube_link')) {
 					$project['youtube_link'] = get_field('youtube_link');
-				}
+				} 
+
 				// PUSH PROJECT INTO PROJECTS ARRAY FOR LATER USE
 				$projects[] = $project;
+
+				// ADD TO FEATURED PROJECTS ARRAY IF PROJECT FEATURED CHECKBOX IS CHECKED
+				// if(isset($project['featured_project'])) {
+				if( $project['featured_project'][0] == 'Featured' ) {
+					$featuredProjects[] = $project;
+				}
 			}	
 		} elseif($post->post_type == 'family-member' ) {
 			// FILTER OUT FAMILY MEMBERS
@@ -87,21 +93,37 @@ if ( $the_query->have_posts() ) {
 				'title'=>get_the_title(),
 				'image'=>$url_src,
 				'excerpt'=>get_the_excerpt(),
+				'description'=>'<p>'.get_the_excerpt().'</p>',
 				'content'=>get_the_content(),
-				'link'=>get_the_permalink()
+				'link'=>get_the_permalink(),
+				'featured_project'=>get_field('featured_project'),
+				'video_files'=>get_field('video_files'),
+				'poster'=>$url_src[0],
+				'id'=>$post->ID
+				
 			);
 
-			if( get_field('youtube_link_post') ) {
-				$link = get_field('youtube_link_post');
-				$news['youtube_link_post'] = $link;
+			if( get_field('youtube_link') ) {
+				$link = get_field('youtube_link');
+				$news['youtube_link'] = $link;
 			}
 
-			$newss[] = $news;
+			// $newss[] = $news;
+
+			// ADD TO FEATURED PROJECTS ARRAY IF PROJECT FEATURED CHECKBOX IS CHECKED
+			if( $news['featured_project'][0] == 'Featured' ) {
+				$featuredProjects[] = $news;
+			} else {
+				// ONLY OUTPUT 'NOT FEATURED' POSTS IN NEWS ARRAY
+				$newss[] = $news;				
+			}
 		}
 	}
 }
 /* Restore original Post Data */
 wp_reset_postdata();
+
+// helper($featuredProjects);
 
 // VARS WE WANT FROM HOME PAGE
 $sub_title = "";
@@ -213,7 +235,7 @@ $server = $_SERVER['REMOTE_ADDR'];
 							</header>
 
 							<section id="projects-list" class="projects-list cf" itemprop="articleBody">
-								<?php printNewProject($projects); ?>
+								<?php printNewProject($featuredProjects); ?>
 							</section>
 						</article>
 

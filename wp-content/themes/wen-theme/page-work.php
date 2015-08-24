@@ -146,25 +146,29 @@
 								// GET PROJECT FIELDS
 								$project = array(
 									'title'=>get_the_title(),
-									'client'=>get_field('client'),
+									// 'client'=>get_field('client'),
 									'featured_project'=>get_field('featured_project'),
 									'video_files'=>get_field('video_files'),
 									'description'=>get_field('description'),
 									'poster'=>$url_src[0],
-									'id'=>$post->ID
+									'id'=>$post->ID,
+									'link'=>get_the_permalink($post->ID)
 								);
 
+								if(get_field('client')) {
+									$project['client']=get_field('client');
+								}
+
 								if(get_the_content() != '') {
-									$project['description'] = '<p style="margin:1.75em auto;">'.get_the_excerpt().'</p><a href="http://thefamily.dev/?p=196" class="btn news-link">Learn More</a>';
+									$project['description'] = '<p style="margin:1.75em auto;">'.get_the_excerpt().'</p>';
 								}
 
 								// YOU TUBE LINK
-								if(get_field('youtube_link_post')) {
-									$project['youtube_link'] = get_field('youtube_link_post');
-								} else if(get_field('youtube_link')) {
+								if(get_field('youtube_link')) {
 									$project['youtube_link'] = get_field('youtube_link');
-								}
+								} 
 
+								// helper($project);
 								// PUSH PROJECT INTO PROJECTS ARRAY FOR LATER USE
 								$projects[] = $project;
 						

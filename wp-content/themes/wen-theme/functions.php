@@ -290,10 +290,14 @@ function printText($project) {
     echo '<div class="txt-container">';
         echo '<div class="txt-wrapper">';
             echo '<h1 class="p-title">'.$project['title'].'</h1>';
-            if( $project['client']) {
+            if( isset($project['client']) ) {
                 echo '<div class="client-wrap"><img src="'.get_bloginfo("template_url").'/library/images/by.png" class="by"><h2 class="p-client">'.$project['client'].'</h2></div>';
             }
             echo $project['description'];
+
+            if( isset($project['link']) ) {
+                echo '<a href="'.$project['link'].'" class="btn news-link">Learn More</a>';
+            }
         echo '</div>';
     echo '</div>';
 }
@@ -463,9 +467,9 @@ function printNews($newss) {
 
                     // IMAGE / VIDEO
                     echo '<div class="vid-container">';
-                        if( isset($news['youtube_link_post'] ) ) {
+                        if( isset($news['youtube_link'] ) ) {
                             echo '<div class="responsive-container">
-                                    <iframe src="'.$news['youtube_link_post'].'" frameborder="0" allowfullscreen></iframe>
+                                    <iframe src="'.$news['youtube_link'].'" frameborder="0" allowfullscreen></iframe>
                                 </div>';
                         } else if($news['image'][0]) {
                             echo '<div class="responsive-container">';
@@ -535,8 +539,8 @@ function printTeamMemberSlider($teamMembers) {
 					echo '<div class="txt-container">';
 						echo '<div class="txt-wrapper">';
 							// NEWS - FAMILY
-							echo '<h2 class="page-sub-title italic">The Family</h2>
-									<h1 class="page-title">Team</h1>';
+							echo '<h2 class="page-sub-title italic">Team</h2>
+									<h1 class="page-title">'.$teamMember['title'].'</h1>';
 							// CONTENT
 							echo $teamMember['description'];
 							// EMAIL

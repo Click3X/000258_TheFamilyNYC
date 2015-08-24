@@ -28,24 +28,55 @@
 										'image'=>$url_src,
 										'excerpt'=>get_the_excerpt(),
 										'content'=>get_the_content(),
-										'link'=>get_the_permalink()
+										'link'=>get_the_permalink(),
+										'id'=>$post->ID
 									);
 
-									$youtube_link_post;
-									if( get_field('youtube_link_post') ) {
-										$youtube_link_post = get_field('youtube_link_post');
+									$youtube_link;
+									if( get_field('youtube_link') ) {
+										$youtube_link = get_field('youtube_link');
 									}
+
+									if( get_field('description') ) {
+										$news['content'] = get_field('description');
+									}
+
+									$video_files;
+									if(	get_field('video_files') ) {
+										$video_files = get_field('video_files');
+										if($video_files[0]['file'] != '') {
+											$news['video_files'] = $video_files;
+											$news['poster'] = $url_src[0];
+										}
+									}
+
+									// helper($news);
 
 									echo '<article id="news-'.$post->ID.'" class="cf news">';
 
 										echo '<div class="center-table">';
 											// IMAGE / VIDEO
-											if( isset($youtube_link_post) ) {
+											if( isset($youtube_link) ) {
 												echo '<div class="vid-container">';
 													echo '<div class="responsive-container">';
-														echo '<iframe src="'.$youtube_link_post.'" frameborder="0" allowfullscreen></iframe>';
+														echo '<iframe src="'.$youtube_link.'" frameborder="0" allowfullscreen></iframe>';
 													echo '</div>';
+													// GOLD LINE
+												echo '<div class="gold-line" style="background-image: url(http://thefamily.dev/wp-content/themes/wen-theme/library/images/gold-border-bottom.png);"></div>';
 												echo '</div>';
+											} else if( isset($news['video_files']) ) {
+												// VIDEO
+												echo '<div class="video-container">';
+													echo '<video poster="'.$news['poster'].'" preload="none" >';
+														if($news['mp4']) { echo '<source src="'.$news['mp4'].'" type="video/mp4" />'; }
+														if($news['ogg']) { echo '<source src="'.$news['ogg'].'" type="video/ogg" />'; }
+														if($news['webm']) { echo '<source src="'.$news['webm'].'" type="video/webm" />'; }
+													echo '</video>';
+														// GOLD LINE
+												echo '<div class="gold-line" style="background-image: url(http://thefamily.dev/wp-content/themes/wen-theme/library/images/gold-border-bottom.png);"></div>';
+												echo '</div>';
+												// END VIDEO
+
 											} else if($news['image'][0]) {
 												echo '<div class="img-container">';
 													echo '<div class="responsive-container">';
@@ -54,8 +85,10 @@
 												echo '</div>';
 											}
 
+
 											// TEXT
 											echo '<div class="txt-container">';
+
 												echo '<div class="txt-wrapper">';
 													// NEWS - FAMILY
 													// echo '<h2 class="page-sub-title italic">The Family</h2>';'

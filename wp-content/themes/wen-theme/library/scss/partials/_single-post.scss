@@ -1,0 +1,12 @@
+// SINGLE POST
+.single-project,
+.single-post {
+	.news-list {
+		.img-container img,
+		.vid-container img {
+			width: 100%;
+			max-width: none;
+			max-height: none;
+		}
+	}	
+}

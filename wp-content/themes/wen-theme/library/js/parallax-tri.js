@@ -1,7 +1,14 @@
 // PARALLAX TRIANGLE
 jQuery(document).ready(function($) {
+	var css3dtransforms = true;
+  
+	  if( $('html').hasClass('no-csstransforms3d') ) {
+	      css3dtransforms = false;
+	  }
 
-	if(!mobile) {
+	  console.log('This is css3dtransforms', css3dtransforms);
+
+	if( (!mobile) && (css3dtransforms == true) ) {
 		console.log('Het from parallax tri');
 
 		// GET ELEMENTS AND MAKE ARRAY
@@ -36,10 +43,10 @@ jQuery(document).ready(function($) {
 		 		'top':halfPadding
 		 	});
 
-		 familyLogoHolder.css({
-		 		'position':'fixed',
-		 		'top':0
-		 });
+			 // familyLogoHolder.css({
+			 // 		'position':'fixed',
+			 // 		'top':0
+			 // });
 
 		 goldWrap.css({
 		 	'top':56
