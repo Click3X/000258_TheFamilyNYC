@@ -174,8 +174,6 @@
 							// END LOOP 2: WP QUERY LOOP
 
 							// PRINT CUSTOM PROJECTS FUNCTION DECLARED IN FUNCTIONS PHP
-							// printProject($projects);
-							
 							printNewProject($projects);
 						?>
 

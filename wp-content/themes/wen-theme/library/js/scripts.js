@@ -164,7 +164,7 @@ jQuery(document).ready(function($) {
 
 			timer = setTimeout(function(){
 					$('body').removeClass('disable-hover');
-			}, 90);
+			}, 300);
 	}, false);
 	// // END DISABLE HOVER
 
@@ -304,7 +304,7 @@ jQuery(document).ready(function($) {
 		prevButton: '#news-container .arrow-right',
 		paginationClickable: true,
 		spaceBetween: 0,
-		autoplay: 6000,
+		// autoplay: 6000,
 		speed:1200,
 		autoplayDisableOnInteraction: true,
 		loop: true

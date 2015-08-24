@@ -51,6 +51,7 @@
 }
 
 .featured-posts {
+    position: relative;
 	header.article-header {
 		margin:3.5em auto 3em;
 		@media(min-width: 768px) {
@@ -66,5 +67,17 @@
 
 .family-members-container {
 	padding-top:11%;
-	@media(min-width: 1400px) { padding-top:154px; }
+    background: #fff;
+    position: relative;
+    @media(min-width: 768px) {
+        // background: transparent;
+        padding-top:0;
+    }
+	// @media(min-width: 1400px) { padding-top:154px; }
+}
+
+.home-content-2,
+.news-container {
+    position: relative;
+    background: #ffffff;
 }

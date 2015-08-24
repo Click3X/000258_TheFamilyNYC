@@ -32,6 +32,17 @@
 									'id'=>$post->ID
 								);
 
+								if(get_the_content() != '') {
+									$project['description'] = '<p style="margin:1.75em auto;">'.get_the_excerpt().'</p><a href="http://thefamily.dev/?p=196" class="btn news-link">Learn More</a>';
+								}
+
+								// YOU TUBE LINK
+								if(get_field('youtube_link_post')) {
+									$project['youtube_link'] = get_field('youtube_link_post');
+								} else if(get_field('youtube_link')) {
+									$project['youtube_link'] = get_field('youtube_link');
+								}
+
 								$projects[] = $project;
 								// helper($projects);
 							?>
@@ -42,7 +53,7 @@
 						<article class="cf archive-projects-container">
 							<?php 
 								if($projects) {
-									printProject($projects);
+									printNewProject($projects);
 								}
 							 ?>
 						</article>

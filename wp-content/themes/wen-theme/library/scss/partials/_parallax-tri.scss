@@ -119,4 +119,48 @@ $maxWidth:1400;
 	width: 100%;
 	top:0;
 	padding-bottom: 800px;
+	z-index: -1;
+}
+
+
+.green-wrap-png {
+	background-image:url('../images/green-parallax-compressor.png');
+}
+.gold-wrap-png {
+	background-image:url('../images/gold-parallax-compressor.png');
+}
+.stripe-wrap-png {
+	background-image:url('../images/stripe-parallax-compressor.png');
+}
+
+
+.green-wrap-png,
+.gold-wrap-png,
+.stripe-wrap-png {
+	// background-repeat: no-repeat;
+	// background-size: cover;
+
+	background-repeat: repeat;
+	background-size: contain;
+
+	width: 100%; height: 0; 
+	padding-bottom:150%;
+
+	// @include prefix(transform, translate3d(0,0,0));
+
+	@media(min-width: 481px) { 
+		// padding-bottom: 86%; 
+		padding-bottom: 172%; 
+	}
+	@media(min-width: 920px) { 
+		// padding-bottom: 800px; 
+		padding-bottom: 1600px; 
+	}
+}
+
+.family-members-container,
+.news-container {
+	article {
+		background: #ffffff;
+	}
 }

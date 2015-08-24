@@ -17,6 +17,8 @@
 }
 
 
+
+
 .page-id-156 {
 	#triangle-header { 
 		padding-bottom:71%;
@@ -41,14 +43,21 @@
 
 		.article-header {
 			display: block;
+			position: relative;
 			background: #fff;
 			margin-bottom:0; 
-			padding-bottom:1.5em; padding-top:1em;
+			padding-bottom:1.5em; 
+			padding-top:1.5em;
 			margin-top:0;
+
 			@media(min-width: 768px) {
+				padding-top:1em;
 				display: inline-block;
-				padding-bottom:3em;
+				// padding-bottom:3em;
+				padding-bottom:15%;
 			}
+
+			@media(min-width: 1400px) { padding-bottom:202px; }
 		}
 	}
 	#down-arrow { display: block; }
@@ -117,3 +126,7 @@
 // 		@media(min-width: 1400px) { padding-bottom: 560px; }
 // 	}
 // }
+
+.article-header {
+	background-color:transparent;
+}

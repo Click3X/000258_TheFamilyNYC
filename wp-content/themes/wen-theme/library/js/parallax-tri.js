@@ -2,96 +2,104 @@
 jQuery(document).ready(function($) {
 	console.log('Het from parallax tri');
 
+	// GET ELEMENTS AND MAKE ARRAY
+	var goldWrap = $('#gold-wrap'),
+		greenWrap = $('#green-wrap'),
+		stripeWrap = $('#stripe-wrap'),
+		familyLogoHolder = $('#family-logo-holder'),
+		wraps = [goldWrap, greenWrap, stripeWrap];
 
-	var triPanels = $('.tri-outer-wrap');
+	var wHeight = $(window).height(),
+		wWidth = $(window).width();
 
-	var num = triPanels.length;
-	var count=0;
-	var blurmod = 2;
-	var scalemod = 1.5;
-	var opacitymod = 0.5;
-	var scrollmod = 1.5;
+	var halfPadding = greenWrap.css('paddingBottom').slice(0,-2);
+		halfPadding = (Number(halfPadding)/2) * -1;
 
-	var triHeader = $('#triangle-header');
-	var triWrapper = $('#tri-logo-wrapper');
+	var paraContainer = $('#post-6-1'),
+		paraHeightLimit = paraContainer.height();
 
-	var blobs = [];
+	console.log('This is paraContainer', paraContainer);
+	console.log('This is paraHeightLimit', paraHeightLimit);
 
-	$.each(triPanels, function() {
-		blobs.push(this);
-	});
 
-	
-	console.log('This is your blobs');
-	console.dir(blobs);
 
-	function blob(count) {
-		console.log('This is coords: ' + coords[count][2]/1400 );
-		this.posZ = getRandomInt(1, 150) - 100;
-		this.element = $('<div/>', { 'class':'tri '+ coords[count][4] + ' ' + coords[count][5] });
-		this.element.css('left', (coords[count][2]/1400) * 100 + '%');
-		this.startTop = (coords[count][3]/800) * 100;
-		this.element.css({
-			'top': this.startTop + '%',
-			'width':(coords[count][0]/1400) * 100 + '%',
-			'padding-bottom':(coords[count][1]/1400) * 1.4028 * 100 + '%',
-			'height':0
-		});
-		this.element.appendTo(triHeader);
-	}
+	// makes the parallax elements
+	function parallaxIt() {
+	  // create variables
+	  var $fwindow = $(window);
+	  var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
 
-	var transformVal;
-	var wHeight = $(window).height();
-	var wWidth = $(window).width();
+	  greenWrap.css({
+	 		'position':'fixed',
+	 		'top':halfPadding
+	 	});
 
-	blob.prototype.updateTop = function() {
-		console.log('This is from updateTop:');
-		console.dir(this);
-		// transformVal = 'translate3d(0px,' + (scrollTopPercent / 100 * (this.posZ) / 100 * scrollmod * wHeight).toFixed(0) + 'px,0px)';
-		// this.element.css('transform', transformVal);
+	 	familyLogoHolder.css({
+	 		'position':'fixed',
+	 		'top':0
+	 	});
+
+	  // on window scroll event
+	  $fwindow.on('scroll resize', function() {
+	    scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+	    paraHeightLimit = paraContainer.height();
+	  }); 
+
+	  // for each of content parallax element
+	  $('[data-type="content"]').each(function (index, e) {
+	    var $contentObj = $(this);
+	    var fgOffset = parseInt($contentObj.offset().top);
+	    var yPos;
+	    var speed = ($contentObj.data('speed') || 1 );
+	    var transformVal;
+
+	    console.log('This is contentObj: ');
+	    console.dir($contentObj);
+	    if( ($contentObj.attr('id') != "gold-wrap") && ($contentObj.attr('id') != "family-logo-holder") ) {
+	    	var halfPadding = greenWrap.css('paddingBottom').slice(0,-2);
+			halfPadding = (Number(halfPadding)/2) * -1;
+			$contentObj.css('top',halfPadding);
+	    }
+
+	    var moveEl; 
+
+	    if ( $contentObj.attr('id') == "family-logo" ) {
+	    	moveEl = function() {
+	    		if(scrollTop < (paraHeightLimit * 1.1) ) {
+	    			yPos = fgOffset - scrollTop / speed; 
+	    		} else {
+	    			return false;
+	    		}
+	    	}
+	    } else {
+	    	moveEl = function() {
+	    		if(scrollTop < (paraHeightLimit * 1.1) ) {
+	    			yPos = scrollTop / speed; 
+	    		} else {
+	    			return false;
+	    		}
+	    	}
+	    }
+
+	    $fwindow.on('scroll resize', function (){
+	      	moveEl();
+	      	transformVal = 'translate3d(0px,' + yPos + 'px,0px)';
+			$contentObj.css('transform', transformVal);
+	    });
+	  });
+
+	  // triggers winodw scroll for refresh
+	  $fwindow.trigger('scroll');
 	};
 
-	function getScreenSize() {
-		wHeight = $(window).height();
-		wWidth = $(window).width();
-	}
-	$(window).resize(getScreenSize);
-
-	
-	var scrollTopPercent = 0;
-	var oldScrollTop = 0;
-	var index, len;
-
-	function doRenderTick() {
-		// console.log('This is $(window).scrollTop():' + $(window).scrollTop());
-		scrollTopPercent = 100 * $(window).scrollTop() / ($(document).height() - $(window).height()) * 2 - 100;
-		for (index = 0, len = blobs.length; index < len; ++index) {
-			blobs[index].updateTop();
-		}
+	if(wWidth > 480) {
+		parallaxIt();
 	}
 
+	// $(window).on('resize', function() {
+	// 	if(wWidth > 480) {
+	// 		parallaxIt();		
+	// 	}
+	// })
 
-	function checkScroll() {
-		requestAnimationFrame(checkScroll);
-		if(count < num) {
-			blobs.push(new blob(count));
-			blobs[count].updateTop();
-			count++;
-		}
-		if(oldScrollTop == 0) {
-			oldScrollTop = $(window).scrollTop();
-	  		doRenderTick();
-		}
-		if (oldScrollTop == $(window).scrollTop() ) {
-			return;
-		}
-	  oldScrollTop = $(window).scrollTop();
-	  doRenderTick();
-	}
-	checkScroll();
-
-
-	function getRandomInt(min, max) {
-	  return Math.floor(Math.random() * (max - min + 1)) + min;
-	}
 }); 

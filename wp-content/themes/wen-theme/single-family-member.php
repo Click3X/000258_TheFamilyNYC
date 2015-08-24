@@ -43,10 +43,21 @@
 										);
 										// STORE PROJECT IN PROJECTS ARRAY
 										$projects[] = $project;
+
+										if(get_the_content() != '') {
+											$project['description'] = '<p style="margin:1.75em auto;">'.get_the_excerpt().'</p><a href="http://thefamily.dev/?p=196" class="btn news-link">Learn More</a>';
+										}
+
+										// YOU TUBE LINK
+										if(get_field('youtube_link_post')) {
+											$project['youtube_link'] = get_field('youtube_link_post');
+										} else if(get_field('youtube_link')) {
+											$project['youtube_link'] = get_field('youtube_link');
+										}
 									}
 
 									// PRINT CUSTOM PROJECTS FUNCTION DECLARED IN FUNCTIONS PHP
-									printProject($projects);
+									printNewProject($projects);
 								}
 
 							?>

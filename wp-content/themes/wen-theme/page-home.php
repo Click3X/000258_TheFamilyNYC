@@ -54,6 +54,17 @@ if ( $the_query->have_posts() ) {
 					'poster'=>$url_src[0],
 					'id'=>$post->ID
 				);
+
+				if(get_the_content() != '') {
+					$project['description'] = '<p style="margin:1.75em auto;">'.get_the_excerpt().'</p><a href="http://thefamily.dev/?p=196" class="btn news-link">Learn More</a>';
+				}
+
+				// YOU TUBE LINK
+				if(get_field('youtube_link_post')) {
+					$project['youtube_link'] = get_field('youtube_link_post');
+				} else if(get_field('youtube_link')) {
+					$project['youtube_link'] = get_field('youtube_link');
+				}
 				// PUSH PROJECT INTO PROJECTS ARRAY FOR LATER USE
 				$projects[] = $project;
 			}	
@@ -104,6 +115,8 @@ endif;
 /* Restore original Post Data */
 wp_reset_postdata();
 
+// WHILE PARALLAX IS IN WORKS, ONLY SHOW PARALLAX IF ON LOCAL CPU
+$server = $_SERVER['REMOTE_ADDR'];
 
 ?>
 
@@ -112,12 +125,16 @@ wp_reset_postdata();
 				<div id="inner-content" class="cf">
 
 					<main id="main" class="m-all t-3of3 d-7of7 cf" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
+
+						<?php 
+							if($server == '127.0.0.1') {
+								include('php/tri-header-png.php');
+							}
+						?>
 						<!-- HOME PART 1 -->
 						<article id="post-<?php the_ID(); ?>-1" class="cf" role="article" itemscope itemtype="http://schema.org/BlogPosting">
 							<!-- TRANGLES HEADER BG-->
 							 <?php 
-							 		// WHILE PARALLAX IS IN WORKS, ONLY SHOW PARALLAX IF ON LOCAL CPU
-									$server = $_SERVER['REMOTE_ADDR'];
 									// IF SERVER IS LOCAL, ADD OUTLINE BUTTON
 									if($server == '127.0.0.1') {
 										echo '<div id="tri-logo-wrapper" class="tri-logo-wrapper">';
@@ -128,15 +145,15 @@ wp_reset_postdata();
 							
 								<!-- ONLY IN PAGE TEMPLATE ON HOME PAGE - ALL OTHERS IN HEADER -->
 								<div id="triangle-header">
-									<div class="logo-wrapper cf">
+									<div id="family-logo-holder" data-type="content" data-speed="-2.5" class="logo-wrapper cf">
 										<div id="family-logo" style="background-image: url(<?php echo get_template_directory_uri(); ?>/library/images/family_logo_1x.png);"></div>
 										<div id="down-arrow" style="background-image: url(<?php echo get_template_directory_uri(); ?>/library/images/down-arrow.png);"></div>
 									</div>
 
 									<?php 
-										if($server == '127.0.0.1') {
-											include('php/tri-header.php');
-										}
+										// if($server == '127.0.0.1') {
+										// 	include('php/tri-header-png.php');
+										// }
 									?>
 								</div>
 								<!-- END HEADER BG -->
@@ -168,8 +185,8 @@ wp_reset_postdata();
 
 
 						<!-- HOME PART 2 -->
-						<article id="post-<?php the_ID(); ?>-2" class="cf wrap home-content-2" role="article" itemscope itemtype="http://schema.org/BlogPosting">
-							<header class="article-header">
+						<article id="post-<?php the_ID(); ?>-2" class="cf home-content-2" role="article" itemscope itemtype="http://schema.org/BlogPosting">
+							<header class="article-header wrap">
 								<?php echo '<div class="page-content">'.$content.'</div>'; ?>
 								<a href="<?php echo get_the_permalink(19);?>" class="btn learn-more">Learn More</a>
 							</header>
@@ -196,7 +213,7 @@ wp_reset_postdata();
 							</header>
 
 							<section id="projects-list" class="projects-list cf" itemprop="articleBody">
-								<?php printProject($projects); ?>
+								<?php printNewProject($projects); ?>
 							</section>
 						</article>
 

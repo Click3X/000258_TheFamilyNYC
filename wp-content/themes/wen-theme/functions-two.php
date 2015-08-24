@@ -462,30 +462,35 @@ function printNews($newss) {
 				echo '<div class="center-table">';
 
                     // IMAGE / VIDEO
-                    echo '<div class="vid-container">';
-                        if( isset($news['youtube_link_post'] ) ) {
-                            echo '<div class="responsive-container">
-                                    <iframe src="'.$news['youtube_link_post'].'" frameborder="0" allowfullscreen></iframe>
-                                </div>';
-                        } else if($news['image'][0]) {
-                            echo '<div class="responsive-container">';
-                                echo '<img src="'.$news['image'][0].'">';
-                            echo '</div>';
-                        }
-                    echo '</div>';
+     //                echo '<div class="vid-container">';
+     //                    if( isset($news['youtube_link_post'] ) ) {
+     //                        echo '<div class="responsive-container">
+     //                                <iframe src="'.$news['youtube_link_post'].'" frameborder="0" allowfullscreen></iframe>
+     //                            </div>';
+     //                    } else if($news['image'][0]) {
+     //                        echo '<div class="responsive-container">';
+     //                            echo '<img src="'.$news['image'][0].'">';
+     //                        echo '</div>';
+     //                    }
+     //                echo '</div>';
 
-					// TEXT
-					echo '<div class="txt-container">';
-						echo '<div class="txt-wrapper">';
-							// NEWS - FAMILY
-							echo '<h2 class="page-sub-title italic">The Family</h2>
-									<h1 class="page-title">'.$news['title'].'</h1>';
-							// CONTENT
-							echo '<p class="excerpt">'.$news['excerpt'].'</p>';
-							// BUTTON
-							echo '<a href="'.$news['link'].'" class="btn news-link">Learn More</a>';
-						echo '</div>';
-					echo '</div>';
+					// // TEXT
+					// echo '<div class="txt-container">';
+					// 	echo '<div class="txt-wrapper">';
+					// 		// NEWS - FAMILY
+					// 		echo '<h2 class="page-sub-title italic">The Family</h2>
+					// 				<h1 class="page-title">'.$news['title'].'</h1>';
+					// 		// CONTENT
+					// 		echo '<p class="excerpt">'.$news['excerpt'].'</p>';
+					// 		// BUTTON
+					// 		echo '<a href="'.$news['link'].'" class="btn news-link">Learn More</a>';
+					// 	echo '</div>';
+					// echo '</div>';
+
+                printImageVideo($news);
+                
+                printText($news);
+
 				echo '</div>';
 			echo '</li>';
 		}
@@ -493,28 +498,6 @@ function printNews($newss) {
 		echo '<a href="#" class="arrow arrow-right"></a>';
 	echo '</section>'; // END NEWS SECITION
 }
-
-// NEWS MODULE
-// function printNews($newss) {
-//     echo '<section id="news-container" class="news-list-container cf swiper-container">'; // START NEWS SECTION
-//         echo '<a href="#" class="arrow arrow-left"></a>';
-//         echo '<ul id="news-list" class="cf news-list swiper-wrapper">';
-//         foreach ($newss as $key => $news) {
-//             // OUTPUT news
-//             echo '<li id="news-'.$key.'" class="cf news swiper-slide">';
-//                 echo '<div class="center-table">';
-                
-//                 printImageVideo($news);
-                
-//                 printText($news);
-
-//                 echo '</div>';
-//             echo '</li>';
-//         }
-//         echo '</ul>';
-//         echo '<a href="#" class="arrow arrow-right"></a>';
-//     echo '</section>'; // END NEWS SECITION
-// }
 
 
 // -TEAM MEMBER SLIDER FOR TEAM HISTORY PAGE

@@ -181,7 +181,7 @@ function bones_scripts_and_styles() {
 			$server = $_SERVER['REMOTE_ADDR'];
             // IF SERVER IS LOCAL, ADD OUTLINE BUTTON
             if($server == '127.0.0.1') {
-				// wp_enqueue_script( 'parallax-tri' );
+				wp_enqueue_script( 'parallax-tri' );
 			}
 		}
 
@@ -196,9 +196,9 @@ function bones_scripts_and_styles() {
 		}
 
 		// IF FAMILY MEMBERS PAGE GET TAB CODE
-		// if( is_page(19) ) {
-		// 	wp_enqueue_script( 'tabs-js' );	
-		// }
+		if( is_page(19) ) {
+			wp_enqueue_script( 'tabs-js' );	
+		}
 	}
 }
 
