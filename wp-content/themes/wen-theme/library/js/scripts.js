@@ -214,31 +214,47 @@ jQuery(document).ready(function($) {
 	// END MENUS
 
 	// ON VIDEO CLICK PLAY/PAUSE VIDEO
-	var videos = $('video');
+	var videos = $('.video-container');
 	// var iframePosters = $('.iframe-poster');
 	var iframePosters = $('.iframe-poster-new');
 
 	$.each(videos, function(i, elem) {
-		console.log('This is video!!!!', i, elem);
-		console.dir(elem);
+		// console.log('This is video!!!!', i, elem);
+		// console.dir(elem);
 		// STORE THIS VAR
+		// var _t = this;
 		var _t = this;
+
+
 		// ON CLICK FUNCTION
 		$(_t).click(function() {
-			if (_t.paused == true) {
+			
+			// console.log('This is video!!!!', i, elem);
+			// console.dir(elem);
+
+			console.log('This is this!!!!', i, _t);
+			console.dir(_t);
+
+			var _video = $(_t).find('video');
+			_video = _video[0];
+
+			console.log('This is _video:', _video);
+			console.dir(_video);
+
+			if (_video.paused == true) {
 				// HIDE OVERLAY
-				$(_t).prev('.play-tri-holder').css('visibility', 'hidden');
+				$(_video).prev('.play-tri-holder').css('visibility', 'hidden');
 				// SHOW CONTROLS
 				$(this).attr('controls', '');
 			    // PLAY THE VIDEO
-			    _t.play();
+			    _video.play();
 			} else {
 				// OVERLAY NORMAL
-				$(_t).prev('.play-tri-holder').css('visibility', 'initial');
+				$(_video).prev('.play-tri-holder').css('visibility', 'initial');
 				// HIDE CONTROLS
 				$(this).removeAttr("controls");
 			    // PAUSE THE VIDEO
-			    _t.pause();
+			    _video.pause();
 			}
 		});
 	});
@@ -255,8 +271,8 @@ jQuery(document).ready(function($) {
 
 
 	$.each(iframePosters, function(i, elem) {
-		console.log('This is iframe poster!!!!', i, elem);
-		console.dir(elem);
+		// console.log('This is iframe poster!!!!', i, elem);
+		// console.dir(elem);
 		// STORE THIS VAR
 		var _t = this;
 		// ON CLICK FUNCTION
@@ -270,7 +286,7 @@ jQuery(document).ready(function($) {
 			iframe.replaceWith(video);
 			$(_t).parent().find('iframe').on('load', function () {
 				
-				console.log('Loaded!');
+				// console.log('Loaded!');
 				// FADE OUT POSTER AND PLAY TRIAB
 				var posterBg = $(_t).parent().find('.poster-bg');
 				posterBg.fadeOut();

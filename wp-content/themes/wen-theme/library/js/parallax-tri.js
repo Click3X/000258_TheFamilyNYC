@@ -9,7 +9,7 @@ jQuery(document).ready(function($) {
 	  console.log('This is css3dtransforms', css3dtransforms);
 
 	if( (!mobile) && (css3dtransforms == true) ) {
-		console.log('Het from parallax tri');
+		// console.log('Het from parallax tri');
 
 		// GET ELEMENTS AND MAKE ARRAY
 		var goldWrap = $('#gold-wrap'),
@@ -27,8 +27,8 @@ jQuery(document).ready(function($) {
 		var paraContainer = $('#post-6-1'),
 			paraHeightLimit = paraContainer.height();
 
-		console.log('This is paraContainer', paraContainer);
-		console.log('This is paraHeightLimit', paraHeightLimit);
+		// console.log('This is paraContainer', paraContainer);
+		// console.log('This is paraHeightLimit', paraHeightLimit);
 
 
 
@@ -53,11 +53,6 @@ jQuery(document).ready(function($) {
 		 });
 
 
-		  // on window scroll event
-		  // $fwindow.on('scroll resize', function() {
-		  //   scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-		  //   paraHeightLimit = paraContainer.height();
-		  // }); 
 
 		  // for each of content parallax element
 		  $('[data-type="content"]').each(function (index, e) {
@@ -67,8 +62,9 @@ jQuery(document).ready(function($) {
 		    var speed = ($contentObj.data('speed') || 1 );
 		    var transformVal;
 
-		    console.log('This is contentObj: ');
-		    console.dir($contentObj);
+		    // console.log('This is contentObj: ');
+		    // console.dir($contentObj);
+
 		    if( ($contentObj.attr('id') != "gold-wrap") && ($contentObj.attr('id') != "family-logo-holder") ) {
 		    	var halfPadding = greenWrap.css('paddingBottom').slice(0,-2);
 				halfPadding = (Number(halfPadding)/2) * -1 + 56;
@@ -112,10 +108,5 @@ jQuery(document).ready(function($) {
 			parallaxIt();
 		}
 
-		// $(window).on('resize', function() {
-		// 	if(wWidth > 480) {
-		// 		parallaxIt();		
-		// 	}
-		// })
 	}
 }); 
