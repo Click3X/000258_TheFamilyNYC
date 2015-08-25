@@ -1,4 +1,5 @@
 .DS_Store
+.htaccess
 wp-content/themes/wen-theme/library/css/style.css
 wp-content/themes/wen-theme/library/scss/.sass-cache
 wp-config.php
