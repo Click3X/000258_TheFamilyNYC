@@ -4827,10 +4827,15 @@ h4.tt-date {
 /* line 3, ../scss/partials/_new-archive-btn.scss */
 .archive-select-container {
   display: inline-block;
-  position: absolute;
-  right: 20px;
 }
-/* line 10, ../scss/partials/_new-archive-btn.scss */
+@media (min-width: 480px) {
+  /* line 3, ../scss/partials/_new-archive-btn.scss */
+  .archive-select-container {
+    position: absolute;
+    right: 20px;
+  }
+}
+/* line 13, ../scss/partials/_new-archive-btn.scss */
 .archive-select-container select {
   cursor: pointer;
   text-transform: uppercase;
@@ -4839,13 +4844,13 @@ h4.tt-date {
   height: auto;
   position: relative;
 }
-/* line 19, ../scss/partials/_new-archive-btn.scss */
+/* line 22, ../scss/partials/_new-archive-btn.scss */
 .archive-select-container select:focus {
   color: #d4a551;
   background-color: #1c391e;
 }
 
-/* line 26, ../scss/partials/_new-archive-btn.scss */
+/* line 29, ../scss/partials/_new-archive-btn.scss */
 .white-tri {
   display: block;
   position: absolute;
