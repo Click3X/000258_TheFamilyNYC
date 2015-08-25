@@ -167,7 +167,7 @@ $server = $_SERVER['REMOTE_ADDR'];
 							
 								<!-- ONLY IN PAGE TEMPLATE ON HOME PAGE - ALL OTHERS IN HEADER -->
 								<div id="triangle-header">
-									<div id="family-logo-holder" data-type="content" data-speed="-2.5" class="logo-wrapper cf">
+									<div id="family-logo-holder" data-type="content" data-speed="-2" class="logo-wrapper cf">
 										<div id="family-logo" style="background-image: url(<?php echo get_template_directory_uri(); ?>/library/images/family_logo_1x.png);"></div>
 										<div id="down-arrow" style="background-image: url(<?php echo get_template_directory_uri(); ?>/library/images/down-arrow.png);"></div>
 									</div>

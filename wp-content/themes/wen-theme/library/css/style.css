@@ -4249,12 +4249,6 @@ h4.tt-date {
 .img-container .responsive-container {
   padding-bottom: 50.346021%;
 }
-@media (min-width: 1000px) {
-  /* line 68, ../scss/partials/_family-members-module.scss */
-  .img-container .responsive-container {
-    padding-bottom: 537px;
-  }
-}
 
 /* line 80, ../scss/partials/_family-members-module.scss */
 .responsive-container iframe {
@@ -4785,7 +4779,7 @@ h4.tt-date {
   .green-wrap-png,
   .gold-wrap-png,
   .stripe-wrap-png {
-    padding-bottom: 172%;
+    padding-bottom: 350%;
   }
 }
 @media (min-width: 920px) {
@@ -4793,11 +4787,11 @@ h4.tt-date {
   .green-wrap-png,
   .gold-wrap-png,
   .stripe-wrap-png {
-    padding-bottom: 1600px;
+    padding-bottom: 2500px;
   }
 }
 
-/* line 162, ../scss/partials/_parallax-tri.scss */
+/* line 164, ../scss/partials/_parallax-tri.scss */
 .desk .green-wrap-png,
 .desk .gold-wrap-png,
 .desk .stripe-wrap-png {
@@ -4805,7 +4799,7 @@ h4.tt-date {
   background-position-x: 50%;
 }
 @media (min-width: 1400px) {
-  /* line 162, ../scss/partials/_parallax-tri.scss */
+  /* line 164, ../scss/partials/_parallax-tri.scss */
   .desk .green-wrap-png,
   .desk .gold-wrap-png,
   .desk .stripe-wrap-png {
@@ -4813,18 +4807,18 @@ h4.tt-date {
   }
 }
 
-/* line 176, ../scss/partials/_parallax-tri.scss */
+/* line 178, ../scss/partials/_parallax-tri.scss */
 .family-members-container article,
 .news-container article {
   background: #ffffff;
 }
 
-/* line 183, ../scss/partials/_parallax-tri.scss */
+/* line 185, ../scss/partials/_parallax-tri.scss */
 #family-logo-holder {
   position: static;
 }
 @media (min-width: 480px) {
-  /* line 183, ../scss/partials/_parallax-tri.scss */
+  /* line 185, ../scss/partials/_parallax-tri.scss */
   #family-logo-holder {
     position: fixed;
   }
