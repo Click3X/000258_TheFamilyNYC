@@ -157,26 +157,14 @@ $server = $_SERVER['REMOTE_ADDR'];
 						<article id="post-<?php the_ID(); ?>-1" class="cf" role="article" itemscope itemtype="http://schema.org/BlogPosting">
 							<!-- TRANGLES HEADER BG-->
 							 <?php 
-									// IF SERVER IS LOCAL, ADD OUTLINE BUTTON
-									// if($server == '127.0.0.1') {
-									echo '<div id="tri-logo-wrapper" class="tri-logo-wrapper">';
-									// } else {
-									// 	echo '<div class="tri-logo-wrapper" style="background-image: url('.get_template_directory_uri().'/library/images/header-bg.png);">';
-									// }
+								echo '<div id="tri-logo-wrapper" class="tri-logo-wrapper">';
 							 ?>
-							
 								<!-- ONLY IN PAGE TEMPLATE ON HOME PAGE - ALL OTHERS IN HEADER -->
 								<div id="triangle-header">
 									<div id="family-logo-holder" data-type="content" data-speed="-2" class="logo-wrapper cf">
 										<div id="family-logo" style="background-image: url(<?php echo get_template_directory_uri(); ?>/library/images/family_logo_1x.png);"></div>
 										<div id="down-arrow" style="background-image: url(<?php echo get_template_directory_uri(); ?>/library/images/down-arrow.png);"></div>
 									</div>
-
-									<?php 
-										// if($server == '127.0.0.1') {
-										// 	include('php/tri-header-png.php');
-										// }
-									?>
 								</div>
 								<!-- END HEADER BG -->
 								<header class="article-header">
@@ -221,6 +209,7 @@ $server = $_SERVER['REMOTE_ADDR'];
 							<!-- TOP GOLD LINE -->
 							<div class="gold-line" style="background-image: url(<?php echo get_template_directory_uri(); ?>/library/images/gold-border-bottom.png);"></div>
 							<article id="news" class="cf wrap news" role="article" itemscope itemtype="http://schema.org/BlogPosting">
+								<h2 class="page-sub-title italic work-news-title">Work &amp; News</h2>
 								<!-- NEWS LIST -->
 								<?php printNews($newss); ?>
 							</article>

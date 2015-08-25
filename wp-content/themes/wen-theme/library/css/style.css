@@ -4238,12 +4238,6 @@ h4.tt-date {
   height: 0;
   overflow: hidden;
 }
-@media (min-width: 1000px) {
-  /* line 55, ../scss/partials/_family-members-module.scss */
-  .responsive-container {
-    padding-bottom: 537px;
-  }
-}
 
 /* line 68, ../scss/partials/_family-members-module.scss */
 .img-container .responsive-container {
@@ -4449,6 +4443,12 @@ h4.tt-date {
   .single .news-list .txt-container {
     width: auto;
   }
+}
+
+/* line 122, ../scss/partials/_news-module.scss */
+#news .work-news-title {
+  color: #1b381d;
+  padding-top: 1.75em;
 }
 
 /* line 2, ../scss/partials/_team-members-module.scss */
@@ -4835,7 +4835,7 @@ h4.tt-date {
     right: 20px;
   }
 }
-/* line 13, ../scss/partials/_new-archive-btn.scss */
+/* line 11, ../scss/partials/_new-archive-btn.scss */
 .archive-select-container select {
   cursor: pointer;
   text-transform: uppercase;
@@ -4844,13 +4844,13 @@ h4.tt-date {
   height: auto;
   position: relative;
 }
-/* line 22, ../scss/partials/_new-archive-btn.scss */
+/* line 20, ../scss/partials/_new-archive-btn.scss */
 .archive-select-container select:focus {
   color: #d4a551;
   background-color: #1c391e;
 }
 
-/* line 29, ../scss/partials/_new-archive-btn.scss */
+/* line 27, ../scss/partials/_new-archive-btn.scss */
 .white-tri {
   display: block;
   position: absolute;
