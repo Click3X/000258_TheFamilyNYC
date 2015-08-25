@@ -158,11 +158,11 @@ $server = $_SERVER['REMOTE_ADDR'];
 							<!-- TRANGLES HEADER BG-->
 							 <?php 
 									// IF SERVER IS LOCAL, ADD OUTLINE BUTTON
-									if($server == '127.0.0.1') {
-										echo '<div id="tri-logo-wrapper" class="tri-logo-wrapper">';
-									} else {
-										echo '<div class="tri-logo-wrapper" style="background-image: url('.get_template_directory_uri().'/library/images/header-bg.png);">';
-									}
+									// if($server == '127.0.0.1') {
+									echo '<div id="tri-logo-wrapper" class="tri-logo-wrapper">';
+									// } else {
+									// 	echo '<div class="tri-logo-wrapper" style="background-image: url('.get_template_directory_uri().'/library/images/header-bg.png);">';
+									// }
 							 ?>
 							
 								<!-- ONLY IN PAGE TEMPLATE ON HOME PAGE - ALL OTHERS IN HEADER -->
