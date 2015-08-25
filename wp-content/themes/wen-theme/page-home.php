@@ -149,9 +149,9 @@ $server = $_SERVER['REMOTE_ADDR'];
 					<main id="main" class="m-all t-3of3 d-7of7 cf" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
 
 						<?php 
-							if($server == '127.0.0.1') {
+							// if($server == '127.0.0.1') {
 								include('php/tri-header-png.php');
-							}
+							// }
 						?>
 						<!-- HOME PART 1 -->
 						<article id="post-<?php the_ID(); ?>-1" class="cf" role="article" itemscope itemtype="http://schema.org/BlogPosting">
