@@ -19,7 +19,6 @@
 							<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
 								<?php
-
 									// GET POST THUMBNAIL SRC
 									$url_src = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID) , 'full' );
 									// FILTER OUT FAMILY MEMBERS
@@ -41,16 +40,21 @@
 										$news['content'] = get_field('description');
 									}
 
-									$video_files;
+									$video_source;
 									if(	get_field('video_files') ) {
-										$video_files = get_field('video_files');
-										if($video_files[0]['file'] != '') {
-											$news['video_files'] = $video_files;
-											$news['poster'] = $url_src[0];
-										}
-									}
+										$video_source = get_field('video_files');
+										$news['poster'] = $url_src[0];
 
-									// helper($news);
+									    if($video_source[0]['file'] != '') {
+									    	$news['video'] = true;
+									        // FOR EACH OF THE FOLLOWING VIDEO TYPES, MAKE A NEW PROJECT ARRAY KEY AND STORE THE VALUE
+									        foreach ($video_source as $vidKey => $source) {
+									            if( $source['file']['mime_type'] == 'video/mp4' ) { $news['mp4'] = $source['file']['url']; }
+									            if( $source['file']['mime_type'] == 'video/ogg' ) { $news['ogg'] = $source['file']['url']; }
+									            if( $source['file']['mime_type'] == 'video/webm' ) { $news['webm'] = $source['file']['url']; }
+									        }
+									    } else { $news['video'] = false; }
+									}
 
 									echo '<article id="news-'.$post->ID.'" class="cf news">';
 
@@ -64,7 +68,7 @@
 													// GOLD LINE
 												echo '<div class="gold-line" style="background-image: url(http://thefamily.dev/wp-content/themes/wen-theme/library/images/gold-border-bottom.png);"></div>';
 												echo '</div>';
-											} else if( isset($news['video_files']) ) {
+											} else if( isset($news['video']) ) {
 												// VIDEO
 												echo '<div class="video-container">';
 													echo '<video poster="'.$news['poster'].'" preload="none" >';
