@@ -178,11 +178,11 @@ function bones_scripts_and_styles() {
 
 		// PARALLAX SCRIPT FOR HOME PAGE
 		if(is_page(6)) {
-			$server = $_SERVER['REMOTE_ADDR'];
+			// $server = $_SERVER['REMOTE_ADDR'];
             // IF SERVER IS LOCAL, ADD OUTLINE BUTTON
-            if($server == '127.0.0.1') {
+            // if($server == '127.0.0.1') {
 				wp_enqueue_script( 'parallax-tri' );
-			}
+			// }
 		}
 
 
