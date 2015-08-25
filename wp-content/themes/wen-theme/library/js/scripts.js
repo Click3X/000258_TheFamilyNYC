@@ -215,31 +215,23 @@ jQuery(document).ready(function($) {
 
 	// ON VIDEO CLICK PLAY/PAUSE VIDEO
 	var videos = $('.video-container');
-	// var iframePosters = $('.iframe-poster');
 	var iframePosters = $('.iframe-poster-new');
 
 	$.each(videos, function(i, elem) {
-		// console.log('This is video!!!!', i, elem);
-		// console.dir(elem);
 		// STORE THIS VAR
-		// var _t = this;
 		var _t = this;
-
 
 		// ON CLICK FUNCTION
 		$(_t).click(function() {
-			
-			// console.log('This is video!!!!', i, elem);
-			// console.dir(elem);
 
-			console.log('This is this!!!!', i, _t);
-			console.dir(_t);
+			// console.log('This is this!!!!', i, _t);
+			// console.dir(_t);
 
 			var _video = $(_t).find('video');
 			_video = _video[0];
 
-			console.log('This is _video:', _video);
-			console.dir(_video);
+			// console.log('This is _video:', _video);
+			// console.dir(_video);
 
 			if (_video.paused == true) {
 				// HIDE OVERLAY
