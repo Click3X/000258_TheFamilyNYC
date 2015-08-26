@@ -568,4 +568,9 @@ function new_excerpt_more( $more ) {
 }
 add_filter('excerpt_more', 'new_excerpt_more');
 
+// SORT MULTI DIMENTSIONAL ARRAY FUNCTION
+function compareByName($a, $b) {
+  return strcmp($a["title"], $b["title"]);
+}
+
 /* DON'T DELETE THIS CLOSING TAG */ ?>

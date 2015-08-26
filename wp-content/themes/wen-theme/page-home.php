@@ -32,6 +32,7 @@ $args = array(
 
 $the_query = new WP_Query( $args );
 
+
 // The Loop
 if ( $the_query->have_posts() ) {
 	while ( $the_query->have_posts() ) {
@@ -83,6 +84,7 @@ if ( $the_query->have_posts() ) {
 				'permalink'=>get_the_permalink()
 			);
 			$familyMembers[] = $fam;
+
 		// NEWS POSTS
 		} elseif($post->post_type == 'post' ) {
 			// GET POST THUMBNAIL SRC
@@ -187,7 +189,10 @@ $server = $_SERVER['REMOTE_ADDR'];
 										<h1 class="page-title">Members</h1>
 								</header>
 								<!-- FAMILY MEMBER LIST -->
-								<?php printFamilyMembers($familyMembers); ?>
+								<?php
+									usort($familyMembers, 'compareByName');
+									printFamilyMembers($familyMembers); 
+								?>
 							</article>
 							<!-- BOTTOM GOLD LINE -->
 							<div class="gold-line" style="background-image: url(<?php echo get_template_directory_uri(); ?>/library/images/gold-border-bottom.png);"></div>

@@ -59,6 +59,7 @@ wp_reset_postdata();
 							<article id="family-members" class="cs wrap family-members" role="article" itemscope itemtype="http://schema.org/BlogPosting">
 								<!-- FAMILY MEMBER LIST -->
 								<?php 
+								usort($familyMembers, 'compareByName');
 
 								echo '<section id="family-member-list-container" class="family-member-list-container cf">'; // START NEWS SECTION
 	
