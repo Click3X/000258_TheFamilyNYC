@@ -69,15 +69,15 @@
 							// END LOOP 2: WP QUERY LOOP
 						?>
 						
-						<!-- TEAM MEMBERS SLIDER -->
-						<div class="gold-line" style="background-image: url(<?php echo get_template_directory_uri(); ?>/library/images/gold-border-bottom.png);"></div>
-						<article id="team-members-container" class="team-members-container cf">
-							<?php
-								// PRINT CUSTOM PROJECTS FUNCTION DECLARED IN FUNCTIONS PHP
-								printTeamMemberSlider($teamMembers);
-							?>
-						</article>
-
+						<?php
+							// TEAM MEMBERS SLIDER
+							// echo '<div class="gold-line" style="background-image: url('; echo get_template_directory_uri(); echo '/library/images/gold-border-bottom.png);"></div>';
+							// echo '<article id="team-members-container" class="team-members-container cf">';
+							// 	// PRINT CUSTOM PROJECTS FUNCTION DECLARED IN FUNCTIONS PHP
+							// 	printTeamMemberSlider($teamMembers);
+							// echo '</article>';
+						?>
+					
 						<!-- CHRONOLOGY & TIMELINE -->
 						<div class="gold-line" style="background-image: url(<?php echo get_template_directory_uri(); ?>/library/images/gold-border-bottom.png);"></div>
 						<article id="tab-holder" class="cf tab-holder">

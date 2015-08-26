@@ -71,7 +71,7 @@
 						<article id="team-members-container" class="team-members-container cf">
 							<?php
 								// PRINT CUSTOM PROJECTS FUNCTION DECLARED IN FUNCTIONS PHP
-								printTemaMembers($teamMembers);
+							//	printTemaMembers($teamMembers);
 							?>
 						</article>
 
