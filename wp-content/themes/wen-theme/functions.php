@@ -443,8 +443,7 @@ function printFamilyMembers($familyMembers) {
 				if($src['url'] != "") {
 					echo '<li id="family-member-'.$key.'" class="cf family-member swiper-slide">';
 							echo '<a href="'.$link.'" class="family-member-link" target="_blank">';
-							// echo '<a href="'.$permalink.'" class="family-member-link">';
-								echo '<img src="'.$src['url'].'">';
+								echo '<img src="'.$src['url'].'" style="max-width:'.$src['width'].'px; max-height:'.$src['height'].'px;">';
 							echo '</a>';
 					echo '</li>';
 				}
@@ -497,29 +496,6 @@ function printNews($newss) {
 		echo '<a href="#" class="arrow arrow-right"></a>';
 	echo '</section>'; // END NEWS SECITION
 }
-
-// NEWS MODULE
-// function printNews($newss) {
-//     echo '<section id="news-container" class="news-list-container cf swiper-container">'; // START NEWS SECTION
-//         echo '<a href="#" class="arrow arrow-left"></a>';
-//         echo '<ul id="news-list" class="cf news-list swiper-wrapper">';
-//         foreach ($newss as $key => $news) {
-//             // OUTPUT news
-//             echo '<li id="news-'.$key.'" class="cf news swiper-slide">';
-//                 echo '<div class="center-table">';
-                
-//                 printImageVideo($news);
-                
-//                 printText($news);
-
-//                 echo '</div>';
-//             echo '</li>';
-//         }
-//         echo '</ul>';
-//         echo '<a href="#" class="arrow arrow-right"></a>';
-//     echo '</section>'; // END NEWS SECITION
-// }
-
 
 // -TEAM MEMBER SLIDER FOR TEAM HISTORY PAGE
 function printTeamMemberSlider($teamMembers) {

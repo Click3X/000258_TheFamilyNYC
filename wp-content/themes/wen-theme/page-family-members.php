@@ -77,7 +77,7 @@ wp_reset_postdata();
 											if($src['url'] != "") {
 												echo '<li id="family-member-'.$key.'" class="cf family-member">';
 														echo '<a href="'.$link.'" class="family-member-link" target="_blank">';
-															echo '<img src="'.$src['url'].'">';
+															echo '<img src="'.$src['url'].'" style="max-width:'.$src['width'].'px; max-height:'.$src['height'].'px;">';
 														echo '</a>';
 												echo '</li>';
 											}
