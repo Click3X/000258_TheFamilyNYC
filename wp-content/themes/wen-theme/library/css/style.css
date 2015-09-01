@@ -4247,17 +4247,17 @@ h4.tt-date {
 /* line 55, ../scss/partials/_family-members-module.scss */
 .responsive-container {
   position: relative;
-  padding-bottom: 50.346021%;
+  padding-bottom: 48%;
   height: 0;
   overflow: hidden;
 }
 
-/* line 68, ../scss/partials/_family-members-module.scss */
+/* line 62, ../scss/partials/_family-members-module.scss */
 .img-container .responsive-container {
-  padding-bottom: 50.346021%;
+  padding-bottom: 48%;
 }
 
-/* line 80, ../scss/partials/_family-members-module.scss */
+/* line 67, ../scss/partials/_family-members-module.scss */
 .responsive-container iframe {
   position: absolute;
   top: 0;
@@ -4266,41 +4266,41 @@ h4.tt-date {
   height: 100%;
 }
 
-/* line 90, ../scss/partials/_family-members-module.scss */
+/* line 77, ../scss/partials/_family-members-module.scss */
 .Center-Container.is-Table {
   display: table;
 }
 
-/* line 91, ../scss/partials/_family-members-module.scss */
+/* line 78, ../scss/partials/_family-members-module.scss */
 .is-Table .Table-Cell {
   display: table-cell;
   vertical-align: middle;
   width: 50%;
 }
 @media (min-width: 480px) {
-  /* line 91, ../scss/partials/_family-members-module.scss */
+  /* line 78, ../scss/partials/_family-members-module.scss */
   .is-Table .Table-Cell {
     width: 33.3333333%;
   }
 }
 @media (min-width: 768px) {
-  /* line 91, ../scss/partials/_family-members-module.scss */
+  /* line 78, ../scss/partials/_family-members-module.scss */
   .is-Table .Table-Cell {
     width: 25%;
   }
 }
 
-/* line 103, ../scss/partials/_family-members-module.scss */
+/* line 90, ../scss/partials/_family-members-module.scss */
 .is-Table .Center-Block {
   width: 60%;
   margin: 0 auto;
 }
-/* line 107, ../scss/partials/_family-members-module.scss */
+/* line 94, ../scss/partials/_family-members-module.scss */
 .is-Table .Center-Block img {
   width: 100%;
 }
 
-/* line 112, ../scss/partials/_family-members-module.scss */
+/* line 99, ../scss/partials/_family-members-module.scss */
 .iframe-poster {
   position: absolute;
   top: 0;
@@ -4308,13 +4308,13 @@ h4.tt-date {
   cursor: pointer;
 }
 
-/* line 118, ../scss/partials/_family-members-module.scss */
+/* line 105, ../scss/partials/_family-members-module.scss */
 .img-wrapper {
   position: relative;
   overflow: hidden;
 }
 
-/* line 124, ../scss/partials/_family-members-module.scss */
+/* line 111, ../scss/partials/_family-members-module.scss */
 .poster-bg {
   background-repeat: no-repeat;
   background-position: 50% 50%;
@@ -4328,14 +4328,14 @@ h4.tt-date {
   margin: auto;
 }
 
-/* line 150, ../scss/partials/_family-members-module.scss */
+/* line 137, ../scss/partials/_family-members-module.scss */
 #project-list .txt-container .news-link {
   margin-top: 0;
   margin-bottom: 1em;
   font-size: 0.7em;
 }
 @media (min-width: 768px) {
-  /* line 150, ../scss/partials/_family-members-module.scss */
+  /* line 137, ../scss/partials/_family-members-module.scss */
   #project-list .txt-container .news-link {
     margin-top: 2em;
     margin-bottom: 0;
@@ -4829,6 +4829,7 @@ h4.tt-date {
 /* line 185, ../scss/partials/_parallax-tri.scss */
 #family-logo-holder {
   position: static;
+  z-index: -1;
 }
 @media (min-width: 480px) {
   /* line 185, ../scss/partials/_parallax-tri.scss */

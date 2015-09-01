@@ -54,29 +54,16 @@
 
 .responsive-container { 
 	position: relative;
-	// padding-bottom: 56.25%;
-	padding-bottom: 50.346021%;
+	padding-bottom: 48%;
 	height: 0;
 	overflow: hidden;
-
-	// @media(min-width: 1000px) {
-	// 	// padding-bottom: 600px;
-	// 	padding-bottom: 537px;
-	// }
 }
 
 .img-container .responsive-container {
-	// padding-bottom: 45%;
-	padding-bottom: 50.346021%;
-
-	@media(min-width: 1000px) {
-		// padding-bottom: 480px;
-		// padding-bottom: 537px;
-	}
+	padding-bottom: 48%;
 }
 
 .responsive-container {
-	// img,
 	iframe { 
 		position: absolute;
 		top: 0;

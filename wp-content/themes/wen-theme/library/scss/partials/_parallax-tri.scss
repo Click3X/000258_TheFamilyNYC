@@ -184,6 +184,7 @@ $maxWidth:1400;
 
 	#family-logo-holder {
 		position: static;
+		z-index: -1;
 		// top:0;
 		
 		@media(min-width: 480px) {
