@@ -59,10 +59,15 @@ footer {
 
 
 		svg { 
+			path { fill:#ffffff; }
+
+			path.circle { fill:$project-gold; }
+
 			path { @include prefix(transition, 200ms fill); }
 
 			&:hover {
-				path.circle { fill:$project-gold; }
+				path { fill:$project-gold; }
+				path.circle { fill:$project-green; }
 			}
 		}
 
@@ -121,16 +126,19 @@ footer {
 		a { display: inline-block; }
 		
 		div {
-			background-size: 44px 44px;
-			width: 44px; height: 44px;
-			margin: auto;
-			display: inline-block;	
-			margin: 0 1.3em;
+			background-size: 50px 50px;
+		    width: 50px;
+		    height: 50px;
+		    margin: auto;
+		    display: inline-block;
+		    margin: 0 1.1em;
 		}
 	}
 
 	.footer-credits {
-		background-color:#182b18;
+		// background-color:#182b18;
+		color:#ffffff;
+		background-color:$gold-footer;
 
 		.footer-credits-container {
 			max-width: 1400px;

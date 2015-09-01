@@ -877,8 +877,10 @@ FOOTER STYLES
 
 .footer {
 	clear: both;
-	background-color: $footer-green;
-	color: $white;
+	// background-color: $footer-green;
+	background-color: $white-footer;
+	// color: $white;
+	color:$project-green;
 }
 
 	/*

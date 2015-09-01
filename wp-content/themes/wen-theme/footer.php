@@ -20,7 +20,7 @@
 							</li>
 							<li class="c-item">
 								<a class="phone" href="tel:2124774248">
-									<span class="phone">T: 212 477 4248</span>
+									<span class="phone">212 477 4248</span>
 								</a>
 							</li>
 							<li class="c-item">
