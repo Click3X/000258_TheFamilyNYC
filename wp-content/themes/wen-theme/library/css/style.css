@@ -3327,20 +3327,21 @@ main > article {
 }
 
 /* Nav */
-/* line 18, ../scss/partials/_tabs.scss */
+/* line 19, ../scss/partials/_tabs.scss */
 .tabs nav {
   text-align: center;
   line-height: 1em;
   padding-top: 2.5em;
+  display: none;
 }
 @media (min-width: 768px) {
-  /* line 18, ../scss/partials/_tabs.scss */
+  /* line 19, ../scss/partials/_tabs.scss */
   .tabs nav {
     padding-top: 6em;
   }
 }
 
-/* line 25, ../scss/partials/_tabs.scss */
+/* line 30, ../scss/partials/_tabs.scss */
 .tabs nav ul {
   padding: 0;
   margin: 0;
@@ -3348,7 +3349,7 @@ main > article {
   display: inline-block;
 }
 
-/* line 31, ../scss/partials/_tabs.scss */
+/* line 36, ../scss/partials/_tabs.scss */
 .tabs nav ul li {
   border-bottom: none;
   margin: 0 0.25em;
@@ -3357,26 +3358,26 @@ main > article {
   position: relative;
 }
 
-/* line 39, ../scss/partials/_tabs.scss */
+/* line 44, ../scss/partials/_tabs.scss */
 .tabs nav li.tab-current {
   z-index: 100;
 }
 
-/* line 43, ../scss/partials/_tabs.scss */
+/* line 48, ../scss/partials/_tabs.scss */
 .tabs nav li a {
   color: white;
   background-color: #1b381d;
   line-height: 1.5em;
 }
 
-/* line 49, ../scss/partials/_tabs.scss */
+/* line 54, ../scss/partials/_tabs.scss */
 .tabs nav li.tab-current a {
   color: white;
   background-color: #d4a551;
 }
 
 /* Content */
-/* line 56, ../scss/partials/_tabs.scss */
+/* line 61, ../scss/partials/_tabs.scss */
 .content section {
   padding: 0 1em;
   display: none;
@@ -3384,41 +3385,41 @@ main > article {
   margin: 0 auto;
 }
 @media (min-width: 768px) {
-  /* line 56, ../scss/partials/_tabs.scss */
+  /* line 61, ../scss/partials/_tabs.scss */
   .content section {
     padding: 1.5em 1em;
   }
 }
 
-/* line 67, ../scss/partials/_tabs.scss */
+/* line 72, ../scss/partials/_tabs.scss */
 .content section:before,
 .content section:after {
   content: '';
   display: table;
 }
 
-/* line 73, ../scss/partials/_tabs.scss */
+/* line 78, ../scss/partials/_tabs.scss */
 .content section:after {
   clear: both;
 }
 
 /* Fallback example */
-/* line 78, ../scss/partials/_tabs.scss */
+/* line 83, ../scss/partials/_tabs.scss */
 .no-js .content section {
   display: block;
   padding-bottom: 2em;
 }
 
-/* line 83, ../scss/partials/_tabs.scss */
+/* line 88, ../scss/partials/_tabs.scss */
 .content section.content-current {
   display: block;
 }
 
-/* line 90, ../scss/partials/_tabs.scss */
+/* line 95, ../scss/partials/_tabs.scss */
 .no-chronology .tabs > nav {
   display: none;
 }
-/* line 93, ../scss/partials/_tabs.scss */
+/* line 98, ../scss/partials/_tabs.scss */
 .no-chronology .content section.who-what {
   display: block;
   padding-top: 0;

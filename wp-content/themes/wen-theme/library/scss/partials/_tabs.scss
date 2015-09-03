@@ -14,11 +14,16 @@
 	}
 }
 
+
 /* Nav */
 .tabs nav {
 	text-align: center;
 	line-height: 1em;
 	padding-top:2.5em;
+
+	// HIDE BUTTONS ON FAMILY HISTORY PAGE (WHO WHAT WHY)
+	display: none;
+
 	@media(min-width: 768px) { padding-top:6em; }
 }
 
