@@ -14,12 +14,16 @@
 
 									<h1 class="page-title" itemprop="headline"><?php the_title(); ?></h1>
 
+									<?php if( get_field('sub-title') ) { echo '<h2 class="sub-title">'.get_field('sub-title').'</h2>'; } ?>
+
 								</header> <?php // end article header ?>
 
 								<section class="entry-content cf" itemprop="articleBody">
 									<?php
 										// the content (pretty self explanatory huh)
-										the_content();
+										echo '<div class="page-content cf">';
+											the_content();
+										echo '</div>';
 
 										/*
 										 * Link Pages is used in case you have posts that are set to break into
