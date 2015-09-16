@@ -102,3 +102,30 @@
 	}
 
 }
+
+
+.single-team-member {
+	#team-member-list-slider {
+		.img-container img, 
+		.vid-container img {
+			position: static;
+		}
+		.img-container {
+			position: relative;
+		}
+		@media(min-width: 768px) {
+			.img-container {
+				width: 40%;
+			    float: left;
+			}
+			.txt-container {
+				width: 60%;
+	    		float: right;
+			}
+			.news-list .img-container img, 
+			.news-list .vid-container img {
+				position: absolute;
+			}
+		}
+	}
+}

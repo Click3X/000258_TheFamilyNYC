@@ -40,41 +40,6 @@ if ( $the_query->have_posts() ) {
 		if($post->post_type == 'team-member') {
 			// PUT POST IN TEAM MEMBER ARRAY
 			$teamMembers[] = $post;
-		} elseif($post->post_type == 'project') {
-			$project = $post;
-			// GET POST THUMBNAIL SRC
-			$url_src = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID) , 'full' );
-			// FILTER OUT ONLY FEATURED PROJECTS
-			if( get_field('featured_project') ) {
-				// GET PROJECT FIELDS
-				$project = array(
-					'title'=>get_the_title(),
-					'client'=>get_field('client'),
-					'featured_project'=>get_field('featured_project'),
-					'video_files'=>get_field('video_files'),
-					'description'=>get_field('description'),
-					'poster'=>$url_src[0],
-					'id'=>$post->ID
-				);
-
-				if(get_the_content() != '') {
-					$project['description'] = '<p style="margin:1.75em auto;">'.get_the_excerpt().'</p><a href="http://thefamily.dev/?p=196" class="btn news-link">Learn More</a>';
-				}
-
-				// YOU TUBE LINK
-				if(get_field('youtube_link')) {
-					$project['youtube_link'] = get_field('youtube_link');
-				} 
-
-				// PUSH PROJECT INTO PROJECTS ARRAY FOR LATER USE
-				$projects[] = $project;
-
-				// ADD TO FEATURED PROJECTS ARRAY IF PROJECT FEATURED CHECKBOX IS CHECKED
-				// if(isset($project['featured_project'])) {
-				if( $project['featured_project'][0] == 'Featured' ) {
-					$featuredProjects[] = $project;
-				}
-			}	
 		} elseif($post->post_type == 'family-member' ) {
 			// FILTER OUT FAMILY MEMBERS
 			$fam = array(
@@ -101,8 +66,8 @@ if ( $the_query->have_posts() ) {
 				'featured_project'=>get_field('featured_project'),
 				'video_files'=>get_field('video_files'),
 				'poster'=>$url_src[0],
-				'id'=>$post->ID
-				
+				'id'=>$post->ID,
+				'link-through'=>get_field('link-through')
 			);
 
 			if( get_field('youtube_link') ) {
@@ -111,9 +76,10 @@ if ( $the_query->have_posts() ) {
 			}
 
 			// $newss[] = $news;
-
+			// helper($news);
 			// ADD TO FEATURED PROJECTS ARRAY IF PROJECT FEATURED CHECKBOX IS CHECKED
-			if( $news['featured_project'][0] == 'Featured' ) {
+			// if( $news['featured_project'][0] == 'Featured' ) {
+			if( $news['featured_project']) {
 				$featuredProjects[] = $news;
 			} else {
 				// ONLY OUTPUT 'NOT FEATURED' POSTS IN NEWS ARRAY

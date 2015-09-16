@@ -152,7 +152,8 @@
 									'description'=>get_field('description'),
 									'poster'=>$url_src[0],
 									'id'=>$post->ID,
-									'link'=>get_the_permalink($post->ID)
+									'link'=>get_the_permalink($post->ID),
+									'link-through'=>get_field('link-through')
 								);
 
 								if(get_field('client')) {

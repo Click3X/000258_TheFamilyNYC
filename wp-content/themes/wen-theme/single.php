@@ -28,7 +28,8 @@
 										'excerpt'=>get_the_excerpt(),
 										'content'=>get_the_content(),
 										'link'=>get_the_permalink(),
-										'id'=>$post->ID
+										'id'=>$post->ID,
+										'link-through'=>get_field('link-through')
 									);
 
 									$youtube_link;
@@ -57,18 +58,27 @@
 									}
 
 									echo '<article id="news-'.$post->ID.'" class="cf news">';
-
 										echo '<div class="center-table">';
+										// helper($news);
 											// IMAGE / VIDEO
 											if( isset($youtube_link) ) {
 												echo '<div class="vid-container">';
 													echo '<div class="responsive-container">';
+														// if (strpos($youtube_link,'vimeo') !== false) {
+														//     $youtube_link = $youtube_link.'?autoplay=1';
+														// }
 														echo '<iframe src="'.$youtube_link.'" frameborder="0" allowfullscreen></iframe>';
+
+														if( isset($news['poster']) ) {
+															echo '<div class="poster-bg" style="background-image:url('.$news['poster'].');"></div>';
+                      										echo '<div class="cf play-tri-holder iframe-poster-new" data-video="'.$youtube_link.'"><div class="play-tri"></div></div>';
+														}
 													echo '</div>';
 													// GOLD LINE
 												echo '<div class="gold-line" style="background-image: url(http://thefamily.dev/wp-content/themes/wen-theme/library/images/gold-border-bottom.png);"></div>';
 												echo '</div>';
-											} else if( isset($news['video']) ) {
+											} else if( isset($news['video'][0]) ) {
+												
 												// VIDEO
 												echo '<div class="video-container">';
 													echo '<video poster="'.$news['poster'].'" preload="none" >';
@@ -84,7 +94,14 @@
 											} else if($news['image'][0]) {
 												echo '<div class="img-container">';
 													echo '<div class="responsive-container">';
-														echo '<img src="'.$news['image'][0].'">';
+														// echo '<img src="'.$news['image'][0].'">';
+															if($news['link-through']) {
+											                  echo '<a href="'.$news['link-through'].'" target="_blank">';
+											                    echo '<div class="poster-bg" style="background-image:url('.$news['poster'].');"></div>';
+											                  echo '</a>';
+											                } else {
+											                  echo '<div class="poster-bg" style="background-image:url('.$news['poster'].');"></div>';
+											                }
 														'</div>';
 												echo '</div>';
 											}

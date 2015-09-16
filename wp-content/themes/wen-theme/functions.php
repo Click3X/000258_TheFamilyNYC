@@ -324,7 +324,7 @@ function printImageVideo($project) {
                       <div class="poster-bg" style="background-image:url('.$project['poster'].');"></div>
                       <div class="cf play-tri-holder iframe-poster-new" data-video="'.$project['youtube_link'].'"><div class="play-tri"></div></div>';
             // VIDEO FILE
-            } else if($video_source) {
+            } else if($video_source[0]['file']) {
                 echo '<div class="video-container">';
                     echo '<div class="cf play-tri-holder"><div class="play-tri"></div></div>';
                     // VIDEO TAG
@@ -335,8 +335,14 @@ function printImageVideo($project) {
                     echo '</video>';                            
                 echo '</div>';
             //IMAGE
-            } else if($project['poster']) {
-                echo '<div class="poster-bg" style="background-image:url('.$project['poster'].');"></div>';
+            } else if( isset($project['poster']) ) {
+                if($project['link-through']) {
+                  echo '<a href="'.$project['link-through'].'" target="_blank">';
+                    echo '<div class="poster-bg" style="background-image:url('.$project['poster'].');"></div>';
+                  echo '</a>';
+                } else {
+                  echo '<div class="poster-bg" style="background-image:url('.$project['poster'].');"></div>';
+                }
             }
         echo '</div>'; // .responsdive container
 
