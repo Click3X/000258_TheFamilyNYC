@@ -97,10 +97,10 @@
 														// echo '<img src="'.$news['image'][0].'">';
 															if($news['link-through']) {
 											                  echo '<a href="'.$news['link-through'].'" target="_blank">';
-											                    echo '<div class="poster-bg" style="background-image:url('.$news['poster'].');"></div>';
+											                    echo '<div class="poster-bg" style="background-image:url('.$news['image'][0].');"></div>';
 											                  echo '</a>';
 											                } else {
-											                  echo '<div class="poster-bg" style="background-image:url('.$news['poster'].');"></div>';
+											                  echo '<div class="poster-bg" style="background-image:url('.$news['image'][0].');"></div>';
 											                }
 														'</div>';
 												echo '</div>';
